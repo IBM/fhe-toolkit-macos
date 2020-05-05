@@ -1,2 +1,2 @@
 # fhe-toolkit-macos
-IBM Homorphic Encryption Toolkit For MacOS
+IBM Homomorphic Encryption Toolkit For MacOS
