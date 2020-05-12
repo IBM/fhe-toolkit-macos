@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/boland/Projects/HomomorphicEncryption/HElib_internal_etx/he-osx/fhe-toolkit-macos.xcodeproj">
+      location = "group:../../../../Projects/HomomorphicEncryption/HElib_internal_etx/he-osx/fhe-toolkit-macos.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:dependencies/HElib_macOS/helib_macOS_SDK.xcodeproj">
+      location = "group:../../../../Projects/HomomorphicEncryption/HElib_internal_etx/he-osx/dependencies/HElib_macOS/helib_macOS_SDK.xcodeproj">
    </FileRef>
 </Workspace>
