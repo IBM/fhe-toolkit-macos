@@ -102,7 +102,7 @@ build_gmp()
     DEVELOPER=`xcode-select --print-path`
     export PATH="${PLATFORM_PATH}/Developer/usr/bin:${DEVELOPER}/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
     mkdir "${CURRENT_DIR}/../gmplib-so-${PLATFORM}-${ARCH}"
-    CFLAGS="-arch ${ARCH} --sysroot=${SDK} -fembed-bitcode"
+    CFLAGS="-arch ${ARCH} --sysroot=${SDK}"
     EXTRA_FLAGS="$(version_min_flag $PLATFORM)"
     CCARGS="${CLANG} ${CFLAGS}"
     CPPFLAGSARGS="${CFLAGS} ${EXTRA_FLAGS}"
@@ -130,7 +130,7 @@ build_ntl()
     cd ntl-${NTL_VERSION}
     cd src
 
-    ./configure CXX=clang++ CXXFLAGS="-fembed-bitcode -stdlib=libc++  -arch ${ARCH} -isysroot ${SDK}"  NTL_THREADS=on NATIVE=on TUNE=x86 NTL_GMP_LIP=on PREFIX="${CURRENT_DIR}/ntl" GMP_PREFIX="${CURRENT_DIR}/gmplib-so-${PLATFORM}-${ARCH}"
+    ./configure CXX=clang++ CXXFLAGS="-stdlib=libc++  -arch ${ARCH} -isysroot ${SDK}"  NTL_THREADS=on NATIVE=on TUNE=x86 NTL_GMP_LIP=on PREFIX="${CURRENT_DIR}/ntl" GMP_PREFIX="${CURRENT_DIR}/gmplib-so-${PLATFORM}-${ARCH}"
     make -j
     
     cp -R "${CURRENT_DIR}/ntl-${NTL_VERSION}/include" "${CURRENT_DIR}/ntl/include" 
