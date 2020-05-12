@@ -1,3 +1,0 @@
-[submodule "dependencies/HElib"]
-	path = dependencies/HElib
-	url = git@github.com:homenc/HElib.git
