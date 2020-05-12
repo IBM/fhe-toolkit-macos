@@ -1,0 +1,3 @@
+[submodule "dependencies/HElib"]
+	path = dependencies/HElib
+	url = https://github.com/homenc/HElib
