@@ -64,14 +64,14 @@ Enter the Repository URL shown below. This URL can be found in the clone or down
 git@github.com:IBM/fhe-toolkit-macos.git
 ```
 
-![Step two image](/Documentation/Images/Step%202.png?raw=true "Selecting a download location")
+![Step two image](/Documentation/Images/Step%202.png?raw=true "Enter the repository URL")
 
 
 
 ## Step 3: 
 You will next be asked which branch you would like to clone. Select the "master" branch as shown and click the clone button to begin the source code copy process. The clone may take a few minutes depending on your network bandwidth and connectivity. 
 
-![Step three image](/Documentation/Images/Step%203.png?raw=true "Clone process progress")
+![Step three image](/Documentation/Images/Step%203.png?raw=true "Selecting the master branch")
 
 
 
@@ -84,7 +84,7 @@ Select any location that makes sense for you and click the Clone button.
 
 Once the download completes, the cloned git repository is almost ready for use with Xcode. 
 
-![Step four image](/Documentation/Images/DownloadSelectionLocation.png?raw=true "Building Dependencies")
+![Step four image](/Documentation/Images/Step%204.png?raw=true "Selecting a download location")
 
 
 ## Step 5: 
