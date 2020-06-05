@@ -14,6 +14,24 @@ TVOS=appletvos
 TVSIMULATOR=appletvsimulator
 MACOS=macosx
 LOGICALCPU_MAX=`sysctl -n hw.logicalcpu_max`
+
+
+PLATFORM=macosx
+ARCH="x86_64"
+
+SDK=`xcrun --sdk $PLATFORM --show-sdk-path`
+PLATFORM_PATH=`xcrun --sdk $PLATFORM --show-sdk-platform-path`
+CLANG=`xcrun --sdk $PLATFORM --find clang`
+CMAKE_C_COMPILER="${CLANG}"
+CLANGXX=`xcrun --sdk $PLATFORM --find clang++`
+CMAKE_CXX_COMPILER="${CLANGXX}"
+CURRENT_DIR=`pwd`
+DEVELOPER=`xcode-select --print-path`
+
+CMAKE_PATH=$(dirname `which cmake`)
+
+export PATH="${CMAKE_PATH}:${PLATFORM_PATH}/Developer/usr/bin:${DEVELOPER}/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
 GMP_DIR="`pwd`/gmp"
 NTL_VERSION="11.4.1"
 GMP_VERSION="6.1.2"
@@ -100,7 +118,7 @@ build_gmp()
     CLANG=`xcrun --sdk $PLATFORM --find clang`
     CURRENT_DIR=`pwd`
     DEVELOPER=`xcode-select --print-path`
-    export PATH="${PLATFORM_PATH}/Developer/usr/bin:${DEVELOPER}/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    #export PATH="${PLATFORM_PATH}/Developer/usr/bin:${DEVELOPER}/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
     mkdir "${CURRENT_DIR}/../gmplib-so-${PLATFORM}-${ARCH}"
     CFLAGS="-arch ${ARCH} --sysroot=${SDK}"
     EXTRA_FLAGS="$(version_min_flag $PLATFORM)"
