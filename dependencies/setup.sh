@@ -89,7 +89,7 @@ prepare()
     {
         CURRENT_DIR=`pwd`
         if [ ! -s ${CURRENT_DIR}/gmp-${GMP_VERSION}.tar.bz2 ]; then
-            curl -L -o ${CURRENT_DIR}/gmp-${GMP_VERSION}.tar.bz2 https://gmplib.org/download/gmp/gmp-${GMP_VERSION}.tar.bz2
+            curl -k -L -o ${CURRENT_DIR}/gmp-${GMP_VERSION}.tar.bz2 https://gmplib.org/download/gmp/gmp-${GMP_VERSION}.tar.bz2
         fi
         rm -rf gmp
         tar xfj "gmp-${GMP_VERSION}.tar.bz2"
@@ -100,7 +100,7 @@ prepare()
     {
         CURRENT_DIR=`pwd`
         if [ ! -s ${CURRENT_DIR}/ntl-${NTL_VERSION}.tar.gz ]; then
-            curl -L -o ${CURRENT_DIR}/ntl-${NTL_VERSION}.tar https://www.shoup.net/ntl/ntl-${NTL_VERSION}.tar.gz
+            curl -k -L -o ${CURRENT_DIR}/ntl-${NTL_VERSION}.tar https://www.shoup.net/ntl/ntl-${NTL_VERSION}.tar.gz
         fi
         tar xvf "ntl-${NTL_VERSION}.tar"
     }
