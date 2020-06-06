@@ -88,7 +88,7 @@ Once the download completes, the cloned git repository is almost ready for use w
 
 
 ## Step 5: 
-Now that you have the toolit repo cloned, along with the automatically included dependency code repositories, we must first compile those dependency libraries. To do this you must use a terminal application and `cd` into the `dependencies` directory from the root of the repo. The root location was entered in the previous step. 
+Now that you have the toolkit repo cloned, along with the automatically included dependency code repositories, we must first compile those dependency libraries. To do this you must use a terminal application and `cd` into the `dependencies` directory from the root of the repo. The root location was entered in the previous step. 
 
 
 ```
