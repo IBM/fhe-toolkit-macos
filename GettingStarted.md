@@ -122,7 +122,7 @@ process is proceeding.
 
 
 ## Step 8: 
-With the compilation of the mobile demonstration application complete, the app will launch, and you will see the sample application as shown. The demonstration is a complete example of a privacy preserving search against an unencrypted database. The database is a key value store prepopulated with the english names of countries and their capital cities from the continent of Europe. Selecting the country will perform a search of the matching capital. On a 2019 Macbook Pro laptop, the example searches take under 80 seconds. 
+With the compilation of the mobile demonstration application complete, the app will launch, and you will see the sample application as shown. The demonstration is a complete example of a privacy preserving search against an encrypted database. The database is a key value store prepopulated with the english names of countries and their capital cities from the continent of Europe. Selecting the country will perform a search of the matching capital. On a 2019 Macbook Pro laptop, the example searches take under 80 seconds. 
 
 ![Step eight image](/Documentation/Images/Step%208.png?raw=true "Sample app Screenshots")
 
