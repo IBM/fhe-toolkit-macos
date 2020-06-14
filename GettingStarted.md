@@ -36,13 +36,13 @@ xcode-select --install
 
 CMake is an open-source, cross-platform family of tools thst can be used to build and test software source code. CMake is used to control the software compilation process using platform and compiler independent configuration files as well as generating native makefiles that work with a variety of compilers.
 
-This toolkit has been tested with `cmake version 3.17.1`. Please check whether you have cmake installed in your environment and if the `cmake version >= 3.17.1` by entering the following command in a terminal window :
+This toolkit has been tested with `cmake version 3.17.1`. Please check whether you have cmake installed in your environment and whether `cmake version >= 3.17.1` by entering the following command in a terminal window :
 
 ```
 cmake -version
 ```
 
-Should you need to install or reinstall `cmake` in your system, precompiled binaries for MacOS are available directly from  [CMake website](https://cmake.org/download/). Available binary release that supports Mac OS X 10.7 or later, can be found directly from: [https://github.com/Kitware/CMake/releases/download/v3.17.3/cmake-3.17.3-Darwin-x86_64.dmg](https://github.com/Kitware/CMake/releases/download/v3.17.3/cmake-3.17.3-Darwin-x86_64.dmg).  Alternatively `cmake` is also available as [MacPorts Project](https://www.macports.org/) or [Homebrew](https://brew.sh/) packages. 
+Should you need to install or reinstall `cmake` in your environment, precompiled binaries for MacOS are available directly from  [CMake website](https://cmake.org/download/). Available binary release that supports Mac OS X 10.7 or later, can be found directly from: [https://github.com/Kitware/CMake/releases/download/v3.17.3/cmake-3.17.3-Darwin-x86_64.dmg](https://github.com/Kitware/CMake/releases/download/v3.17.3/cmake-3.17.3-Darwin-x86_64.dmg).  Alternatively `cmake` is also available as [MacPorts Project](https://www.macports.org/) or [Homebrew](https://brew.sh/) packages. 
 
 If you do not currently have cmake installed, the setup script will attempt to install it for you as it is needed to build the libraries.
 
