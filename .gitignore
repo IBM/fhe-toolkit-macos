@@ -105,3 +105,4 @@ dependencies/gmplib-*
 *.exe
 *.out
 *.app
+.DS_Store

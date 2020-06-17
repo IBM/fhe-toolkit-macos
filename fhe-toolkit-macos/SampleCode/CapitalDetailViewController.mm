@@ -214,23 +214,23 @@ unsigned long debug = 0;
      std::vector<std::pair<helib::Ptxt<helib::BGV>, helib::Ptxt<helib::BGV>>>
          address_book_ptxt;
      for (const auto& name_addr_pair : address_book) {
-     if (debug) {
-         std::cout << "\t\tname_addr_pair.first size = "
-                   << name_addr_pair.first.size() << " (" << name_addr_pair.first
-                   << ")"
-                   << "\tname_addr_pair.second size = "
-                   << name_addr_pair.second.size() << " (" << name_addr_pair.second
-                   << ")" << std::endl;
-     }
+        if (debug) {
+            std::cout << "\t\tname_addr_pair.first size = "
+                    << name_addr_pair.first.size() << " (" << name_addr_pair.first
+                    << ")"
+                    << "\tname_addr_pair.second size = "
+                    << name_addr_pair.second.size() << " (" << name_addr_pair.second
+                    << ")" << std::endl;
+        }
 
-     helib::Ptxt<helib::BGV> name(context);
-     // std::cout << "\tname size = " << name.size() << std::endl;
-     for (long i = 0; i < name_addr_pair.first.size(); ++i)
-         name.at(i) = name_addr_pair.first[i];
+        helib::Ptxt<helib::BGV> name(context);
+        // std::cout << "\tname size = " << name.size() << std::endl;
+        for (long i = 0; i < name_addr_pair.first.size(); ++i)
+            name.at(i) = name_addr_pair.first[i];
 
-     helib::Ptxt<helib::BGV> addr(context);
-     for (long i = 0; i < name_addr_pair.second.size(); ++i)
-         addr.at(i) = name_addr_pair.second[i];
+        helib::Ptxt<helib::BGV> addr(context);
+        for (long i = 0; i < name_addr_pair.second.size(); ++i)
+            addr.at(i) = name_addr_pair.second[i];
          address_book_ptxt.emplace_back(std::move(name), std::move(addr));
      }
      FHE_NTIMER_STOP(Ptxt_DB);
@@ -245,7 +245,7 @@ unsigned long debug = 0;
         helib::Ctxt encrypted_addr(public_key);
         public_key.Encrypt(encrypted_name, name_addr_pair.first);
         public_key.Encrypt(encrypted_addr, name_addr_pair.second);
-        encrypted_address_book.emplace_back(encrypted_name, encrypted_addr);
+        encrypted_address_book.emplace_back(std::move(encrypted_name), std::move(encrypted_addr));
      }
      FHE_NTIMER_STOP(Ctxt_DB);
     
