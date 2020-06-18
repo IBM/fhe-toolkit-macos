@@ -17,7 +17,7 @@ About Xcode Projects
 
 If you are a developer interested in Homomorphic Encryption and you use a MacOS development machine, this project will help you get started with a pre-configured [Xcode](https://developer.apple.com/xcode/) Project that can save you time. If you are new to Xcode, an Xcode project is a directory structure for all the resources needed to build one or more software using the Xcode IDE from Apple.  You can install Xcode directly through the App Store. 
 
-The contents of this Xcode project includes the pre-determined compilation procedure and the required dependency relationships between source code modules. Typically an Xcode project contains one or more build targets, which specify the compilation procedure for the final executable or library products. This project comes complete with default build settings for HELib as well as the two external dependencies required by HELib, namely [The GNU Multiple Precision Arithmetic Library (GMP)](https://gmplib.org/) and [NTL Lib](https://www.shoup.net/ntl/) which s a number theoretic library.
+The contents of this Xcode project includes the pre-determined compilation procedure and the required dependency relationships between source code modules. Typically an Xcode project contains one or more build targets, which specify the compilation procedure for the final executable or library products. This project comes complete with default build settings for HELib as well as the two external dependencies required by HELib, namely [The GNU Multiple Precision Arithmetic Library (GMP)](https://gmplib.org/) and [NTL Lib](https://www.shoup.net/ntl/) which is a number theoretic library.
 
 The targets of the project are:
 	•	Privacy Preserving Search (sample app)
