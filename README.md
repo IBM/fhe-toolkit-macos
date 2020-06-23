@@ -21,7 +21,7 @@ The contents of this Xcode project includes the pre-determined compilation proce
 
 The targets of the project are:
 * Privacy Preserving Search (sample app)
-* helib Library
+* HElib Library
 
 
 
