@@ -25,7 +25,7 @@ If applicable, add screenshots to help explain your problem.
 
 **Desktop (please complete the following information):**
  - macOS Info [ menu top left -> About this mac]:
- - cmake version [cmake --version in Terminal]:
+ - cmake version [`cmake --version` in Terminal]:
  - Xcode version [Xcode -> About Xcode]:
 
 **Terminal Output**
