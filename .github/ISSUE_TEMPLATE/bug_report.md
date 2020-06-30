@@ -24,12 +24,12 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+ - macOS Info [ menu top left -> About this mac]:
+ - cmake version [cmake --version in Terminal]:
+ - Xcode version [Xcode -> About Xcode]:
 
 **Terminal Output**
-(if applicable, please attach terminal output)
+(please attach terminal output after running setup.sh)
 
 **Additional context**
 Add any other context about the problem here.
