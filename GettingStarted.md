@@ -121,7 +121,7 @@ After the dependencies finish building, go back to Xcode and open the workspace 
 ## Step 7: 
 Switch the Build target to `Privacy Preserving Search`, and Build the sample app with the embedded libraries and dependencies by clicking the “Play” button in the upper left hand corner
 of the IDE to start the build process. You will notice the bar at the top will indicate the build
-process is proceeding. 
+process is proceeding. If you don't see `Privacy Preserving Search` in the dropdown list, you might need to use the arrow to scroll to the top of list.
 
 ![Step seven image](/Documentation/Images/Step%207.png?raw=true "Click the play button to start the sample app")
 
