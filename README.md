@@ -38,8 +38,8 @@ The code base is split up into a few major components.  Upon initial installatio
 
 * The Helib library has two dependencies from other open source libraries.  They are built when the `setup.sh` script is run for the first time.  They currently build for the x86_64 ARCHITECTURE and get added to the `dependencies` folder.  Nothing needs to be done with them, but they are linked as relative paths on the target, in `Build Settings` under `Library Search Paths`, for the .a files, and `Header Search Paths` for the .h files.  Again if you alter the location of these files, you will need to update these paths accordingly.
 
-    * ntl                     -   
-    * gmplib-so-macosx-x86_64 -
+    * ntl                       
+    * gmplib-so-macosx-x86_64
 
 
 --------------------------------------------
