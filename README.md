@@ -68,18 +68,13 @@ fhe-toolkit-macos
 This is the Xcode Directory that contains all of the files that are neccessary to build the osx target.  The Helib files are imported into the `CountryTableViewController.mm` 
 
 * Assets.xcassets	- directory structure where all assets (art, icons, images, etc) are held
-* AppDelegate.h	- entry point to application
-* AppDelegate.m	- handles responsiblities for when the app is launched or closed
-* Info.plist	- file that contains app settings
-* CountryData.h - object that contains the data for the split view controller
-* CountryData.m
-* CapitalDetailViewController.h  
-* CapitalDetailViewController.m - the side of the split view controller that contains the details about the country.  This is where the code utilizes the Helib library.
-* CountryTableViewController.h
-* CountryTableViewController.mm - the "left" side of the split view that contains all of the countries to click
-* CountryDisplaySplitViewController.h
-* CountryDisplaySplitViewController.m - The file that manages the split views 
-* main.m	-	the start file that creates the Application, this is usually not altered in an macOS application
+* AppDelegate - Main entry point to application. Handles responsibilities for when the app is launched or closed
+* Info.plist	- The file that contains app settings
+* CountryData - The object that contains the data for the split view controller  
+* CapitalDetailViewController - The side of the split view controller that contains the details about the country.  This is where the code utilizes the Helib library.
+* CountryTableViewController - the "left" side of the split view that contains all of the countries to click
+* CountryDisplaySplitViewController - The file that manages the split views 
+* main.m	-	The start file that creates the Application, this is usually not altered in an macOS application
 
 
 
