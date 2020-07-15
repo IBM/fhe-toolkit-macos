@@ -2,7 +2,7 @@
 IBM Fully Homomorphic Encryption Toolkit for MacOS
 ----------------------------------------------------------------------------
 
-This source code is the packaged XCode project and resources needed to build the open source <a href="https://github.com/homenc/HElib/">HELib</a> <a href="https://en.wikipedia.org/wiki/Homomorphic_encryption">Fully Homomorphic Encryption</a> library on MacOS. If you are instead looking for the IBM Fully Homomorphic Encryption Tookit for Linux that pvides a docker based toolkit for Linux developers, it can be found <a href="https://github.com/IBM/fhe-toolkit-linux" target="_blank">here</a>.
+This source code is the packaged XCode project and resources needed to build the open source <a href="https://github.com/homenc/HElib/">HELib</a> <a href="https://en.wikipedia.org/wiki/Homomorphic_encryption">Fully Homomorphic Encryption</a> library on MacOS. If you are instead looking for the IBM Fully Homomorphic Encryption Tookit for Linux that provides a docker based toolkit for Linux developers, it can be found <a href="https://github.com/IBM/fhe-toolkit-linux" target="_blank">here</a>.
 
 
 --------------------------------------------
