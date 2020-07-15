@@ -200,7 +200,10 @@ unsigned long debug = 0;
          { "Switzerland", "Bern" },
          { "Turkey", "Ankara" },
          { "Ukraine", "Kiev" },
-         { "United Kingdom; England", "London" }
+         { "England", "London" },
+         { "Scotland", "Edinburgh" },
+         { "Wales", "Cardiff" },
+         { "Northern Ireland", "Belfast" }
      };
 
      // Convert strings into numerical vectors
