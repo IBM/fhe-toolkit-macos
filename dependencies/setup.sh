@@ -116,7 +116,6 @@ prepare()
         rm -rf gmp
         tar xfj "gmp-${GMP_VERSION}.tar.bz2"
         mv gmp-${GMP_VERSION} gmp
-        cd gmp
     }
     download_ntl()
     {
@@ -132,9 +131,10 @@ prepare()
 
 build_gmp()
 {
-   
+   cd gmp
     PLATFORM=$1
     ARCH=$2
+    ARCH_TRIPLE=$3
     SDK=`xcrun --sdk $PLATFORM --show-sdk-path`
     PLATFORM_PATH=`xcrun --sdk $PLATFORM --show-sdk-platform-path`
     CLANG=`xcrun --sdk $PLATFORM --find clang`
@@ -149,7 +149,7 @@ build_gmp()
     #CONFIGURESCRIPT="gmp_configure_script.sh"
     #cat >"$CONFIGURESCRIPT" << EOF
 
-    ./configure CC="$CCARGS" CPPFLAGS="$CPPFLAGSARGS" --host=${ARCH}-apple-darwin --disable-assembly --prefix="${CURRENT_DIR}/../gmplib-so-${PLATFORM}-${ARCH}"
+    ./configure CC="$CCARGS" CPPFLAGS="$CPPFLAGSARGS" --build=${ARCH_TRIPLE} --host="kabylake-apple-darwin" --disable-assembly --prefix="${CURRENT_DIR}/../gmplib-so-${PLATFORM}-${ARCH}"
 
     make -j $LOGICALCPU_MAX &> "${CURRENT_DIR}/gmplib-so-${PLATFORM}-${ARCH}-build.log"
     make install &> "${CURRENT_DIR}/gmplib-so-${PLATFORM}-${ARCH}-install.log"
@@ -164,13 +164,13 @@ build_ntl()
     ARCH=$2
     CURRENT_DIR=`pwd`
     SDK=`xcrun --sdk $PLATFORM --show-sdk-path`
-    
+
     mkdir ntl
     mkdir ntl/libs
     cd ntl-${NTL_VERSION}
     cd src
 
-    ./configure CXX=clang++ CXXFLAGS="-stdlib=libc++  -arch ${ARCH} -isysroot ${SDK}"  NTL_THREADS=on NATIVE=on TUNE=x86 NTL_GMP_LIP=on PREFIX="${CURRENT_DIR}/ntl" GMP_PREFIX="${CURRENT_DIR}/gmplib-so-${PLATFORM}-${ARCH}"
+    ./configure CXX=clang++ CXXFLAGS="-stdlib=libc++  -arch ${ARCH} -isysroot ${SDK}"  NTL_THREADS=on NATIVE=on TUNE=x86 SHARED=on NTL_GMP_LIP=on PREFIX="${CURRENT_DIR}/ntl" GMP_PREFIX="${CURRENT_DIR}/gmplib-so-${PLATFORM}-${ARCH}"
     make -j
     
     cp -R "${CURRENT_DIR}/ntl-${NTL_VERSION}/include" "${CURRENT_DIR}/ntl/include" 
@@ -207,9 +207,11 @@ build_all()
     SUFFIX=$1
     BUILD_IN=$2
     
-    build_gmp "${MACOS}" "x86_64"
+    build_gmp "${MACOS}" "x86_64" "x86_64-apple-darwin"
+    build_gmp "${IPHONEOS}" "arm64" "aarch64-apple-darwin"
+    build_gmp "${IPHONESIMULATOR}" "x86_64" "x86_64-apple-darwin_sim"
     build_ntl "${MACOS}" "x86_64"
-    build_helib "${MACOS}" "x86_64"
+  #  build_helib "${MACOS}" "x86_64"
 }
 
 change_submodules
