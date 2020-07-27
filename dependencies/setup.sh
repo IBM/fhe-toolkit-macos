@@ -57,6 +57,8 @@ export PATH="${CMAKE_PATH}:${PLATFORM_PATH}/Developer/usr/bin:${DEVELOPER}/usr/b
 GMP_DIR="`pwd`/gmp"
 NTL_VERSION="11.4.1"
 GMP_VERSION="6.1.2"
+BOOST_VERSION="1_72_0"
+HDF5_VERSION="1-12-0"
 
 change_submodules() 
 {
@@ -116,6 +118,7 @@ prepare()
         rm -rf gmp
         tar xfj "gmp-${GMP_VERSION}.tar.bz2"
         mv gmp-${GMP_VERSION} gmp
+        cd gmp
     }
     download_ntl()
     {
@@ -131,10 +134,9 @@ prepare()
 
 build_gmp()
 {
-   cd gmp
+   
     PLATFORM=$1
     ARCH=$2
-    ARCH_TRIPLE=$3
     SDK=`xcrun --sdk $PLATFORM --show-sdk-path`
     PLATFORM_PATH=`xcrun --sdk $PLATFORM --show-sdk-platform-path`
     CLANG=`xcrun --sdk $PLATFORM --find clang`
@@ -149,7 +151,7 @@ build_gmp()
     #CONFIGURESCRIPT="gmp_configure_script.sh"
     #cat >"$CONFIGURESCRIPT" << EOF
 
-    ./configure CC="$CCARGS" CPPFLAGS="$CPPFLAGSARGS" --build=${ARCH_TRIPLE} --host="kabylake-apple-darwin" --disable-assembly --prefix="${CURRENT_DIR}/../gmplib-so-${PLATFORM}-${ARCH}"
+    ./configure CC="$CCARGS" CPPFLAGS="$CPPFLAGSARGS" --host=${ARCH}-apple-darwin --disable-assembly --prefix="${CURRENT_DIR}/../gmplib-so-${PLATFORM}-${ARCH}"
 
     make -j $LOGICALCPU_MAX &> "${CURRENT_DIR}/gmplib-so-${PLATFORM}-${ARCH}-build.log"
     make install &> "${CURRENT_DIR}/gmplib-so-${PLATFORM}-${ARCH}-install.log"
@@ -164,13 +166,13 @@ build_ntl()
     ARCH=$2
     CURRENT_DIR=`pwd`
     SDK=`xcrun --sdk $PLATFORM --show-sdk-path`
-
+    
     mkdir ntl
     mkdir ntl/libs
     cd ntl-${NTL_VERSION}
     cd src
 
-    ./configure CXX=clang++ CXXFLAGS="-stdlib=libc++  -arch ${ARCH} -isysroot ${SDK}"  NTL_THREADS=on NATIVE=on TUNE=x86 SHARED=on NTL_GMP_LIP=on PREFIX="${CURRENT_DIR}/ntl" GMP_PREFIX="${CURRENT_DIR}/gmplib-so-${PLATFORM}-${ARCH}"
+    ./configure CXX=clang++ CXXFLAGS="-stdlib=libc++  -arch ${ARCH} -isysroot ${SDK}"  NTL_THREADS=on NATIVE=on TUNE=x86 NTL_GMP_LIP=on PREFIX="${CURRENT_DIR}/ntl" GMP_PREFIX="${CURRENT_DIR}/gmplib-so-${PLATFORM}-${ARCH}"
     make -j
     
     cp -R "${CURRENT_DIR}/ntl-${NTL_VERSION}/include" "${CURRENT_DIR}/ntl/include" 
@@ -198,8 +200,48 @@ build_helib()
     -DGMP_HEADERS="${DEPEND_DIR}/gmp/include" \
     -DGMP_LIB="${DEPEND_DIR}/gmp/lib/libgmp.a" \
     -DNTL_INCLUDE_PATHS="${DEPEND_DIR}/ntl/include" \
-        -DNTL_LIB="${DEPEND_DIR}/ntl/lib/ntl.a" \
-        -DNTL_DIR="${DEPEND_DIR}/ntl/include"
+    -DNTL_LIB="${DEPEND_DIR}/ntl/lib/ntl.a" \
+    -DNTL_DIR="${DEPEND_DIR}/ntl/include"
+    cd ../
+}
+
+build_boost() 
+{
+     #hardcoding the version because they want to specifically use the 1.72.0 release
+    download_boost()
+    {
+        CURRENT_DIR=`pwd`
+        if [ ! -s ${CURRENT_DIR}/boost_1_72_0.tar.gz ]; then
+            curl -k -L -o ${CURRENT_DIR}/boost_1_72_0.tar.gz "https://dl.bintray.com/boostorg/release/1.72.0/source/boost_1_72_0.tar.gz"
+        fi
+        tar xvzf "boost_${BOOST_VERSION}.tar.gz"
+    }
+    download_boost
+
+    CURRENT_DIR=`pwd`
+    cd boost_1_72_0
+    ./bootstrap.sh --without-libraries=python --prefix=${CURRENT_DIR}
+    ./b2 install
+    cd ../
+}
+
+build_hdf5() 
+{
+    download_hdf5() 
+    {
+        CURRENT_DIR=`pwd`
+        if [ ! -s ${CURRENT_DIR}/cmake-hdf5-${HDF5_VERSION}.tar.gz ]; then
+            curl -k -L -o ${CURRENT_DIR}/cmake-hdf5-${HDF5_VERSION}.tar.gz "https://www.hdfgroup.org/package/cmake-hdf5-${HDF5_VERSION}-tar-gz/?wpdmdl=14580&refresh=5f19d44b903561595528267"
+        fi
+        tar xvzf "cmake-hdf5-1-12-0.tar.gz"
+    }
+    download_hdf5
+
+    CURRENT_DIR=`pwd`
+    mkdir hdf5-1.12.0
+    cd hdf5-1.12.0
+    cmake -G "Xcode" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DHDF5_BUILD_TOOLS:BOOL=ON ../CMake-hdf5-1.12.0/hdf5-1.12.0
+    cd ../
 }
 
 build_all()
@@ -207,16 +249,18 @@ build_all()
     SUFFIX=$1
     BUILD_IN=$2
     
-    build_gmp "${MACOS}" "x86_64" "x86_64-apple-darwin"
-    build_gmp "${IPHONEOS}" "arm64" "aarch64-apple-darwin"
-    build_gmp "${IPHONESIMULATOR}" "x86_64" "x86_64-apple-darwin_sim"
+    build_gmp "${MACOS}" "x86_64"
     build_ntl "${MACOS}" "x86_64"
-  #  build_helib "${MACOS}" "x86_64"
+    build_helib "${MACOS}" "x86_64"
+    build_hdf5
+    build_boost
+    
 }
 
 change_submodules
 check_cmake
 prepare
-build_all "ios" "${MACOS};|x86_64"
+build_all
+
 echo " — — — — — — — — — — Building Dependencies Script Ended — — — — — — — — — — "
 
