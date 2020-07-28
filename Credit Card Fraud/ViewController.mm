@@ -45,7 +45,9 @@ const string encryptedModelFile = outDir + "/encrypted_model.bin";
 //const string plainModelFile  = "model_42098.h5";
 const string plainModelFile = prependBundlePathOnFilePath("model_42098.h5");
 const string plainSamplesFile  = prependBundlePathOnFilePath("x_test.h5");
-const string plainLabelsFile  = prependBundlePathOnFilePath("y_test.h5")    ;
+const string plainLabelsFile  = prependBundlePathOnFilePath("y_test.h5");
+
+bool runAll = false;
 
 /*
  * define the number of slots in each ciphertext object.
@@ -178,62 +180,63 @@ public:
 
   void assessResults(){
 
-        cout << "CLIENT: assessing results so far . . ." << endl;
+          cout << "CLIENT: assessing results so far . . ." << endl;
 
-    int truePositives = 0;
-    int trueNegatives = 0;
-    int falsePositives = 0;
-    int falseNegatives = 0;
-    currentBatch++;
+      int truePositives = 0;
+      int trueNegatives = 0;
+      int falsePositives = 0;
+      int falseNegatives = 0;
+      currentBatch++;
 
-        // go over the predictions of each batch and count hits
-    for(int i=0; i<currentBatch; ++i){
+          // go over the predictions of each batch and count hits
+      for(int i=0; i<currentBatch; ++i){
 
-        const DoubleMatrixArray labels = ts.getLabels(i); // these are the batch's true labels
-        const DoubleMatrixArray predictions = allPredictions.at(i); // these are the batch's predictions
+          const DoubleMatrixArray labels = ts.getLabels(i); // these are the batch's true labels
+          const DoubleMatrixArray predictions = allPredictions.at(i); // these are the batch's predictions
 
-        int samplesToCheck = labels.size();
-        if(i == numBatches - 1) // last batch may partially be populated with "dummy" labels to ignore
-            samplesToCheck = ts.getNumSamples() - (batchSize * (numBatches - 1));
+          int samplesToCheck = labels.size();
+          if(i == numBatches - 1) // last batch may partially be populated with "dummy" labels to ignore
+              samplesToCheck = ts.getNumSamples() - (batchSize * (numBatches - 1));
 
-        for(int j=0; j<samplesToCheck; ++j){
-            int label = labels.getMat(j).get(0, 0);
-            // determines the classification of the current samples based on the prediction made by the server
-            // and the threshold defined
-            int classification = (predictions.getMat(j).get(0, 0) > classificationThreshold ? 1 : 0);
+          for(int j=0; j<samplesToCheck; ++j){
+              int label = labels.getMat(j).get(0, 0);
+              // determines the classification of the current samples based on the prediction made by the server
+              // and the threshold defined
+              int classification = (predictions.getMat(j).get(0, 0) > classificationThreshold ? 1 : 0);
 
-            if(classification == label && classification == 1)
-                truePositives++;
-            else if(classification == label && classification == 0)
-                trueNegatives++;
-            else if(classification != label && classification == 1)
-                falsePositives++;
-            else
-                falseNegatives++;
-        }
+              if(classification == label && classification == 1)
+                  truePositives++;
+              else if(classification == label && classification == 0)
+                  trueNegatives++;
+              else if(classification != label && classification == 1)
+                  falsePositives++;
+              else
+                  falseNegatives++;
+          }
+      }
+
+      double precision = ((double) truePositives / (truePositives + falsePositives));
+      double recall = ((double) truePositives / (truePositives + falseNegatives));
+      double f1Score = (2 * precision * recall) / (precision + recall);
+
+      cout << endl;
+      cout << "|---------------------------------------------|" << endl;
+      cout << "|                       |    True condition   |" << endl;
+      cout << "|                       ----------------------|" << endl;
+      cout << "|                       | Positive | Negative |" << endl;
+      cout << "|---------------------------------------------|" << endl;
+      cout << "| Predicted  | Positive |" << setw(8) << truePositives << "  |" << setw(8) << falsePositives << "  |" << endl;
+      cout << "|            |--------------------------------|" << endl;
+      cout << "| condition  | Negative |" << setw(8) << falseNegatives << "  |" << setw(8) << trueNegatives << "  |" << endl;
+      cout << "|---------------------------------------------|" << endl;
+      cout << endl;
+      cout << "Precision: " << precision << endl;
+      cout << "Recall: " << recall << endl;
+      cout << "F1 score: " << f1Score << endl;
     }
 
-    double precision = ((double) truePositives / (truePositives + falsePositives));
-    double recall = ((double) truePositives / (truePositives + falseNegatives));
-    double f1Score = (2 * precision * recall) / (precision + recall);
+  };
 
-    cout << endl;
-    cout << "|---------------------------------------------|" << endl;
-    cout << "|                       |    True condition   |" << endl;
-    cout << "|                       ----------------------|" << endl;
-    cout << "|                       | Positive | Negative |" << endl;
-    cout << "|---------------------------------------------|" << endl;
-    cout << "| Predicted  | Positive |" << setw(8) << truePositives << "  |" << setw(8) << falsePositives << "  |" << endl;
-    cout << "|            |--------------------------------|" << endl;
-    cout << "| condition  | Negative |" << setw(8) << falseNegatives << "  |" << setw(8) << trueNegatives << "  |" << endl;
-    cout << "|---------------------------------------------|" << endl;
-    cout << endl;
-    cout << "Precision: " << precision << endl;
-    cout << "Recall: " << recall << endl;
-    cout << "F1 score: " << f1Score << endl;
-  }
-
-};
 
 /*
  * a class to represent server-side operations.
@@ -307,6 +310,32 @@ public:
     //sample server init
     Server server;
     server.init();
+    
+    int nn=24;
+    if (runAll) {
+        nn=numBatches;
+    }
+    
+    // go over each batch of samples
+    for(int i=0; i<nn; ++i){
+
+      cout << endl << "*** Performing inference on batch " << i+1 << "/" << nn << " ***" << endl;
+      // define names of files to be used to save encrypted batch of samples and their correspondent predictions
+          const string encryptedSamplesFile = outDir + "/encrypted_batch_samples_" + to_string(i) + ".bin";
+      const string encryptedPredictionsFile = outDir + "/encrypted_batch_predictions_" + to_string(i) + ".bin";
+
+      // encrypt current batch of samples by client, save to file
+      client.encryptAndSaveSamples(i, encryptedSamplesFile);
+
+      // load current batch of encrypted samples by server, predict and save encrypted predictions
+      server.processEncryptedSamples(encryptedSamplesFile, encryptedPredictionsFile);
+
+      // load current batch's predictions by client, decrypt and store
+      client.decryptPredictions(encryptedPredictionsFile);
+
+      // analyze the server's predictions so far with respect to the expected labels
+      client.assessResults();
+    }
 
    
 }
