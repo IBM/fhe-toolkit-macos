@@ -77,6 +77,10 @@ dependencies/HElib_macOS
 dependencies/gmplib-*
 dependencies/boost*
 dependencies/*-hdf5-*
+dependencies/lib
+dependencies/include
+dependencies/hdf5-*
+
 
 # Compiled Object files
 *.slo

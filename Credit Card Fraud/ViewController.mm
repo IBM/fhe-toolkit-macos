@@ -22,7 +22,17 @@
 using namespace std;
 
 std::string prependBundlePathOnFilePath(const char *fileName) {
-      return [[NSBundle mainBundle] pathForResource:[NSString stringWithUTF8String: fileName] ofType: nil].UTF8String;
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:[NSString stringWithUTF8String: fileName] ofType: nil];
+    char const *filePath = filepath.UTF8String;
+    //H5::H5File file(filePath, H5F_ACC_RDONLY);
+    NSFileManager *fm = [NSFileManager defaultManager];
+    BOOL isThere =[fm fileExistsAtPath: filepath];
+    NSData *result = [fm contentsAtPath:filepath];
+    
+    NSString *newStr = [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
+    NSLog(@"%@", newStr);
+    return filePath;
+    
 }
 
 // define names of files to be used for saving and loading of HE contexts and encrypted model
@@ -32,10 +42,10 @@ const string serverContext = outDir + "/server_context.bin";
 const string encryptedModelFile = outDir + "/encrypted_model.bin";
 
 // paths from which to load the plain model, samples and lebels
-//const string plainModelFile  = prependBundlePathOnFilePath("model_42098.h5");
-const H5std_string plainModelFile(prependBundlePathOnFilePath("model_42098.h5"));
-const string plainSamplesFile  = "./data/x_test.h5";
-const string plainLabelsFile  = "./data/y_test.h5";
+//const string plainModelFile  = "model_42098.h5";
+const string plainModelFile = prependBundlePathOnFilePath("model_42098.h5");
+const string plainSamplesFile  = prependBundlePathOnFilePath("x_test.h5");
+const string plainLabelsFile  = prependBundlePathOnFilePath("y_test.h5")    ;
 
 /*
  * define the number of slots in each ciphertext object.
@@ -60,8 +70,14 @@ void createContexts() {
   cout << "Initalizing HElib . . ." << endl;
   HelibConfig conf;
   conf.m=numSlots*2*2;
-  conf.r=50;
-  conf.L=700;
+  if (numSlots==16384 || numSlots==32768) {
+    conf.r=50;
+    conf.L=700;
+  } else if (numSlots==512) {
+    conf.r=52;
+    conf.L=1024;
+  } else
+    throw runtime_error("configuration not tested for given number of slots");
 
   HelibCkksContext he;
   he.init(conf);
