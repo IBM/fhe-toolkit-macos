@@ -1,13 +1,29 @@
-//
-//  ViewController.m
-//  Credit Card Fraud
-//
-//  Created by boland on 7/21/20.
-//  Copyright © 2020 IBM. All rights reserved.
-//
+/*
+* MIT License
+*
+* Copyright (c) 2020 International Business Machines
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*/
 
-#import "ViewController.h"
-
+#import "CreditCardInferenceViewController.h"
+#import "CreditSampleResultsData.h"
 #include <iostream>
 
 #include "HelibCkksContext.h"
@@ -24,13 +40,6 @@ using namespace std;
 std::string prependBundlePathOnFilePath(const char *fileName) {
     NSString *filepath = [[NSBundle mainBundle] pathForResource:[NSString stringWithUTF8String: fileName] ofType: nil];
     char const *filePath = filepath.UTF8String;
-    //H5::H5File file(filePath, H5F_ACC_RDONLY);
-    NSFileManager *fm = [NSFileManager defaultManager];
-    BOOL isThere =[fm fileExistsAtPath: filepath];
-    NSData *result = [fm contentsAtPath:filepath];
-    
-    NSString *newStr = [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
-    NSLog(@"%@", newStr);
     return filePath;
     
 }
@@ -178,7 +187,7 @@ public:
       allPredictions.push_back(plainPredictions);
   }
 
-  void assessResults(){
+  void assessResults(CreditSampleResults *creditData){
 
           cout << "CLIENT: assessing results so far . . ." << endl;
 
@@ -233,6 +242,14 @@ public:
       cout << "Precision: " << precision << endl;
       cout << "Recall: " << recall << endl;
       cout << "F1 score: " << f1Score << endl;
+      
+      creditData->f1Score = f1Score;
+      creditData->recall = recall;
+      creditData->precision = precision;
+      creditData->truePositives = truePositives;
+      creditData->trueNegatives = trueNegatives;
+      creditData->falsePositives = falsePositives;
+      creditData->falseNegatives = falseNegatives;
     }
 
   };
@@ -293,11 +310,17 @@ public:
 
 
 
-@implementation ViewController
+@implementation CreditCardInferenceViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupView];
+    [self triggerInference];
     
+    
+}
+
+- (void)startInference {
     cout << "*** Starting inference demo ***" << endl;
 
     // creating HELIB context for both client and server, save them to files
@@ -319,25 +342,61 @@ public:
     // go over each batch of samples
     for(int i=0; i<nn; ++i){
 
-      cout << endl << "*** Performing inference on batch " << i+1 << "/" << nn << " ***" << endl;
-      // define names of files to be used to save encrypted batch of samples and their correspondent predictions
-          const string encryptedSamplesFile = outDir + "/encrypted_batch_samples_" + to_string(i) + ".bin";
-      const string encryptedPredictionsFile = outDir + "/encrypted_batch_predictions_" + to_string(i) + ".bin";
+        cout << endl << "*** Performing inference on batch " << i+1 << "/" << nn << " ***" << endl;
+        // define names of files to be used to save encrypted batch of samples and their correspondent predictions
+        const string encryptedSamplesFile = outDir + "/encrypted_batch_samples_" + to_string(i) + ".bin";
+        const string encryptedPredictionsFile = outDir + "/encrypted_batch_predictions_" + to_string(i) + ".bin";
 
-      // encrypt current batch of samples by client, save to file
-      client.encryptAndSaveSamples(i, encryptedSamplesFile);
+        // encrypt current batch of samples by client, save to file
+        client.encryptAndSaveSamples(i, encryptedSamplesFile);
 
-      // load current batch of encrypted samples by server, predict and save encrypted predictions
-      server.processEncryptedSamples(encryptedSamplesFile, encryptedPredictionsFile);
+        // load current batch of encrypted samples by server, predict and save encrypted predictions
+        server.processEncryptedSamples(encryptedSamplesFile, encryptedPredictionsFile);
 
-      // load current batch's predictions by client, decrypt and store
-      client.decryptPredictions(encryptedPredictionsFile);
+        // load current batch's predictions by client, decrypt and store
+        client.decryptPredictions(encryptedPredictionsFile);
 
-      // analyze the server's predictions so far with respect to the expected labels
-      client.assessResults();
+        // analyze the server's predictions so far with respect to the expected labels
+        CreditSampleResults *sampleResults = (CreditSampleResults *) malloc(sizeof(CreditSampleResults));
+        
+        sampleResults->totalInferenceCount = nn;
+        sampleResults->inferenceCount = i;
+        client.assessResults(sampleResults);
+        [self.sampleDataArray addObject:[[CreditSampleResultsData alloc] initWithData: sampleResults]];
+        //TODO: add in a call to re-load the tableview
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            [self.tableView reloadData];
+        });
+        
     }
+}
 
-   
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+    return  [self.sampleDataArray count];
+}
+
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    
+   // TODO: need to get some data in here from the inference
+    CreditSampleResultsData *inferenceData = [self.sampleDataArray objectAtIndex:row];
+    NSInteger truePositives = inferenceData.sampleData->truePositives;
+    NSInteger trueNegatives = inferenceData.sampleData->trueNegatives;
+    
+    NSTableCellView *cellResult = [tableView makeViewWithIdentifier:@"SampleDataCell" owner:self];
+    cellResult.textField.stringValue = [NSString stringWithFormat:@"%i:%i", truePositives, trueNegatives];
+    return cellResult;
+}
+
+- (void)setupView {
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.sampleDataArray = [[NSMutableArray alloc] initWithCapacity:24];
+}
+
+- (void)triggerInference {
+     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+         [self startInference];
+     });
 }
 
 

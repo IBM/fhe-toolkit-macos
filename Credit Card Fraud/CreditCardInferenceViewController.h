@@ -24,7 +24,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface CreditCardInferenceViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
+
+@property (nonatomic, weak) IBOutlet NSTableView *tableView;
+@property (nonatomic, strong) NSMutableArray *sampleDataArray;
 
 
 @end

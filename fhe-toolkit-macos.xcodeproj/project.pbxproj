@@ -13,7 +13,7 @@
 		A50693F024C7298A00FFF08B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A50693EF24C7298A00FFF08B /* main.m */; };
 		A50693F724C72C4900FFF08B /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CA244F73380087514D /* libgmp.a */; };
 		A50693F824C72C6900FFF08B /* ntl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649C4244F72700087514D /* ntl.a */; };
-		A50694D424C7DE2300FFF08B /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A50693E724C7298500FFF08B /* ViewController.mm */; };
+		A50694D424C7DE2300FFF08B /* CreditCardInferenceViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A50693E724C7298500FFF08B /* CreditCardInferenceViewController.mm */; };
 		A506951224C878C500FFF08B /* h5Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694D724C878C500FFF08B /* h5Parser.cpp */; };
 		A506951324C878C500FFF08B /* HelibCkksPlaintext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694DA24C878C500FFF08B /* HelibCkksPlaintext.cpp */; };
 		A506951424C878C500FFF08B /* SimpleFcLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694DB24C878C500FFF08B /* SimpleFcLayer.cpp */; };
@@ -55,6 +55,7 @@
 		A5667EF823FCD4BA00F122FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5667A0C23F714D200F122FD /* main.m */; };
 		A5A0E47A24CB679F00FA427E /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0E47924CB679F00FA427E /* libhelib.a */; };
 		A5A0E47C24CFBE7B00FA427E /* new_2.h5 in Resources */ = {isa = PBXBuildFile; fileRef = A5A0E47B24CFBE7B00FA427E /* new_2.h5 */; };
+		A5A0E47F24D09CFB00FA427E /* CreditSampleResultsData.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */; };
 		A5F649C5244F72700087514D /* ntl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649C4244F72700087514D /* ntl.a */; };
 		A5F649D3244F73390087514D /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CA244F73380087514D /* libgmp.a */; };
 		A5F649D4244F73390087514D /* libgmp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CB244F73380087514D /* libgmp.dylib */; };
@@ -91,8 +92,8 @@
 		A50693E124C7298500FFF08B /* Credit Card Fraud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Credit Card Fraud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50693E324C7298500FFF08B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A50693E424C7298500FFF08B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A50693E624C7298500FFF08B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A50693E724C7298500FFF08B /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		A50693E624C7298500FFF08B /* CreditCardInferenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreditCardInferenceViewController.h; sourceTree = "<group>"; };
+		A50693E724C7298500FFF08B /* CreditCardInferenceViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CreditCardInferenceViewController.mm; sourceTree = "<group>"; };
 		A50693E924C7298A00FFF08B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A50693EC24C7298A00FFF08B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A50693EE24C7298A00FFF08B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -174,6 +175,8 @@
 		A5667A0E23F714D200F122FD /* fhe-toolkit-macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "fhe-toolkit-macos.entitlements"; sourceTree = "<group>"; };
 		A5A0E47924CB679F00FA427E /* libhelib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libhelib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A0E47B24CFBE7B00FA427E /* new_2.h5 */ = {isa = PBXFileReference; lastKnownFileType = file; path = new_2.h5; sourceTree = "<group>"; };
+		A5A0E47D24D09CFB00FA427E /* CreditSampleResultsData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreditSampleResultsData.h; sourceTree = "<group>"; };
+		A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreditSampleResultsData.m; sourceTree = "<group>"; };
 		A5F64922244F711D0087514D /* keys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keys.h; sourceTree = "<group>"; };
 		A5F64923244F711D0087514D /* randomMatrices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randomMatrices.h; sourceTree = "<group>"; };
 		A5F64924244F711D0087514D /* matmul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matmul.h; sourceTree = "<group>"; };
@@ -390,8 +393,8 @@
 				A50694D624C878C500FFF08B /* src */,
 				A50693E324C7298500FFF08B /* AppDelegate.h */,
 				A50693E424C7298500FFF08B /* AppDelegate.m */,
-				A50693E624C7298500FFF08B /* ViewController.h */,
-				A50693E724C7298500FFF08B /* ViewController.mm */,
+				A50693E624C7298500FFF08B /* CreditCardInferenceViewController.h */,
+				A50693E724C7298500FFF08B /* CreditCardInferenceViewController.mm */,
 				A50693E924C7298A00FFF08B /* Assets.xcassets */,
 				A50693EB24C7298A00FFF08B /* Main.storyboard */,
 				A50693EE24C7298A00FFF08B /* Info.plist */,
@@ -797,6 +800,8 @@
 				A5F9515824C9D72800406273 /* model_42098.h5 */,
 				A5F9515124C91B6100406273 /* y_test.h5 */,
 				A5F9515224C91B6100406273 /* x_test.h5 */,
+				A5A0E47D24D09CFB00FA427E /* CreditSampleResultsData.h */,
+				A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -916,7 +921,7 @@
 				A506952E24C878C600FFF08B /* FcLayer.cpp in Sources */,
 				A506954324C8C2DC00FFF08B /* HDF5DatasetExample.mm in Sources */,
 				A506952B24C878C600FFF08B /* HeContext.cpp in Sources */,
-				A50694D424C7DE2300FFF08B /* ViewController.mm in Sources */,
+				A50694D424C7DE2300FFF08B /* CreditCardInferenceViewController.mm in Sources */,
 				A506951A24C878C600FFF08B /* AbstractCiphertext.cpp in Sources */,
 				A506951824C878C600FFF08B /* HelibCkksEncoder.cpp in Sources */,
 				A506951B24C878C600FFF08B /* CTile.cpp in Sources */,
@@ -926,6 +931,7 @@
 				A50693E524C7298500FFF08B /* AppDelegate.m in Sources */,
 				A506952D24C878C600FFF08B /* PTile.cpp in Sources */,
 				A506952124C878C600FFF08B /* HelibCkksContext.cpp in Sources */,
+				A5A0E47F24D09CFB00FA427E /* CreditSampleResultsData.m in Sources */,
 				A506952724C878C600FFF08B /* SimpleSquareActivationLayer.cpp in Sources */,
 				A506951F24C878C600FFF08B /* DoubleMatrixArray.cpp in Sources */,
 				A506952C24C878C600FFF08B /* Encoder.cpp in Sources */,
