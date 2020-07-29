@@ -383,14 +383,16 @@ public:
     NSInteger trueNegatives = inferenceData.sampleData->trueNegatives;
     
     NSTableCellView *cellResult = [tableView makeViewWithIdentifier:@"SampleDataCell" owner:self];
-    cellResult.textField.stringValue = [NSString stringWithFormat:@"%i:%i", truePositives, trueNegatives];
+   // cellResult.textField.stringValue = [NSString stringWithFormat:@"%i:%i", truePositives, trueNegatives];
     return cellResult;
 }
 
 - (void)setupView {
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.tableView.rowHeight = 200.0;
     self.sampleDataArray = [[NSMutableArray alloc] initWithCapacity:24];
+    
 }
 
 - (void)triggerInference {
