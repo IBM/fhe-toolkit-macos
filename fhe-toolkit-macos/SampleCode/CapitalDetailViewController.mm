@@ -92,9 +92,9 @@ unsigned long debug = 0;
        std::cout << "---Initialising HE Environment ... ";
        // Initialize context
        std::cout << "\n\tContext ... ";
-       HELIB_NTIMER_START(timer_Context);
+       FHE_NTIMER_START(timer_Context);
        helib::Context context(m, p, r);
-       HELIB_NTIMER_STOP(timer_Context);
+       FHE_NTIMER_STOP(timer_Context);
       
      // Modify the context, adding primes to the modulus chain
      std::cout  << "Building modulus chain..." << std::endl;
@@ -106,18 +106,18 @@ unsigned long debug = 0;
          [self.progressBar startAnimation:self];
         [self startTimer];
      });
-     HELIB_NTIMER_START(timer_CHAIN);
+     FHE_NTIMER_START(timer_CHAIN);
      helib::buildModChain(context, bits, c);
-     HELIB_NTIMER_STOP(timer_CHAIN);
+     FHE_NTIMER_STOP(timer_CHAIN);
 
      // Secret key management
      std::cout << "\nCreating Secret Key ...";
-     HELIB_NTIMER_START(timer_SecKey);
+     FHE_NTIMER_START(timer_SecKey);
      // Create a secret key associated with the context
      helib::SecKey secret_key = helib::SecKey(context);
      // Generate the secret key
      secret_key.GenSecKey();
-     HELIB_NTIMER_STOP(timer_SecKey);
+     FHE_NTIMER_STOP(timer_SecKey);
      
      dispatch_async(dispatch_get_main_queue(), ^(void){
          [self.logging setStringValue:[NSString stringWithFormat:@"Creating secret key..."]];
@@ -128,17 +128,17 @@ unsigned long debug = 0;
           [self.logging setStringValue:[NSString stringWithFormat:@"Generating key-switching matrices..."]];
      });
      // Compute key-switching matrices that we need
-     HELIB_NTIMER_START(timer_SKM);
+     FHE_NTIMER_START(timer_SKM);
      helib::addSome1DMatrices(secret_key);
-     HELIB_NTIMER_STOP(timer_SKM);
+     FHE_NTIMER_STOP(timer_SKM);
 
      
       // Public key management
     // Set the secret key (upcast: FHESecKey is a subclass of FHEPubKey)
     std::cout << "\nCreating Public Key ...";
-    HELIB_NTIMER_START(timer_PubKey);
+    FHE_NTIMER_START(timer_PubKey);
     const helib::PubKey& public_key = secret_key;
-    HELIB_NTIMER_STOP(timer_PubKey);
+    FHE_NTIMER_STOP(timer_PubKey);
       
     // Get the EncryptedArray of the context
     const helib::EncryptedArray& ea = *(context.ea);
@@ -221,7 +221,7 @@ unsigned long debug = 0;
          << std::endl;
 
      // Generating the Plain text representation of Country DB
-     HELIB_NTIMER_START(timer_PtxtCountryDB);
+     FHE_NTIMER_START(timer_PtxtCountryDB);
      std::vector<std::pair<helib::Ptxt<helib::BGV>, helib::Ptxt<helib::BGV>>>
          country_db_ptxt;
      for (const auto& country_capital_pair : country_db) {
@@ -244,11 +244,11 @@ unsigned long debug = 0;
          capital.at(i) = country_capital_pair.second[i];
          country_db_ptxt.emplace_back(std::move(country), std::move(capital));
      }
-     HELIB_NTIMER_STOP(timer_PtxtCountryDB);
+     FHE_NTIMER_STOP(timer_PtxtCountryDB);
 
      // Encrypt the Country DB
      std::cout << "Encrypting the database..." << std::endl;
-     HELIB_NTIMER_START(timer_CtxtCountryDB);
+     FHE_NTIMER_START(timer_CtxtCountryDB);
      std::vector<std::pair<helib::Ctxt, helib::Ctxt>> encrypted_country_db;
      for (const auto& country_capital_pair : country_db_ptxt) {
         helib::Ctxt encrypted_country(public_key);
@@ -257,7 +257,7 @@ unsigned long debug = 0;
         public_key.Encrypt(encrypted_capital, country_capital_pair.second);
         encrypted_country_db.emplace_back(encrypted_country, encrypted_capital);
      }
-    HELIB_NTIMER_STOP(timer_CtxtCountryDB);
+    FHE_NTIMER_STOP(timer_CtxtCountryDB);
     
      // Print DB Creation Timers
      if (debug) {
@@ -281,9 +281,9 @@ unsigned long debug = 0;
          [self.logging setStringValue:[NSString stringWithFormat:@"Creating Encrypted query"]];
      });
     
-     HELIB_NTIMER_START(timer_TotalQuery);
+     FHE_NTIMER_START(timer_TotalQuery);
 
-     HELIB_NTIMER_START(timer_EncryptQuery);
+     FHE_NTIMER_START(timer_EncryptQuery);
      // Convert query to a numerical vector
      helib::Ptxt<helib::BGV> query_ptxt(context);
      for (long i = 0; i < query_string.size(); ++i)
@@ -292,14 +292,14 @@ unsigned long debug = 0;
      // Encrypt the query
      helib::Ctxt query(public_key);
      public_key.Encrypt(query, query_ptxt);
-     HELIB_NTIMER_STOP(timer_EncryptQuery);
+     FHE_NTIMER_STOP(timer_EncryptQuery);
 
      /************ Perform the database search ************/
 
      dispatch_async(dispatch_get_main_queue(), ^(void){
         [self.logging setStringValue:[NSString stringWithFormat:@"Looking for the Capital of %@", countryQuery]];
      });
-     HELIB_NTIMER_START(timer_QuerySearch);
+     FHE_NTIMER_START(timer_QuerySearch);
      std::vector<helib::Ctxt> mask;
      mask.reserve(country_db.size());
      for (const auto& encrypted_pair : encrypted_country_db) {
@@ -324,7 +324,7 @@ unsigned long debug = 0;
     for (int i = 1; i < mask.size(); i++)
         value += mask[i];
     
-    HELIB_NTIMER_STOP(timer_QuerySearch);
+    FHE_NTIMER_STOP(timer_QuerySearch);
     
      /************ Decrypt and print result ************/
 
@@ -332,17 +332,17 @@ unsigned long debug = 0;
         [self.logging setStringValue:[NSString stringWithFormat:@"Decrypting the Result"]];
      });
     
-     HELIB_NTIMER_START(timer_DecryptQueryResult);
+     FHE_NTIMER_START(timer_DecryptQueryResult);
      helib::Ptxt<helib::BGV> plaintext_result(context);
      secret_key.Decrypt(plaintext_result, value);
-     HELIB_NTIMER_STOP(timer_DecryptQueryResult);
+     FHE_NTIMER_STOP(timer_DecryptQueryResult);
 
      // Convert from ASCII to a string
      std::string string_result;
      for (long i = 0; i < plaintext_result.size(); ++i)
        string_result.push_back(static_cast<long>(plaintext_result[i]));
 
-     HELIB_NTIMER_STOP(timer_TotalQuery);
+     FHE_NTIMER_STOP(timer_TotalQuery);
 
      std::cout << "\nQuery result: " << plaintext_result << std::endl;
      // Print DB Query Timers
