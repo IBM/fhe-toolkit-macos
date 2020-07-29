@@ -170,7 +170,7 @@ build_ntl()
     cd ntl-${NTL_VERSION}
     cd src
 
-    ./configure CXX=clang++ CXXFLAGS="-stdlib=libc++  -arch ${ARCH} -isysroot ${SDK}"  NTL_THREADS=on NATIVE=on TUNE=x86 SHARED=on NTL_GMP_LIP=on PREFIX="${CURRENT_DIR}/ntl" GMP_PREFIX="${CURRENT_DIR}/gmplib-so-${PLATFORM}-${ARCH}"
+    ./configure CXX=clang++ CXXFLAGS="-stdlib=libc++  -arch ${ARCH} -isysroot ${SDK}"  NTL_THREADS=on NATIVE=on TUNE=x86 SHARED=off NTL_GMP_LIP=on PREFIX="${CURRENT_DIR}/ntl" GMP_PREFIX="${CURRENT_DIR}/gmplib-so-${PLATFORM}-${ARCH}"
     make -j
     
     cp -R "${CURRENT_DIR}/ntl-${NTL_VERSION}/include" "${CURRENT_DIR}/ntl/include" 
@@ -208,8 +208,6 @@ build_all()
     BUILD_IN=$2
     
     build_gmp "${MACOS}" "x86_64" "x86_64-apple-darwin"
-    build_gmp "${IPHONEOS}" "arm64" "aarch64-apple-darwin"
-    build_gmp "${IPHONESIMULATOR}" "x86_64" "x86_64-apple-darwin_sim"
     build_ntl "${MACOS}" "x86_64"
     build_helib "${MACOS}" "x86_64"
 }
