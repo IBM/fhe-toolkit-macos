@@ -24,7 +24,6 @@
 
 #import "CreditCardInferenceViewController.h"
 #import "CreditSampleResultsData.h"
-#import "SampleDataViewCell.h"
 #include <iostream>
 
 #include "HelibCkksContext.h"
@@ -343,6 +342,7 @@ public:
     // go over each batch of samples
     for(int i=0; i<nn; ++i){
 
+        //TODO: add in progress update here in the beginng as oppsoed to the end
         cout << endl << "*** Performing inference on batch " << i+1 << "/" << nn << " ***" << endl;
         // define names of files to be used to save encrypted batch of samples and their correspondent predictions
         const string encryptedSamplesFile = outDir + "/encrypted_batch_samples_" + to_string(i) + ".bin";
@@ -361,45 +361,86 @@ public:
         CreditSampleResults *sampleResults = (CreditSampleResults *) malloc(sizeof(CreditSampleResults));
         
         sampleResults->totalInferenceCount = nn;
-        sampleResults->inferenceCount = i;
+        sampleResults->inferenceCount = i+1;
         client.assessResults(sampleResults);
         [self.sampleDataArray addObject:[[CreditSampleResultsData alloc] initWithData: sampleResults]];
         //TODO: add in a call to re-load the tableview
         dispatch_async(dispatch_get_main_queue(), ^(void){
-            [self.tableView reloadData];
+            [self updateView:[self.sampleDataArray objectAtIndex:i]];
         });
         
     }
 }
 
+//- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+//
+//   // TODO: need to get some data in here from the inference
+//    CreditSampleResultsData *inferenceData = [self.sampleDataArray objectAtIndex:row];
+//    NSInteger truePositives = inferenceData.sampleData->truePositives;
+//    NSInteger trueNegatives = inferenceData.sampleData->trueNegatives;
+//
+//    NSTableCellView *cellResult = [tableView makeViewWithIdentifier:@"SampleDataCell" owner:self];
+//
+//    SampleDataViewCell *sampleDataView = (SampleDataViewCell *)[[cellResult subviews] objectAtIndex:0];
+//    if ([sampleDataView isKindOfClass:[SampleDataViewCell class]] ) {
+//        NSLog(@"bingo");
+//        [sampleDataView updateWithData:inferenceData];
+//
+//    }
+//   // cellResult.textField.stringValue = [NSString stringWithFormat:@"%i:%i", truePositives, trueNegatives];
+//    return cellResult;
+//}
+
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return  [self.sampleDataArray count];
+    NSInteger totalRows = 3;
+    if (tableView.tag == 1) {
+        totalRows = 3;
+    }
+    return totalRows;
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    
-   // TODO: need to get some data in here from the inference
-    CreditSampleResultsData *inferenceData = [self.sampleDataArray objectAtIndex:row];
-    NSInteger truePositives = inferenceData.sampleData->truePositives;
-    NSInteger trueNegatives = inferenceData.sampleData->trueNegatives;
-    
-    NSTableCellView *cellResult = [tableView makeViewWithIdentifier:@"SampleDataCell" owner:self];
-    
-    SampleDataViewCell *sampleDataView = (SampleDataViewCell *)[[cellResult subviews] objectAtIndex:0];
-    if ([sampleDataView isKindOfClass:[SampleDataViewCell class]] ) {
-        NSLog(@"bingo");
-        [sampleDataView updateWithData:inferenceData];
-        
+    if ([self.sampleDataArray count] < 1) {
+        return nil;
     }
-   // cellResult.textField.stringValue = [NSString stringWithFormat:@"%i:%i", truePositives, trueNegatives];
-    return cellResult;
+    CreditSampleResultsData *inferenceData = self.sampleDataArray.lastObject;
+    if (tableView.tag == 0) {
+        //This is the Scores TableView
+        NSString *cellTextString = @"";
+        if ([tableView tableColumns][0] == tableColumn) {
+            cellTextString = self.scoresTitleDataArray[row];
+        } else {
+            cellTextString = [NSString stringWithFormat:@"%f", [inferenceData getValueByName: self.scoresTitleDataArray[row]]];
+        }
+        NSTableCellView *cellResult = [tableView makeViewWithIdentifier:@"ScoresDataCell" owner:self];
+        [cellResult.textField setStringValue:cellTextString];
+        return cellResult;
+    } else {
+        //This is the Inference Tableview
+        NSTableCellView *cellResult = [tableView makeViewWithIdentifier:@"SampleDataCell" owner:self];
+        [cellResult.textField setStringValue:[NSString stringWithFormat:@""]];
+        return cellResult;
+    }
+}
+
+- (void)updateView:(CreditSampleResultsData *)sampleResultsData {
+    [self.progressView update:sampleResultsData.sampleData->inferenceCount total:sampleResultsData.sampleData->totalInferenceCount];
+    [self.scoresTableView reloadData];
+    [self.inferenceTableView reloadData];
 }
 
 - (void)setupView {
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    self.tableView.rowHeight = 200.0;
     self.sampleDataArray = [[NSMutableArray alloc] initWithCapacity:24];
+    NSTableColumn *sideHeader = self.inferenceTableView.tableColumns.firstObject;
+    NSString *title = @"Predict";
+    [sideHeader.headerCell setStringValue:title];
+    
+    self.scoresTableView.delegate = self;
+    self.scoresTableView.dataSource = self;
+    self.inferenceTableView.delegate = self;
+    self.inferenceTableView.dataSource = self;
+    self.scoresTitleDataArray = @[@"Precision", @"Recall", @"F1 Score"];
+    self.inferenceTitleDataArray = @[@"Positive", @"Negative"];
     
 }
 

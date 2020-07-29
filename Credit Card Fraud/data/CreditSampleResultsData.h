@@ -27,6 +27,7 @@ typedef struct {
 @property (nonatomic, assign) CreditSampleResults *sampleData;
 
 - (id)initWithData:(CreditSampleResults *)sData;
+- (double)getValueByName:(NSString *)keyName;
 
 @end
 

@@ -23,5 +23,17 @@
   //[super dealloc];
 }
 
+- (double)getValueByName:(NSString *)keyName {
+    if ([keyName isEqual:@"Precision"]) {
+        return _sampleData->precision;
+    } else if ([keyName isEqual:@"Recall"]) {
+        return _sampleData->recall;
+    } else if ([keyName isEqual:@"F1 Score"]) {
+        return _sampleData->f1Score;
+    } else {
+        return 1.0;
+    }
+}
+
 
 @end

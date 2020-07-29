@@ -22,19 +22,28 @@
 * SOFTWARE.
 */
 
-#import <Cocoa/Cocoa.h>
+
 #import "CCProgressView.h"
 
-@interface CreditCardInferenceViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
+@implementation CCProgressView
 
-@property (nonatomic, weak) IBOutlet CCProgressView *progressView;
-@property (nonatomic, weak) IBOutlet NSTableView *scoresTableView;
-@property (nonatomic, weak) IBOutlet NSTableView *inferenceTableView;
-@property (nonatomic, strong) NSMutableArray *sampleDataArray;
-@property (nonatomic, strong) NSArray *scoresTitleDataArray;
-@property (nonatomic, strong) NSArray *inferenceTitleDataArray;
+- (void)drawRect:(NSRect)dirtyRect {
+//    [[NSColor whiteColor] setFill];
+//    NSRectFill(dirtyRect);
+    [super drawRect:dirtyRect];
+}
 
-
+- (void) update:(NSInteger)currentAmount total:(NSInteger)totalAmount {
+    if (currentAmount == 1) {
+        [self.progressBar startAnimation:self];
+    } else if (currentAmount == totalAmount) {
+        [self.progressBar stopAnimation:self];
+    }
+    //TODO: update the amounts here
+    double percent = (double)currentAmount/(double)totalAmount*100.0;
+    NSLog(@"PERCENT IS %f %i %i", percent, currentAmount, totalAmount);
+    [self.progressBar setDoubleValue:percent];
+    [self.progressAmountLabel setStringValue: [NSString stringWithFormat:@"%li / %li", (long)currentAmount, (long)totalAmount]];
+}
 
 @end
-

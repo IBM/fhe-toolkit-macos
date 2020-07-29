@@ -22,19 +22,18 @@
 * SOFTWARE.
 */
 
+
 #import <Cocoa/Cocoa.h>
-#import "CCProgressView.h"
 
-@interface CreditCardInferenceViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
+NS_ASSUME_NONNULL_BEGIN
 
-@property (nonatomic, weak) IBOutlet CCProgressView *progressView;
-@property (nonatomic, weak) IBOutlet NSTableView *scoresTableView;
-@property (nonatomic, weak) IBOutlet NSTableView *inferenceTableView;
-@property (nonatomic, strong) NSMutableArray *sampleDataArray;
-@property (nonatomic, strong) NSArray *scoresTitleDataArray;
-@property (nonatomic, strong) NSArray *inferenceTitleDataArray;
+@interface CCProgressView : NSView
 
+@property (nonatomic, weak) IBOutlet NSProgressIndicator *progressBar;
+@property (nonatomic, weak) IBOutlet NSTextField *progressAmountLabel;
 
+- (void) update:(NSInteger)currentAmount total:(NSInteger)totalAmount;
 
 @end
 
+NS_ASSUME_NONNULL_END
