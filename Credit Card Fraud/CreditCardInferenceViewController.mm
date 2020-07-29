@@ -24,6 +24,7 @@
 
 #import "CreditCardInferenceViewController.h"
 #import "CreditSampleResultsData.h"
+#import "SampleDataViewCell.h"
 #include <iostream>
 
 #include "HelibCkksContext.h"
@@ -383,6 +384,13 @@ public:
     NSInteger trueNegatives = inferenceData.sampleData->trueNegatives;
     
     NSTableCellView *cellResult = [tableView makeViewWithIdentifier:@"SampleDataCell" owner:self];
+    
+    SampleDataViewCell *sampleDataView = (SampleDataViewCell *)[[cellResult subviews] objectAtIndex:0];
+    if ([sampleDataView isKindOfClass:[SampleDataViewCell class]] ) {
+        NSLog(@"bingo");
+        [sampleDataView updateWithData:inferenceData];
+        
+    }
    // cellResult.textField.stringValue = [NSString stringWithFormat:@"%i:%i", truePositives, trueNegatives];
     return cellResult;
 }

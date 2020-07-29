@@ -56,6 +56,7 @@
 		A5A0E47A24CB679F00FA427E /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0E47924CB679F00FA427E /* libhelib.a */; };
 		A5A0E47C24CFBE7B00FA427E /* new_2.h5 in Resources */ = {isa = PBXBuildFile; fileRef = A5A0E47B24CFBE7B00FA427E /* new_2.h5 */; };
 		A5A0E47F24D09CFB00FA427E /* CreditSampleResultsData.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */; };
+		A5D0073024D1AFE500AAE351 /* SampleDataViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D0072F24D1AFE500AAE351 /* SampleDataViewCell.m */; };
 		A5F649C5244F72700087514D /* ntl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649C4244F72700087514D /* ntl.a */; };
 		A5F649D3244F73390087514D /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CA244F73380087514D /* libgmp.a */; };
 		A5F649D4244F73390087514D /* libgmp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CB244F73380087514D /* libgmp.dylib */; };
@@ -177,6 +178,8 @@
 		A5A0E47B24CFBE7B00FA427E /* new_2.h5 */ = {isa = PBXFileReference; lastKnownFileType = file; path = new_2.h5; sourceTree = "<group>"; };
 		A5A0E47D24D09CFB00FA427E /* CreditSampleResultsData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreditSampleResultsData.h; sourceTree = "<group>"; };
 		A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreditSampleResultsData.m; sourceTree = "<group>"; };
+		A5D0072E24D1AFE500AAE351 /* SampleDataViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleDataViewCell.h; sourceTree = "<group>"; };
+		A5D0072F24D1AFE500AAE351 /* SampleDataViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleDataViewCell.m; sourceTree = "<group>"; };
 		A5F64922244F711D0087514D /* keys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keys.h; sourceTree = "<group>"; };
 		A5F64923244F711D0087514D /* randomMatrices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randomMatrices.h; sourceTree = "<group>"; };
 		A5F64924244F711D0087514D /* matmul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matmul.h; sourceTree = "<group>"; };
@@ -402,6 +405,8 @@
 				A50693F124C7298A00FFF08B /* Credit_Card_Fraud.entitlements */,
 				A506954124C8C2DC00FFF08B /* HDF5DatasetExample.h */,
 				A506954224C8C2DC00FFF08B /* HDF5DatasetExample.mm */,
+				A5D0072E24D1AFE500AAE351 /* SampleDataViewCell.h */,
+				A5D0072F24D1AFE500AAE351 /* SampleDataViewCell.m */,
 			);
 			path = "Credit Card Fraud";
 			sourceTree = "<group>";
@@ -925,6 +930,7 @@
 				A506951A24C878C600FFF08B /* AbstractCiphertext.cpp in Sources */,
 				A506951824C878C600FFF08B /* HelibCkksEncoder.cpp in Sources */,
 				A506951B24C878C600FFF08B /* CTile.cpp in Sources */,
+				A5D0073024D1AFE500AAE351 /* SampleDataViewCell.m in Sources */,
 				A50693F024C7298A00FFF08B /* main.m in Sources */,
 				A506951924C878C600FFF08B /* HelibCkksCiphertext.cpp in Sources */,
 				A506952624C878C600FFF08B /* CipherMatrixEncoder.cpp in Sources */,
