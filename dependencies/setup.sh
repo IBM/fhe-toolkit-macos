@@ -153,7 +153,7 @@ build_gmp()
 
     make -j $LOGICALCPU_MAX &> "${CURRENT_DIR}/gmplib-so-${PLATFORM}-${ARCH}-build.log"
     make install &> "${CURRENT_DIR}/gmplib-so-${PLATFORM}-${ARCH}-install.log"
-    rm "${CURRENT_DIR}/../gmplib-so-${PLATFORM}-${ARCH}/lib/libgmp.10.dylib"
+    #rm "${CURRENT_DIR}/../gmplib-so-${PLATFORM}-${ARCH}/lib/libgmp.10.dylib"
     rm "${CURRENT_DIR}/../gmp-${GMP_VERSION}.tar.bz2"
     cd ../
 }
@@ -211,7 +211,7 @@ build_all()
     build_gmp "${IPHONEOS}" "arm64" "aarch64-apple-darwin"
     build_gmp "${IPHONESIMULATOR}" "x86_64" "x86_64-apple-darwin_sim"
     build_ntl "${MACOS}" "x86_64"
-  #  build_helib "${MACOS}" "x86_64"
+    build_helib "${MACOS}" "x86_64"
 }
 
 change_submodules
