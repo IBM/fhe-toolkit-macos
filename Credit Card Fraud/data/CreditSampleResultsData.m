@@ -33,7 +33,7 @@
     } else if ([keyName isEqual:@"Recall"]) {
         return [NSString stringWithFormat:@"%.2f", _sampleData->recall];
     } else if ([keyName isEqual:@"F1 Score"]) {
-        return [NSString stringWithFormat:@"%.6f", _sampleData->f1Score];
+        return [NSString stringWithFormat:@"%.3f", _sampleData->f1Score];
     } else {
         return @"";
     }
