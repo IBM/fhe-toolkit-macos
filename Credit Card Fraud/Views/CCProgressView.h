@@ -32,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) IBOutlet NSProgressIndicator *progressBar;
 @property (nonatomic, weak) IBOutlet NSTextField *progressAmountLabel;
 
+- (void) setup;
 - (void) update:(NSInteger)currentAmount total:(NSInteger)totalAmount;
 
 @end

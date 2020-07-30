@@ -372,45 +372,32 @@ public:
     }
 }
 
-//- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-//
-//   // TODO: need to get some data in here from the inference
-//    CreditSampleResultsData *inferenceData = [self.sampleDataArray objectAtIndex:row];
-//    NSInteger truePositives = inferenceData.sampleData->truePositives;
-//    NSInteger trueNegatives = inferenceData.sampleData->trueNegatives;
-//
-//    NSTableCellView *cellResult = [tableView makeViewWithIdentifier:@"SampleDataCell" owner:self];
-//
-//    SampleDataViewCell *sampleDataView = (SampleDataViewCell *)[[cellResult subviews] objectAtIndex:0];
-//    if ([sampleDataView isKindOfClass:[SampleDataViewCell class]] ) {
-//        NSLog(@"bingo");
-//        [sampleDataView updateWithData:inferenceData];
-//
-//    }
-//   // cellResult.textField.stringValue = [NSString stringWithFormat:@"%i:%i", truePositives, trueNegatives];
-//    return cellResult;
-//}
-
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+    //The Scores TableView we default to 3 rows
     NSInteger totalRows = 3;
-    if (tableView.tag == 1) {
-        totalRows = 3;
+    //But we check to see which table we have, if its the Inference table then there are 4 rows
+    if (tableView.tag == InferenceTableViewType) {
+        totalRows = 4;
     }
     return totalRows;
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    //Skip if there is no data yet
     if ([self.sampleDataArray count] < 1) {
         return nil;
     }
+    //Pull the last object out of the array because that will always be the most recent data
     CreditSampleResultsData *inferenceData = self.sampleDataArray.lastObject;
-    if (tableView.tag == 0) {
+    //Check which table we have to populate. The first one is the Score Table View
+    if (tableView.tag == ScoresTableViewType) {
         //This is the Scores TableView
         NSString *cellTextString = @"";
+        NSArray *scoresTitleDataArray = [CreditSampleResultsData titleArrayByType:ScoresTableViewType];
         if ([tableView tableColumns][0] == tableColumn) {
-            cellTextString = self.scoresTitleDataArray[row];
+            cellTextString = scoresTitleDataArray[row];
         } else {
-            cellTextString = [NSString stringWithFormat:@"%f", [inferenceData getValueByName: self.scoresTitleDataArray[row]]];
+            cellTextString = [NSString stringWithFormat:@"%f", [inferenceData getValueByName: scoresTitleDataArray[row]]];
         }
         NSTableCellView *cellResult = [tableView makeViewWithIdentifier:@"ScoresDataCell" owner:self];
         [cellResult.textField setStringValue:cellTextString];
@@ -418,21 +405,41 @@ public:
     } else {
         //This is the Inference Tableview
         NSString *cellTextString = @"";
-        NSDictionary *columnDict = [self.inferenceTitleDataArray objectAtIndex:row];
+        NSArray *inferenceTitleDataArray = [CreditSampleResultsData titleArrayByType:InferenceTableViewType];
+        NSDictionary *columnDict = [inferenceTitleDataArray objectAtIndex:row];
         if ([tableView tableColumns][0] == tableColumn) {
             //this is the first column in the inference table which should only hold a title
             cellTextString = [columnDict objectForKey:[NSNumber numberWithLong:0]];
         } else if ([tableView tableColumns][1] == tableColumn) {
             cellTextString = [columnDict objectForKey:[NSNumber numberWithLong:1]];
         } else if ([tableView tableColumns][2] == tableColumn) {
-            cellTextString = [columnDict objectForKey:[NSNumber numberWithLong:2]];
+            if (row == 2 || row == 3) {
+                cellTextString = [inferenceData getValueByColumn:2 row:row];
+            } else {
+               cellTextString = [columnDict objectForKey:[NSNumber numberWithLong:2]];
+            }
         } else {
-            cellTextString = [columnDict objectForKey:[NSNumber numberWithLong:3]];
+            //we know this must be the last column
+            if (row == 2 || row == 3) {
+                cellTextString = [inferenceData getValueByColumn:3 row:row];
+            } else {
+               cellTextString = [columnDict objectForKey:[NSNumber numberWithLong:3]];
+            }
         }
         NSTableCellView *cellResult = [tableView makeViewWithIdentifier:@"SampleDataCell" owner:self];
         [cellResult.textField setStringValue:cellTextString];
         return cellResult;
     }
+}
+
+- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
+    //The Scores TableView we default to 24 height
+    NSInteger rowHeight = 24.0;
+    //But we check to see which table we have, if its the Inference table then there are 4 rows
+    if (tableView.tag == InferenceTableViewType) {
+        rowHeight = 30.0;
+    }
+    return rowHeight;
 }
 
 - (void)updateView:(CreditSampleResultsData *)sampleResultsData {
@@ -443,16 +450,11 @@ public:
 
 - (void)setupView {
     self.sampleDataArray = [[NSMutableArray alloc] initWithCapacity:24];
-    
+    [self.progressView setup];
     self.scoresTableView.delegate = self;
     self.scoresTableView.dataSource = self;
     self.inferenceTableView.delegate = self;
     self.inferenceTableView.dataSource = self;
-    self.scoresTitleDataArray = @[@"Precision", @"Recall", @"F1 Score"];
-    self.inferenceTitleDataArray = @[@{@0:@"", @1:@"", @2:@"+", @3:@"-"},
-                                     @{@0:@"Predict", @1:@"+", @2:@"", @3:@""},
-                                     @{@0:@"", @1:@"-", @2:@"", @3:@""}];
-    
 }
 
 - (void)triggerInference {

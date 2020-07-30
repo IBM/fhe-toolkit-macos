@@ -33,6 +33,12 @@
     [super drawRect:dirtyRect];
 }
 
+- (void)setup {
+    [self.progressBar stopAnimation:self];
+    [self.progressBar setDoubleValue:0.0];
+    [self.progressAmountLabel setStringValue: [NSString stringWithFormat:@"%li / %li", (long)0, (long)0]];
+}
+
 - (void) update:(NSInteger)currentAmount total:(NSInteger)totalAmount {
     if (currentAmount == 1) {
         [self.progressBar startAnimation:self];

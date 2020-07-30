@@ -22,13 +22,20 @@ typedef struct {
     double f1Score;
 } CreditSampleResults;
 
+typedef NS_ENUM(NSInteger, ResultsTableViewType) {
+    ScoresTableViewType,
+    InferenceTableViewType
+};
+
+
 @interface CreditSampleResultsData : NSObject
 
 @property (nonatomic, assign) CreditSampleResults *sampleData;
 
 - (id)initWithData:(CreditSampleResults *)sData;
 - (double)getValueByName:(NSString *)keyName;
-+ (NSString *)getNameByRow:(NSInteger)row;
+- (NSString *)getValueByColumn:(NSInteger)column row:(NSInteger)row;
++ (NSArray *)titleArrayByType:(ResultsTableViewType)tableType;
 
 @end
 

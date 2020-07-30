@@ -35,21 +35,63 @@
     }
 }
 
-+ (NSString *)getNameByRow:(NSInteger)row {
+/**
+    * Get Value By Column/Row
+        - This is used exclusively for the Inference TableView as when a result is ready it needs to be sorted to fit into the correct column
+        - needs column number
+        - and row number
+ */
+- (NSString *)getValueByColumn:(NSInteger)column row:(NSInteger)row{
     switch (row) {
-        case 0:
-            return @"0";
-            break;
-        case 1:
-            return @"1";
-            break;
         case 2:
-            return @"2";
+        {
+            NSString *resultValue = @"";
+            switch (column) {
+                case 2:
+                    //True Positive Value
+                    resultValue = [NSString stringWithFormat:@"%ld", (long)_sampleData->truePositives];
+                    break;
+                case 3:
+                    //False Positive Value
+                    resultValue = [NSString stringWithFormat:@"%ld", (long)_sampleData->falsePositives];
+                default:
+                    break;
+            }
+            return resultValue;
+        }
         case 3:
-            return @"3";
+        {
+            NSString *resultValue = @"";
+            switch (column) {
+                case 2:
+                    //False Negative Value
+                    resultValue = [NSString stringWithFormat:@"%ld", (long)_sampleData->falseNegatives];
+                    break;
+                case 3:
+                    //True Negative Value
+                    resultValue = [NSString stringWithFormat:@"%ld", (long)_sampleData->trueNegatives];
+                default:
+                    break;
+            }
+            return resultValue;
+        }
         default:
+            //0, and 1 should never get called, but if they do default to empty space
             return @"";
             break;
+    }
+}
+
++ (NSArray *)titleArrayByType:(ResultsTableViewType)tableType {
+    switch (tableType) {
+        case ScoresTableViewType:
+            return @[@"Precision", @"Recall", @"F1 Score"];
+            break;
+        case InferenceTableViewType:
+            return  @[@{@0:@"", @1:@"", @2:@"Truth", @3:@""},
+                                               @{@0:@"", @1:@"", @2:@"+", @3:@"-"},
+                                               @{@0:@"Predict", @1:@"+", @2:@"", @3:@""},
+                                               @{@0:@"", @1:@"-", @2:@"", @3:@""}];
     }
 }
 

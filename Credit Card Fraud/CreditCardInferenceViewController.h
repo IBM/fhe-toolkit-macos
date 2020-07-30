@@ -31,8 +31,6 @@
 @property (nonatomic, weak) IBOutlet NSTableView *scoresTableView;
 @property (nonatomic, weak) IBOutlet NSTableView *inferenceTableView;
 @property (nonatomic, strong) NSMutableArray *sampleDataArray;
-@property (nonatomic, strong) NSArray *scoresTitleDataArray;
-@property (nonatomic, strong) NSArray *inferenceTitleDataArray;
 
 
 
