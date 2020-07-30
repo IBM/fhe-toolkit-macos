@@ -28,6 +28,7 @@ typedef struct {
 
 - (id)initWithData:(CreditSampleResults *)sData;
 - (double)getValueByName:(NSString *)keyName;
++ (NSString *)getNameByRow:(NSInteger)row;
 
 @end
 

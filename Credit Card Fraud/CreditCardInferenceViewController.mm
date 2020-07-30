@@ -364,7 +364,7 @@ public:
         sampleResults->inferenceCount = i+1;
         client.assessResults(sampleResults);
         [self.sampleDataArray addObject:[[CreditSampleResultsData alloc] initWithData: sampleResults]];
-        //TODO: add in a call to re-load the tableview
+        // re-load the views with the updated information
         dispatch_async(dispatch_get_main_queue(), ^(void){
             [self updateView:[self.sampleDataArray objectAtIndex:i]];
         });
@@ -417,8 +417,20 @@ public:
         return cellResult;
     } else {
         //This is the Inference Tableview
+        NSString *cellTextString = @"";
+        NSDictionary *columnDict = [self.inferenceTitleDataArray objectAtIndex:row];
+        if ([tableView tableColumns][0] == tableColumn) {
+            //this is the first column in the inference table which should only hold a title
+            cellTextString = [columnDict objectForKey:[NSNumber numberWithLong:0]];
+        } else if ([tableView tableColumns][1] == tableColumn) {
+            cellTextString = [columnDict objectForKey:[NSNumber numberWithLong:1]];
+        } else if ([tableView tableColumns][2] == tableColumn) {
+            cellTextString = [columnDict objectForKey:[NSNumber numberWithLong:2]];
+        } else {
+            cellTextString = [columnDict objectForKey:[NSNumber numberWithLong:3]];
+        }
         NSTableCellView *cellResult = [tableView makeViewWithIdentifier:@"SampleDataCell" owner:self];
-        [cellResult.textField setStringValue:[NSString stringWithFormat:@""]];
+        [cellResult.textField setStringValue:cellTextString];
         return cellResult;
     }
 }
@@ -431,16 +443,15 @@ public:
 
 - (void)setupView {
     self.sampleDataArray = [[NSMutableArray alloc] initWithCapacity:24];
-    NSTableColumn *sideHeader = self.inferenceTableView.tableColumns.firstObject;
-    NSString *title = @"Predict";
-    [sideHeader.headerCell setStringValue:title];
     
     self.scoresTableView.delegate = self;
     self.scoresTableView.dataSource = self;
     self.inferenceTableView.delegate = self;
     self.inferenceTableView.dataSource = self;
     self.scoresTitleDataArray = @[@"Precision", @"Recall", @"F1 Score"];
-    self.inferenceTitleDataArray = @[@"Positive", @"Negative"];
+    self.inferenceTitleDataArray = @[@{@0:@"", @1:@"", @2:@"+", @3:@"-"},
+                                     @{@0:@"Predict", @1:@"+", @2:@"", @3:@""},
+                                     @{@0:@"", @1:@"-", @2:@"", @3:@""}];
     
 }
 
