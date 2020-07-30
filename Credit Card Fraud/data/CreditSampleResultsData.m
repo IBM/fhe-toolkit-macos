@@ -23,15 +23,19 @@
   //[super dealloc];
 }
 
-- (double)getValueByName:(NSString *)keyName {
+/**
+    * GetValueByName
+        - returns the value from the sample data that is mapped to it via a key
+ */
+- (NSString *)getValueByName:(NSString *)keyName {
     if ([keyName isEqual:@"Precision"]) {
-        return _sampleData->precision;
+        return [NSString stringWithFormat:@"%f", _sampleData->precision];
     } else if ([keyName isEqual:@"Recall"]) {
-        return _sampleData->recall;
+        return [NSString stringWithFormat:@"%f", _sampleData->recall];
     } else if ([keyName isEqual:@"F1 Score"]) {
-        return _sampleData->f1Score;
+        return [NSString stringWithFormat:@"%f", _sampleData->f1Score];
     } else {
-        return 1.0;
+        return @"";
     }
 }
 
@@ -85,13 +89,13 @@
 + (NSArray *)titleArrayByType:(ResultsTableViewType)tableType {
     switch (tableType) {
         case ScoresTableViewType:
-            return @[@"Precision", @"Recall", @"F1 Score"];
+            return @[@"Scores:", @"Precision", @"Recall", @"F1 Score"];
             break;
         case InferenceTableViewType:
-            return  @[@{@0:@"", @1:@"", @2:@"Truth", @3:@""},
-                                               @{@0:@"", @1:@"", @2:@"+", @3:@"-"},
-                                               @{@0:@"Predict", @1:@"+", @2:@"", @3:@""},
-                                               @{@0:@"", @1:@"-", @2:@"", @3:@""}];
+            return  @[@{@0:@"", @1:@"", @2:@"Truth:", @3:@""},
+                                               @{@0:@"", @1:@"", @2:@"➕", @3:@"➖"},
+                                               @{@0:@"Predict:", @1:@"➕", @2:@"", @3:@""},
+                                               @{@0:@"", @1:@"➖", @2:@"", @3:@""}];
     }
 }
 

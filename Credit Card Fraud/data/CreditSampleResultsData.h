@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, ResultsTableViewType) {
 @property (nonatomic, assign) CreditSampleResults *sampleData;
 
 - (id)initWithData:(CreditSampleResults *)sData;
-- (double)getValueByName:(NSString *)keyName;
+- (NSString *)getValueByName:(NSString *)keyName;
 - (NSString *)getValueByColumn:(NSInteger)column row:(NSInteger)row;
 + (NSArray *)titleArrayByType:(ResultsTableViewType)tableType;
 

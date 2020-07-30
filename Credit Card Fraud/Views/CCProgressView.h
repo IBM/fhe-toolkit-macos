@@ -31,9 +31,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) IBOutlet NSProgressIndicator *progressBar;
 @property (nonatomic, weak) IBOutlet NSTextField *progressAmountLabel;
+@property (nonatomic, weak) IBOutlet NSButton *startButton;
+@property (nonatomic, weak) IBOutlet NSProgressIndicator *spinningBar;
+@property (nonatomic, strong) NSTimer *timeTicker;
+@property (nonatomic, weak) IBOutlet NSTextField *timeElapsed;
+@property (nonatomic, assign) NSInteger currentTimeTick;
 
-- (void) setup;
-- (void) update:(NSInteger)currentAmount total:(NSInteger)totalAmount;
+- (void)setup;
+- (void)start;
+- (void)update:(NSInteger)currentAmount total:(NSInteger)totalAmount;
+
 
 @end
 

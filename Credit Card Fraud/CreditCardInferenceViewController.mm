@@ -315,7 +315,6 @@ public:
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupView];
-    [self triggerInference];
     
     
 }
@@ -373,8 +372,8 @@ public:
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    //The Scores TableView we default to 3 rows
-    NSInteger totalRows = 3;
+    //The Scores TableView we default to 4 rows
+    NSInteger totalRows = 4;
     //But we check to see which table we have, if its the Inference table then there are 4 rows
     if (tableView.tag == InferenceTableViewType) {
         totalRows = 4;
@@ -382,6 +381,12 @@ public:
     return totalRows;
 }
 
+/**
+    ViewForTableColumn
+    - populates the different table rows
+    - does nothing if there is no data to use
+    - detemines which table to use first, then uses column and row to populate the data
+ */
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     //Skip if there is no data yet
     if ([self.sampleDataArray count] < 1) {
@@ -397,7 +402,7 @@ public:
         if ([tableView tableColumns][0] == tableColumn) {
             cellTextString = scoresTitleDataArray[row];
         } else {
-            cellTextString = [NSString stringWithFormat:@"%f", [inferenceData getValueByName: scoresTitleDataArray[row]]];
+            cellTextString = [inferenceData getValueByName: scoresTitleDataArray[row]];
         }
         NSTableCellView *cellResult = [tableView makeViewWithIdentifier:@"ScoresDataCell" owner:self];
         [cellResult.textField setStringValue:cellTextString];
@@ -434,10 +439,10 @@ public:
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
     //The Scores TableView we default to 24 height
-    NSInteger rowHeight = 24.0;
+    NSInteger rowHeight = 26.0;
     //But we check to see which table we have, if its the Inference table then there are 4 rows
     if (tableView.tag == InferenceTableViewType) {
-        rowHeight = 30.0;
+        rowHeight = 31.0;
     }
     return rowHeight;
 }
@@ -463,6 +468,10 @@ public:
      });
 }
 
+- (IBAction) startButtonWasPressed:(id)sender {
+    [self.progressView start];
+    [self triggerInference];
+}
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];

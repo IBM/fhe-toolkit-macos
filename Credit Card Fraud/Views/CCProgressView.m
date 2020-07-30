@@ -39,6 +39,23 @@
     [self.progressAmountLabel setStringValue: [NSString stringWithFormat:@"%li / %li", (long)0, (long)0]];
 }
 
+- (void)start {
+    self.currentTimeTick = 0;
+    [self.spinningBar startAnimation:self];
+    [self.spinningBar setHidden:NO];
+    [self.progressBar startAnimation:self];
+    [self.timeElapsed setHidden:NO];
+    [self.startButton setHidden:YES];
+    [self startTimer];
+    
+}
+
+- (void)stop {
+    [self.progressBar stopAnimation:self];
+    [self.timeTicker invalidate];
+    [self.spinningBar stopAnimation:self];
+}
+
 - (void) update:(NSInteger)currentAmount total:(NSInteger)totalAmount {
     if (currentAmount == 1) {
         [self.progressBar startAnimation:self];
@@ -47,9 +64,29 @@
     }
     //TODO: update the amounts here
     double percent = (double)currentAmount/(double)totalAmount*100.0;
-    NSLog(@"PERCENT IS %f %i %i", percent, currentAmount, totalAmount);
     [self.progressBar setDoubleValue:percent];
     [self.progressAmountLabel setStringValue: [NSString stringWithFormat:@"%li / %li", (long)currentAmount, (long)totalAmount]];
+    if (currentAmount == 24) {
+        [self stop];
+    }
+}
+
+- (void)startTimer {
+    [self.timeElapsed setStringValue:[NSString stringWithFormat:@"%.1f", [self convertTime:0.0]]];
+    self.timeTicker = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(showTimerActivity) userInfo:nil repeats:YES];
+}
+
+- (void)showTimerActivity {
+    int currentTime = self.currentTimeTick;
+    float newTime = [self convertTime:currentTime + 1];
+    self.currentTimeTick = newTime;
+    int minutes = (int)newTime / 60;
+    int seconds = (int)newTime % 60;
+    [self.timeElapsed setStringValue:[NSString stringWithFormat:@"%i:%.2i", minutes, seconds]];
+}
+
+- (float)convertTime:(int)newTime {
+    return (float)newTime;
 }
 
 @end
