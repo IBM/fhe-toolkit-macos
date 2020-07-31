@@ -7,42 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A50693E524C7298500FFF08B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A50693E424C7298500FFF08B /* AppDelegate.m */; };
+		A50693E524C7298500FFF08B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A50693E424C7298500FFF08B /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A50693EA24C7298A00FFF08B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A50693E924C7298A00FFF08B /* Assets.xcassets */; };
 		A50693ED24C7298A00FFF08B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50693EB24C7298A00FFF08B /* Main.storyboard */; };
-		A50693F024C7298A00FFF08B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A50693EF24C7298A00FFF08B /* main.m */; };
+		A50693F024C7298A00FFF08B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A50693EF24C7298A00FFF08B /* main.m */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A50693F724C72C4900FFF08B /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CA244F73380087514D /* libgmp.a */; };
 		A50693F824C72C6900FFF08B /* ntl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649C4244F72700087514D /* ntl.a */; };
-		A50694D424C7DE2300FFF08B /* CreditCardInferenceViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A50693E724C7298500FFF08B /* CreditCardInferenceViewController.mm */; };
-		A506951224C878C500FFF08B /* h5Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694D724C878C500FFF08B /* h5Parser.cpp */; };
-		A506951324C878C500FFF08B /* HelibCkksPlaintext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694DA24C878C500FFF08B /* HelibCkksPlaintext.cpp */; };
-		A506951424C878C500FFF08B /* SimpleFcLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694DB24C878C500FFF08B /* SimpleFcLayer.cpp */; };
-		A506951524C878C500FFF08B /* HelibConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694DD24C878C500FFF08B /* HelibConfig.cpp */; };
-		A506951624C878C500FFF08B /* DoubleMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694DE24C878C500FFF08B /* DoubleMatrix.cpp */; };
-		A506951724C878C500FFF08B /* AlwaysAssert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E024C878C500FFF08B /* AlwaysAssert.cpp */; };
-		A506951824C878C600FFF08B /* HelibCkksEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E224C878C500FFF08B /* HelibCkksEncoder.cpp */; };
-		A506951924C878C600FFF08B /* HelibCkksCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E424C878C500FFF08B /* HelibCkksCiphertext.cpp */; };
-		A506951A24C878C600FFF08B /* AbstractCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E624C878C500FFF08B /* AbstractCiphertext.cpp */; };
-		A506951B24C878C600FFF08B /* CTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E824C878C500FFF08B /* CTile.cpp */; };
-		A506951C24C878C600FFF08B /* CipherMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694EB24C878C500FFF08B /* CipherMatrix.cpp */; };
-		A506951D24C878C600FFF08B /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694ED24C878C500FFF08B /* Layer.cpp */; };
-		A506951E24C878C600FFF08B /* FileUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694EE24C878C500FFF08B /* FileUtils.cpp */; };
-		A506951F24C878C600FFF08B /* DoubleMatrixArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694F124C878C500FFF08B /* DoubleMatrixArray.cpp */; };
-		A506952024C878C600FFF08B /* SimpleNeuralNet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694F524C878C500FFF08B /* SimpleNeuralNet.cpp */; };
-		A506952124C878C600FFF08B /* HelibCkksContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694F724C878C500FFF08B /* HelibCkksContext.cpp */; };
-		A506952224C878C600FFF08B /* AbstractEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694FB24C878C500FFF08B /* AbstractEncoder.cpp */; };
-		A506952324C878C600FFF08B /* SimpleTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694FD24C878C500FFF08B /* SimpleTimer.cpp */; };
-		A506952424C878C600FFF08B /* HelibContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694FE24C878C500FFF08B /* HelibContext.cpp */; };
-		A506952524C878C600FFF08B /* h5Dumper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694FF24C878C500FFF08B /* h5Dumper.cpp */; };
-		A506952624C878C600FFF08B /* CipherMatrixEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950324C878C500FFF08B /* CipherMatrixEncoder.cpp */; };
-		A506952724C878C600FFF08B /* SimpleSquareActivationLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950424C878C500FFF08B /* SimpleSquareActivationLayer.cpp */; };
-		A506952824C878C600FFF08B /* HelibCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950624C878C500FFF08B /* HelibCiphertext.cpp */; };
-		A506952924C878C600FFF08B /* SimpleNeuralNetPlain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950A24C878C500FFF08B /* SimpleNeuralNetPlain.cpp */; };
-		A506952A24C878C600FFF08B /* SimpleTrainingSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950B24C878C500FFF08B /* SimpleTrainingSet.cpp */; };
-		A506952B24C878C600FFF08B /* HeContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950C24C878C500FFF08B /* HeContext.cpp */; };
-		A506952C24C878C600FFF08B /* Encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950D24C878C500FFF08B /* Encoder.cpp */; };
-		A506952D24C878C600FFF08B /* PTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950F24C878C500FFF08B /* PTile.cpp */; };
-		A506952E24C878C600FFF08B /* FcLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506951124C878C500FFF08B /* FcLayer.cpp */; };
+		A50694D424C7DE2300FFF08B /* CreditCardInferenceViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A50693E724C7298500FFF08B /* CreditCardInferenceViewController.mm */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951224C878C500FFF08B /* h5Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694D724C878C500FFF08B /* h5Parser.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951324C878C500FFF08B /* HelibCkksPlaintext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694DA24C878C500FFF08B /* HelibCkksPlaintext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951424C878C500FFF08B /* SimpleFcLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694DB24C878C500FFF08B /* SimpleFcLayer.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951524C878C500FFF08B /* HelibConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694DD24C878C500FFF08B /* HelibConfig.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951624C878C500FFF08B /* DoubleMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694DE24C878C500FFF08B /* DoubleMatrix.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951724C878C500FFF08B /* AlwaysAssert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E024C878C500FFF08B /* AlwaysAssert.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951824C878C600FFF08B /* HelibCkksEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E224C878C500FFF08B /* HelibCkksEncoder.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951924C878C600FFF08B /* HelibCkksCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E424C878C500FFF08B /* HelibCkksCiphertext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951A24C878C600FFF08B /* AbstractCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E624C878C500FFF08B /* AbstractCiphertext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951B24C878C600FFF08B /* CTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E824C878C500FFF08B /* CTile.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951C24C878C600FFF08B /* CipherMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694EB24C878C500FFF08B /* CipherMatrix.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951D24C878C600FFF08B /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694ED24C878C500FFF08B /* Layer.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951E24C878C600FFF08B /* FileUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694EE24C878C500FFF08B /* FileUtils.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951F24C878C600FFF08B /* DoubleMatrixArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694F124C878C500FFF08B /* DoubleMatrixArray.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952024C878C600FFF08B /* SimpleNeuralNet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694F524C878C500FFF08B /* SimpleNeuralNet.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952124C878C600FFF08B /* HelibCkksContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694F724C878C500FFF08B /* HelibCkksContext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952224C878C600FFF08B /* AbstractEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694FB24C878C500FFF08B /* AbstractEncoder.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952324C878C600FFF08B /* SimpleTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694FD24C878C500FFF08B /* SimpleTimer.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952424C878C600FFF08B /* HelibContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694FE24C878C500FFF08B /* HelibContext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952524C878C600FFF08B /* h5Dumper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694FF24C878C500FFF08B /* h5Dumper.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952624C878C600FFF08B /* CipherMatrixEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950324C878C500FFF08B /* CipherMatrixEncoder.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952724C878C600FFF08B /* SimpleSquareActivationLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950424C878C500FFF08B /* SimpleSquareActivationLayer.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952824C878C600FFF08B /* HelibCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950624C878C500FFF08B /* HelibCiphertext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952924C878C600FFF08B /* SimpleNeuralNetPlain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950A24C878C500FFF08B /* SimpleNeuralNetPlain.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952A24C878C600FFF08B /* SimpleTrainingSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950B24C878C500FFF08B /* SimpleTrainingSet.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952B24C878C600FFF08B /* HeContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950C24C878C500FFF08B /* HeContext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952C24C878C600FFF08B /* Encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950D24C878C500FFF08B /* Encoder.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952D24C878C600FFF08B /* PTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950F24C878C500FFF08B /* PTile.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952E24C878C600FFF08B /* FcLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506951124C878C500FFF08B /* FcLayer.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A506953624C8812300FFF08B /* libhdf5_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953524C8812300FFF08B /* libhdf5_debug.a */; };
 		A506953824C8B02300FFF08B /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953724C8B02300FFF08B /* libhelib.a */; };
 		A506953A24C8B17200FFF08B /* libhdf5_cpp_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953924C8B17200FFF08B /* libhdf5_cpp_debug.a */; };
@@ -53,8 +53,8 @@
 		A5667EF823FCD4BA00F122FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5667A0C23F714D200F122FD /* main.m */; };
 		A5A0E47A24CB679F00FA427E /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0E47924CB679F00FA427E /* libhelib.a */; };
 		A5A0E47C24CFBE7B00FA427E /* new_2.h5 in Resources */ = {isa = PBXBuildFile; fileRef = A5A0E47B24CFBE7B00FA427E /* new_2.h5 */; };
-		A5A0E47F24D09CFB00FA427E /* CreditSampleResultsData.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */; };
-		A5D0073424D1E6CC00AAE351 /* CCProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D0073324D1E6CC00AAE351 /* CCProgressView.m */; };
+		A5A0E47F24D09CFB00FA427E /* CreditSampleResultsData.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A5D0073424D1E6CC00AAE351 /* CCProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D0073324D1E6CC00AAE351 /* CCProgressView.m */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A5D0073524D3674100AAE351 /* libboost_filesystem.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */; };
 		A5F649C5244F72700087514D /* ntl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649C4244F72700087514D /* ntl.a */; };
 		A5F649D3244F73390087514D /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CA244F73380087514D /* libgmp.a */; };
@@ -496,7 +496,7 @@
 				A5667A0023F714CF00F122FD /* AppDelegate.h */,
 				A5667A0123F714CF00F122FD /* AppDelegate.m */,
 				A5F649E12450853C0087514D /* data.json */,
-				A5F649DD245085070087514D /* SampleCode */,
+				A5F649DD245085070087514D /* Privacy Preserving Search */,
 				A5F649C6244F73380087514D /* gmplib-so-macosx-x86_64 */,
 				A5F64953244F726F0087514D /* ntl */,
 				A5F64920244F711D0087514D /* include */,
@@ -786,7 +786,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A5F649DD245085070087514D /* SampleCode */ = {
+		A5F649DD245085070087514D /* Privacy Preserving Search */ = {
 			isa = PBXGroup;
 			children = (
 				A5F649DE2450852C0087514D /* CountryData.h */,
@@ -798,7 +798,7 @@
 				A5F649EB2450DC270087514D /* CountryDisplaySplitViewController.h */,
 				A5F649EC2450DC270087514D /* CountryDisplaySplitViewController.m */,
 			);
-			path = SampleCode;
+			path = "Privacy Preserving Search";
 			sourceTree = "<group>";
 		};
 		A5F9514F24C91B6100406273 /* data */ = {
@@ -1001,12 +1001,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_MODULES_DISABLE_PRIVATE_WARNING = YES;
 				CODE_SIGN_ENTITLEMENTS = "Credit Card Fraud/Credit_Card_Fraud.entitlements";
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = FR4R6U6723;
 				ENABLE_HARDENED_RUNTIME = NO;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/boost_1_72_0",
 					"$(PROJECT_DIR)/dependencies/CMake-hdf5-1.12.0/hdf5-1.12.0/c++/src",
@@ -1034,6 +1036,7 @@
 					"$(PROJECT_DIR)/dependencies/ntl/include",
 					"\"$(PROJECT_DIR)/Credit Card Fraud/src\"",
 				);
+				WARNING_LDFLAGS = "-W";
 			};
 			name = Debug;
 		};
@@ -1042,12 +1045,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_MODULES_DISABLE_PRIVATE_WARNING = YES;
 				CODE_SIGN_ENTITLEMENTS = "Credit Card Fraud/Credit_Card_Fraud.entitlements";
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = FR4R6U6723;
 				ENABLE_HARDENED_RUNTIME = NO;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/boost_1_72_0",
 					"$(PROJECT_DIR)/dependencies/CMake-hdf5-1.12.0/hdf5-1.12.0/c++/src",
@@ -1075,6 +1080,7 @@
 					"$(PROJECT_DIR)/dependencies/ntl/include",
 					"\"$(PROJECT_DIR)/Credit Card Fraud/src\"",
 				);
+				WARNING_LDFLAGS = "-W";
 			};
 			name = Release;
 		};
