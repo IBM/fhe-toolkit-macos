@@ -47,7 +47,6 @@
 		A506953824C8B02300FFF08B /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953724C8B02300FFF08B /* libhelib.a */; };
 		A506953A24C8B17200FFF08B /* libhdf5_cpp_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953924C8B17200FFF08B /* libhdf5_cpp_debug.a */; };
 		A506953E24C8BD7600FFF08B /* libboost_filesystem.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */; };
-		A506953F24C8BD7600FFF08B /* libboost_filesystem.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A5667A0223F714CF00F122FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5667A0123F714CF00F122FD /* AppDelegate.m */; };
 		A5667A0723F714D200F122FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5667A0623F714D200F122FD /* Assets.xcassets */; };
 		A5667A0A23F714D200F122FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5667A0823F714D200F122FD /* Main.storyboard */; };
@@ -56,6 +55,7 @@
 		A5A0E47C24CFBE7B00FA427E /* new_2.h5 in Resources */ = {isa = PBXBuildFile; fileRef = A5A0E47B24CFBE7B00FA427E /* new_2.h5 */; };
 		A5A0E47F24D09CFB00FA427E /* CreditSampleResultsData.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */; };
 		A5D0073424D1E6CC00AAE351 /* CCProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D0073324D1E6CC00AAE351 /* CCProgressView.m */; };
+		A5D0073524D3674100AAE351 /* libboost_filesystem.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */; };
 		A5F649C5244F72700087514D /* ntl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649C4244F72700087514D /* ntl.a */; };
 		A5F649D3244F73390087514D /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CA244F73380087514D /* libgmp.a */; };
 		A5F649D4244F73390087514D /* libgmp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CB244F73380087514D /* libgmp.dylib */; };
@@ -75,13 +75,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A506954024C8BD7600FFF08B /* Embed Libraries */ = {
+		A5D0073624D3674100AAE351 /* Embed Libraries */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A506953F24C8BD7600FFF08B /* libboost_filesystem.dylib in Embed Libraries */,
+				A5D0073524D3674100AAE351 /* libboost_filesystem.dylib in Embed Libraries */,
 			);
 			name = "Embed Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -824,7 +824,7 @@
 				A50693DD24C7298500FFF08B /* Sources */,
 				A50693DE24C7298500FFF08B /* Frameworks */,
 				A50693DF24C7298500FFF08B /* Resources */,
-				A506954024C8BD7600FFF08B /* Embed Libraries */,
+				A5D0073624D3674100AAE351 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -1002,9 +1002,9 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Credit Card Fraud/Credit_Card_Fraud.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 76CMF53Q35;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/boost_1_72_0",
@@ -1028,6 +1028,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.research.Credit-Card-Fraud";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/ntl/include",
 					"\"$(PROJECT_DIR)/Credit Card Fraud/src\"",
@@ -1041,9 +1042,9 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Credit Card Fraud/Credit_Card_Fraud.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 76CMF53Q35;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/boost_1_72_0",
@@ -1067,6 +1068,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.research.Credit-Card-Fraud";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/ntl/include",
 					"\"$(PROJECT_DIR)/Credit Card Fraud/src\"",
