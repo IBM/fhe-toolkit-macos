@@ -16,16 +16,19 @@
       "size" : "32x32"
     },
     {
+      "filename" : "morphic_encrypt_64.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
+      "filename" : "morphic_encrypt_128.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
+      "filename" : "morphic_encrypt.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
