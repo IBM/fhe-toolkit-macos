@@ -752,13 +752,23 @@
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8NQ-DU-9jP">
+                                                    <rect key="frame" x="555" y="4" width="39" height="45"/>
+                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="✓" id="pUG-qr-xUZ">
+                                                        <font key="font" metaFont="systemBold" size="38"/>
+                                                        <color key="textColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="7nr-jy-mfV" secondAttribute="trailing" constant="13" id="4wp-FW-OvG"/>
                                                 <constraint firstItem="7nr-jy-mfV" firstAttribute="leading" secondItem="2zp-7L-QUN" secondAttribute="trailing" constant="12" id="6uQ-sK-WEr"/>
+                                                <constraint firstItem="8NQ-DU-9jP" firstAttribute="leading" secondItem="2zp-7L-QUN" secondAttribute="trailing" constant="8" symbolic="YES" id="AzR-pi-MA4"/>
                                                 <constraint firstItem="2zp-7L-QUN" firstAttribute="centerY" secondItem="HaG-nL-bha" secondAttribute="centerY" id="BbV-cU-iRU"/>
                                                 <constraint firstItem="ENB-rt-d8w" firstAttribute="top" secondItem="HaG-nL-bha" secondAttribute="top" constant="16" id="JPl-Gp-XQB"/>
                                                 <constraint firstItem="ENB-rt-d8w" firstAttribute="centerY" secondItem="HaG-nL-bha" secondAttribute="centerY" id="TUP-9T-8bc"/>
+                                                <constraint firstItem="8NQ-DU-9jP" firstAttribute="centerY" secondItem="7nr-jy-mfV" secondAttribute="centerY" id="Vgi-NV-gAw"/>
                                                 <constraint firstAttribute="trailing" secondItem="ENB-rt-d8w" secondAttribute="trailing" constant="20" symbolic="YES" id="kfZ-CV-ECP"/>
                                                 <constraint firstItem="ENB-rt-d8w" firstAttribute="centerY" secondItem="7nr-jy-mfV" secondAttribute="centerY" id="lT4-2O-ocs"/>
                                                 <constraint firstAttribute="bottom" secondItem="ENB-rt-d8w" secondAttribute="bottom" constant="16" id="wgR-2J-Nu8"/>
@@ -791,6 +801,7 @@
                                     <constraint firstItem="YbO-wV-ZCo" firstAttribute="top" secondItem="fTf-Om-mHN" secondAttribute="top" id="wWQ-gv-86d"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="doneCheckmark" destination="8NQ-DU-9jP" id="rCe-dd-FMH"/>
                                     <outlet property="progressAmountLabel" destination="p8O-nv-uqN" id="WF5-yh-Z0S"/>
                                     <outlet property="progressBar" destination="fqF-ub-XeP" id="wSb-Iq-tm1"/>
                                     <outlet property="spinningBar" destination="7nr-jy-mfV" id="cp3-za-4ka"/>

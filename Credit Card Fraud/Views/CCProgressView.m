@@ -37,6 +37,7 @@
     [self.progressBar stopAnimation:self];
     [self.progressBar setDoubleValue:0.0];
     [self.progressAmountLabel setStringValue: [NSString stringWithFormat:@"%li / %li", (long)0, (long)0]];
+    [self.doneCheckmark setHidden: YES];
 }
 
 - (void)start {
@@ -54,6 +55,8 @@
     [self.progressBar stopAnimation:self];
     [self.timeTicker invalidate];
     [self.spinningBar stopAnimation:self];
+    [self.spinningBar setHidden:YES];
+    [self.doneCheckmark setHidden: NO];
 }
 
 - (void) update:(NSInteger)currentAmount total:(NSInteger)totalAmount {
@@ -62,7 +65,6 @@
     } else if (currentAmount == totalAmount) {
         [self.progressBar stopAnimation:self];
     }
-    //TODO: update the amounts here
     double percent = (double)currentAmount/(double)totalAmount*100.0;
     [self.progressBar setDoubleValue:percent];
     [self.progressAmountLabel setStringValue: [NSString stringWithFormat:@"%li / %li", (long)currentAmount, (long)totalAmount]];
