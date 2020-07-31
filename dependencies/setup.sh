@@ -155,7 +155,7 @@ build_gmp()
 
     make -j $LOGICALCPU_MAX &> "${CURRENT_DIR}/gmplib-so-${PLATFORM}-${ARCH}-build.log"
     make install &> "${CURRENT_DIR}/gmplib-so-${PLATFORM}-${ARCH}-install.log"
-    rm "${CURRENT_DIR}/../gmplib-so-${PLATFORM}-${ARCH}/lib/libgmp.10.dylib"
+    #rm "${CURRENT_DIR}/../gmplib-so-${PLATFORM}-${ARCH}/lib/libgmp.10.dylib"
     rm "${CURRENT_DIR}/../gmp-${GMP_VERSION}.tar.bz2"
     cd ../
 }
@@ -172,7 +172,7 @@ build_ntl()
     cd ntl-${NTL_VERSION}
     cd src
 
-    ./configure CXX=clang++ CXXFLAGS="-stdlib=libc++  -arch ${ARCH} -isysroot ${SDK}"  NTL_THREADS=on NATIVE=on TUNE=x86 NTL_GMP_LIP=on PREFIX="${CURRENT_DIR}/ntl" GMP_PREFIX="${CURRENT_DIR}/gmplib-so-${PLATFORM}-${ARCH}"
+    ./configure CXX=clang++ CXXFLAGS="-stdlib=libc++  -arch ${ARCH} -isysroot ${SDK}"  NTL_THREADS=on NATIVE=on TUNE=x86 SHARED=off NTL_GMP_LIP=on PREFIX="${CURRENT_DIR}/ntl" GMP_PREFIX="${CURRENT_DIR}/gmplib-so-${PLATFORM}-${ARCH}"
     make -j
     
     cp -R "${CURRENT_DIR}/ntl-${NTL_VERSION}/include" "${CURRENT_DIR}/ntl/include" 
@@ -254,7 +254,6 @@ build_all()
     build_helib "${MACOS}" "x86_64"
     build_hdf5
     build_boost
-    
 }
 
 change_submodules

@@ -391,7 +391,7 @@
 			children = (
 				A5D0073124D1E6A200AAE351 /* Views */,
 				A5F9514F24C91B6100406273 /* data */,
-				A50694D624C878C500FFF08B /* src */,
+				A50694D624C878C500FFF08B /* helib_ai */,
 				A50693E324C7298500FFF08B /* AppDelegate.h */,
 				A50693E424C7298500FFF08B /* AppDelegate.m */,
 				A50693E624C7298500FFF08B /* CreditCardInferenceViewController.h */,
@@ -405,7 +405,7 @@
 			path = "Credit Card Fraud";
 			sourceTree = "<group>";
 		};
-		A50694D624C878C500FFF08B /* src */ = {
+		A50694D624C878C500FFF08B /* helib_ai */ = {
 			isa = PBXGroup;
 			children = (
 				A50694D724C878C500FFF08B /* h5Parser.cpp */,
@@ -468,7 +468,7 @@
 				A506951024C878C500FFF08B /* CipherMatrix.h */,
 				A506951124C878C500FFF08B /* FcLayer.cpp */,
 			);
-			path = src;
+			path = helib_ai;
 			sourceTree = "<group>";
 		};
 		A56679F423F714CF00F122FD = {
@@ -1034,7 +1034,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/ntl/include",
-					"\"$(PROJECT_DIR)/Credit Card Fraud/src\"",
+					"\"$(PROJECT_DIR)/Credit Card Fraud/helib_ai\"",
 				);
 				WARNING_LDFLAGS = "-W";
 			};
@@ -1078,7 +1078,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/ntl/include",
-					"\"$(PROJECT_DIR)/Credit Card Fraud/src\"",
+					"\"$(PROJECT_DIR)/Credit Card Fraud/helib_ai\"",
 				);
 				WARNING_LDFLAGS = "-W";
 			};
