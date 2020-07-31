@@ -242,6 +242,7 @@ build_hdf5()
     cd hdf5-1.12.0
     cmake -G "Xcode" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DHDF5_BUILD_TOOLS:BOOL=ON ../CMake-hdf5-1.12.0/hdf5-1.12.0
     cd ../
+    
 }
 
 build_all()
@@ -254,6 +255,8 @@ build_all()
     build_helib "${MACOS}" "x86_64"
     build_hdf5
     build_boost
+    cd ../
+    xcodebuild clean
 }
 
 change_submodules
