@@ -22,7 +22,9 @@
 
 #!/bin/sh
 set -x
-echo " — — — — — — — — — — Building Dependencies Script Started — — — — — — — — — — "
+log_file="setup.log"
+
+echo " — — — — — — — — — — Building Dependencies Script Started — — — — — — — — — — " | tee -a "$log_file"
 
 MIN_IOS="10.0"
 MIN_WATCHOS="2.0"
@@ -261,10 +263,10 @@ build_all()
     xcodebuild clean
 }
 
-change_submodules
-check_cmake
-prepare
-build_all
+change_submodules | tee -a "$log_file"
+check_cmake | tee -a "$log_file"
+prepare | tee -a "$log_file"
+build_all | tee -a "$log_file"
 
-echo " — — — — — — — — — — Building Dependencies Script Ended — — — — — — — — — — "
+echo " — — — — — — — — — — Building Dependencies Script Ended — — — — — — — — — — " | tee -a "$log_file"
 
