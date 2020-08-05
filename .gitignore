@@ -80,6 +80,7 @@ dependencies/*-hdf5-*
 dependencies/lib
 dependencies/include
 dependencies/hdf5-*
+dependencies/setup.log
 
 
 # Compiled Object files
