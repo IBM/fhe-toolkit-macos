@@ -112,33 +112,7 @@ Now from within the dependencies folder, you can trigger the `setup.sh` script t
 
 
 ## Step 6:
-After the dependencies finish building, go back to Xcode and open the workspace `fhe-toolkit-macos.xcworkspace`.  If you previously had it open close it and re-open.  There are two sample demos to choose from, `Privacy Preserving Search`, and `Credit Card Fraud`.  Select the target of the Demo that you would like to build and make sure "My Mac" is selected.
+After the dependencies finish building, go back to Xcode and open the workspace `fhe-toolkit-macos.xcworkspace`.  If you previously had it open close it and re-open.
 
-![Step six image](/Documentation/Images/Step%206_0.png?raw=true "Choosing a Target")
-
-![Step six image](/Documentation/Images/Step%206_1.png?raw=true "Choosing a Target")
-
-
-
-## Step 7: 
-Press Build, the "Play" button in the upper left hand corner.  The sample app with the embedded libraries and dependencies will start the build process. You will notice the bar at the top will indicate the build process is proceeding. If you don't see `Privacy Preserving Search` or `Credit Card Fraud` in the dropdown list, you might need to use the arrow to scroll to the top of list.
-
-NOTE: “Privacy Preserving Search” and "Credit Card Fraud" might request access to the folder you selected for your workspace, please click “ok” to continue.
-
-![Step seven image](/Documentation/Images/Step%207.png?raw=true "Click the play button to start the sample app")
-
-
-
-## Step 8: 
-With the compilation of the mobile demonstration application complete, the app will launch, and you will see the sample application as shown. 
-
-The “Privacy Preserving Search” demonstration is a complete example of a privacy preserving search against an encrypted database. The database is a key value store prepopulated with the english names of countries and their capital cities from the continent of Europe. Selecting the country will perform a search of the matching capital. On a 2019 Macbook Pro laptop, the example searches take under 80 seconds. 
-
-![Step eight image](/Documentation/Images/Step%208.png?raw=true "Sample app Screenshots")
-
-The "Credit Card Fraud" example demonstrates the process of neural network inference over fully homomorphic encrypted dataset and model. The neural network and dataset determine fraudulent activities based on anonymized transactions. The demonstration is split into a privledged client that has access to unencrypted data and models, and an unprivledged server that only performs homomorphic computation in a completely encrypted fashion. Specific details can be found in the section on running the demonstration later in this document.
-
-Note: this takes about 30 seconds for setup time, then it processes 24 batches of about 500 samples per batch, totaling with 12K samples in about 5 minutes.
-
-![Step eight image](/Documentation/Images/Step%208_1.png?raw=true "Sample app Screenshots")
-
+At this point you can build and run the example applications showing the FHE capability. Each demonstration application is a self contained target that builds a macOS application by clicking Build. 
+Each demo application directory contains a README.md that explains how to run the demo and what you should expect for results.  There are two demonstrations to choose from, [Privacy Preserving Search](/Privacy%20Preserving%20Search/README.md), and [Credit Card Fraud](/Credit%20Card%20Fraud/README.md). 
