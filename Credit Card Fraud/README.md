@@ -19,17 +19,17 @@ Lastly, with respect to realism and performance, the sample application is desig
 #### Step 1:
 Select the target `Credit Card Fraud` to build and make sure "My Mac" is selected.
 
-![Step one image](../Documentation/Images/Step%206_0.png?raw=true "Choosing a Target")
+![Step one image](../Documentation/Images/Step%206_0_1.png?raw=true "Choosing a Target")
 
 If you don't see the `Credit Card Fraud` target, click and hold on the target that is in the bar, and a list of all the targets will present itself.
-![Step one.two image](../Documentation/Images/Step%206_1.png?raw=true "Choosing a Target")
+![Step one.two image](../Documentation/Images/Step%206_1_1.png?raw=true "Choosing a Target")
 
 #### Step 2: 
 Press Build, the "Play" button in the upper left hand corner.  The sample app with the embedded libraries and dependencies will start the build process. You will notice the bar at the top will indicate the build process is proceeding.
 
 NOTE: "Credit Card Fraud" might request access to the folder you selected for your workspace, please click “ok” to continue.
 
-![Step seven image](../Documentation/Images/Step%207.png?raw=true "Click the play button to start the sample app")
+![Step seven image](../Documentation/Images/Step%207_1.png?raw=true "Click the play button to start the sample app")
 
 #### Step 3:
 With the compilation of the mobile demonstration application complete, the app will launch, and you will see the sample application as shown. 
