@@ -120,7 +120,6 @@ prepare()
         rm -rf gmp
         tar xfj "gmp-${GMP_VERSION}.tar.bz2"
         mv gmp-${GMP_VERSION} gmp
-        cd gmp
     }
     download_ntl()
     {
@@ -137,6 +136,7 @@ prepare()
 build_gmp()
 {
    
+     cd gmp
     PLATFORM=$1
     ARCH=$2
     SDK=`xcrun --sdk $PLATFORM --show-sdk-path`
