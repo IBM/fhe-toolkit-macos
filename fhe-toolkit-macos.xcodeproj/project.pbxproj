@@ -7,10 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A50693E524C7298500FFF08B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A50693E424C7298500FFF08B /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A50693EA24C7298A00FFF08B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A50693E924C7298A00FFF08B /* Assets.xcassets */; };
+		A50693ED24C7298A00FFF08B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50693EB24C7298A00FFF08B /* Main.storyboard */; };
+		A50693F024C7298A00FFF08B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A50693EF24C7298A00FFF08B /* main.m */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A50693F724C72C4900FFF08B /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CA244F73380087514D /* libgmp.a */; };
+		A50693F824C72C6900FFF08B /* ntl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649C4244F72700087514D /* ntl.a */; };
+		A50694D424C7DE2300FFF08B /* CreditCardInferenceViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A50693E724C7298500FFF08B /* CreditCardInferenceViewController.mm */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951224C878C500FFF08B /* h5Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694D724C878C500FFF08B /* h5Parser.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951324C878C500FFF08B /* HelibCkksPlaintext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694DA24C878C500FFF08B /* HelibCkksPlaintext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951424C878C500FFF08B /* SimpleFcLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694DB24C878C500FFF08B /* SimpleFcLayer.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951524C878C500FFF08B /* HelibConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694DD24C878C500FFF08B /* HelibConfig.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951624C878C500FFF08B /* DoubleMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694DE24C878C500FFF08B /* DoubleMatrix.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951724C878C500FFF08B /* AlwaysAssert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E024C878C500FFF08B /* AlwaysAssert.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951824C878C600FFF08B /* HelibCkksEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E224C878C500FFF08B /* HelibCkksEncoder.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951924C878C600FFF08B /* HelibCkksCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E424C878C500FFF08B /* HelibCkksCiphertext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951A24C878C600FFF08B /* AbstractCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E624C878C500FFF08B /* AbstractCiphertext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951B24C878C600FFF08B /* CTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E824C878C500FFF08B /* CTile.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951C24C878C600FFF08B /* CipherMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694EB24C878C500FFF08B /* CipherMatrix.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951D24C878C600FFF08B /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694ED24C878C500FFF08B /* Layer.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951E24C878C600FFF08B /* FileUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694EE24C878C500FFF08B /* FileUtils.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506951F24C878C600FFF08B /* DoubleMatrixArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694F124C878C500FFF08B /* DoubleMatrixArray.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952024C878C600FFF08B /* SimpleNeuralNet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694F524C878C500FFF08B /* SimpleNeuralNet.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952124C878C600FFF08B /* HelibCkksContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694F724C878C500FFF08B /* HelibCkksContext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952224C878C600FFF08B /* AbstractEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694FB24C878C500FFF08B /* AbstractEncoder.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952324C878C600FFF08B /* SimpleTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694FD24C878C500FFF08B /* SimpleTimer.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952424C878C600FFF08B /* HelibContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694FE24C878C500FFF08B /* HelibContext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952524C878C600FFF08B /* h5Dumper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694FF24C878C500FFF08B /* h5Dumper.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952624C878C600FFF08B /* CipherMatrixEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950324C878C500FFF08B /* CipherMatrixEncoder.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952724C878C600FFF08B /* SimpleSquareActivationLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950424C878C500FFF08B /* SimpleSquareActivationLayer.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952824C878C600FFF08B /* HelibCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950624C878C500FFF08B /* HelibCiphertext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952924C878C600FFF08B /* SimpleNeuralNetPlain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950A24C878C500FFF08B /* SimpleNeuralNetPlain.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952A24C878C600FFF08B /* SimpleTrainingSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950B24C878C500FFF08B /* SimpleTrainingSet.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952B24C878C600FFF08B /* HeContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950C24C878C500FFF08B /* HeContext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952C24C878C600FFF08B /* Encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950D24C878C500FFF08B /* Encoder.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952D24C878C600FFF08B /* PTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950F24C878C500FFF08B /* PTile.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506952E24C878C600FFF08B /* FcLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506951124C878C500FFF08B /* FcLayer.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A506953624C8812300FFF08B /* libhdf5_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953524C8812300FFF08B /* libhdf5_debug.a */; };
+		A506953824C8B02300FFF08B /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953724C8B02300FFF08B /* libhelib.a */; };
+		A506953A24C8B17200FFF08B /* libhdf5_cpp_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953924C8B17200FFF08B /* libhdf5_cpp_debug.a */; };
+		A506953E24C8BD7600FFF08B /* libboost_filesystem.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */; };
 		A5667A0223F714CF00F122FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5667A0123F714CF00F122FD /* AppDelegate.m */; };
 		A5667A0723F714D200F122FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5667A0623F714D200F122FD /* Assets.xcassets */; };
 		A5667A0A23F714D200F122FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5667A0823F714D200F122FD /* Main.storyboard */; };
 		A5667EF823FCD4BA00F122FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5667A0C23F714D200F122FD /* main.m */; };
+		A5A0E47A24CB679F00FA427E /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0E47924CB679F00FA427E /* libhelib.a */; };
+		A5A0E47C24CFBE7B00FA427E /* new_2.h5 in Resources */ = {isa = PBXBuildFile; fileRef = A5A0E47B24CFBE7B00FA427E /* new_2.h5 */; };
+		A5A0E47F24D09CFB00FA427E /* CreditSampleResultsData.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A5D0073424D1E6CC00AAE351 /* CCProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D0073324D1E6CC00AAE351 /* CCProgressView.m */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A5D0073524D3674100AAE351 /* libboost_filesystem.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */; };
 		A5F649C5244F72700087514D /* ntl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649C4244F72700087514D /* ntl.a */; };
 		A5F649D3244F73390087514D /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CA244F73380087514D /* libgmp.a */; };
 		A5F649D4244F73390087514D /* libgmp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CB244F73380087514D /* libgmp.dylib */; };
@@ -19,15 +64,105 @@
 		A5F649D7244F73390087514D /* gmp.info in Resources */ = {isa = PBXBuildFile; fileRef = A5F649D0244F73380087514D /* gmp.info */; };
 		A5F649D8244F73390087514D /* gmp.info-2 in Resources */ = {isa = PBXBuildFile; fileRef = A5F649D1244F73380087514D /* gmp.info-2 */; };
 		A5F649D9244F73390087514D /* dir in Resources */ = {isa = PBXBuildFile; fileRef = A5F649D2244F73380087514D /* dir */; };
-		A5F649DC244F789E0087514D /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649DB244F789E0087514D /* libhelib.a */; };
 		A5F649E02450852C0087514D /* CountryData.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F649DF2450852C0087514D /* CountryData.m */; };
 		A5F649E22450853C0087514D /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A5F649E12450853C0087514D /* data.json */; };
 		A5F649E524508CAD0087514D /* CountryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F649E424508CAD0087514D /* CountryTableViewController.m */; };
 		A5F649E924508CCC0087514D /* CapitalDetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A5F649E724508CCC0087514D /* CapitalDetailViewController.mm */; };
 		A5F649ED2450DC270087514D /* CountryDisplaySplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F649EC2450DC270087514D /* CountryDisplaySplitViewController.m */; };
+		A5F9515424C91B6100406273 /* y_test.h5 in Resources */ = {isa = PBXBuildFile; fileRef = A5F9515124C91B6100406273 /* y_test.h5 */; };
+		A5F9515524C91B6100406273 /* x_test.h5 in Resources */ = {isa = PBXBuildFile; fileRef = A5F9515224C91B6100406273 /* x_test.h5 */; };
+		A5F9515924C9D72800406273 /* model_42098.h5 in Resources */ = {isa = PBXBuildFile; fileRef = A5F9515824C9D72800406273 /* model_42098.h5 */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A5D0073624D3674100AAE351 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A5D0073524D3674100AAE351 /* libboost_filesystem.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		A50693E124C7298500FFF08B /* Credit Card Fraud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Credit Card Fraud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50693E324C7298500FFF08B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A50693E424C7298500FFF08B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A50693E624C7298500FFF08B /* CreditCardInferenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreditCardInferenceViewController.h; sourceTree = "<group>"; };
+		A50693E724C7298500FFF08B /* CreditCardInferenceViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CreditCardInferenceViewController.mm; sourceTree = "<group>"; };
+		A50693E924C7298A00FFF08B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A50693EC24C7298A00FFF08B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A50693EE24C7298A00FFF08B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A50693EF24C7298A00FFF08B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A50693F124C7298A00FFF08B /* Credit_Card_Fraud.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Credit_Card_Fraud.entitlements; sourceTree = "<group>"; };
+		A50694D724C878C500FFF08B /* h5Parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = h5Parser.cpp; sourceTree = "<group>"; };
+		A50694D824C878C500FFF08B /* HelibCkksPlaintext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibCkksPlaintext.h; sourceTree = "<group>"; };
+		A50694D924C878C500FFF08B /* SimpleNeuralNetPlain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleNeuralNetPlain.h; sourceTree = "<group>"; };
+		A50694DA24C878C500FFF08B /* HelibCkksPlaintext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibCkksPlaintext.cpp; sourceTree = "<group>"; };
+		A50694DB24C878C500FFF08B /* SimpleFcLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleFcLayer.cpp; sourceTree = "<group>"; };
+		A50694DC24C878C500FFF08B /* SimpleTrainingSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTrainingSet.h; sourceTree = "<group>"; };
+		A50694DD24C878C500FFF08B /* HelibConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibConfig.cpp; sourceTree = "<group>"; };
+		A50694DE24C878C500FFF08B /* DoubleMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DoubleMatrix.cpp; sourceTree = "<group>"; };
+		A50694DF24C878C500FFF08B /* SimpleFcLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFcLayer.h; sourceTree = "<group>"; };
+		A50694E024C878C500FFF08B /* AlwaysAssert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AlwaysAssert.cpp; sourceTree = "<group>"; };
+		A50694E124C878C500FFF08B /* HelibCkksEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibCkksEncoder.h; sourceTree = "<group>"; };
+		A50694E224C878C500FFF08B /* HelibCkksEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibCkksEncoder.cpp; sourceTree = "<group>"; };
+		A50694E324C878C500FFF08B /* FileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtils.h; sourceTree = "<group>"; };
+		A50694E424C878C500FFF08B /* HelibCkksCiphertext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibCkksCiphertext.cpp; sourceTree = "<group>"; };
+		A50694E524C878C500FFF08B /* DoubleMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleMatrix.h; sourceTree = "<group>"; };
+		A50694E624C878C500FFF08B /* AbstractCiphertext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AbstractCiphertext.cpp; sourceTree = "<group>"; };
+		A50694E724C878C500FFF08B /* SimpleNeuralNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleNeuralNet.h; sourceTree = "<group>"; };
+		A50694E824C878C500FFF08B /* CTile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTile.cpp; sourceTree = "<group>"; };
+		A50694E924C878C500FFF08B /* h5Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = h5Parser.h; sourceTree = "<group>"; };
+		A50694EA24C878C500FFF08B /* HeContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeContext.h; sourceTree = "<group>"; };
+		A50694EB24C878C500FFF08B /* CipherMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CipherMatrix.cpp; sourceTree = "<group>"; };
+		A50694EC24C878C500FFF08B /* Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layer.h; sourceTree = "<group>"; };
+		A50694ED24C878C500FFF08B /* Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Layer.cpp; sourceTree = "<group>"; };
+		A50694EE24C878C500FFF08B /* FileUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileUtils.cpp; sourceTree = "<group>"; };
+		A50694EF24C878C500FFF08B /* PTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTile.h; sourceTree = "<group>"; };
+		A50694F024C878C500FFF08B /* HelibCiphertext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibCiphertext.h; sourceTree = "<group>"; };
+		A50694F124C878C500FFF08B /* DoubleMatrixArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DoubleMatrixArray.cpp; sourceTree = "<group>"; };
+		A50694F224C878C500FFF08B /* SimpleTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTimer.h; sourceTree = "<group>"; };
+		A50694F324C878C500FFF08B /* DoubleMatrixArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleMatrixArray.h; sourceTree = "<group>"; };
+		A50694F424C878C500FFF08B /* AbstractCiphertext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractCiphertext.h; sourceTree = "<group>"; };
+		A50694F524C878C500FFF08B /* SimpleNeuralNet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleNeuralNet.cpp; sourceTree = "<group>"; };
+		A50694F624C878C500FFF08B /* CipherMatrixEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherMatrixEncoder.h; sourceTree = "<group>"; };
+		A50694F724C878C500FFF08B /* HelibCkksContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibCkksContext.cpp; sourceTree = "<group>"; };
+		A50694F824C878C500FFF08B /* AbstractEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractEncoder.h; sourceTree = "<group>"; };
+		A50694F924C878C500FFF08B /* HelibCkksCiphertext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibCkksCiphertext.h; sourceTree = "<group>"; };
+		A50694FA24C878C500FFF08B /* CTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTile.h; sourceTree = "<group>"; };
+		A50694FB24C878C500FFF08B /* AbstractEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AbstractEncoder.cpp; sourceTree = "<group>"; };
+		A50694FC24C878C500FFF08B /* HelibContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibContext.h; sourceTree = "<group>"; };
+		A50694FD24C878C500FFF08B /* SimpleTimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleTimer.cpp; sourceTree = "<group>"; };
+		A50694FE24C878C500FFF08B /* HelibContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibContext.cpp; sourceTree = "<group>"; };
+		A50694FF24C878C500FFF08B /* h5Dumper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = h5Dumper.cpp; sourceTree = "<group>"; };
+		A506950024C878C500FFF08B /* Encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encoder.h; sourceTree = "<group>"; };
+		A506950124C878C500FFF08B /* h5Dumper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = h5Dumper.h; sourceTree = "<group>"; };
+		A506950224C878C500FFF08B /* AbstractPlaintext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractPlaintext.h; sourceTree = "<group>"; };
+		A506950324C878C500FFF08B /* CipherMatrixEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CipherMatrixEncoder.cpp; sourceTree = "<group>"; };
+		A506950424C878C500FFF08B /* SimpleSquareActivationLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleSquareActivationLayer.cpp; sourceTree = "<group>"; };
+		A506950524C878C500FFF08B /* SimpleSquareActivationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleSquareActivationLayer.h; sourceTree = "<group>"; };
+		A506950624C878C500FFF08B /* HelibCiphertext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibCiphertext.cpp; sourceTree = "<group>"; };
+		A506950724C878C500FFF08B /* FcLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FcLayer.h; sourceTree = "<group>"; };
+		A506950824C878C500FFF08B /* AlwaysAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlwaysAssert.h; sourceTree = "<group>"; };
+		A506950924C878C500FFF08B /* HelibCkksContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibCkksContext.h; sourceTree = "<group>"; };
+		A506950A24C878C500FFF08B /* SimpleNeuralNetPlain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleNeuralNetPlain.cpp; sourceTree = "<group>"; };
+		A506950B24C878C500FFF08B /* SimpleTrainingSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleTrainingSet.cpp; sourceTree = "<group>"; };
+		A506950C24C878C500FFF08B /* HeContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HeContext.cpp; sourceTree = "<group>"; };
+		A506950D24C878C500FFF08B /* Encoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Encoder.cpp; sourceTree = "<group>"; };
+		A506950E24C878C500FFF08B /* HelibConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibConfig.h; sourceTree = "<group>"; };
+		A506950F24C878C500FFF08B /* PTile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PTile.cpp; sourceTree = "<group>"; };
+		A506951024C878C500FFF08B /* CipherMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherMatrix.h; sourceTree = "<group>"; };
+		A506951124C878C500FFF08B /* FcLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FcLayer.cpp; sourceTree = "<group>"; };
+		A506953524C8812300FFF08B /* libhdf5_debug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libhdf5_debug.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A506953724C8B02300FFF08B /* libhelib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libhelib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A506953924C8B17200FFF08B /* libhdf5_cpp_debug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libhdf5_cpp_debug.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A506953B24C8BD3200FFF08B /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = dependencies/lib/libboost_filesystem.a; sourceTree = "<group>"; };
+		A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_filesystem.dylib; path = dependencies/lib/libboost_filesystem.dylib; sourceTree = "<group>"; };
 		A56679FD23F714CF00F122FD /* Privacy Preserving Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Privacy Preserving Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5667A0023F714CF00F122FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A5667A0123F714CF00F122FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,6 +171,14 @@
 		A5667A0B23F714D200F122FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5667A0C23F714D200F122FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A5667A0E23F714D200F122FD /* fhe-toolkit-macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "fhe-toolkit-macos.entitlements"; sourceTree = "<group>"; };
+		A5A0E47924CB679F00FA427E /* libhelib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libhelib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5A0E47B24CFBE7B00FA427E /* new_2.h5 */ = {isa = PBXFileReference; lastKnownFileType = file; path = new_2.h5; sourceTree = "<group>"; };
+		A5A0E47D24D09CFB00FA427E /* CreditSampleResultsData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreditSampleResultsData.h; sourceTree = "<group>"; };
+		A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreditSampleResultsData.m; sourceTree = "<group>"; };
+		A5D0073224D1E6CC00AAE351 /* CCProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCProgressView.h; sourceTree = "<group>"; };
+		A5D0073324D1E6CC00AAE351 /* CCProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCProgressView.m; sourceTree = "<group>"; };
+		A5D0073724DB330900AAE351 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A5D0073824DB33C700AAE351 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A5F64922244F711D0087514D /* keys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keys.h; sourceTree = "<group>"; };
 		A5F64923244F711D0087514D /* randomMatrices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randomMatrices.h; sourceTree = "<group>"; };
 		A5F64924244F711D0087514D /* matmul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matmul.h; sourceTree = "<group>"; };
@@ -203,7 +346,6 @@
 		A5F649D0244F73380087514D /* gmp.info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gmp.info; sourceTree = "<group>"; };
 		A5F649D1244F73380087514D /* gmp.info-2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "gmp.info-2"; sourceTree = "<group>"; };
 		A5F649D2244F73380087514D /* dir */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dir; sourceTree = "<group>"; };
-		A5F649DB244F789E0087514D /* libhelib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libhelib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F649DE2450852C0087514D /* CountryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryData.h; sourceTree = "<group>"; };
 		A5F649DF2450852C0087514D /* CountryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryData.m; sourceTree = "<group>"; };
 		A5F649E12450853C0087514D /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
@@ -213,14 +355,30 @@
 		A5F649E724508CCC0087514D /* CapitalDetailViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CapitalDetailViewController.mm; sourceTree = "<group>"; };
 		A5F649EB2450DC270087514D /* CountryDisplaySplitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryDisplaySplitViewController.h; sourceTree = "<group>"; };
 		A5F649EC2450DC270087514D /* CountryDisplaySplitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryDisplaySplitViewController.m; sourceTree = "<group>"; };
+		A5F9515124C91B6100406273 /* y_test.h5 */ = {isa = PBXFileReference; lastKnownFileType = file; path = y_test.h5; sourceTree = "<group>"; };
+		A5F9515224C91B6100406273 /* x_test.h5 */ = {isa = PBXFileReference; lastKnownFileType = file; path = x_test.h5; sourceTree = "<group>"; };
+		A5F9515824C9D72800406273 /* model_42098.h5 */ = {isa = PBXFileReference; lastKnownFileType = file; path = model_42098.h5; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A50693DE24C7298500FFF08B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A506953824C8B02300FFF08B /* libhelib.a in Frameworks */,
+				A506953A24C8B17200FFF08B /* libhdf5_cpp_debug.a in Frameworks */,
+				A506953624C8812300FFF08B /* libhdf5_debug.a in Frameworks */,
+				A506953E24C8BD7600FFF08B /* libboost_filesystem.dylib in Frameworks */,
+				A50693F824C72C6900FFF08B /* ntl.a in Frameworks */,
+				A50693F724C72C4900FFF08B /* libgmp.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A56679FA23F714CF00F122FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5F649DC244F789E0087514D /* libhelib.a in Frameworks */,
+				A5A0E47A24CB679F00FA427E /* libhelib.a in Frameworks */,
 				A5F649D3244F73390087514D /* libgmp.a in Frameworks */,
 				A5F649D4244F73390087514D /* libgmp.dylib in Frameworks */,
 				A5F649C5244F72700087514D /* ntl.a in Frameworks */,
@@ -230,10 +388,97 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A50693E224C7298500FFF08B /* Credit Card Fraud */ = {
+			isa = PBXGroup;
+			children = (
+				A5D0073824DB33C700AAE351 /* README.md */,
+				A5D0073124D1E6A200AAE351 /* Views */,
+				A5F9514F24C91B6100406273 /* data */,
+				A50694D624C878C500FFF08B /* helib_ai */,
+				A50693E324C7298500FFF08B /* AppDelegate.h */,
+				A50693E424C7298500FFF08B /* AppDelegate.m */,
+				A50693E624C7298500FFF08B /* CreditCardInferenceViewController.h */,
+				A50693E724C7298500FFF08B /* CreditCardInferenceViewController.mm */,
+				A50693E924C7298A00FFF08B /* Assets.xcassets */,
+				A50693EB24C7298A00FFF08B /* Main.storyboard */,
+				A50693EE24C7298A00FFF08B /* Info.plist */,
+				A50693EF24C7298A00FFF08B /* main.m */,
+				A50693F124C7298A00FFF08B /* Credit_Card_Fraud.entitlements */,
+			);
+			path = "Credit Card Fraud";
+			sourceTree = "<group>";
+		};
+		A50694D624C878C500FFF08B /* helib_ai */ = {
+			isa = PBXGroup;
+			children = (
+				A50694D724C878C500FFF08B /* h5Parser.cpp */,
+				A50694D824C878C500FFF08B /* HelibCkksPlaintext.h */,
+				A50694D924C878C500FFF08B /* SimpleNeuralNetPlain.h */,
+				A50694DA24C878C500FFF08B /* HelibCkksPlaintext.cpp */,
+				A50694DB24C878C500FFF08B /* SimpleFcLayer.cpp */,
+				A50694DC24C878C500FFF08B /* SimpleTrainingSet.h */,
+				A50694DD24C878C500FFF08B /* HelibConfig.cpp */,
+				A50694DE24C878C500FFF08B /* DoubleMatrix.cpp */,
+				A50694DF24C878C500FFF08B /* SimpleFcLayer.h */,
+				A50694E024C878C500FFF08B /* AlwaysAssert.cpp */,
+				A50694E124C878C500FFF08B /* HelibCkksEncoder.h */,
+				A50694E224C878C500FFF08B /* HelibCkksEncoder.cpp */,
+				A50694E324C878C500FFF08B /* FileUtils.h */,
+				A50694E424C878C500FFF08B /* HelibCkksCiphertext.cpp */,
+				A50694E524C878C500FFF08B /* DoubleMatrix.h */,
+				A50694E624C878C500FFF08B /* AbstractCiphertext.cpp */,
+				A50694E724C878C500FFF08B /* SimpleNeuralNet.h */,
+				A50694E824C878C500FFF08B /* CTile.cpp */,
+				A50694E924C878C500FFF08B /* h5Parser.h */,
+				A50694EA24C878C500FFF08B /* HeContext.h */,
+				A50694EB24C878C500FFF08B /* CipherMatrix.cpp */,
+				A50694EC24C878C500FFF08B /* Layer.h */,
+				A50694ED24C878C500FFF08B /* Layer.cpp */,
+				A50694EE24C878C500FFF08B /* FileUtils.cpp */,
+				A50694EF24C878C500FFF08B /* PTile.h */,
+				A50694F024C878C500FFF08B /* HelibCiphertext.h */,
+				A50694F124C878C500FFF08B /* DoubleMatrixArray.cpp */,
+				A50694F224C878C500FFF08B /* SimpleTimer.h */,
+				A50694F324C878C500FFF08B /* DoubleMatrixArray.h */,
+				A50694F424C878C500FFF08B /* AbstractCiphertext.h */,
+				A50694F524C878C500FFF08B /* SimpleNeuralNet.cpp */,
+				A50694F624C878C500FFF08B /* CipherMatrixEncoder.h */,
+				A50694F724C878C500FFF08B /* HelibCkksContext.cpp */,
+				A50694F824C878C500FFF08B /* AbstractEncoder.h */,
+				A50694F924C878C500FFF08B /* HelibCkksCiphertext.h */,
+				A50694FA24C878C500FFF08B /* CTile.h */,
+				A50694FB24C878C500FFF08B /* AbstractEncoder.cpp */,
+				A50694FC24C878C500FFF08B /* HelibContext.h */,
+				A50694FD24C878C500FFF08B /* SimpleTimer.cpp */,
+				A50694FE24C878C500FFF08B /* HelibContext.cpp */,
+				A50694FF24C878C500FFF08B /* h5Dumper.cpp */,
+				A506950024C878C500FFF08B /* Encoder.h */,
+				A506950124C878C500FFF08B /* h5Dumper.h */,
+				A506950224C878C500FFF08B /* AbstractPlaintext.h */,
+				A506950324C878C500FFF08B /* CipherMatrixEncoder.cpp */,
+				A506950424C878C500FFF08B /* SimpleSquareActivationLayer.cpp */,
+				A506950524C878C500FFF08B /* SimpleSquareActivationLayer.h */,
+				A506950624C878C500FFF08B /* HelibCiphertext.cpp */,
+				A506950724C878C500FFF08B /* FcLayer.h */,
+				A506950824C878C500FFF08B /* AlwaysAssert.h */,
+				A506950924C878C500FFF08B /* HelibCkksContext.h */,
+				A506950A24C878C500FFF08B /* SimpleNeuralNetPlain.cpp */,
+				A506950B24C878C500FFF08B /* SimpleTrainingSet.cpp */,
+				A506950C24C878C500FFF08B /* HeContext.cpp */,
+				A506950D24C878C500FFF08B /* Encoder.cpp */,
+				A506950E24C878C500FFF08B /* HelibConfig.h */,
+				A506950F24C878C500FFF08B /* PTile.cpp */,
+				A506951024C878C500FFF08B /* CipherMatrix.h */,
+				A506951124C878C500FFF08B /* FcLayer.cpp */,
+			);
+			path = helib_ai;
+			sourceTree = "<group>";
+		};
 		A56679F423F714CF00F122FD = {
 			isa = PBXGroup;
 			children = (
-				A56679FF23F714CF00F122FD /* fhe-toolkit-macos */,
+				A56679FF23F714CF00F122FD /* Privacy Preserving Search */,
+				A50693E224C7298500FFF08B /* Credit Card Fraud */,
 				A56679FE23F714CF00F122FD /* Products */,
 				A5F649DA244F789E0087514D /* Frameworks */,
 			);
@@ -243,17 +488,19 @@
 			isa = PBXGroup;
 			children = (
 				A56679FD23F714CF00F122FD /* Privacy Preserving Search.app */,
+				A50693E124C7298500FFF08B /* Credit Card Fraud.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A56679FF23F714CF00F122FD /* fhe-toolkit-macos */ = {
+		A56679FF23F714CF00F122FD /* Privacy Preserving Search */ = {
 			isa = PBXGroup;
 			children = (
+				A5D0073724DB330900AAE351 /* README.md */,
 				A5667A0023F714CF00F122FD /* AppDelegate.h */,
 				A5667A0123F714CF00F122FD /* AppDelegate.m */,
 				A5F649E12450853C0087514D /* data.json */,
-				A5F649DD245085070087514D /* SampleCode */,
+				A5F649DD245085070087514D /* Sample Code */,
 				A5F649C6244F73380087514D /* gmplib-so-macosx-x86_64 */,
 				A5F64953244F726F0087514D /* ntl */,
 				A5F64920244F711D0087514D /* include */,
@@ -263,7 +510,16 @@
 				A5667A0C23F714D200F122FD /* main.m */,
 				A5667A0E23F714D200F122FD /* fhe-toolkit-macos.entitlements */,
 			);
-			path = "fhe-toolkit-macos";
+			path = "Privacy Preserving Search";
+			sourceTree = "<group>";
+		};
+		A5D0073124D1E6A200AAE351 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A5D0073224D1E6CC00AAE351 /* CCProgressView.h */,
+				A5D0073324D1E6CC00AAE351 /* CCProgressView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A5F64920244F711D0087514D /* include */ = {
@@ -524,12 +780,17 @@
 		A5F649DA244F789E0087514D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A5F649DB244F789E0087514D /* libhelib.a */,
+				A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */,
+				A5A0E47924CB679F00FA427E /* libhelib.a */,
+				A506953B24C8BD3200FFF08B /* libboost_filesystem.a */,
+				A506953524C8812300FFF08B /* libhdf5_debug.a */,
+				A506953724C8B02300FFF08B /* libhelib.a */,
+				A506953924C8B17200FFF08B /* libhdf5_cpp_debug.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A5F649DD245085070087514D /* SampleCode */ = {
+		A5F649DD245085070087514D /* Sample Code */ = {
 			isa = PBXGroup;
 			children = (
 				A5F649DE2450852C0087514D /* CountryData.h */,
@@ -541,12 +802,43 @@
 				A5F649EB2450DC270087514D /* CountryDisplaySplitViewController.h */,
 				A5F649EC2450DC270087514D /* CountryDisplaySplitViewController.m */,
 			);
-			path = SampleCode;
+			path = "Sample Code";
+			sourceTree = "<group>";
+		};
+		A5F9514F24C91B6100406273 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				A5A0E47B24CFBE7B00FA427E /* new_2.h5 */,
+				A5F9515824C9D72800406273 /* model_42098.h5 */,
+				A5F9515124C91B6100406273 /* y_test.h5 */,
+				A5F9515224C91B6100406273 /* x_test.h5 */,
+				A5A0E47D24D09CFB00FA427E /* CreditSampleResultsData.h */,
+				A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A50693E024C7298500FFF08B /* Credit Card Fraud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A50693F424C7298A00FFF08B /* Build configuration list for PBXNativeTarget "Credit Card Fraud" */;
+			buildPhases = (
+				A50693DD24C7298500FFF08B /* Sources */,
+				A50693DE24C7298500FFF08B /* Frameworks */,
+				A50693DF24C7298500FFF08B /* Resources */,
+				A5D0073624D3674100AAE351 /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Credit Card Fraud";
+			productName = "Credit Card Fraud";
+			productReference = A50693E124C7298500FFF08B /* Credit Card Fraud.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A56679FC23F714CF00F122FD /* Privacy Preserving Search */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5667A2723F714D200F122FD /* Build configuration list for PBXNativeTarget "Privacy Preserving Search" */;
@@ -573,6 +865,9 @@
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = IBM;
 				TargetAttributes = {
+					A50693E024C7298500FFF08B = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
 					A56679FC23F714CF00F122FD = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -592,11 +887,25 @@
 			projectRoot = "";
 			targets = (
 				A56679FC23F714CF00F122FD /* Privacy Preserving Search */,
+				A50693E024C7298500FFF08B /* Credit Card Fraud */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A50693DF24C7298500FFF08B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5F9515924C9D72800406273 /* model_42098.h5 in Resources */,
+				A5F9515424C91B6100406273 /* y_test.h5 in Resources */,
+				A5A0E47C24CFBE7B00FA427E /* new_2.h5 in Resources */,
+				A5F9515524C91B6100406273 /* x_test.h5 in Resources */,
+				A50693EA24C7298A00FFF08B /* Assets.xcassets in Resources */,
+				A50693ED24C7298A00FFF08B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A56679FB23F714CF00F122FD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -615,6 +924,47 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A50693DD24C7298500FFF08B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A506951524C878C500FFF08B /* HelibConfig.cpp in Sources */,
+				A506951624C878C500FFF08B /* DoubleMatrix.cpp in Sources */,
+				A506952E24C878C600FFF08B /* FcLayer.cpp in Sources */,
+				A506952B24C878C600FFF08B /* HeContext.cpp in Sources */,
+				A50694D424C7DE2300FFF08B /* CreditCardInferenceViewController.mm in Sources */,
+				A506951A24C878C600FFF08B /* AbstractCiphertext.cpp in Sources */,
+				A506951824C878C600FFF08B /* HelibCkksEncoder.cpp in Sources */,
+				A506951B24C878C600FFF08B /* CTile.cpp in Sources */,
+				A50693F024C7298A00FFF08B /* main.m in Sources */,
+				A506951924C878C600FFF08B /* HelibCkksCiphertext.cpp in Sources */,
+				A506952624C878C600FFF08B /* CipherMatrixEncoder.cpp in Sources */,
+				A50693E524C7298500FFF08B /* AppDelegate.m in Sources */,
+				A506952D24C878C600FFF08B /* PTile.cpp in Sources */,
+				A506952124C878C600FFF08B /* HelibCkksContext.cpp in Sources */,
+				A5A0E47F24D09CFB00FA427E /* CreditSampleResultsData.m in Sources */,
+				A506952724C878C600FFF08B /* SimpleSquareActivationLayer.cpp in Sources */,
+				A506951F24C878C600FFF08B /* DoubleMatrixArray.cpp in Sources */,
+				A506952C24C878C600FFF08B /* Encoder.cpp in Sources */,
+				A506951D24C878C600FFF08B /* Layer.cpp in Sources */,
+				A506952824C878C600FFF08B /* HelibCiphertext.cpp in Sources */,
+				A506952224C878C600FFF08B /* AbstractEncoder.cpp in Sources */,
+				A506952924C878C600FFF08B /* SimpleNeuralNetPlain.cpp in Sources */,
+				A506951C24C878C600FFF08B /* CipherMatrix.cpp in Sources */,
+				A506951324C878C500FFF08B /* HelibCkksPlaintext.cpp in Sources */,
+				A506951424C878C500FFF08B /* SimpleFcLayer.cpp in Sources */,
+				A506952324C878C600FFF08B /* SimpleTimer.cpp in Sources */,
+				A506951224C878C500FFF08B /* h5Parser.cpp in Sources */,
+				A5D0073424D1E6CC00AAE351 /* CCProgressView.m in Sources */,
+				A506952424C878C600FFF08B /* HelibContext.cpp in Sources */,
+				A506951724C878C500FFF08B /* AlwaysAssert.cpp in Sources */,
+				A506952A24C878C600FFF08B /* SimpleTrainingSet.cpp in Sources */,
+				A506952024C878C600FFF08B /* SimpleNeuralNet.cpp in Sources */,
+				A506952524C878C600FFF08B /* h5Dumper.cpp in Sources */,
+				A506951E24C878C600FFF08B /* FileUtils.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A56679F923F714CF00F122FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -631,6 +981,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		A50693EB24C7298A00FFF08B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A50693EC24C7298A00FFF08B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		A5667A0823F714D200F122FD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -642,6 +1000,94 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A50693F224C7298A00FFF08B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_MODULES_DISABLE_PRIVATE_WARNING = YES;
+				CODE_SIGN_ENTITLEMENTS = "Credit Card Fraud/Credit_Card_Fraud.entitlements";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/dependencies/boost_1_72_0",
+					"$(PROJECT_DIR)/dependencies/CMake-hdf5-1.12.0/hdf5-1.12.0/c++/src",
+					"$(PROJECT_DIR)/dependencies/CMake-hdf5-1.12.0/hdf5-1.12.0/src",
+					"$(PROJECT_DIR)/dependencies/HElib/include",
+					"$(PROJECT_DIR)/dependencies/hdf5-1.12.0",
+				);
+				INFOPLIST_FILE = "Credit Card Fraud/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/dependencies/gmplib-so-macosx-x86_64/lib",
+					"$(PROJECT_DIR)/dependencies/ntl/libs",
+					"$(PROJECT_DIR)/dependencies/HElib_macOS/lib/Debug",
+					"$(PROJECT_DIR)/dependencies/hdf5-1.12.0/bin/Debug",
+					"$(PROJECT_DIR)/dependencies/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.research.Credit-Card-Fraud";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				USER_HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/dependencies/ntl/include",
+					"\"$(PROJECT_DIR)/Credit Card Fraud/helib_ai\"",
+				);
+				WARNING_LDFLAGS = "-W";
+			};
+			name = Debug;
+		};
+		A50693F324C7298A00FFF08B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_MODULES_DISABLE_PRIVATE_WARNING = YES;
+				CODE_SIGN_ENTITLEMENTS = "Credit Card Fraud/Credit_Card_Fraud.entitlements";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/dependencies/boost_1_72_0",
+					"$(PROJECT_DIR)/dependencies/CMake-hdf5-1.12.0/hdf5-1.12.0/c++/src",
+					"$(PROJECT_DIR)/dependencies/CMake-hdf5-1.12.0/hdf5-1.12.0/src",
+					"$(PROJECT_DIR)/dependencies/HElib/include",
+					"$(PROJECT_DIR)/dependencies/hdf5-1.12.0",
+				);
+				INFOPLIST_FILE = "Credit Card Fraud/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/dependencies/gmplib-so-macosx-x86_64/lib",
+					"$(PROJECT_DIR)/dependencies/ntl/libs",
+					"$(PROJECT_DIR)/dependencies/HElib_macOS/lib/Debug",
+					"$(PROJECT_DIR)/dependencies/hdf5-1.12.0/bin/Debug",
+					"$(PROJECT_DIR)/dependencies/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.research.Credit-Card-Fraud";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				USER_HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/dependencies/ntl/include",
+					"\"$(PROJECT_DIR)/Credit Card Fraud/helib_ai\"",
+				);
+				WARNING_LDFLAGS = "-W";
+			};
+			name = Release;
+		};
 		A5667A2523F714D200F122FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -693,7 +1139,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -746,7 +1192,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -758,15 +1204,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
-				CODE_SIGN_ENTITLEMENTS = "fhe-toolkit-macos/fhe-toolkit-macos.entitlements";
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "Privacy Preserving Search/fhe-toolkit-macos.entitlements";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 76CMF53Q35;
-				ENABLE_HARDENED_RUNTIME = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/dependencies/HElib/include";
-				INFOPLIST_FILE = "fhe-toolkit-macos/Info.plist";
+				INFOPLIST_FILE = "Privacy Preserving Search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -780,6 +1226,7 @@
 				OTHER_CFLAGS = "-fPIC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.research.fhe-toolkit-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/fhe-toolkit-macos/**",
 					"$(PROJECT_DIR)/dependencies/ntl/include",
@@ -792,15 +1239,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
-				CODE_SIGN_ENTITLEMENTS = "fhe-toolkit-macos/fhe-toolkit-macos.entitlements";
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "Privacy Preserving Search/fhe-toolkit-macos.entitlements";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 76CMF53Q35;
-				ENABLE_HARDENED_RUNTIME = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/dependencies/HElib/include";
-				INFOPLIST_FILE = "fhe-toolkit-macos/Info.plist";
+				INFOPLIST_FILE = "Privacy Preserving Search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -814,6 +1261,7 @@
 				OTHER_CFLAGS = "-fPIC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.research.fhe-toolkit-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/fhe-toolkit-macos/**",
 					"$(PROJECT_DIR)/dependencies/ntl/include",
@@ -824,6 +1272,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A50693F424C7298A00FFF08B /* Build configuration list for PBXNativeTarget "Credit Card Fraud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A50693F224C7298A00FFF08B /* Debug */,
+				A50693F324C7298A00FFF08B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A56679F823F714CF00F122FD /* Build configuration list for PBXProject "fhe-toolkit-macos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
