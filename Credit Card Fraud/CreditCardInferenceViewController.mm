@@ -153,8 +153,12 @@ public:
 
         cout << "CLIENT: loading plain samples . . ." << endl;
         // load plain samples from h5 file, will be later encrypted and saved
-      ts.loadFromH5(plainSamplesFile, "x_test", plainLabelsFile, "y_test");
-      numBatches = ts.getNumBatches();
+        ts.loadFromH5(plainSamplesFile, "x_test", plainLabelsFile, "y_test");
+        numBatches = ts.getNumBatches();
+      
+        cout << "Number of samples: " << ts.getNumSamples() << endl;
+        cout << "Batch size: " << ts.getBatchSize() << endl;
+        cout << "Number of batches: " << numBatches << endl;
   }
 
   void encryptAndSaveSamples(int batch, const string& encryptedSamplesFile){

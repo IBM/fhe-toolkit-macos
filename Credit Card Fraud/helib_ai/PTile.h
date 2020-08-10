@@ -41,19 +41,21 @@ public:
 
 	PTile(const PTile& src);
 
-  ~PTile();
+    ~PTile();
+    
+    PTile& operator=(const PTile& src);
 
-  void reduceChainIndex();
+    void reduceChainIndex();
 
-  void setChainIndex(const PTile& other);
+    void setChainIndex(const PTile& other);
 
-  void setChainIndex(int chainIndex);
+    void setChainIndex(int chainIndex);
 
-  int getChainIndex() const;
+    int getChainIndex() const;
 
-  int slotCount() const;
+    int slotCount() const;
 
-  void debugPrint(const std::string& title = "", int maxElements = -1, std::ostream& out = std::cout) const;
+    void debugPrint(const std::string& title = "", int maxElements = -1, std::ostream& out = std::cout) const;
 };
 
 #endif /* SRC_GENERIC_PTILE_H */
