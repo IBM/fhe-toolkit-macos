@@ -49,7 +49,6 @@
 // Plaintext prime modulus
 unsigned long p = 131;
 // Cyclotomic polynomial - defines phi(m)
-//unsigned long m = 33;  // this will give 20 slots - runs faster
 unsigned long m = 130; // this will give 48 slots
 // Hensel lifting (default = 1)
 unsigned long r = 1;
