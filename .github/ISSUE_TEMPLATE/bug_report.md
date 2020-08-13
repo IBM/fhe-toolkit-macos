@@ -29,7 +29,7 @@ If applicable, add screenshots to help explain your problem.
  - Xcode version [Xcode -> About Xcode]:
 
 **Terminal Output**
-(please attach terminal output after running setup.sh)
+(please attach setup.log output file after running setup.sh, located in the `dependencies` directory.  This will hold information about the building of the dependencies.  NOTE: It will contain file names and paths that may be sensitive.  Upload is optional but recommended for debugging assistance.)
 
 **Additional context**
 Add any other context about the problem here.

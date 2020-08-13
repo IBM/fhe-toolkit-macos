@@ -34,7 +34,7 @@ xcode-select --install
 
 ## Step 2: Install CMAKE (2/2)
 
-CMake is an open-source, cross-platform family of tools thst can be used to build and test software source code. CMake is used to control the software compilation process using platform and compiler independent configuration files as well as generating native makefiles that work with a variety of compilers.
+CMake is an open-source, cross-platform family of tools that can be used to build and test software source code. CMake is used to control the software compilation process using platform and compiler independent configuration files as well as generating native makefiles that work with a variety of compilers.
 
 This toolkit has been tested with `cmake version 3.17.1`. Please check whether you have cmake installed in your environment and whether `cmake version >= 3.17.1` by entering the following command in a terminal window :
 
@@ -112,23 +112,7 @@ Now from within the dependencies folder, you can trigger the `setup.sh` script t
 
 
 ## Step 6:
-After the dependencies finish building, go back to Xcode and open the workspace `fhe-toolkit-macos.xcworkspace`.  If you previously had it open close it and re-open.  Find the target called `helib` and make sure "My Mac" is selected. Press Build, the "Play" buton in the upper left hand corner.
+After the dependencies finish building, go back to Xcode and open the workspace `fhe-toolkit-macos.xcworkspace`.  If you previously had it open close it and re-open.
 
-![Step six image](/Documentation/Images/Step%206.png?raw=true "Building Helib")
-
-
-
-## Step 7: 
-Switch the Build target to `Privacy Preserving Search`, and Build the sample app with the embedded libraries and dependencies by clicking the “Play” button in the upper left hand corner
-of the IDE to start the build process. You will notice the bar at the top will indicate the build
-process is proceeding. If you don't see `Privacy Preserving Search` in the dropdown list, you might need to use the arrow to scroll to the top of list.
-
-![Step seven image](/Documentation/Images/Step%207.png?raw=true "Click the play button to start the sample app")
-
-
-
-## Step 8: 
-With the compilation of the mobile demonstration application complete, the app will launch, and you will see the sample application as shown. The demonstration is a complete example of a privacy preserving search against an encrypted database. The database is a key value store prepopulated with the english names of countries and their capital cities from the continent of Europe. Selecting the country will perform a search of the matching capital. On a 2019 Macbook Pro laptop, the example searches take under 80 seconds. 
-
-![Step eight image](/Documentation/Images/Step%208.png?raw=true "Sample app Screenshots")
-
+At this point you can build and run the example applications showing the FHE capability. Each demonstration application is a self contained target that builds a macOS application by clicking Build. 
+Each demo application directory contains a README.md that explains how to run the demo and what you should expect for results.  There are two demonstrations to choose from, [Privacy Preserving Search](/Privacy%20Preserving%20Search/README.md), and [Credit Card Fraud](/Credit%20Card%20Fraud/README.md). 
