@@ -45,7 +45,15 @@
 		A506953824C8B02300FFF08B /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953724C8B02300FFF08B /* libhelib.a */; };
 		A506953A24C8B17200FFF08B /* libhdf5_cpp_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953924C8B17200FFF08B /* libhdf5_cpp_debug.a */; };
 		A506953E24C8BD7600FFF08B /* libboost_filesystem.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */; };
-		A533BABB24F45D780066E9DA /* HElib in Frameworks */ = {isa = PBXBuildFile; productRef = A533BABA24F45D780066E9DA /* HElib */; };
+		A533BAC524F4B4800066E9DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A533BAC424F4B4800066E9DA /* AppDelegate.m */; };
+		A533BAC824F4B4800066E9DA /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A533BAC724F4B4800066E9DA /* SceneDelegate.m */; };
+		A533BACB24F4B4800066E9DA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A533BACA24F4B4800066E9DA /* ViewController.m */; };
+		A533BACE24F4B4800066E9DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A533BACC24F4B4800066E9DA /* Main.storyboard */; };
+		A533BAD024F4B4800066E9DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533BACF24F4B4800066E9DA /* ContentView.swift */; };
+		A533BAD224F4B4800066E9DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A533BAD124F4B4800066E9DA /* Assets.xcassets */; };
+		A533BAD524F4B4800066E9DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A533BAD324F4B4800066E9DA /* LaunchScreen.storyboard */; };
+		A533BAD824F4B4800066E9DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A533BAD724F4B4800066E9DA /* main.m */; };
+		A533BAE024F4B91F0066E9DA /* HElib in Frameworks */ = {isa = PBXBuildFile; productRef = A533BADF24F4B91F0066E9DA /* HElib */; };
 		A5667A0223F714CF00F122FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5667A0123F714CF00F122FD /* AppDelegate.m */; };
 		A5667A0723F714D200F122FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5667A0623F714D200F122FD /* Assets.xcassets */; };
 		A5667A0A23F714D200F122FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5667A0823F714D200F122FD /* Main.storyboard */; };
@@ -153,6 +161,19 @@
 		A506953924C8B17200FFF08B /* libhdf5_cpp_debug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libhdf5_cpp_debug.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A506953B24C8BD3200FFF08B /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = dependencies/lib/libboost_filesystem.a; sourceTree = "<group>"; };
 		A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_filesystem.dylib; path = dependencies/lib/libboost_filesystem.dylib; sourceTree = "<group>"; };
+		A533BAC124F4B4800066E9DA /* Privacy Preserving Search iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Privacy Preserving Search iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A533BAC324F4B4800066E9DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A533BAC424F4B4800066E9DA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A533BAC624F4B4800066E9DA /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		A533BAC724F4B4800066E9DA /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		A533BAC924F4B4800066E9DA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A533BACA24F4B4800066E9DA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A533BACD24F4B4800066E9DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A533BACF24F4B4800066E9DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A533BAD124F4B4800066E9DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A533BAD424F4B4800066E9DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A533BAD624F4B4800066E9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A533BAD724F4B4800066E9DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A56679FD23F714CF00F122FD /* Privacy Preserving Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Privacy Preserving Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5667A0023F714CF00F122FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A5667A0123F714CF00F122FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -195,11 +216,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A533BABE24F4B4800066E9DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A56679FA23F714CF00F122FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A533BABB24F45D780066E9DA /* HElib in Frameworks */,
+				A533BAE024F4B91F0066E9DA /* HElib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,11 +320,31 @@
 			path = helib_ai;
 			sourceTree = "<group>";
 		};
+		A533BAC224F4B4800066E9DA /* Privacy Preserving Search iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A533BAC324F4B4800066E9DA /* AppDelegate.h */,
+				A533BAC424F4B4800066E9DA /* AppDelegate.m */,
+				A533BAC624F4B4800066E9DA /* SceneDelegate.h */,
+				A533BAC724F4B4800066E9DA /* SceneDelegate.m */,
+				A533BAC924F4B4800066E9DA /* ViewController.h */,
+				A533BACA24F4B4800066E9DA /* ViewController.m */,
+				A533BACC24F4B4800066E9DA /* Main.storyboard */,
+				A533BACF24F4B4800066E9DA /* ContentView.swift */,
+				A533BAD124F4B4800066E9DA /* Assets.xcassets */,
+				A533BAD324F4B4800066E9DA /* LaunchScreen.storyboard */,
+				A533BAD624F4B4800066E9DA /* Info.plist */,
+				A533BAD724F4B4800066E9DA /* main.m */,
+			);
+			path = "Privacy Preserving Search iOS";
+			sourceTree = "<group>";
+		};
 		A56679F423F714CF00F122FD = {
 			isa = PBXGroup;
 			children = (
 				A56679FF23F714CF00F122FD /* Privacy Preserving Search */,
 				A50693E224C7298500FFF08B /* Credit Card Fraud */,
+				A533BAC224F4B4800066E9DA /* Privacy Preserving Search iOS */,
 				A56679FE23F714CF00F122FD /* Products */,
 				A5F649DA244F789E0087514D /* Frameworks */,
 			);
@@ -307,6 +355,7 @@
 			children = (
 				A56679FD23F714CF00F122FD /* Privacy Preserving Search.app */,
 				A50693E124C7298500FFF08B /* Credit Card Fraud.app */,
+				A533BAC124F4B4800066E9DA /* Privacy Preserving Search iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -399,6 +448,25 @@
 			productReference = A50693E124C7298500FFF08B /* Credit Card Fraud.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A533BAC024F4B4800066E9DA /* Privacy Preserving Search iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A533BAD924F4B4800066E9DA /* Build configuration list for PBXNativeTarget "Privacy Preserving Search iOS" */;
+			buildPhases = (
+				A533BABD24F4B4800066E9DA /* Sources */,
+				A533BABE24F4B4800066E9DA /* Frameworks */,
+				A533BABF24F4B4800066E9DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Privacy Preserving Search iOS";
+			packageProductDependencies = (
+			);
+			productName = "Privacy Preserving Search iOS";
+			productReference = A533BAC124F4B4800066E9DA /* Privacy Preserving Search iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A56679FC23F714CF00F122FD /* Privacy Preserving Search */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5667A2723F714D200F122FD /* Build configuration list for PBXNativeTarget "Privacy Preserving Search" */;
@@ -413,7 +481,7 @@
 			);
 			name = "Privacy Preserving Search";
 			packageProductDependencies = (
-				A533BABA24F45D780066E9DA /* HElib */,
+				A533BADF24F4B91F0066E9DA /* HElib */,
 			);
 			productName = Morphic;
 			productReference = A56679FD23F714CF00F122FD /* Privacy Preserving Search.app */;
@@ -425,11 +493,15 @@
 		A56679F523F714CF00F122FD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = IBM;
 				TargetAttributes = {
 					A50693E024C7298500FFF08B = {
 						CreatedOnToolsVersion = 11.4.1;
+					};
+					A533BAC024F4B4800066E9DA = {
+						CreatedOnToolsVersion = 12.0;
 					};
 					A56679FC23F714CF00F122FD = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -446,7 +518,7 @@
 			);
 			mainGroup = A56679F423F714CF00F122FD;
 			packageReferences = (
-				A533BAB924F45D780066E9DA /* XCRemoteSwiftPackageReference "helib-universal" */,
+				A533BADE24F4B91F0066E9DA /* XCRemoteSwiftPackageReference "helib-universal" */,
 			);
 			productRefGroup = A56679FE23F714CF00F122FD /* Products */;
 			projectDirPath = "";
@@ -454,6 +526,7 @@
 			targets = (
 				A56679FC23F714CF00F122FD /* Privacy Preserving Search */,
 				A50693E024C7298500FFF08B /* Credit Card Fraud */,
+				A533BAC024F4B4800066E9DA /* Privacy Preserving Search iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -469,6 +542,16 @@
 				A5F9515524C91B6100406273 /* x_test.h5 in Resources */,
 				A50693EA24C7298A00FFF08B /* Assets.xcassets in Resources */,
 				A50693ED24C7298A00FFF08B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A533BABF24F4B4800066E9DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A533BAD524F4B4800066E9DA /* LaunchScreen.storyboard in Resources */,
+				A533BAD224F4B4800066E9DA /* Assets.xcassets in Resources */,
+				A533BACE24F4B4800066E9DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +609,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A533BABD24F4B4800066E9DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A533BAD824F4B4800066E9DA /* main.m in Sources */,
+				A533BACB24F4B4800066E9DA /* ViewController.m in Sources */,
+				A533BAC524F4B4800066E9DA /* AppDelegate.m in Sources */,
+				A533BAD024F4B4800066E9DA /* ContentView.swift in Sources */,
+				A533BAC824F4B4800066E9DA /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A56679F923F714CF00F122FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -548,6 +643,22 @@
 				A50693EC24C7298A00FFF08B /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A533BACC24F4B4800066E9DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A533BACD24F4B4800066E9DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A533BAD324F4B4800066E9DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A533BAD424F4B4800066E9DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		A5667A0823F714D200F122FD /* Main.storyboard */ = {
@@ -646,6 +757,51 @@
 					"\"$(PROJECT_DIR)/Credit Card Fraud/helib_ai\"",
 				);
 				WARNING_LDFLAGS = "-W";
+			};
+			name = Release;
+		};
+		A533BADA24F4B4800066E9DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76CMF53Q35;
+				INFOPLIST_FILE = "Privacy Preserving Search iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.research.Privacy-Preserving-Search-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A533BADB24F4B4800066E9DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76CMF53Q35;
+				INFOPLIST_FILE = "Privacy Preserving Search iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.research.Privacy-Preserving-Search-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -842,6 +998,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		A533BAD924F4B4800066E9DA /* Build configuration list for PBXNativeTarget "Privacy Preserving Search iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A533BADA24F4B4800066E9DA /* Debug */,
+				A533BADB24F4B4800066E9DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A56679F823F714CF00F122FD /* Build configuration list for PBXProject "fhe-toolkit-macos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -863,7 +1028,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A533BAB924F45D780066E9DA /* XCRemoteSwiftPackageReference "helib-universal" */ = {
+		A533BADE24F4B91F0066E9DA /* XCRemoteSwiftPackageReference "helib-universal" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:boland25/helib-universal.git";
 			requirement = {
@@ -874,9 +1039,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A533BABA24F45D780066E9DA /* HElib */ = {
+		A533BADF24F4B91F0066E9DA /* HElib */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A533BAB924F45D780066E9DA /* XCRemoteSwiftPackageReference "helib-universal" */;
+			package = A533BADE24F4B91F0066E9DA /* XCRemoteSwiftPackageReference "helib-universal" */;
 			productName = HElib;
 		};
 /* End XCSwiftPackageProductDependency section */
