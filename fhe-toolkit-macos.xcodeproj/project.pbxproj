@@ -53,7 +53,11 @@
 		A533BAD224F4B4800066E9DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A533BAD124F4B4800066E9DA /* Assets.xcassets */; };
 		A533BAD524F4B4800066E9DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A533BAD324F4B4800066E9DA /* LaunchScreen.storyboard */; };
 		A533BAD824F4B4800066E9DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A533BAD724F4B4800066E9DA /* main.m */; };
-		A533BAE024F4B91F0066E9DA /* HElib in Frameworks */ = {isa = PBXBuildFile; productRef = A533BADF24F4B91F0066E9DA /* HElib */; };
+		A533BAE824F586050066E9DA /* CountryData.m in Sources */ = {isa = PBXBuildFile; fileRef = A533BAE224F586050066E9DA /* CountryData.m */; };
+		A533BAE924F586050066E9DA /* CapitalDetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A533BAE424F586050066E9DA /* CapitalDetailViewController.mm */; };
+		A533BAEA24F586050066E9DA /* CountryCapitalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A533BAE624F586050066E9DA /* CountryCapitalTableViewController.m */; };
+		A533BB0B24F603A20066E9DA /* HElib in Frameworks */ = {isa = PBXBuildFile; productRef = A533BB0A24F603A20066E9DA /* HElib */; };
+		A533BB0D24F603C30066E9DA /* HElib in Frameworks */ = {isa = PBXBuildFile; productRef = A533BB0C24F603C30066E9DA /* HElib */; };
 		A5667A0223F714CF00F122FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5667A0123F714CF00F122FD /* AppDelegate.m */; };
 		A5667A0723F714D200F122FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5667A0623F714D200F122FD /* Assets.xcassets */; };
 		A5667A0A23F714D200F122FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5667A0823F714D200F122FD /* Main.storyboard */; };
@@ -174,6 +178,12 @@
 		A533BAD424F4B4800066E9DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A533BAD624F4B4800066E9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A533BAD724F4B4800066E9DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A533BAE224F586050066E9DA /* CountryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryData.m; sourceTree = "<group>"; };
+		A533BAE324F586050066E9DA /* CountryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryData.h; sourceTree = "<group>"; };
+		A533BAE424F586050066E9DA /* CapitalDetailViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CapitalDetailViewController.mm; sourceTree = "<group>"; };
+		A533BAE524F586050066E9DA /* CapitalDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CapitalDetailViewController.h; sourceTree = "<group>"; };
+		A533BAE624F586050066E9DA /* CountryCapitalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryCapitalTableViewController.m; sourceTree = "<group>"; };
+		A533BAE724F586050066E9DA /* CountryCapitalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryCapitalTableViewController.h; sourceTree = "<group>"; };
 		A56679FD23F714CF00F122FD /* Privacy Preserving Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Privacy Preserving Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5667A0023F714CF00F122FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A5667A0123F714CF00F122FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -220,6 +230,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A533BB0D24F603C30066E9DA /* HElib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +238,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A533BAE024F4B91F0066E9DA /* HElib in Frameworks */,
+				A533BB0B24F603A20066E9DA /* HElib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +334,7 @@
 		A533BAC224F4B4800066E9DA /* Privacy Preserving Search iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A533BAE124F584A10066E9DA /* SampleCode */,
 				A533BAC324F4B4800066E9DA /* AppDelegate.h */,
 				A533BAC424F4B4800066E9DA /* AppDelegate.m */,
 				A533BAC624F4B4800066E9DA /* SceneDelegate.h */,
@@ -337,6 +349,19 @@
 				A533BAD724F4B4800066E9DA /* main.m */,
 			);
 			path = "Privacy Preserving Search iOS";
+			sourceTree = "<group>";
+		};
+		A533BAE124F584A10066E9DA /* SampleCode */ = {
+			isa = PBXGroup;
+			children = (
+				A533BAE524F586050066E9DA /* CapitalDetailViewController.h */,
+				A533BAE424F586050066E9DA /* CapitalDetailViewController.mm */,
+				A533BAE724F586050066E9DA /* CountryCapitalTableViewController.h */,
+				A533BAE624F586050066E9DA /* CountryCapitalTableViewController.m */,
+				A533BAE324F586050066E9DA /* CountryData.h */,
+				A533BAE224F586050066E9DA /* CountryData.m */,
+			);
+			path = SampleCode;
 			sourceTree = "<group>";
 		};
 		A56679F423F714CF00F122FD = {
@@ -462,6 +487,7 @@
 			);
 			name = "Privacy Preserving Search iOS";
 			packageProductDependencies = (
+				A533BB0C24F603C30066E9DA /* HElib */,
 			);
 			productName = "Privacy Preserving Search iOS";
 			productReference = A533BAC124F4B4800066E9DA /* Privacy Preserving Search iOS.app */;
@@ -481,7 +507,7 @@
 			);
 			name = "Privacy Preserving Search";
 			packageProductDependencies = (
-				A533BADF24F4B91F0066E9DA /* HElib */,
+				A533BB0A24F603A20066E9DA /* HElib */,
 			);
 			productName = Morphic;
 			productReference = A56679FD23F714CF00F122FD /* Privacy Preserving Search.app */;
@@ -518,7 +544,7 @@
 			);
 			mainGroup = A56679F423F714CF00F122FD;
 			packageReferences = (
-				A533BADE24F4B91F0066E9DA /* XCRemoteSwiftPackageReference "helib-universal" */,
+				A533BB0924F603A20066E9DA /* XCRemoteSwiftPackageReference "helib-universal" */,
 			);
 			productRefGroup = A56679FE23F714CF00F122FD /* Products */;
 			projectDirPath = "";
@@ -616,8 +642,11 @@
 				A533BAD824F4B4800066E9DA /* main.m in Sources */,
 				A533BACB24F4B4800066E9DA /* ViewController.m in Sources */,
 				A533BAC524F4B4800066E9DA /* AppDelegate.m in Sources */,
+				A533BAE924F586050066E9DA /* CapitalDetailViewController.mm in Sources */,
 				A533BAD024F4B4800066E9DA /* ContentView.swift in Sources */,
+				A533BAE824F586050066E9DA /* CountryData.m in Sources */,
 				A533BAC824F4B4800066E9DA /* SceneDelegate.m in Sources */,
+				A533BAEA24F586050066E9DA /* CountryCapitalTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,7 +807,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -800,7 +829,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -856,7 +885,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -909,7 +939,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -1028,7 +1059,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A533BADE24F4B91F0066E9DA /* XCRemoteSwiftPackageReference "helib-universal" */ = {
+		A533BB0924F603A20066E9DA /* XCRemoteSwiftPackageReference "helib-universal" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:boland25/helib-universal.git";
 			requirement = {
@@ -1039,9 +1070,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A533BADF24F4B91F0066E9DA /* HElib */ = {
+		A533BB0A24F603A20066E9DA /* HElib */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A533BADE24F4B91F0066E9DA /* XCRemoteSwiftPackageReference "helib-universal" */;
+			package = A533BB0924F603A20066E9DA /* XCRemoteSwiftPackageReference "helib-universal" */;
+			productName = HElib;
+		};
+		A533BB0C24F603C30066E9DA /* HElib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A533BB0924F603A20066E9DA /* XCRemoteSwiftPackageReference "helib-universal" */;
 			productName = HElib;
 		};
 /* End XCSwiftPackageProductDependency section */
