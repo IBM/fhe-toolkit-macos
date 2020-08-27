@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "HElib",
+        "repositoryURL": "git@github.com:boland25/helib-universal.git",
+        "state": {
+          "branch": "master",
+          "revision": "5d3631eb6fe93ca2f6d11e190a4908288190b60b",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

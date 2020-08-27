@@ -111,7 +111,7 @@ unsigned long debug = 0;
 
      // Secret key management
      std::cout << "\nCreating Secret Key ...";
-     FHE_NTIMER_START(timer_SecKey);
+    FHE_NTIMER_START(timer_SecKey);
      // Create a secret key associated with the context
      helib::SecKey secret_key = helib::SecKey(context);
      // Generate the secret key
