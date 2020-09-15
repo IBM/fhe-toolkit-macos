@@ -180,7 +180,7 @@ unsigned long debug = 0;
          { "Germany", "Berlin" },
          { "Greece", "Athens" },
          { "Hungary", "Budapest" },
-         { "Iceland", "Reykjavík" },
+         { "Iceland", "Reykjavik" },
          { "Ireland", "Dublin" },
          { "Italy", "Rome" },
          { "Latvia", "Riga" },
