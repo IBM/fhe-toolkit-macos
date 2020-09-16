@@ -57,10 +57,9 @@ CMAKE_PATH=$(dirname `which cmake`)
 export PATH="${CMAKE_PATH}:${PLATFORM_PATH}/Developer/usr/bin:${DEVELOPER}/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 GMP_DIR="`pwd`/gmp"
-NTL_VERSION="11.4.1"
-GMP_VERSION="6.1.2"
-BOOST_VERSION="1_72_0"
-HDF5_VERSION="1-12-0"
+
+#Load in version Vars from the ConfigConstants file
+source ConfigConstants.xcconfig
 
 change_submodules() 
 {
