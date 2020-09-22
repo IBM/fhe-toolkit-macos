@@ -175,6 +175,7 @@
 		A5A0E47B24CFBE7B00FA427E /* new_2.h5 */ = {isa = PBXFileReference; lastKnownFileType = file; path = new_2.h5; sourceTree = "<group>"; };
 		A5A0E47D24D09CFB00FA427E /* CreditSampleResultsData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreditSampleResultsData.h; sourceTree = "<group>"; };
 		A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreditSampleResultsData.m; sourceTree = "<group>"; };
+		A5AB0C3C2511581D00F550E2 /* ConfigConstants.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = ConfigConstants.xcconfig; path = dependencies/ConfigConstants.xcconfig; sourceTree = "<group>"; };
 		A5D0073224D1E6CC00AAE351 /* CCProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCProgressView.h; sourceTree = "<group>"; };
 		A5D0073324D1E6CC00AAE351 /* CCProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCProgressView.m; sourceTree = "<group>"; };
 		A5D0073724DB330900AAE351 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -477,6 +478,7 @@
 		A56679F423F714CF00F122FD = {
 			isa = PBXGroup;
 			children = (
+				A5AB0C3C2511581D00F550E2 /* ConfigConstants.xcconfig */,
 				A56679FF23F714CF00F122FD /* Privacy Preserving Search */,
 				A50693E224C7298500FFF08B /* Credit Card Fraud */,
 				A56679FE23F714CF00F122FD /* Products */,
@@ -1014,11 +1016,11 @@
 				ENABLE_HARDENED_RUNTIME = NO;
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/dependencies/boost_1_72_0",
-					"$(PROJECT_DIR)/dependencies/CMake-hdf5-1.12.0/hdf5-1.12.0/c++/src",
-					"$(PROJECT_DIR)/dependencies/CMake-hdf5-1.12.0/hdf5-1.12.0/src",
+					"$(PROJECT_DIR)/dependencies/boost_$(BOOST_VERSION)",
+					"$(PROJECT_DIR)/dependencies/CMake-hdf5-$(HDF5_FILE_VERSION)/hdf5-$(HDF5_FILE_VERSION)/c++/src",
+					"$(PROJECT_DIR)/dependencies/CMake-hdf5-$(HDF5_FILE_VERSION)/hdf5-$(HDF5_FILE_VERSION)/src",
 					"$(PROJECT_DIR)/dependencies/HElib/include",
-					"$(PROJECT_DIR)/dependencies/hdf5-1.12.0",
+					"$(PROJECT_DIR)/dependencies/hdf5-$(HDF5_FILE_VERSION)",
 				);
 				INFOPLIST_FILE = "Credit Card Fraud/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1058,11 +1060,11 @@
 				ENABLE_HARDENED_RUNTIME = NO;
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/dependencies/boost_1_72_0",
-					"$(PROJECT_DIR)/dependencies/CMake-hdf5-1.12.0/hdf5-1.12.0/c++/src",
-					"$(PROJECT_DIR)/dependencies/CMake-hdf5-1.12.0/hdf5-1.12.0/src",
+					"$(PROJECT_DIR)/dependencies/boost_$(BOOST_VERSION)",
+					"$(PROJECT_DIR)/dependencies/CMake-hdf5-$(HDF5_FILE_VERSION)/hdf5-$(HDF5_FILE_VERSION)/c++/src",
+					"$(PROJECT_DIR)/dependencies/CMake-hdf5-$(HDF5_FILE_VERSION)/hdf5-$(HDF5_FILE_VERSION)/src",
 					"$(PROJECT_DIR)/dependencies/HElib/include",
-					"$(PROJECT_DIR)/dependencies/hdf5-1.12.0",
+					"$(PROJECT_DIR)/dependencies/hdf5-$(HDF5_FILE_VERSION)",
 				);
 				INFOPLIST_FILE = "Credit Card Fraud/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1090,6 +1092,7 @@
 		};
 		A5667A2523F714D200F122FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5AB0C3C2511581D00F550E2 /* ConfigConstants.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
