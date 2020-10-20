@@ -241,8 +241,8 @@ build_hdf5()
     CURRENT_DIR=`pwd`
     mkdir hdf5-1.12.0
     cd hdf5-1.12.0
-    #touch H5lib_settings.c
-    #touch H5Tinit.c
+    touch H5lib_settings.c
+    touch H5Tinit.c
     cmake -G "Xcode" -DCMAKE_OSX_ARCHITECTURES="x86_64" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DHDF5_BUILD_TOOLS:BOOL=ON ../CMake-hdf5-1.12.0/hdf5-1.12.0
    
     cd ../
@@ -258,7 +258,7 @@ build_all()
     build_ntl "${MACOS}" "x86_64"
     build_helib "${MACOS}" "x86_64"
     build_hdf5
-    build_boost
+    #build_boost
     cd ../
     xcodebuild clean
 }
