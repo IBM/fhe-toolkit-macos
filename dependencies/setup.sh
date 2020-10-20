@@ -258,7 +258,7 @@ build_all()
     build_ntl "${MACOS}" "x86_64"
     build_helib "${MACOS}" "x86_64"
     build_hdf5
-   # build_boost
+    build_boost
     cd ../
     xcodebuild clean
 }
