@@ -241,12 +241,12 @@ build_hdf5()
     CURRENT_DIR=`pwd`
     mkdir hdf5-1.12.0
     cd hdf5-1.12.0
-    touch H5lib_settings.c
-    touch H5Tinit.c
+    #touch H5lib_settings.c
+    #touch H5Tinit.c
     cmake -G "Xcode" -DCMAKE_OSX_ARCHITECTURES="x86_64" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DHDF5_BUILD_TOOLS:BOOL=ON ../CMake-hdf5-1.12.0/hdf5-1.12.0
-   
+    CURRENT_DIR=`pwd`
+    xcodebuild -target hdf5-static
     cd ../
-    
 }
 
 build_all()
@@ -254,9 +254,9 @@ build_all()
     SUFFIX=$1
     BUILD_IN=$2
     
-    build_gmp "${MACOS}" "x86_64"
-    build_ntl "${MACOS}" "x86_64"
-    build_helib "${MACOS}" "x86_64"
+    #build_gmp "${MACOS}" "x86_64"
+    #build_ntl "${MACOS}" "x86_64"
+    #build_helib "${MACOS}" "x86_64"
     build_hdf5
     #build_boost
     cd ../
@@ -265,7 +265,7 @@ build_all()
 
 change_submodules | tee -a "$log_file"
 check_cmake | tee -a "$log_file"
-prepare | tee -a "$log_file"
+#prepare | tee -a "$log_file"
 build_all | tee -a "$log_file"
 
 echo " — — — — — — — — — — Building Dependencies Script Ended — — — — — — — — — — " | tee -a "$log_file"
