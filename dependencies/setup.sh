@@ -254,18 +254,18 @@ build_all()
     SUFFIX=$1
     BUILD_IN=$2
     
-    #build_gmp "${MACOS}" "x86_64"
-    #build_ntl "${MACOS}" "x86_64"
-    #build_helib "${MACOS}" "x86_64"
+    build_gmp "${MACOS}" "x86_64"
+    build_ntl "${MACOS}" "x86_64"
+    build_helib "${MACOS}" "x86_64"
     build_hdf5
-    #build_boost
+    build_boost
     cd ../
     xcodebuild clean
 }
 
 change_submodules | tee -a "$log_file"
 check_cmake | tee -a "$log_file"
-#prepare | tee -a "$log_file"
+prepare | tee -a "$log_file"
 build_all | tee -a "$log_file"
 
 echo " — — — — — — — — — — Building Dependencies Script Ended — — — — — — — — — — " | tee -a "$log_file"
