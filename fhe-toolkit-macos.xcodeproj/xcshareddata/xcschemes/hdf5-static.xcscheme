@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BC083A44CC1D47379E773577"
+               BlueprintIdentifier = "587B47D526AA476C80660ED9"
                BuildableName = "libhdf5_debug.a"
                BlueprintName = "hdf5-static"
                ReferencedContainer = "container:dependencies/hdf5-1.12.0/HDF5.xcodeproj">
@@ -50,7 +50,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BC083A44CC1D47379E773577"
+            BlueprintIdentifier = "587B47D526AA476C80660ED9"
             BuildableName = "libhdf5_debug.a"
             BlueprintName = "hdf5-static"
             ReferencedContainer = "container:dependencies/hdf5-1.12.0/HDF5.xcodeproj">

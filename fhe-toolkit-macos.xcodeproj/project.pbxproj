@@ -43,7 +43,6 @@
 		A506952C24C878C600FFF08B /* Encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950D24C878C500FFF08B /* Encoder.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A506952D24C878C600FFF08B /* PTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950F24C878C500FFF08B /* PTile.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A506952E24C878C600FFF08B /* FcLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506951124C878C500FFF08B /* FcLayer.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506953624C8812300FFF08B /* libhdf5_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953524C8812300FFF08B /* libhdf5_debug.a */; };
 		A506953824C8B02300FFF08B /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953724C8B02300FFF08B /* libhelib.a */; };
 		A506953A24C8B17200FFF08B /* libhdf5_cpp_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953924C8B17200FFF08B /* libhdf5_cpp_debug.a */; };
 		A506953E24C8BD7600FFF08B /* libboost_filesystem.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */; };
@@ -54,6 +53,7 @@
 		A5A0E47A24CB679F00FA427E /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0E47924CB679F00FA427E /* libhelib.a */; };
 		A5A0E47C24CFBE7B00FA427E /* new_2.h5 in Resources */ = {isa = PBXBuildFile; fileRef = A5A0E47B24CFBE7B00FA427E /* new_2.h5 */; };
 		A5A0E47F24D09CFB00FA427E /* CreditSampleResultsData.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */; settings = {COMPILER_FLAGS = "-W"; }; };
+		A5BB176A253F4F02004DDA94 /* libhdf5_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BB1769253F4F02004DDA94 /* libhdf5_debug.a */; };
 		A5D0073424D1E6CC00AAE351 /* CCProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D0073324D1E6CC00AAE351 /* CCProgressView.m */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A5D0073524D3674100AAE351 /* libboost_filesystem.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */; };
 		A5F649C5244F72700087514D /* ntl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649C4244F72700087514D /* ntl.a */; };
@@ -176,6 +176,7 @@
 		A5A0E47D24D09CFB00FA427E /* CreditSampleResultsData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreditSampleResultsData.h; sourceTree = "<group>"; };
 		A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreditSampleResultsData.m; sourceTree = "<group>"; };
 		A5AB0C3C2511581D00F550E2 /* ConfigConstants.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = ConfigConstants.xcconfig; path = dependencies/ConfigConstants.xcconfig; sourceTree = "<group>"; };
+		A5BB1769253F4F02004DDA94 /* libhdf5_debug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libhdf5_debug.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D0073224D1E6CC00AAE351 /* CCProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCProgressView.h; sourceTree = "<group>"; };
 		A5D0073324D1E6CC00AAE351 /* CCProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCProgressView.m; sourceTree = "<group>"; };
 		A5D0073724DB330900AAE351 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -366,9 +367,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5BB176A253F4F02004DDA94 /* libhdf5_debug.a in Frameworks */,
 				A506953824C8B02300FFF08B /* libhelib.a in Frameworks */,
 				A506953A24C8B17200FFF08B /* libhdf5_cpp_debug.a in Frameworks */,
-				A506953624C8812300FFF08B /* libhdf5_debug.a in Frameworks */,
 				A506953E24C8BD7600FFF08B /* libboost_filesystem.dylib in Frameworks */,
 				A50693F824C72C6900FFF08B /* ntl.a in Frameworks */,
 				A50693F724C72C4900FFF08B /* libgmp.a in Frameworks */,
@@ -782,6 +783,7 @@
 		A5F649DA244F789E0087514D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5BB1769253F4F02004DDA94 /* libhdf5_debug.a */,
 				A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */,
 				A5A0E47924CB679F00FA427E /* libhelib.a */,
 				A506953B24C8BD3200FFF08B /* libboost_filesystem.a */,
@@ -1035,12 +1037,17 @@
 					"$(PROJECT_DIR)/dependencies/hdf5-1.12.0/bin/Debug",
 					"$(PROJECT_DIR)/dependencies/lib",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.research.Credit-Card-Fraud";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/ntl/include",
 					"\"$(PROJECT_DIR)/Credit Card Fraud/helib_ai\"",
+					"$(PROJECT_DIR)/dependencies/hdf5-$(HDF5_FILE_VERSION)",
 				);
 				WARNING_LDFLAGS = "-W";
 			};
@@ -1079,12 +1086,17 @@
 					"$(PROJECT_DIR)/dependencies/hdf5-1.12.0/bin/Debug",
 					"$(PROJECT_DIR)/dependencies/lib",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.research.Credit-Card-Fraud";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/ntl/include",
 					"\"$(PROJECT_DIR)/Credit Card Fraud/helib_ai\"",
+					"$(PROJECT_DIR)/dependencies/hdf5-$(HDF5_FILE_VERSION)",
 				);
 				WARNING_LDFLAGS = "-W";
 			};
@@ -1227,6 +1239,7 @@
 					"$(PROJECT_DIR)/dependencies/HElib_macOS/lib/Debug",
 				);
 				OTHER_CFLAGS = "-fPIC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.research.fhe-toolkit-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1262,6 +1275,7 @@
 					"$(PROJECT_DIR)/dependencies/HElib_macOS/lib/Debug",
 				);
 				OTHER_CFLAGS = "-fPIC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.research.fhe-toolkit-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
