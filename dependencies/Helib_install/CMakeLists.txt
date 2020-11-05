@@ -20,7 +20,7 @@
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
 
-cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.10.2 FATAL_ERROR)
 
 set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGNING_REQUIRED "NO")
 set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "com.ibm.research")
@@ -37,6 +37,38 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_EXTENSIONS OFF)
 ## Require full C++ standard
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+################################################################################
+#                                                                              #
+#                             FOLDER DEFINITIONS                               #
+#                                                                              #
+################################################################################
+
+# Define standard installation directories (GNU)
+include(GNUInstallDirs)
+
+# Setting compiler output directories
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY
+    ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY
+    ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY
+    ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_BINDIR})
+
+# Location of the cmake extra files
+set(HELIB_CMAKE_EXTRA_DIR "${PROJECT_SOURCE_DIR}/cmake")
+# Prefix of the header files (directory to be added to the include list)
+set(HELIB_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/include")
+# Location of helib header files
+set(HELIB_HEADER_DIR "${HELIB_INCLUDE_DIR}/helib")
+# Location of the source files
+set(HELIB_SOURCE_DIR "${PROJECT_SOURCE_DIR}/src")
+# Location of the google tests
+set(HELIB_TESTS_DIR "${PROJECT_SOURCE_DIR}/tests")
+# Location of the directory containing the test binary (runTests). If
+# PACKAGE_BUILD=ON, this location will be changed to reflect the tests location.
+set(HELIB_TEST_BIN_DIR "${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_BINDIR}")
+
 
 
 

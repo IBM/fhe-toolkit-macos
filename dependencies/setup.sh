@@ -198,8 +198,6 @@ build_helib()
     -DCMAKE_XCODE_ATTRIBUTE_ONLY_ACTIVE_ARCH=NO \
     -DCMAKE_IOS_INSTALL_COMBINED=YES \
     -DGMP_DIR="${DEPEND_DIR}/gmp" \
-    -DGMP_HEADERS="${DEPEND_DIR}/gmp/include" \
-    -DGMP_LIB="${DEPEND_DIR}/gmp/lib/libgmp.a" \
     -DNTL_INCLUDE_PATHS="${DEPEND_DIR}/ntl/include" \
     -DNTL_LIB="${DEPEND_DIR}/ntl/lib/ntl.a" \
     -DNTL_DIR="${DEPEND_DIR}/ntl/include"
