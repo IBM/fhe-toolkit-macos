@@ -198,8 +198,8 @@ build_helib()
     -DCMAKE_XCODE_ATTRIBUTE_ONLY_ACTIVE_ARCH=NO \
     -DCMAKE_IOS_INSTALL_COMBINED=YES \
     -DGMP_DIR="${DEPEND_DIR}/gmp" \
-    -DGMP_HEADERS="${DEPEND_DIR}/gmp/include" \
-    -DGMP_LIB="${DEPEND_DIR}/gmp/lib/libgmp.a" \
+    -DGMP_HEADERS="${DEPEND_DIR}/gmplib-so-macosx-x86_64/include" \
+    -DGMP_LIB="${DEPEND_DIR}/gmplib-so-macosx-x86_64/lib/libgmp.a" \
     -DNTL_INCLUDE_PATHS="${DEPEND_DIR}/ntl/include" \
     -DNTL_LIB="${DEPEND_DIR}/ntl/lib/ntl.a" \
     -DNTL_DIR="${DEPEND_DIR}/ntl/include"
@@ -255,8 +255,8 @@ build_all()
     build_gmp "${MACOS}" "x86_64"
     build_ntl "${MACOS}" "x86_64"
     build_helib "${MACOS}" "x86_64"
-    build_hdf5
-    build_boost
+   # build_hdf5
+   #build_boost
     cd ../
     xcodebuild clean
 }

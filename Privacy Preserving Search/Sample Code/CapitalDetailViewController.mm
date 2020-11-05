@@ -91,7 +91,7 @@ unsigned long debug = 0;
        std::cout << "---Initialising HE Environment ... ";
        // Initialize context
        std::cout << "\n\tContext ... ";
-//       FHE_NTIMER_START(timer_Context);
+    //   FHE_NTIMER_START(timer_Context);
        helib::Context context(m, p, r);
 //       FHE_NTIMER_STOP(timer_Context);
       
