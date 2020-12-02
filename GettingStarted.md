@@ -4,7 +4,7 @@
 This document will walk you through setting up Xcode to use this Github repository and running
 a complete mobile application example step by step.
 
-
+A working internet connection is required to build the toolkit as some dependencies are fetched from external sources at build time.
 
 
 
@@ -17,7 +17,6 @@ a complete mobile application example step by step.
 
 This toolkit requires the Xcode IDE and some associated command line tools. It also requires the cmake build system to be installed. 
 
-A working internet connection is required to build the toolkit as some dependencies are fetched from external sources at build time.
 
 
 ## Step 1: Install XCode and command line tools (1/2)
