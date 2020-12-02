@@ -4,7 +4,7 @@
 This document will walk you through setting up Xcode to use this Github repository and running
 a complete mobile application example step by step.
 
-A working internet connection is required to build the toolkit as some dependencies are fetched from external sources at build time.
+A working Internet connection is required to build the toolkit as some dependencies are fetched from external sources at build time.
 
 
 
