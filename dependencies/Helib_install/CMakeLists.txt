@@ -31,8 +31,8 @@ project(helib_macOS_SDK
 # Define standard installation directories (GNU)
 include(GNUInstallDirs)
 
-## Use -std=c++14 as default.
-set(CMAKE_CXX_STANDARD 14)
+## Use -std=c++17 as default.
+set(CMAKE_CXX_STANDARD 17)
 ## Disable C++ extensions
 set(CMAKE_CXX_EXTENSIONS OFF)
 ## Require full C++ standard
