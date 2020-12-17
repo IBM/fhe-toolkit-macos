@@ -12,7 +12,13 @@ Compiling and Running the XCode Project
 If you want to dive right in and get started using the SDK, please see the [Getting Started Document](GettingStarted.md).
 
 
-----------------------------------------------------------------------------
+## Need Help to Get Started?
+
+<a href="https://www.ibm.com/security/services/homomorphic-encryption" target="_blank">IBM Security Homomorphic Encryption Services</a> can help you unlock the value of your sensitive data without decrypting it to help maintain your privacy and compliance controls. Our trusted advisors will offer education, expert support and testing environments to build your prototype applications.
+
+
+
+
 Feedback Survey
 ----------------------------------------------------------------------------
  
