@@ -199,7 +199,7 @@ build_helib()
     -DCMAKE_IOS_INSTALL_COMBINED=YES \
     -DGMP_DIR="${DEPEND_DIR}/gmp" \
     -DNTL_INCLUDE_PATHS="${DEPEND_DIR}/ntl/include" \
-    -DNTL_LIB="${DEPEND_DIR}/ntl/lib/ntl.a" \
+    -DNTL_LIB="${DEPEND_DIR}/ntl/libs/ntl.a" \
     -DNTL_DIR="${DEPEND_DIR}/ntl/include"
     cd ../
 }
