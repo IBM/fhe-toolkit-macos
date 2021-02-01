@@ -71,11 +71,10 @@ check_cmake()
     install_cmake()
     {
         echo "installing cmake"
-        curl -OL https://github.com/Kitware/CMake/releases/download/v3.17.1/cmake-3.17.1-Darwin-x86_64.tar.gz
-        tar -xzf cmake-3.17.1-Darwin-x86_64.tar.gz
-        sudo mv cmake-3.17.1-Darwin-x86_64/CMake.app /Applications
-        sudo /Applications/CMake.app/Contents/bin/cmake-gui --install
-
+        curl -OL https://github.com/Kitware/CMake/releases/download/v3.19.2/cmake-3.19.2-macos-universal.tar.gz
+        tar -xzf cmake-3.19.2-macos-universal.tar.gz 
+        sudo mv cmake-3.19.2-macos-universal/CMake.app /Applications 
+        sudo /Applications/CMake.app/Contents/bin/cmake-gui --install 
     }
 
     if hash cmake 2>/dev/null; then
