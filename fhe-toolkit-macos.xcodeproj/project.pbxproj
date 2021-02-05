@@ -46,6 +46,7 @@
 		A506953824C8B02300FFF08B /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953724C8B02300FFF08B /* libhelib.a */; };
 		A506953A24C8B17200FFF08B /* libhdf5_cpp_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953924C8B17200FFF08B /* libhdf5_cpp_debug.a */; };
 		A506953E24C8BD7600FFF08B /* libboost_filesystem.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */; };
+		A513E02925CCA0B80066A3BA /* HelibBgvContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A513E02825CCA0B80066A3BA /* HelibBgvContext.cpp */; };
 		A5667A0223F714CF00F122FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5667A0123F714CF00F122FD /* AppDelegate.m */; };
 		A5667A0723F714D200F122FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5667A0623F714D200F122FD /* Assets.xcassets */; };
 		A5667A0A23F714D200F122FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5667A0823F714D200F122FD /* Main.storyboard */; };
@@ -163,6 +164,15 @@
 		A506953924C8B17200FFF08B /* libhdf5_cpp_debug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libhdf5_cpp_debug.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A506953B24C8BD3200FFF08B /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = dependencies/lib/libboost_filesystem.a; sourceTree = "<group>"; };
 		A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_filesystem.dylib; path = dependencies/lib/libboost_filesystem.dylib; sourceTree = "<group>"; };
+		A513E00C25CC8C460066A3BA /* hebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hebase.h; sourceTree = "<group>"; };
+		A513E00E25CC8C460066A3BA /* HelibBgvContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibBgvContext.h; sourceTree = "<group>"; };
+		A513E02125CC9EE70066A3BA /* CTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTile.h; sourceTree = "<group>"; };
+		A513E02225CC9EE70066A3BA /* HeTraits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeTraits.h; sourceTree = "<group>"; };
+		A513E02325CC9EE70066A3BA /* HeContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeContext.h; sourceTree = "<group>"; };
+		A513E02425CC9EE70066A3BA /* BitwiseEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitwiseEvaluator.h; sourceTree = "<group>"; };
+		A513E02525CC9EE70066A3BA /* HelayersTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelayersTimer.h; sourceTree = "<group>"; };
+		A513E02625CC9EE70066A3BA /* NativeFunctionEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeFunctionEvaluator.h; sourceTree = "<group>"; };
+		A513E02825CCA0B80066A3BA /* HelibBgvContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibBgvContext.cpp; sourceTree = "<group>"; };
 		A56679FD23F714CF00F122FD /* Privacy Preserving Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Privacy Preserving Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5667A0023F714CF00F122FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A5667A0123F714CF00F122FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -177,59 +187,75 @@
 		A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreditSampleResultsData.m; sourceTree = "<group>"; };
 		A5AB0C3C2511581D00F550E2 /* ConfigConstants.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = ConfigConstants.xcconfig; path = dependencies/ConfigConstants.xcconfig; sourceTree = "<group>"; };
 		A5BB1769253F4F02004DDA94 /* libhdf5_debug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libhdf5_debug.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5CDB23A25CCE66D00EC929D /* AbstractFunctionEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractFunctionEvaluator.h; sourceTree = "<group>"; };
+		A5CDB23B25CCE66D00EC929D /* AbstractCiphertext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractCiphertext.h; sourceTree = "<group>"; };
+		A5CDB23C25CCE66D00EC929D /* AbstractBitwiseEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractBitwiseEvaluator.h; sourceTree = "<group>"; };
+		A5CDB23D25CCE66D00EC929D /* AbstractEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractEncoder.h; sourceTree = "<group>"; };
+		A5CDB23E25CCE66D00EC929D /* AbstractPlaintext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractPlaintext.h; sourceTree = "<group>"; };
+		A5CDB2A725CCE78200EC929D /* keys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keys.h; sourceTree = "<group>"; };
+		A5CDB2A825CCE78200EC929D /* randomMatrices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randomMatrices.h; sourceTree = "<group>"; };
+		A5CDB2A925CCE78200EC929D /* matmul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matmul.h; sourceTree = "<group>"; };
+		A5CDB2AA25CCE78200EC929D /* multicore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = multicore.h; sourceTree = "<group>"; };
+		A5CDB2AB25CCE78200EC929D /* hypercube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hypercube.h; sourceTree = "<group>"; };
+		A5CDB2AC25CCE78200EC929D /* IndexMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexMap.h; sourceTree = "<group>"; };
+		A5CDB2AD25CCE78200EC929D /* range.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = range.h; sourceTree = "<group>"; };
+		A5CDB2AE25CCE78200EC929D /* tableLookup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tableLookup.h; sourceTree = "<group>"; };
+		A5CDB2AF25CCE78200EC929D /* PolyModRing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolyModRing.h; sourceTree = "<group>"; };
+		A5CDB2B025CCE78200EC929D /* EvalMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvalMap.h; sourceTree = "<group>"; };
+		A5CDB2B125CCE78200EC929D /* norms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = norms.h; sourceTree = "<group>"; };
+		A5CDB2B225CCE78200EC929D /* CtPtrs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CtPtrs.h; sourceTree = "<group>"; };
+		A5CDB2B325CCE78200EC929D /* polyEval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = polyEval.h; sourceTree = "<group>"; };
+		A5CDB2B425CCE78200EC929D /* CModulus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CModulus.h; sourceTree = "<group>"; };
+		A5CDB2B525CCE78200EC929D /* DoubleCRT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleCRT.h; sourceTree = "<group>"; };
+		A5CDB2B625CCE78200EC929D /* ArgMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArgMap.h; sourceTree = "<group>"; };
+		A5CDB2B725CCE78200EC929D /* FHE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHE.h; sourceTree = "<group>"; };
+		A5CDB2B825CCE78200EC929D /* JsonWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonWrapper.h; sourceTree = "<group>"; };
+		A5CDB2B925CCE78200EC929D /* matching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matching.h; sourceTree = "<group>"; };
+		A5CDB2BA25CCE78200EC929D /* assertions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = assertions.h; sourceTree = "<group>"; };
+		A5CDB2BB25CCE78200EC929D /* EncodedPtxt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncodedPtxt.h; sourceTree = "<group>"; };
+		A5CDB2BC25CCE78200EC929D /* EncryptedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptedArray.h; sourceTree = "<group>"; };
+		A5CDB2BD25CCE78200EC929D /* zzX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zzX.h; sourceTree = "<group>"; };
+		A5CDB2BE25CCE78200EC929D /* exceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exceptions.h; sourceTree = "<group>"; };
+		A5CDB2BF25CCE78200EC929D /* timing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timing.h; sourceTree = "<group>"; };
+		A5CDB2C025CCE78200EC929D /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
+		A5CDB2C125CCE78200EC929D /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
+		A5CDB2C225CCE78200EC929D /* primeChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = primeChain.h; sourceTree = "<group>"; };
+		A5CDB2C325CCE78200EC929D /* PtrVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PtrVector.h; sourceTree = "<group>"; };
+		A5CDB2C425CCE78200EC929D /* scheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scheme.h; sourceTree = "<group>"; };
+		A5CDB2C525CCE78200EC929D /* ClonedPtr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClonedPtr.h; sourceTree = "<group>"; };
+		A5CDB2C625CCE78200EC929D /* Ptxt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ptxt.h; sourceTree = "<group>"; };
+		A5CDB2C725CCE78200EC929D /* binaryArith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binaryArith.h; sourceTree = "<group>"; };
+		A5CDB2C825CCE78200EC929D /* keySwitching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keySwitching.h; sourceTree = "<group>"; };
+		A5CDB2C925CCE78200EC929D /* debugging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debugging.h; sourceTree = "<group>"; };
+		A5CDB2CA25CCE78200EC929D /* fhe_stats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fhe_stats.h; sourceTree = "<group>"; };
+		A5CDB2CB25CCE78200EC929D /* partialMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = partialMatch.h; sourceTree = "<group>"; };
+		A5CDB2CC25CCE78200EC929D /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+		A5CDB2CD25CCE78200EC929D /* powerful.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = powerful.h; sourceTree = "<group>"; };
+		A5CDB2CE25CCE78200EC929D /* SumRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SumRegister.h; sourceTree = "<group>"; };
+		A5CDB2CF25CCE78200EC929D /* replicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = replicate.h; sourceTree = "<group>"; };
+		A5CDB2D025CCE78200EC929D /* bluestein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bluestein.h; sourceTree = "<group>"; };
+		A5CDB2D125CCE78200EC929D /* zeroValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zeroValue.h; sourceTree = "<group>"; };
+		A5CDB2D225CCE78200EC929D /* apiAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apiAttributes.h; sourceTree = "<group>"; };
+		A5CDB2D325CCE78200EC929D /* NumbTh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumbTh.h; sourceTree = "<group>"; };
+		A5CDB2D425CCE78200EC929D /* PolyMod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolyMod.h; sourceTree = "<group>"; };
+		A5CDB2D525CCE78200EC929D /* Ctxt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ctxt.h; sourceTree = "<group>"; };
+		A5CDB2D625CCE78200EC929D /* helib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helib.h; sourceTree = "<group>"; };
+		A5CDB2D725CCE78200EC929D /* PGFFT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFFT.h; sourceTree = "<group>"; };
+		A5CDB2D825CCE78200EC929D /* IndexSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexSet.h; sourceTree = "<group>"; };
+		A5CDB2D925CCE78200EC929D /* binaryCompare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binaryCompare.h; sourceTree = "<group>"; };
+		A5CDB2DA25CCE78200EC929D /* PtrMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PtrMatrix.h; sourceTree = "<group>"; };
+		A5CDB2DB25CCE78200EC929D /* version.in.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.in.h; sourceTree = "<group>"; };
+		A5CDB2DC25CCE78200EC929D /* sample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sample.h; sourceTree = "<group>"; };
+		A5CDB2DD25CCE78200EC929D /* permutations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = permutations.h; sourceTree = "<group>"; };
+		A5CDB2DE25CCE78200EC929D /* recryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recryption.h; sourceTree = "<group>"; };
+		A5CDB2DF25CCE78200EC929D /* intraSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intraSlot.h; sourceTree = "<group>"; };
+		A5CDB2E025CCE78200EC929D /* PAlgebra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAlgebra.h; sourceTree = "<group>"; };
+		A5CDB2E125CCE78200EC929D /* set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = set.h; sourceTree = "<group>"; };
+		A5CDB34A25CCEA2B00EC929D /* binio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binio.h; sourceTree = "<group>"; };
 		A5D0073224D1E6CC00AAE351 /* CCProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCProgressView.h; sourceTree = "<group>"; };
 		A5D0073324D1E6CC00AAE351 /* CCProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCProgressView.m; sourceTree = "<group>"; };
 		A5D0073724DB330900AAE351 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A5D0073824DB33C700AAE351 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		A5F64922244F711D0087514D /* keys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keys.h; sourceTree = "<group>"; };
-		A5F64923244F711D0087514D /* randomMatrices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randomMatrices.h; sourceTree = "<group>"; };
-		A5F64924244F711D0087514D /* matmul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matmul.h; sourceTree = "<group>"; };
-		A5F64925244F711D0087514D /* multicore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = multicore.h; sourceTree = "<group>"; };
-		A5F64926244F711D0087514D /* hypercube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hypercube.h; sourceTree = "<group>"; };
-		A5F64927244F711D0087514D /* IndexMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexMap.h; sourceTree = "<group>"; };
-		A5F64928244F711D0087514D /* range.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = range.h; sourceTree = "<group>"; };
-		A5F64929244F711D0087514D /* tableLookup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tableLookup.h; sourceTree = "<group>"; };
-		A5F6492A244F711D0087514D /* PolyModRing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolyModRing.h; sourceTree = "<group>"; };
-		A5F6492B244F711D0087514D /* EvalMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvalMap.h; sourceTree = "<group>"; };
-		A5F6492C244F711D0087514D /* norms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = norms.h; sourceTree = "<group>"; };
-		A5F6492D244F711D0087514D /* CtPtrs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CtPtrs.h; sourceTree = "<group>"; };
-		A5F6492E244F711D0087514D /* polyEval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = polyEval.h; sourceTree = "<group>"; };
-		A5F6492F244F711D0087514D /* CModulus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CModulus.h; sourceTree = "<group>"; };
-		A5F64930244F711D0087514D /* DoubleCRT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleCRT.h; sourceTree = "<group>"; };
-		A5F64931244F711D0087514D /* ArgMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArgMap.h; sourceTree = "<group>"; };
-		A5F64932244F711D0087514D /* FHE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHE.h; sourceTree = "<group>"; };
-		A5F64933244F711D0087514D /* matching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matching.h; sourceTree = "<group>"; };
-		A5F64934244F711D0087514D /* assertions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = assertions.h; sourceTree = "<group>"; };
-		A5F64935244F711D0087514D /* EncryptedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptedArray.h; sourceTree = "<group>"; };
-		A5F64936244F711D0087514D /* binio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binio.h; sourceTree = "<group>"; };
-		A5F64937244F711D0087514D /* zzX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zzX.h; sourceTree = "<group>"; };
-		A5F64938244F711D0087514D /* exceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exceptions.h; sourceTree = "<group>"; };
-		A5F64939244F711D0087514D /* timing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timing.h; sourceTree = "<group>"; };
-		A5F6493A244F711D0087514D /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
-		A5F6493B244F711D0087514D /* primeChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = primeChain.h; sourceTree = "<group>"; };
-		A5F6493C244F711D0087514D /* PtrVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PtrVector.h; sourceTree = "<group>"; };
-		A5F6493D244F711D0087514D /* clonedPtr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clonedPtr.h; sourceTree = "<group>"; };
-		A5F6493E244F711D0087514D /* Ptxt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ptxt.h; sourceTree = "<group>"; };
-		A5F6493F244F711D0087514D /* binaryArith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binaryArith.h; sourceTree = "<group>"; };
-		A5F64940244F711D0087514D /* keySwitching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keySwitching.h; sourceTree = "<group>"; };
-		A5F64941244F711D0087514D /* debugging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debugging.h; sourceTree = "<group>"; };
-		A5F64942244F711D0087514D /* fhe_stats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fhe_stats.h; sourceTree = "<group>"; };
-		A5F64943244F711D0087514D /* powerful.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = powerful.h; sourceTree = "<group>"; };
-		A5F64944244F711D0087514D /* replicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = replicate.h; sourceTree = "<group>"; };
-		A5F64945244F711D0087514D /* bluestein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bluestein.h; sourceTree = "<group>"; };
-		A5F64946244F711D0087514D /* NumbTh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumbTh.h; sourceTree = "<group>"; };
-		A5F64947244F711D0087514D /* PolyMod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolyMod.h; sourceTree = "<group>"; };
-		A5F64948244F711D0087514D /* Ctxt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ctxt.h; sourceTree = "<group>"; };
-		A5F64949244F711D0087514D /* helib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helib.h; sourceTree = "<group>"; };
-		A5F6494A244F711D0087514D /* PGFFT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGFFT.h; sourceTree = "<group>"; };
-		A5F6494B244F711D0087514D /* IndexSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexSet.h; sourceTree = "<group>"; };
-		A5F6494C244F711D0087514D /* binaryCompare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binaryCompare.h; sourceTree = "<group>"; };
-		A5F6494D244F711D0087514D /* PtrMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PtrMatrix.h; sourceTree = "<group>"; };
-		A5F6494E244F711D0087514D /* sample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sample.h; sourceTree = "<group>"; };
-		A5F6494F244F711D0087514D /* permutations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = permutations.h; sourceTree = "<group>"; };
-		A5F64950244F711D0087514D /* recryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recryption.h; sourceTree = "<group>"; };
-		A5F64951244F711D0087514D /* intraSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intraSlot.h; sourceTree = "<group>"; };
-		A5F64952244F711D0087514D /* PAlgebra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAlgebra.h; sourceTree = "<group>"; };
 		A5F64956244F726F0087514D /* PackageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageInfo.h; sourceTree = "<group>"; };
 		A5F64957244F726F0087514D /* GF2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GF2.h; sourceTree = "<group>"; };
 		A5F64958244F726F0087514D /* FFT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFT.h; sourceTree = "<group>"; };
@@ -476,6 +502,39 @@
 			path = helib_ai;
 			sourceTree = "<group>";
 		};
+		A513E00A25CC8C460066A3BA /* helayers */ = {
+			isa = PBXGroup;
+			children = (
+				A5CDB23925CCE66D00EC929D /* impl */,
+				A513E00B25CC8C460066A3BA /* hebase */,
+			);
+			path = helayers;
+			sourceTree = "<group>";
+		};
+		A513E00B25CC8C460066A3BA /* hebase */ = {
+			isa = PBXGroup;
+			children = (
+				A513E02425CC9EE70066A3BA /* BitwiseEvaluator.h */,
+				A513E02125CC9EE70066A3BA /* CTile.h */,
+				A513E02325CC9EE70066A3BA /* HeContext.h */,
+				A513E02525CC9EE70066A3BA /* HelayersTimer.h */,
+				A513E02225CC9EE70066A3BA /* HeTraits.h */,
+				A513E02625CC9EE70066A3BA /* NativeFunctionEvaluator.h */,
+				A513E00C25CC8C460066A3BA /* hebase.h */,
+				A513E00D25CC8C460066A3BA /* helib */,
+			);
+			path = hebase;
+			sourceTree = "<group>";
+		};
+		A513E00D25CC8C460066A3BA /* helib */ = {
+			isa = PBXGroup;
+			children = (
+				A513E02825CCA0B80066A3BA /* HelibBgvContext.cpp */,
+				A513E00E25CC8C460066A3BA /* HelibBgvContext.h */,
+			);
+			path = helib;
+			sourceTree = "<group>";
+		};
 		A56679F423F714CF00F122FD = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +558,7 @@
 		A56679FF23F714CF00F122FD /* Privacy Preserving Search */ = {
 			isa = PBXGroup;
 			children = (
+				A513E00A25CC8C460066A3BA /* helayers */,
 				A5D0073724DB330900AAE351 /* README.md */,
 				A5667A0023F714CF00F122FD /* AppDelegate.h */,
 				A5667A0123F714CF00F122FD /* AppDelegate.m */,
@@ -516,6 +576,86 @@
 			path = "Privacy Preserving Search";
 			sourceTree = "<group>";
 		};
+		A5CDB23925CCE66D00EC929D /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				A5CDB23A25CCE66D00EC929D /* AbstractFunctionEvaluator.h */,
+				A5CDB23B25CCE66D00EC929D /* AbstractCiphertext.h */,
+				A5CDB23C25CCE66D00EC929D /* AbstractBitwiseEvaluator.h */,
+				A5CDB23D25CCE66D00EC929D /* AbstractEncoder.h */,
+				A5CDB23E25CCE66D00EC929D /* AbstractPlaintext.h */,
+			);
+			name = impl;
+			path = hebase/impl;
+			sourceTree = "<group>";
+		};
+		A5CDB2A625CCE78200EC929D /* helib */ = {
+			isa = PBXGroup;
+			children = (
+				A5CDB34A25CCEA2B00EC929D /* binio.h */,
+				A5CDB2A725CCE78200EC929D /* keys.h */,
+				A5CDB2A825CCE78200EC929D /* randomMatrices.h */,
+				A5CDB2A925CCE78200EC929D /* matmul.h */,
+				A5CDB2AA25CCE78200EC929D /* multicore.h */,
+				A5CDB2AB25CCE78200EC929D /* hypercube.h */,
+				A5CDB2AC25CCE78200EC929D /* IndexMap.h */,
+				A5CDB2AD25CCE78200EC929D /* range.h */,
+				A5CDB2AE25CCE78200EC929D /* tableLookup.h */,
+				A5CDB2AF25CCE78200EC929D /* PolyModRing.h */,
+				A5CDB2B025CCE78200EC929D /* EvalMap.h */,
+				A5CDB2B125CCE78200EC929D /* norms.h */,
+				A5CDB2B225CCE78200EC929D /* CtPtrs.h */,
+				A5CDB2B325CCE78200EC929D /* polyEval.h */,
+				A5CDB2B425CCE78200EC929D /* CModulus.h */,
+				A5CDB2B525CCE78200EC929D /* DoubleCRT.h */,
+				A5CDB2B625CCE78200EC929D /* ArgMap.h */,
+				A5CDB2B725CCE78200EC929D /* FHE.h */,
+				A5CDB2B825CCE78200EC929D /* JsonWrapper.h */,
+				A5CDB2B925CCE78200EC929D /* matching.h */,
+				A5CDB2BA25CCE78200EC929D /* assertions.h */,
+				A5CDB2BB25CCE78200EC929D /* EncodedPtxt.h */,
+				A5CDB2BC25CCE78200EC929D /* EncryptedArray.h */,
+				A5CDB2BD25CCE78200EC929D /* zzX.h */,
+				A5CDB2BE25CCE78200EC929D /* exceptions.h */,
+				A5CDB2BF25CCE78200EC929D /* timing.h */,
+				A5CDB2C025CCE78200EC929D /* Context.h */,
+				A5CDB2C125CCE78200EC929D /* Matrix.h */,
+				A5CDB2C225CCE78200EC929D /* primeChain.h */,
+				A5CDB2C325CCE78200EC929D /* PtrVector.h */,
+				A5CDB2C425CCE78200EC929D /* scheme.h */,
+				A5CDB2C525CCE78200EC929D /* ClonedPtr.h */,
+				A5CDB2C625CCE78200EC929D /* Ptxt.h */,
+				A5CDB2C725CCE78200EC929D /* binaryArith.h */,
+				A5CDB2C825CCE78200EC929D /* keySwitching.h */,
+				A5CDB2C925CCE78200EC929D /* debugging.h */,
+				A5CDB2CA25CCE78200EC929D /* fhe_stats.h */,
+				A5CDB2CB25CCE78200EC929D /* partialMatch.h */,
+				A5CDB2CC25CCE78200EC929D /* log.h */,
+				A5CDB2CD25CCE78200EC929D /* powerful.h */,
+				A5CDB2CE25CCE78200EC929D /* SumRegister.h */,
+				A5CDB2CF25CCE78200EC929D /* replicate.h */,
+				A5CDB2D025CCE78200EC929D /* bluestein.h */,
+				A5CDB2D125CCE78200EC929D /* zeroValue.h */,
+				A5CDB2D225CCE78200EC929D /* apiAttributes.h */,
+				A5CDB2D325CCE78200EC929D /* NumbTh.h */,
+				A5CDB2D425CCE78200EC929D /* PolyMod.h */,
+				A5CDB2D525CCE78200EC929D /* Ctxt.h */,
+				A5CDB2D625CCE78200EC929D /* helib.h */,
+				A5CDB2D725CCE78200EC929D /* PGFFT.h */,
+				A5CDB2D825CCE78200EC929D /* IndexSet.h */,
+				A5CDB2D925CCE78200EC929D /* binaryCompare.h */,
+				A5CDB2DA25CCE78200EC929D /* PtrMatrix.h */,
+				A5CDB2DB25CCE78200EC929D /* version.in.h */,
+				A5CDB2DC25CCE78200EC929D /* sample.h */,
+				A5CDB2DD25CCE78200EC929D /* permutations.h */,
+				A5CDB2DE25CCE78200EC929D /* recryption.h */,
+				A5CDB2DF25CCE78200EC929D /* intraSlot.h */,
+				A5CDB2E025CCE78200EC929D /* PAlgebra.h */,
+				A5CDB2E125CCE78200EC929D /* set.h */,
+			);
+			path = helib;
+			sourceTree = "<group>";
+		};
 		A5D0073124D1E6A200AAE351 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,67 +668,11 @@
 		A5F64920244F711D0087514D /* include */ = {
 			isa = PBXGroup;
 			children = (
-				A5F64921244F711D0087514D /* helib */,
+				A5CDB2A625CCE78200EC929D /* helib */,
 			);
 			name = include;
 			path = dependencies/HElib/include;
 			sourceTree = SOURCE_ROOT;
-		};
-		A5F64921244F711D0087514D /* helib */ = {
-			isa = PBXGroup;
-			children = (
-				A5F64922244F711D0087514D /* keys.h */,
-				A5F64923244F711D0087514D /* randomMatrices.h */,
-				A5F64924244F711D0087514D /* matmul.h */,
-				A5F64925244F711D0087514D /* multicore.h */,
-				A5F64926244F711D0087514D /* hypercube.h */,
-				A5F64927244F711D0087514D /* IndexMap.h */,
-				A5F64928244F711D0087514D /* range.h */,
-				A5F64929244F711D0087514D /* tableLookup.h */,
-				A5F6492A244F711D0087514D /* PolyModRing.h */,
-				A5F6492B244F711D0087514D /* EvalMap.h */,
-				A5F6492C244F711D0087514D /* norms.h */,
-				A5F6492D244F711D0087514D /* CtPtrs.h */,
-				A5F6492E244F711D0087514D /* polyEval.h */,
-				A5F6492F244F711D0087514D /* CModulus.h */,
-				A5F64930244F711D0087514D /* DoubleCRT.h */,
-				A5F64931244F711D0087514D /* ArgMap.h */,
-				A5F64932244F711D0087514D /* FHE.h */,
-				A5F64933244F711D0087514D /* matching.h */,
-				A5F64934244F711D0087514D /* assertions.h */,
-				A5F64935244F711D0087514D /* EncryptedArray.h */,
-				A5F64936244F711D0087514D /* binio.h */,
-				A5F64937244F711D0087514D /* zzX.h */,
-				A5F64938244F711D0087514D /* exceptions.h */,
-				A5F64939244F711D0087514D /* timing.h */,
-				A5F6493A244F711D0087514D /* Context.h */,
-				A5F6493B244F711D0087514D /* primeChain.h */,
-				A5F6493C244F711D0087514D /* PtrVector.h */,
-				A5F6493D244F711D0087514D /* clonedPtr.h */,
-				A5F6493E244F711D0087514D /* Ptxt.h */,
-				A5F6493F244F711D0087514D /* binaryArith.h */,
-				A5F64940244F711D0087514D /* keySwitching.h */,
-				A5F64941244F711D0087514D /* debugging.h */,
-				A5F64942244F711D0087514D /* fhe_stats.h */,
-				A5F64943244F711D0087514D /* powerful.h */,
-				A5F64944244F711D0087514D /* replicate.h */,
-				A5F64945244F711D0087514D /* bluestein.h */,
-				A5F64946244F711D0087514D /* NumbTh.h */,
-				A5F64947244F711D0087514D /* PolyMod.h */,
-				A5F64948244F711D0087514D /* Ctxt.h */,
-				A5F64949244F711D0087514D /* helib.h */,
-				A5F6494A244F711D0087514D /* PGFFT.h */,
-				A5F6494B244F711D0087514D /* IndexSet.h */,
-				A5F6494C244F711D0087514D /* binaryCompare.h */,
-				A5F6494D244F711D0087514D /* PtrMatrix.h */,
-				A5F6494E244F711D0087514D /* sample.h */,
-				A5F6494F244F711D0087514D /* permutations.h */,
-				A5F64950244F711D0087514D /* recryption.h */,
-				A5F64951244F711D0087514D /* intraSlot.h */,
-				A5F64952244F711D0087514D /* PAlgebra.h */,
-			);
-			path = helib;
-			sourceTree = "<group>";
 		};
 		A5F64953244F726F0087514D /* ntl */ = {
 			isa = PBXGroup;
@@ -974,6 +1058,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5F649E924508CCC0087514D /* CapitalDetailViewController.mm in Sources */,
+				A513E02925CCA0B80066A3BA /* HelibBgvContext.cpp in Sources */,
 				A5667EF823FCD4BA00F122FD /* main.m in Sources */,
 				A5F649ED2450DC270087514D /* CountryDisplaySplitViewController.m in Sources */,
 				A5F649E524508CAD0087514D /* CountryTableViewController.m in Sources */,
@@ -1227,7 +1312,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/dependencies/HElib/include";
 				INFOPLIST_FILE = "Privacy Preserving Search/Info.plist";
@@ -1247,8 +1332,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/fhe-toolkit-macos/**",
+					"$(PROJECT_DIR)/\"Privacy Preserving Search\"/**",
 					"$(PROJECT_DIR)/dependencies/ntl/include",
+					"$(PROJECT_DIR)/dependencies/include",
 				);
 			};
 			name = Debug;
@@ -1264,7 +1350,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/dependencies/HElib/include";
 				INFOPLIST_FILE = "Privacy Preserving Search/Info.plist";
@@ -1284,8 +1370,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/fhe-toolkit-macos/**",
+					"$(PROJECT_DIR)/\"Privacy Preserving Search\"/**",
 					"$(PROJECT_DIR)/dependencies/ntl/include",
+					"$(PROJECT_DIR)/dependencies/include",
 				);
 			};
 			name = Release;

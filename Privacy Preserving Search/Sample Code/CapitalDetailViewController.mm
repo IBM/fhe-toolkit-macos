@@ -24,6 +24,9 @@
 
 #import "CapitalDetailViewController.h"
 #include <iostream>
+#include "helayers/hebase/hebase.h"
+#include "helayers/hebase/helib/HelibBgvContext.h"
+#include <fstream>
 #include <helib/helib.h>
 #include <helib/EncryptedArray.h>
 #include <helib/ArgMap.h>
@@ -57,7 +60,7 @@ unsigned long bits = 1000;
 // Number of columns of Key-Switching matrix (default = 2 or 3)
 unsigned long c = 2;
 // Size of NTL thread pool (default =1)
-unsigned long nthreads = 1;
+unsigned long nthreads = 12;
 // debug output (default no debug output)
 unsigned long debug = 0;
 
