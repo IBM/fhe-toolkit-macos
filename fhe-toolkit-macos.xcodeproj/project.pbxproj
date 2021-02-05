@@ -43,7 +43,6 @@
 		A506952C24C878C600FFF08B /* Encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950D24C878C500FFF08B /* Encoder.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A506952D24C878C600FFF08B /* PTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950F24C878C500FFF08B /* PTile.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A506952E24C878C600FFF08B /* FcLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506951124C878C500FFF08B /* FcLayer.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506953824C8B02300FFF08B /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953724C8B02300FFF08B /* libhelib.a */; };
 		A506953A24C8B17200FFF08B /* libhdf5_cpp_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953924C8B17200FFF08B /* libhdf5_cpp_debug.a */; };
 		A506953E24C8BD7600FFF08B /* libboost_filesystem.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */; };
 		A513E02925CCA0B80066A3BA /* HelibBgvContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A513E02825CCA0B80066A3BA /* HelibBgvContext.cpp */; };
@@ -51,10 +50,10 @@
 		A5667A0723F714D200F122FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5667A0623F714D200F122FD /* Assets.xcassets */; };
 		A5667A0A23F714D200F122FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5667A0823F714D200F122FD /* Main.storyboard */; };
 		A5667EF823FCD4BA00F122FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5667A0C23F714D200F122FD /* main.m */; };
-		A5A0E47A24CB679F00FA427E /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0E47924CB679F00FA427E /* libhelib.a */; };
 		A5A0E47C24CFBE7B00FA427E /* new_2.h5 in Resources */ = {isa = PBXBuildFile; fileRef = A5A0E47B24CFBE7B00FA427E /* new_2.h5 */; };
 		A5A0E47F24D09CFB00FA427E /* CreditSampleResultsData.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A5BB176A253F4F02004DDA94 /* libhdf5_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BB1769253F4F02004DDA94 /* libhdf5_debug.a */; };
+		A5CDB49525CDF09000EC929D /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5CDB49425CDF08300EC929D /* libhelib.a */; };
 		A5D0073424D1E6CC00AAE351 /* CCProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D0073324D1E6CC00AAE351 /* CCProgressView.m */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A5D0073524D3674100AAE351 /* libboost_filesystem.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */; };
 		A5F649C5244F72700087514D /* ntl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649C4244F72700087514D /* ntl.a */; };
@@ -160,7 +159,6 @@
 		A506951024C878C500FFF08B /* CipherMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherMatrix.h; sourceTree = "<group>"; };
 		A506951124C878C500FFF08B /* FcLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FcLayer.cpp; sourceTree = "<group>"; };
 		A506953524C8812300FFF08B /* libhdf5_debug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libhdf5_debug.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A506953724C8B02300FFF08B /* libhelib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libhelib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A506953924C8B17200FFF08B /* libhdf5_cpp_debug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libhdf5_cpp_debug.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A506953B24C8BD3200FFF08B /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = dependencies/lib/libboost_filesystem.a; sourceTree = "<group>"; };
 		A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_filesystem.dylib; path = dependencies/lib/libboost_filesystem.dylib; sourceTree = "<group>"; };
@@ -181,7 +179,6 @@
 		A5667A0B23F714D200F122FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5667A0C23F714D200F122FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A5667A0E23F714D200F122FD /* fhe-toolkit-macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "fhe-toolkit-macos.entitlements"; sourceTree = "<group>"; };
-		A5A0E47924CB679F00FA427E /* libhelib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libhelib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A0E47B24CFBE7B00FA427E /* new_2.h5 */ = {isa = PBXFileReference; lastKnownFileType = file; path = new_2.h5; sourceTree = "<group>"; };
 		A5A0E47D24D09CFB00FA427E /* CreditSampleResultsData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreditSampleResultsData.h; sourceTree = "<group>"; };
 		A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreditSampleResultsData.m; sourceTree = "<group>"; };
@@ -252,6 +249,7 @@
 		A5CDB2E025CCE78200EC929D /* PAlgebra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAlgebra.h; sourceTree = "<group>"; };
 		A5CDB2E125CCE78200EC929D /* set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = set.h; sourceTree = "<group>"; };
 		A5CDB34A25CCEA2B00EC929D /* binio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binio.h; sourceTree = "<group>"; };
+		A5CDB49425CDF08300EC929D /* libhelib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhelib.a; path = dependencies/HElib_macOS/lib/Debug/libhelib.a; sourceTree = "<group>"; };
 		A5D0073224D1E6CC00AAE351 /* CCProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCProgressView.h; sourceTree = "<group>"; };
 		A5D0073324D1E6CC00AAE351 /* CCProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCProgressView.m; sourceTree = "<group>"; };
 		A5D0073724DB330900AAE351 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -394,7 +392,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5BB176A253F4F02004DDA94 /* libhdf5_debug.a in Frameworks */,
-				A506953824C8B02300FFF08B /* libhelib.a in Frameworks */,
 				A506953A24C8B17200FFF08B /* libhdf5_cpp_debug.a in Frameworks */,
 				A506953E24C8BD7600FFF08B /* libboost_filesystem.dylib in Frameworks */,
 				A50693F824C72C6900FFF08B /* ntl.a in Frameworks */,
@@ -406,7 +403,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5A0E47A24CB679F00FA427E /* libhelib.a in Frameworks */,
+				A5CDB49525CDF09000EC929D /* libhelib.a in Frameworks */,
 				A5F649D3244F73390087514D /* libgmp.a in Frameworks */,
 				A5F649D4244F73390087514D /* libgmp.dylib in Frameworks */,
 				A5F649C5244F72700087514D /* ntl.a in Frameworks */,
@@ -867,12 +864,11 @@
 		A5F649DA244F789E0087514D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5CDB49425CDF08300EC929D /* libhelib.a */,
 				A5BB1769253F4F02004DDA94 /* libhdf5_debug.a */,
 				A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */,
-				A5A0E47924CB679F00FA427E /* libhelib.a */,
 				A506953B24C8BD3200FFF08B /* libboost_filesystem.a */,
 				A506953524C8812300FFF08B /* libhdf5_debug.a */,
-				A506953724C8B02300FFF08B /* libhelib.a */,
 				A506953924C8B17200FFF08B /* libhdf5_cpp_debug.a */,
 			);
 			name = Frameworks;
@@ -1314,7 +1310,11 @@
 				ENABLE_HARDENED_RUNTIME = NO;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/dependencies/HElib/include";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/dependencies/HElib_macOS/src",
+					"$(PROJECT_DIR)/dependencies/HElib/include",
+					"$(PROJECT_DIR)/dependencies/HElib/dependencies/json",
+				);
 				INFOPLIST_FILE = "Privacy Preserving Search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1332,9 +1332,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/dependencies/include",
 					"$(PROJECT_DIR)/\"Privacy Preserving Search\"/**",
 					"$(PROJECT_DIR)/dependencies/ntl/include",
-					"$(PROJECT_DIR)/dependencies/include",
 				);
 			};
 			name = Debug;
@@ -1352,7 +1352,11 @@
 				ENABLE_HARDENED_RUNTIME = NO;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/dependencies/HElib/include";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/dependencies/HElib_macOS/src",
+					"$(PROJECT_DIR)/dependencies/HElib/include",
+					"$(PROJECT_DIR)/dependencies/HElib/dependencies/json",
+				);
 				INFOPLIST_FILE = "Privacy Preserving Search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1370,9 +1374,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/dependencies/include",
 					"$(PROJECT_DIR)/\"Privacy Preserving Search\"/**",
 					"$(PROJECT_DIR)/dependencies/ntl/include",
-					"$(PROJECT_DIR)/dependencies/include",
 				);
 			};
 			name = Release;
