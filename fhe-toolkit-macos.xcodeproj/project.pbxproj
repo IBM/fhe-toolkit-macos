@@ -54,6 +54,7 @@
 		A5A0E47F24D09CFB00FA427E /* CreditSampleResultsData.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A5BB176A253F4F02004DDA94 /* libhdf5_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BB1769253F4F02004DDA94 /* libhdf5_debug.a */; };
 		A5CDB49525CDF09000EC929D /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5CDB49425CDF08300EC929D /* libhelib.a */; };
+		A5CDB50725D1BE5900EC929D /* AbstractFunctionEvaluator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5CDB50625D1BE5900EC929D /* AbstractFunctionEvaluator.cpp */; };
 		A5D0073424D1E6CC00AAE351 /* CCProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D0073324D1E6CC00AAE351 /* CCProgressView.m */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A5D0073524D3674100AAE351 /* libboost_filesystem.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */; };
 		A5F649C5244F72700087514D /* ntl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649C4244F72700087514D /* ntl.a */; };
@@ -250,6 +251,7 @@
 		A5CDB2E125CCE78200EC929D /* set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = set.h; sourceTree = "<group>"; };
 		A5CDB34A25CCEA2B00EC929D /* binio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binio.h; sourceTree = "<group>"; };
 		A5CDB49425CDF08300EC929D /* libhelib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhelib.a; path = dependencies/HElib_macOS/lib/Debug/libhelib.a; sourceTree = "<group>"; };
+		A5CDB50625D1BE5900EC929D /* AbstractFunctionEvaluator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AbstractFunctionEvaluator.cpp; path = "Privacy Preserving Search/helayers/hebase/AbstractFunctionEvaluator.cpp"; sourceTree = SOURCE_ROOT; };
 		A5D0073224D1E6CC00AAE351 /* CCProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCProgressView.h; sourceTree = "<group>"; };
 		A5D0073324D1E6CC00AAE351 /* CCProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCProgressView.m; sourceTree = "<group>"; };
 		A5D0073724DB330900AAE351 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -576,6 +578,7 @@
 		A5CDB23925CCE66D00EC929D /* impl */ = {
 			isa = PBXGroup;
 			children = (
+				A5CDB50625D1BE5900EC929D /* AbstractFunctionEvaluator.cpp */,
 				A5CDB23A25CCE66D00EC929D /* AbstractFunctionEvaluator.h */,
 				A5CDB23B25CCE66D00EC929D /* AbstractCiphertext.h */,
 				A5CDB23C25CCE66D00EC929D /* AbstractBitwiseEvaluator.h */,
@@ -1056,6 +1059,7 @@
 				A5F649E924508CCC0087514D /* CapitalDetailViewController.mm in Sources */,
 				A513E02925CCA0B80066A3BA /* HelibBgvContext.cpp in Sources */,
 				A5667EF823FCD4BA00F122FD /* main.m in Sources */,
+				A5CDB50725D1BE5900EC929D /* AbstractFunctionEvaluator.cpp in Sources */,
 				A5F649ED2450DC270087514D /* CountryDisplaySplitViewController.m in Sources */,
 				A5F649E524508CAD0087514D /* CountryTableViewController.m in Sources */,
 				A5667A0223F714CF00F122FD /* AppDelegate.m in Sources */,
@@ -1301,7 +1305,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_USE_AFTER_MOVE = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_ENTITLEMENTS = "Privacy Preserving Search/fhe-toolkit-macos.entitlements";
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
@@ -1309,6 +1316,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = NO;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/HElib_macOS/src",
@@ -1327,7 +1335,15 @@
 					"$(PROJECT_DIR)/dependencies/HElib_macOS/lib/Debug",
 				);
 				OTHER_CFLAGS = "-fPIC";
-				OTHER_LDFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-Werror",
+					"-Wfatal-errors",
+					"$(OTHER_CFLAGS)",
+				);
+				OTHER_LDFLAGS = (
+					"-Werror",
+					"-Wfatal-errors",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.research.fhe-toolkit-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1343,7 +1359,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_USE_AFTER_MOVE = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_ENTITLEMENTS = "Privacy Preserving Search/fhe-toolkit-macos.entitlements";
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
@@ -1351,6 +1370,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = NO;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/HElib_macOS/src",
@@ -1369,7 +1389,15 @@
 					"$(PROJECT_DIR)/dependencies/HElib_macOS/lib/Debug",
 				);
 				OTHER_CFLAGS = "-fPIC";
-				OTHER_LDFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-Werror",
+					"-Wfatal-errors",
+					"$(OTHER_CFLAGS)",
+				);
+				OTHER_LDFLAGS = (
+					"-Werror",
+					"-Wfatal-errors",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.research.fhe-toolkit-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

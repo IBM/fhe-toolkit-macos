@@ -188,93 +188,93 @@ public:
     throw std::runtime_error("getModulusChain() not implemented");
   };
 
-  ///  Saves this context to a stream in binary form.
-  ///
-  ///  @param[in] out output stream to write to
-  ///  @param[in] withSecretKey whether to include the secret key
+  //  Saves this context to a stream in binary form.
+  //
+  //  @param[in] out output stream to write to
+  //  @param[in] withSecretKey whether to include the secret key
   virtual void save(std::ostream& out, bool withSecretKey);
 
-  ///  Loads context saved by the save() method
-  ///
-  ///  @param[in] out input stream to read from
+  //  Loads context saved by the save() method
+  //
+  //
   virtual void load(std::istream& in);
 
-  /// Save secret key to the given ostream. \n
-  /// @param[out] ostream the binary stream to save to.
-  ///
-  /// @throw runtime_error if this HeContext doesn't have a secret key. i.e.
-  ///        hasSecretKey() is false.
+  // Save secret key to the given ostream. \n
+  // @param[out] ostream the binary stream to save to.
+  //
+  // @throw runtime_error if this HeContext doesn't have a secret key. i.e.
+  //        hasSecretKey() is false.
   virtual void saveSecretKey(std::ostream& out) = 0;
 
-  /// Load secret key from the given istream. \n
-  /// @param[in] istream the binary stream to load from.
-  /// @throw runtime_error if this HeContext already has a secret key. i.e.
-  ///        hasSecretKey() is ture.
+  // Load secret key from the given istream. \n
+  // @param[in] istream the binary stream to load from.
+  // @throw runtime_error if this HeContext already has a secret key. i.e.
+  //        hasSecretKey() is ture.
   virtual void loadSecretKey(std::istream& in) = 0;
 
-  ///  Saves this context to a file in binary form.
-  ///
-  ///  @param[in] fileName file to write to
-  ///  @param[in] withSecretKey whether to include the secret key
+  //  Saves this context to a file in binary form.
+  //
+  //  @param[in] fileName file to write to
+  //  @param[in] withSecretKey whether to include the secret key
   void saveToFile(const std::string& fileName, bool withSecretKey);
 
-  ///  Loads context saved by the saveToFile() method
-  ///
-  ///  @param[in] fileName file to read from
+  //  Loads context saved by the saveToFile() method
+  //
+  //  @param[in] fileName file to read from
   void loadFromFile(const std::string& fileName);
 
-  /// save secret key to the given file. \n
-  /// @param[out] fileName the path of the file to save to.
-  /// @throw runtime_error if this HeContext doesn't have a secret key. i.e.
-  ///        hasSecretKey() is false.
+  // save secret key to the given file. \n
+  // @param[out] fileName the path of the file to save to.
+  // @throw runtime_error if this HeContext doesn't have a secret key. i.e.
+  //        hasSecretKey() is false.
   void saveSecretKeyToFile(const std::string& fileName);
 
-  /// load secret key from the given file. \n
-  /// @param[in] fileName the path of the file to load from
-  /// @throw runtime_error if this HeContext already has a secret key. i.e.
-  ///        hasSecretKey() is ture.
+  // load secret key from the given file. \n
+  // @param[in] fileName the path of the file to load from
+  // @throw runtime_error if this HeContext already has a secret key. i.e.
+  //        hasSecretKey() is ture.
   void loadSecretKeyFromFile(const std::string& fileName);
 
-  /// Returns default scale used in encoding (where applicable).
+  // Returns default scale used in encoding (where applicable).
   virtual inline double getDefaultScale() const { return defaultScale; }
 
-  /// Sets the default scale to be used in encoding (where applicable).
-  ///  @param[in] v the default scale
+  // Sets the default scale to be used in encoding (where applicable).
+  //  @param[in] v the default scale
   virtual void setDefaultScale(double v) { defaultScale = v; }
 
-  /// Returns the name of the underlying library
+  // Returns the name of the underlying library
   virtual std::string getLibraryName() const = 0;
 
-  /// Returns the name of the underlying scheme
+  // Returns the name of the underlying scheme
   virtual std::string getSchemeName() const = 0;
 
-  /// Returns a signature of the context that distinguishes it enough to be able
-  /// to load previously stored contexts based on their signatures.
+  // Returns a signature of the context that distinguishes it enough to be able
+  // to load previously stored contexts based on their signatures.
   virtual std::string getSignature() const { return getSchemeName(); };
 
-  /// For internal use
+  // For internal use
   inline virtual std::shared_ptr<JsonWrapper> getEstimatedLatencies() const
   {
     throw std::runtime_error("not implemented");
   };
 
-  /// Returns a pointer to a context initialized from file.
-  /// Context type is dynamically determined by content of file.
-  /// @param[in] fileName file to read from
+  // Returns a pointer to a context initialized from file.
+  // Context type is dynamically determined by content of file.
+  // @param[in] fileName file to read from
   static std::shared_ptr<HeContext> loadHeContextFromFile(
       const std::string& fileName);
 
-  /// Returns a pointer to a context initialized from stream.
-  /// Context type is dynamically determined by content of stream.
-  /// @param[in] in stream to read from
+  // Returns a pointer to a context initialized from stream.
+  // Context type is dynamically determined by content of stream.
+  // @param[in] in stream to read from
   static std::shared_ptr<HeContext> loadHeContext(std::istream& in);
 
-  /// Registers a context object for the purpose of dynamic loading.
-  /// Don't call this directly. Use REGISTER_CONTEXT (see above)
+  // Registers a context object for the purpose of dynamic loading.
+  // Don't call this directly. Use REGISTER_CONTEXT (see above)
   static bool internalRegisterContext(const HeContext* context);
 
-  /// Returns an uninitialized context of the same type. Used for dynamic
-  /// type loading among others.
+  // Returns an uninitialized context of the same type. Used for dynamic
+  // type loading among others.
   virtual std::shared_ptr<HeContext> clone() const;
 };
 }

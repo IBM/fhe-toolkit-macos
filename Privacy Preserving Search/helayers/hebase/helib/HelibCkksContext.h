@@ -22,35 +22,42 @@
 * SOFTWARE.
 */
 
-#ifndef SRC_HELAYERS_HELIBBGVCONTEXT_H_
-#define SRC_HELAYERS_HELIBBGVCONTEXT_H_
+#ifndef SRC_HELAYERS_HELIBCKKSCONTEXT_H_
+#define SRC_HELAYERS_HELIBCKKSCONTEXT_H_
 
 #include "HelibContext.h"
 
 namespace helayers {
+///@brief An implementation of HeContext for Helib's CKKS scheme.
 
-/// An implementation of HeContext for BGV scheme in HElib.
-///
 /// It can be either initialized via parameters, via an HelibConfig,
 /// or loaded from a file.
-///
+
 /// It is recommended not to use directly after initialization, but
 /// use an HeContext reference instead.
-///
-/// It is currently in beta version, as not all BGV operators are covered.
-class HelibBgvContext : public HelibContext
+
+class HelibCkksContext : public HelibContext
 {
 
-  unsigned long p;
-  const helib::EncryptedArray* ea = NULL;
+private:
+  const helib::EncryptedArrayCx* ea = NULL;
 
-  // double defaultScale = 100;
+protected:
+  /// A helper function for init() method
+  void initCommon(helib::Context* context);
 
 public:
-  HelibBgvContext();
-  virtual ~HelibBgvContext();
+  /// Constructs an empty object.
+  HelibCkksContext();
 
-  void init(unsigned long p, unsigned long m, unsigned long r, unsigned long L);
+  virtual ~HelibCkksContext();
+
+  /// Initializes context with given parameters
+  void init(unsigned long m,
+            unsigned long r,
+            unsigned long L,
+            unsigned long c = 2,
+            bool enableConjugate = true);
 
   /// Initializes context with given configuration
   /// @param[in] conf user configuration
@@ -66,41 +73,29 @@ public:
             helib::SecKey* userSecretKey,
             helib::PubKey* userPublicKey);
 
-  /// Returns a pointer to HelibBgvCiphertext, initialized with this
-  /// HelibBgvContext.
-  virtual std::shared_ptr<AbstractCiphertext> createAbstractCipher();
+  /// Do not use. Should be made private.
+  std::shared_ptr<AbstractCiphertext> createAbstractCipher() override;
 
-  /// Returns a pointer to HelibBgvPlaintext, initialized with this
-  /// HelibBgvContext.
-  virtual std::shared_ptr<AbstractPlaintext> createAbstractPlain();
+  /// Do not use. Should be made private.
+  std::shared_ptr<AbstractPlaintext> createAbstractPlain() override;
 
-  /// Returns a pointer to HelibBgvNativeFunctionEvaluator, initialized with
-  /// this HelibBgvContext.
-  std::shared_ptr<AbstractFunctionEvaluator> getFunctionEvaluator() override;
-
-  /// Returns a pointer to HelibBgvEncoder, initialized with this
-  /// HelibBgvContext.
+  /// Do not use. Should be made private.
   std::shared_ptr<AbstractEncoder> getEncoder() override;
 
-  void printSignature(std::ostream& out = std::cout) const override;
+  /// Returns encrypted array object
+  inline const helib::EncryptedArrayCx& getEncryptedArray() { return *ea; }
 
-  /// Returns the EncryptedArray used to perform operation on ciphertexts and
-  /// plaintexts that are initialized with this scheme.
-  virtual inline const helib::EncryptedArray& getEncryptedArray()
-  {
-    return *ea;
-  }
+  bool getEnableConjugate() const { return config.enableConjugate; }
 
-  /// Loads this HelibBgvcontext from the given istream.
-  /// @param[in] istream The istream to load from.
-  void load(std::istream& in);
+  /// Loads from binary stream
+  void load(std::istream& out) override;
 
-  /// Returns the name of this scheme (i.e. "BGV").
-  std::string getSchemeName() const override { return "BGV"; }
+  /// Returns scheme name
+  std::string getSchemeName() const override { return "CKKS"; }
 
-  // void setDefaultScale(double val) { defaultScale = val; }
-  // inline double getDefaultScale() const { return defaultScale; }
+  /// See parent method
+  std::shared_ptr<HeContext> clone() const override;
 };
 }
 
-#endif /* SRC_HELAYERS_HELIBBGVCONTEXT_H_ */
+#endif /* SRC_HELAYERS_HELIBCKKSCONTEXT_H_ */
