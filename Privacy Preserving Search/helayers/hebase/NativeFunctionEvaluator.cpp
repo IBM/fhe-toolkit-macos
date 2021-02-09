@@ -42,7 +42,7 @@ void NativeFunctionEvaluator::powerInPlace(CTile& c, int p) const
 
 void NativeFunctionEvaluator::totalProduct(CTile& result, const std::vector<CTile>& multiplicands) const
 {
-  int size = multiplicands.size();
+  long size = multiplicands.size();
   std::vector<shared_ptr<helayers::AbstractCiphertext>> absMultiplicands(size);
   for(int i = 0; i < size ; i++)
   {

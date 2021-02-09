@@ -29,10 +29,11 @@
 #include <mutex>
 #include <math.h>
 #include <time.h>
-#include <omp.h>
+
 
 #ifdef _WIN32
 #include <windows.h>
+#include <omp.h>
 #endif
 
 using namespace std::chrono;
@@ -105,8 +106,8 @@ void HelayersTimer::restart(const string& t)
 
 void HelayersTimer::push(const std::string& section)
 {
-  if (omp_in_parallel())
-    return;
+  //if (omp_in_parallel())
+  //  return;
   current = &current->getSubSection(section);
   current->start = high_resolution_clock::now();
   current->cpu_start = getProcessCPUTime();
@@ -116,8 +117,8 @@ void HelayersTimer::push(const std::string& section)
 
 void HelayersTimer::pop()
 {
-  if (omp_in_parallel())
-    return;
+ // if (omp_in_parallel())
+ //   return;
   if (current->parent == NULL) {
     throw runtime_error("already at top. current name=" + current->name);
   }

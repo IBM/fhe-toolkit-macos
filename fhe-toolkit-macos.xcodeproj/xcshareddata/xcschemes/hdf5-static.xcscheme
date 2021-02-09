@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1140"
+   LastUpgradeVersion = "1230"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "587B47D526AA476C80660ED9"
+               BlueprintIdentifier = "2B9DC2A2133B4E47A7728566"
                BuildableName = "libhdf5_debug.a"
                BlueprintName = "hdf5-static"
                ReferencedContainer = "container:dependencies/hdf5-1.12.0/HDF5.xcodeproj">
@@ -50,7 +50,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "587B47D526AA476C80660ED9"
+            BlueprintIdentifier = "2B9DC2A2133B4E47A7728566"
             BuildableName = "libhdf5_debug.a"
             BlueprintName = "hdf5-static"
             ReferencedContainer = "container:dependencies/hdf5-1.12.0/HDF5.xcodeproj">

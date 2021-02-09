@@ -24,7 +24,6 @@
 
 #include "HeTraits.h"
 
-using namespace std;
 
 namespace helayers {
 

@@ -42,7 +42,7 @@ protected:
   helib::SecKey* secretKey = NULL;
   helib::PubKey* publicKey = NULL;
 
-  long nslots = 0;
+  int nslots = 0;
 
   bool mirrored = false;
 

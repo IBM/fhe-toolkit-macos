@@ -75,10 +75,10 @@ void HelibCkksContext::init(unsigned long m,
 
 void HelibCkksContext::init(const HelibConfig& conf)
 {
-  HELAYERS_TIMER_SECTION("context-init");
-  if (context != NULL)
-    throw runtime_error("This context is already initialized");
-  always_assert(conf.p == -1, "p must be set to -1 in CKKS");
+//  HELAYERS_TIMER_SECTION("context-init");
+//  if (context != NULL)
+//    throw runtime_error("This context is already initialized");
+//  always_assert(conf.p == -1, "p must be set to -1 in CKKS");
 
   config = conf;
   unsigned long p = -1;
@@ -107,9 +107,9 @@ void HelibCkksContext::init(const HelibConfig& conf,
                             helib::SecKey* userSecretKey,
                             helib::PubKey* userPublicKey)
 {
-  if (context != NULL)
-    throw runtime_error("This context is already initialized");
-  always_assert(conf.p == -1, "p must be set to -1 in CKKS");
+//  if (context != NULL)
+//    throw runtime_error("This context is already initialized");
+//  always_assert(conf.p == -1, "p must be set to -1 in CKKS");
 
   context = userContext;
   secretKey = userSecretKey;

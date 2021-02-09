@@ -65,7 +65,7 @@ unsigned long c = 2;
 // Size of NTL thread pool (default =1)
 unsigned long nthreads = 12;
 // input database file name
-string db_filename = getExamplesDir() + "/BGV_world_country_db_lookup/countries_dataset.csv";
+string db_filename = /** getExamplesDir()  +  **/ "/BGV_world_country_db_lookup/countries_dataset.csv";
 // debug output (default no debug output)
 unsigned long debug = 0;
 
@@ -75,6 +75,8 @@ unsigned long debug = 0;
 
 - (void)createCapitalQuery:(NSString *)countryQuery {
     
+    
+      string countryName = "";
       helib::ArgMap amap;
       amap.arg("p", p);
       amap.arg("m", m);
