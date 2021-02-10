@@ -81,6 +81,7 @@
 		A5667A0723F714D200F122FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5667A0623F714D200F122FD /* Assets.xcassets */; };
 		A5667A0A23F714D200F122FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5667A0823F714D200F122FD /* Main.storyboard */; };
 		A5667EF823FCD4BA00F122FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5667A0C23F714D200F122FD /* main.m */; };
+		A58BF5C325D34F3F002A8A89 /* countries_dataset.csv in Resources */ = {isa = PBXBuildFile; fileRef = A58BF5C225D34F3F002A8A89 /* countries_dataset.csv */; };
 		A5A0E47C24CFBE7B00FA427E /* new_2.h5 in Resources */ = {isa = PBXBuildFile; fileRef = A5A0E47B24CFBE7B00FA427E /* new_2.h5 */; };
 		A5A0E47F24D09CFB00FA427E /* CreditSampleResultsData.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A5BB176A253F4F02004DDA94 /* libhdf5_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BB1769253F4F02004DDA94 /* libhdf5_debug.a */; };
@@ -270,6 +271,7 @@
 		A5667A0B23F714D200F122FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5667A0C23F714D200F122FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A5667A0E23F714D200F122FD /* fhe-toolkit-macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "fhe-toolkit-macos.entitlements"; sourceTree = "<group>"; };
+		A58BF5C225D34F3F002A8A89 /* countries_dataset.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = countries_dataset.csv; sourceTree = "<group>"; };
 		A5A0E47B24CFBE7B00FA427E /* new_2.h5 */ = {isa = PBXFileReference; lastKnownFileType = file; path = new_2.h5; sourceTree = "<group>"; };
 		A5A0E47D24D09CFB00FA427E /* CreditSampleResultsData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreditSampleResultsData.h; sourceTree = "<group>"; };
 		A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreditSampleResultsData.m; sourceTree = "<group>"; };
@@ -699,6 +701,7 @@
 		A56679FF23F714CF00F122FD /* Privacy Preserving Search */ = {
 			isa = PBXGroup;
 			children = (
+				A58BF5C125D34ACF002A8A89 /* data */,
 				A513E00A25CC8C460066A3BA /* helayers */,
 				A5D0073724DB330900AAE351 /* README.md */,
 				A5667A0023F714CF00F122FD /* AppDelegate.h */,
@@ -715,6 +718,14 @@
 				A5667A0E23F714D200F122FD /* fhe-toolkit-macos.entitlements */,
 			);
 			path = "Privacy Preserving Search";
+			sourceTree = "<group>";
+		};
+		A58BF5C125D34ACF002A8A89 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				A58BF5C225D34F3F002A8A89 /* countries_dataset.csv */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 		A5CDB23925CCE66D00EC929D /* impl */ = {
@@ -1150,6 +1161,7 @@
 				A5F649D6244F73390087514D /* gmp.info-1 in Resources */,
 				A5F649D7244F73390087514D /* gmp.info in Resources */,
 				A5F649D5244F73390087514D /* libgmp.la in Resources */,
+				A58BF5C325D34F3F002A8A89 /* countries_dataset.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

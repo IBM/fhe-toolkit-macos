@@ -63,9 +63,10 @@
 }
 
 - (void)startQuery:(NSString *)countryQuery {
-     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
-         [self.detailsViewController createCapitalQuery:countryQuery];
-     });
+    dispatch_async(dispatch_get_global_queue( QOS_CLASS_USER_INITIATED, 0), ^(void){
+        [self.detailsViewController createCapitalQuery:countryQuery];
+    });
+   
 }
 
 @end
