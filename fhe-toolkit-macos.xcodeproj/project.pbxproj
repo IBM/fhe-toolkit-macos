@@ -14,35 +14,6 @@
 		A50693F724C72C4900FFF08B /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CA244F73380087514D /* libgmp.a */; };
 		A50693F824C72C6900FFF08B /* ntl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649C4244F72700087514D /* ntl.a */; };
 		A50694D424C7DE2300FFF08B /* CreditCardInferenceViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A50693E724C7298500FFF08B /* CreditCardInferenceViewController.mm */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506951224C878C500FFF08B /* h5Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694D724C878C500FFF08B /* h5Parser.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506951324C878C500FFF08B /* HelibCkksPlaintext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694DA24C878C500FFF08B /* HelibCkksPlaintext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506951424C878C500FFF08B /* SimpleFcLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694DB24C878C500FFF08B /* SimpleFcLayer.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506951524C878C500FFF08B /* HelibConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694DD24C878C500FFF08B /* HelibConfig.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506951624C878C500FFF08B /* DoubleMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694DE24C878C500FFF08B /* DoubleMatrix.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506951724C878C500FFF08B /* AlwaysAssert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E024C878C500FFF08B /* AlwaysAssert.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506951824C878C600FFF08B /* HelibCkksEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E224C878C500FFF08B /* HelibCkksEncoder.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506951924C878C600FFF08B /* HelibCkksCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E424C878C500FFF08B /* HelibCkksCiphertext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506951A24C878C600FFF08B /* AbstractCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E624C878C500FFF08B /* AbstractCiphertext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506951B24C878C600FFF08B /* CTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694E824C878C500FFF08B /* CTile.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506951C24C878C600FFF08B /* CipherMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694EB24C878C500FFF08B /* CipherMatrix.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506951D24C878C600FFF08B /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694ED24C878C500FFF08B /* Layer.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506951E24C878C600FFF08B /* FileUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694EE24C878C500FFF08B /* FileUtils.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506951F24C878C600FFF08B /* DoubleMatrixArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694F124C878C500FFF08B /* DoubleMatrixArray.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506952024C878C600FFF08B /* SimpleNeuralNet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694F524C878C500FFF08B /* SimpleNeuralNet.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506952124C878C600FFF08B /* HelibCkksContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694F724C878C500FFF08B /* HelibCkksContext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506952224C878C600FFF08B /* AbstractEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694FB24C878C500FFF08B /* AbstractEncoder.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506952324C878C600FFF08B /* SimpleTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694FD24C878C500FFF08B /* SimpleTimer.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506952424C878C600FFF08B /* HelibContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694FE24C878C500FFF08B /* HelibContext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506952524C878C600FFF08B /* h5Dumper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50694FF24C878C500FFF08B /* h5Dumper.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506952624C878C600FFF08B /* CipherMatrixEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950324C878C500FFF08B /* CipherMatrixEncoder.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506952724C878C600FFF08B /* SimpleSquareActivationLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950424C878C500FFF08B /* SimpleSquareActivationLayer.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506952824C878C600FFF08B /* HelibCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950624C878C500FFF08B /* HelibCiphertext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506952924C878C600FFF08B /* SimpleNeuralNetPlain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950A24C878C500FFF08B /* SimpleNeuralNetPlain.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506952A24C878C600FFF08B /* SimpleTrainingSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950B24C878C500FFF08B /* SimpleTrainingSet.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506952B24C878C600FFF08B /* HeContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950C24C878C500FFF08B /* HeContext.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506952C24C878C600FFF08B /* Encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950D24C878C500FFF08B /* Encoder.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506952D24C878C600FFF08B /* PTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506950F24C878C500FFF08B /* PTile.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
-		A506952E24C878C600FFF08B /* FcLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A506951124C878C500FFF08B /* FcLayer.cpp */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A506953A24C8B17200FFF08B /* libhdf5_cpp_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953924C8B17200FFF08B /* libhdf5_cpp_debug.a */; };
 		A506953E24C8BD7600FFF08B /* libboost_filesystem.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */; };
 		A513E02925CCA0B80066A3BA /* HelibBgvContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A513E02825CCA0B80066A3BA /* HelibBgvContext.cpp */; };
@@ -88,6 +59,52 @@
 		A5CDB49525CDF09000EC929D /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5CDB49425CDF08300EC929D /* libhelib.a */; };
 		A5D0073424D1E6CC00AAE351 /* CCProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D0073324D1E6CC00AAE351 /* CCProgressView.m */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A5D0073524D3674100AAE351 /* libboost_filesystem.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = A506953D24C8BD7600FFF08B /* libboost_filesystem.dylib */; };
+		A5D0321425D58E7C00B9C519 /* AbstractPlaintext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031D425D58E7C00B9C519 /* AbstractPlaintext.cpp */; };
+		A5D0321525D58E7C00B9C519 /* AbstractCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031D625D58E7C00B9C519 /* AbstractCiphertext.cpp */; };
+		A5D0321625D58E7C00B9C519 /* AbstractEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031DA25D58E7C00B9C519 /* AbstractEncoder.cpp */; };
+		A5D0321725D58E7C00B9C519 /* AbstractFunctionEvaluator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031DB25D58E7C00B9C519 /* AbstractFunctionEvaluator.cpp */; };
+		A5D0321825D58E7C00B9C519 /* NativeFunctionEvaluator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031DD25D58E7C00B9C519 /* NativeFunctionEvaluator.cpp */; };
+		A5D0321925D58E7C00B9C519 /* HeTraits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031DE25D58E7C00B9C519 /* HeTraits.cpp */; };
+		A5D0321A25D58E7C00B9C519 /* AlwaysAssert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031DF25D58E7C00B9C519 /* AlwaysAssert.cpp */; };
+		A5D0321B25D58E7C00B9C519 /* BitwiseEvaluator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031E325D58E7C00B9C519 /* BitwiseEvaluator.cpp */; };
+		A5D0321C25D58E7C00B9C519 /* CTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031E525D58E7C00B9C519 /* CTile.cpp */; };
+		A5D0321D25D58E7C00B9C519 /* FileUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031E825D58E7C00B9C519 /* FileUtils.cpp */; };
+		A5D0321E25D58E7C00B9C519 /* JsonSubtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031EC25D58E7C00B9C519 /* JsonSubtree.cpp */; };
+		A5D0321F25D58E7C00B9C519 /* BinIoUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031EF25D58E7C00B9C519 /* BinIoUtils.cpp */; };
+		A5D0322025D58E7C00B9C519 /* HelayersConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031F025D58E7C00B9C519 /* HelayersConfig.cpp */; };
+		A5D0322125D58E7C00B9C519 /* JsonWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031F125D58E7C00B9C519 /* JsonWrapper.cpp */; };
+		A5D0322225D58E7C00B9C519 /* HelayersTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031F525D58E7C00B9C519 /* HelayersTimer.cpp */; };
+		A5D0322325D58E7C00B9C519 /* HelibCkksPlaintext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031F825D58E7C00B9C519 /* HelibCkksPlaintext.cpp */; };
+		A5D0322425D58E7C00B9C519 /* HelibBgvPlaintext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031F925D58E7C00B9C519 /* HelibBgvPlaintext.cpp */; };
+		A5D0322525D58E7C00B9C519 /* HelibConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031FA25D58E7C00B9C519 /* HelibConfig.cpp */; };
+		A5D0322625D58E7C00B9C519 /* HelibCkksEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031FD25D58E7C00B9C519 /* HelibCkksEncoder.cpp */; };
+		A5D0322725D58E7C00B9C519 /* HelibCkksCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D031FF25D58E7C00B9C519 /* HelibCkksCiphertext.cpp */; };
+		A5D0322825D58E7C00B9C519 /* HelibBgvEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0320125D58E7C00B9C519 /* HelibBgvEncoder.cpp */; };
+		A5D0322925D58E7C00B9C519 /* HelibCkksContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0320325D58E7C00B9C519 /* HelibCkksContext.cpp */; };
+		A5D0322A25D58E7C00B9C519 /* HelibContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0320725D58E7C00B9C519 /* HelibContext.cpp */; };
+		A5D0322B25D58E7C00B9C519 /* HelibCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0320825D58E7C00B9C519 /* HelibCiphertext.cpp */; };
+		A5D0322C25D58E7C00B9C519 /* HelibBgvCiphertext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0320A25D58E7C00B9C519 /* HelibBgvCiphertext.cpp */; };
+		A5D0322D25D58E7C00B9C519 /* HelibBgvNativeFunctionEvaluator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0320D25D58E7C00B9C519 /* HelibBgvNativeFunctionEvaluator.cpp */; };
+		A5D0322E25D58E7C00B9C519 /* HelibBgvContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0320E25D58E7C00B9C519 /* HelibBgvContext.cpp */; };
+		A5D0322F25D58E7C00B9C519 /* HeContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0321025D58E7C00B9C519 /* HeContext.cpp */; };
+		A5D0323025D58E7C00B9C519 /* Encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0321125D58E7C00B9C519 /* Encoder.cpp */; };
+		A5D0323125D58E7C00B9C519 /* PTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0321225D58E7C00B9C519 /* PTile.cpp */; };
+		A5D0325225D5A49900B9C519 /* h5Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0323825D5A49900B9C519 /* h5Parser.cpp */; };
+		A5D0325325D5A49900B9C519 /* SimpleFcLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0323A25D5A49900B9C519 /* SimpleFcLayer.cpp */; };
+		A5D0325425D5A49900B9C519 /* SimpleFcPlainLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0323B25D5A49900B9C519 /* SimpleFcPlainLayer.cpp */; };
+		A5D0325525D5A49900B9C519 /* DoubleMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0323C25D5A49900B9C519 /* DoubleMatrix.cpp */; };
+		A5D0325625D5A49900B9C519 /* CipherMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0324225D5A49900B9C519 /* CipherMatrix.cpp */; };
+		A5D0325725D5A49900B9C519 /* DoubleMatrixArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0324325D5A49900B9C519 /* DoubleMatrixArray.cpp */; };
+		A5D0325825D5A49900B9C519 /* SimpleNeuralNet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0324625D5A49900B9C519 /* SimpleNeuralNet.cpp */; };
+		A5D0325925D5A49900B9C519 /* SimpleLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0324925D5A49900B9C519 /* SimpleLayer.cpp */; };
+		A5D0325A25D5A49900B9C519 /* TrainingSetPlain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0324B25D5A49900B9C519 /* TrainingSetPlain.cpp */; };
+		A5D0325B25D5A49900B9C519 /* CipherMatrixEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0324C25D5A49900B9C519 /* CipherMatrixEncoder.cpp */; };
+		A5D0325C25D5A49900B9C519 /* SimpleSquareActivationLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0324D25D5A49900B9C519 /* SimpleSquareActivationLayer.cpp */; };
+		A5D0325D25D5A49900B9C519 /* SimpleNeuralNetPlain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0324F25D5A49900B9C519 /* SimpleNeuralNetPlain.cpp */; };
+		A5D0325E25D5A49900B9C519 /* SimpleSquareActivationPlainLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0325125D5A49900B9C519 /* SimpleSquareActivationPlainLayer.cpp */; };
+		A5D0326125D5BAE800B9C519 /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5CDB49425CDF08300EC929D /* libhelib.a */; };
+		A5D032C825D5BB5B00B9C519 /* ClientServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0325F25D5B34B00B9C519 /* ClientServer.cpp */; };
+		A5D032CC25D5CCEE00B9C519 /* ClientServerWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = A5D032CB25D5CCEE00B9C519 /* ClientServerWrapper.mm */; };
 		A5F649C5244F72700087514D /* ntl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649C4244F72700087514D /* ntl.a */; };
 		A5F649D3244F73390087514D /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CA244F73380087514D /* libgmp.a */; };
 		A5F649D4244F73390087514D /* libgmp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CB244F73380087514D /* libgmp.dylib */; };
@@ -141,65 +158,6 @@
 		A50693EE24C7298A00FFF08B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A50693EF24C7298A00FFF08B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A50693F124C7298A00FFF08B /* Credit_Card_Fraud.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Credit_Card_Fraud.entitlements; sourceTree = "<group>"; };
-		A50694D724C878C500FFF08B /* h5Parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = h5Parser.cpp; sourceTree = "<group>"; };
-		A50694D824C878C500FFF08B /* HelibCkksPlaintext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibCkksPlaintext.h; sourceTree = "<group>"; };
-		A50694D924C878C500FFF08B /* SimpleNeuralNetPlain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleNeuralNetPlain.h; sourceTree = "<group>"; };
-		A50694DA24C878C500FFF08B /* HelibCkksPlaintext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibCkksPlaintext.cpp; sourceTree = "<group>"; };
-		A50694DB24C878C500FFF08B /* SimpleFcLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleFcLayer.cpp; sourceTree = "<group>"; };
-		A50694DC24C878C500FFF08B /* SimpleTrainingSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTrainingSet.h; sourceTree = "<group>"; };
-		A50694DD24C878C500FFF08B /* HelibConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibConfig.cpp; sourceTree = "<group>"; };
-		A50694DE24C878C500FFF08B /* DoubleMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DoubleMatrix.cpp; sourceTree = "<group>"; };
-		A50694DF24C878C500FFF08B /* SimpleFcLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFcLayer.h; sourceTree = "<group>"; };
-		A50694E024C878C500FFF08B /* AlwaysAssert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AlwaysAssert.cpp; sourceTree = "<group>"; };
-		A50694E124C878C500FFF08B /* HelibCkksEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibCkksEncoder.h; sourceTree = "<group>"; };
-		A50694E224C878C500FFF08B /* HelibCkksEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibCkksEncoder.cpp; sourceTree = "<group>"; };
-		A50694E324C878C500FFF08B /* FileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtils.h; sourceTree = "<group>"; };
-		A50694E424C878C500FFF08B /* HelibCkksCiphertext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibCkksCiphertext.cpp; sourceTree = "<group>"; };
-		A50694E524C878C500FFF08B /* DoubleMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleMatrix.h; sourceTree = "<group>"; };
-		A50694E624C878C500FFF08B /* AbstractCiphertext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AbstractCiphertext.cpp; sourceTree = "<group>"; };
-		A50694E724C878C500FFF08B /* SimpleNeuralNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleNeuralNet.h; sourceTree = "<group>"; };
-		A50694E824C878C500FFF08B /* CTile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTile.cpp; sourceTree = "<group>"; };
-		A50694E924C878C500FFF08B /* h5Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = h5Parser.h; sourceTree = "<group>"; };
-		A50694EA24C878C500FFF08B /* HeContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeContext.h; sourceTree = "<group>"; };
-		A50694EB24C878C500FFF08B /* CipherMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CipherMatrix.cpp; sourceTree = "<group>"; };
-		A50694EC24C878C500FFF08B /* Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layer.h; sourceTree = "<group>"; };
-		A50694ED24C878C500FFF08B /* Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Layer.cpp; sourceTree = "<group>"; };
-		A50694EE24C878C500FFF08B /* FileUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileUtils.cpp; sourceTree = "<group>"; };
-		A50694EF24C878C500FFF08B /* PTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTile.h; sourceTree = "<group>"; };
-		A50694F024C878C500FFF08B /* HelibCiphertext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibCiphertext.h; sourceTree = "<group>"; };
-		A50694F124C878C500FFF08B /* DoubleMatrixArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DoubleMatrixArray.cpp; sourceTree = "<group>"; };
-		A50694F224C878C500FFF08B /* SimpleTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTimer.h; sourceTree = "<group>"; };
-		A50694F324C878C500FFF08B /* DoubleMatrixArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleMatrixArray.h; sourceTree = "<group>"; };
-		A50694F424C878C500FFF08B /* AbstractCiphertext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractCiphertext.h; sourceTree = "<group>"; };
-		A50694F524C878C500FFF08B /* SimpleNeuralNet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleNeuralNet.cpp; sourceTree = "<group>"; };
-		A50694F624C878C500FFF08B /* CipherMatrixEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherMatrixEncoder.h; sourceTree = "<group>"; };
-		A50694F724C878C500FFF08B /* HelibCkksContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibCkksContext.cpp; sourceTree = "<group>"; };
-		A50694F824C878C500FFF08B /* AbstractEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractEncoder.h; sourceTree = "<group>"; };
-		A50694F924C878C500FFF08B /* HelibCkksCiphertext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibCkksCiphertext.h; sourceTree = "<group>"; };
-		A50694FA24C878C500FFF08B /* CTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTile.h; sourceTree = "<group>"; };
-		A50694FB24C878C500FFF08B /* AbstractEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AbstractEncoder.cpp; sourceTree = "<group>"; };
-		A50694FC24C878C500FFF08B /* HelibContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibContext.h; sourceTree = "<group>"; };
-		A50694FD24C878C500FFF08B /* SimpleTimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleTimer.cpp; sourceTree = "<group>"; };
-		A50694FE24C878C500FFF08B /* HelibContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibContext.cpp; sourceTree = "<group>"; };
-		A50694FF24C878C500FFF08B /* h5Dumper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = h5Dumper.cpp; sourceTree = "<group>"; };
-		A506950024C878C500FFF08B /* Encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encoder.h; sourceTree = "<group>"; };
-		A506950124C878C500FFF08B /* h5Dumper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = h5Dumper.h; sourceTree = "<group>"; };
-		A506950224C878C500FFF08B /* AbstractPlaintext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractPlaintext.h; sourceTree = "<group>"; };
-		A506950324C878C500FFF08B /* CipherMatrixEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CipherMatrixEncoder.cpp; sourceTree = "<group>"; };
-		A506950424C878C500FFF08B /* SimpleSquareActivationLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleSquareActivationLayer.cpp; sourceTree = "<group>"; };
-		A506950524C878C500FFF08B /* SimpleSquareActivationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleSquareActivationLayer.h; sourceTree = "<group>"; };
-		A506950624C878C500FFF08B /* HelibCiphertext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibCiphertext.cpp; sourceTree = "<group>"; };
-		A506950724C878C500FFF08B /* FcLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FcLayer.h; sourceTree = "<group>"; };
-		A506950824C878C500FFF08B /* AlwaysAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlwaysAssert.h; sourceTree = "<group>"; };
-		A506950924C878C500FFF08B /* HelibCkksContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibCkksContext.h; sourceTree = "<group>"; };
-		A506950A24C878C500FFF08B /* SimpleNeuralNetPlain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleNeuralNetPlain.cpp; sourceTree = "<group>"; };
-		A506950B24C878C500FFF08B /* SimpleTrainingSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleTrainingSet.cpp; sourceTree = "<group>"; };
-		A506950C24C878C500FFF08B /* HeContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HeContext.cpp; sourceTree = "<group>"; };
-		A506950D24C878C500FFF08B /* Encoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Encoder.cpp; sourceTree = "<group>"; };
-		A506950E24C878C500FFF08B /* HelibConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibConfig.h; sourceTree = "<group>"; };
-		A506950F24C878C500FFF08B /* PTile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PTile.cpp; sourceTree = "<group>"; };
-		A506951024C878C500FFF08B /* CipherMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherMatrix.h; sourceTree = "<group>"; };
-		A506951124C878C500FFF08B /* FcLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FcLayer.cpp; sourceTree = "<group>"; };
 		A506953524C8812300FFF08B /* libhdf5_debug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libhdf5_debug.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A506953924C8B17200FFF08B /* libhdf5_cpp_debug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libhdf5_cpp_debug.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A506953B24C8BD3200FFF08B /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = dependencies/lib/libboost_filesystem.a; sourceTree = "<group>"; };
@@ -345,6 +303,99 @@
 		A5D0073324D1E6CC00AAE351 /* CCProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCProgressView.m; sourceTree = "<group>"; };
 		A5D0073724DB330900AAE351 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A5D0073824DB33C700AAE351 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A5D031D225D58E7C00B9C519 /* NativeFunctionEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeFunctionEvaluator.h; sourceTree = "<group>"; };
+		A5D031D425D58E7C00B9C519 /* AbstractPlaintext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AbstractPlaintext.cpp; sourceTree = "<group>"; };
+		A5D031D525D58E7C00B9C519 /* AbstractFunctionEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractFunctionEvaluator.h; sourceTree = "<group>"; };
+		A5D031D625D58E7C00B9C519 /* AbstractCiphertext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AbstractCiphertext.cpp; sourceTree = "<group>"; };
+		A5D031D725D58E7C00B9C519 /* AbstractCiphertext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractCiphertext.h; sourceTree = "<group>"; };
+		A5D031D825D58E7C00B9C519 /* AbstractBitwiseEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractBitwiseEvaluator.h; sourceTree = "<group>"; };
+		A5D031D925D58E7C00B9C519 /* AbstractEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractEncoder.h; sourceTree = "<group>"; };
+		A5D031DA25D58E7C00B9C519 /* AbstractEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AbstractEncoder.cpp; sourceTree = "<group>"; };
+		A5D031DB25D58E7C00B9C519 /* AbstractFunctionEvaluator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AbstractFunctionEvaluator.cpp; sourceTree = "<group>"; };
+		A5D031DC25D58E7C00B9C519 /* AbstractPlaintext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractPlaintext.h; sourceTree = "<group>"; };
+		A5D031DD25D58E7C00B9C519 /* NativeFunctionEvaluator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NativeFunctionEvaluator.cpp; sourceTree = "<group>"; };
+		A5D031DE25D58E7C00B9C519 /* HeTraits.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HeTraits.cpp; sourceTree = "<group>"; };
+		A5D031DF25D58E7C00B9C519 /* AlwaysAssert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AlwaysAssert.cpp; sourceTree = "<group>"; };
+		A5D031E025D58E7C00B9C519 /* HeTraits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeTraits.h; sourceTree = "<group>"; };
+		A5D031E125D58E7C00B9C519 /* AbstractFunctionEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractFunctionEvaluator.h; sourceTree = "<group>"; };
+		A5D031E225D58E7C00B9C519 /* FileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtils.h; sourceTree = "<group>"; };
+		A5D031E325D58E7C00B9C519 /* BitwiseEvaluator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BitwiseEvaluator.cpp; sourceTree = "<group>"; };
+		A5D031E425D58E7C00B9C519 /* HelayersTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelayersTimer.h; sourceTree = "<group>"; };
+		A5D031E525D58E7C00B9C519 /* CTile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTile.cpp; sourceTree = "<group>"; };
+		A5D031E625D58E7C00B9C519 /* hebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hebase.h; sourceTree = "<group>"; };
+		A5D031E725D58E7C00B9C519 /* HeContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeContext.h; sourceTree = "<group>"; };
+		A5D031E825D58E7C00B9C519 /* FileUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileUtils.cpp; sourceTree = "<group>"; };
+		A5D031E925D58E7C00B9C519 /* PTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTile.h; sourceTree = "<group>"; };
+		A5D031EB25D58E7C00B9C519 /* JsonSubtree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonSubtree.h; sourceTree = "<group>"; };
+		A5D031EC25D58E7C00B9C519 /* JsonSubtree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JsonSubtree.cpp; sourceTree = "<group>"; };
+		A5D031ED25D58E7C00B9C519 /* JsonWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonWrapper.h; sourceTree = "<group>"; };
+		A5D031EE25D58E7C00B9C519 /* HelayersConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelayersConfig.h; sourceTree = "<group>"; };
+		A5D031EF25D58E7C00B9C519 /* BinIoUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BinIoUtils.cpp; sourceTree = "<group>"; };
+		A5D031F025D58E7C00B9C519 /* HelayersConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelayersConfig.cpp; sourceTree = "<group>"; };
+		A5D031F125D58E7C00B9C519 /* JsonWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JsonWrapper.cpp; sourceTree = "<group>"; };
+		A5D031F225D58E7C00B9C519 /* BinIoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinIoUtils.h; sourceTree = "<group>"; };
+		A5D031F325D58E7C00B9C519 /* CTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTile.h; sourceTree = "<group>"; };
+		A5D031F425D58E7C00B9C519 /* Encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encoder.h; sourceTree = "<group>"; };
+		A5D031F525D58E7C00B9C519 /* HelayersTimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelayersTimer.cpp; sourceTree = "<group>"; };
+		A5D031F725D58E7C00B9C519 /* HelibCkksPlaintext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibCkksPlaintext.h; sourceTree = "<group>"; };
+		A5D031F825D58E7C00B9C519 /* HelibCkksPlaintext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibCkksPlaintext.cpp; sourceTree = "<group>"; };
+		A5D031F925D58E7C00B9C519 /* HelibBgvPlaintext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibBgvPlaintext.cpp; sourceTree = "<group>"; };
+		A5D031FA25D58E7C00B9C519 /* HelibConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibConfig.cpp; sourceTree = "<group>"; };
+		A5D031FB25D58E7C00B9C519 /* HelibBgvContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibBgvContext.h; sourceTree = "<group>"; };
+		A5D031FC25D58E7C00B9C519 /* HelibCkksEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibCkksEncoder.h; sourceTree = "<group>"; };
+		A5D031FD25D58E7C00B9C519 /* HelibCkksEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibCkksEncoder.cpp; sourceTree = "<group>"; };
+		A5D031FE25D58E7C00B9C519 /* HelibBgvCiphertext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibBgvCiphertext.h; sourceTree = "<group>"; };
+		A5D031FF25D58E7C00B9C519 /* HelibCkksCiphertext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibCkksCiphertext.cpp; sourceTree = "<group>"; };
+		A5D0320025D58E7C00B9C519 /* HelibCiphertext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibCiphertext.h; sourceTree = "<group>"; };
+		A5D0320125D58E7C00B9C519 /* HelibBgvEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibBgvEncoder.cpp; sourceTree = "<group>"; };
+		A5D0320225D58E7C00B9C519 /* HelibBgvPlaintext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibBgvPlaintext.h; sourceTree = "<group>"; };
+		A5D0320325D58E7C00B9C519 /* HelibCkksContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibCkksContext.cpp; sourceTree = "<group>"; };
+		A5D0320425D58E7C00B9C519 /* HelibCkksCiphertext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibCkksCiphertext.h; sourceTree = "<group>"; };
+		A5D0320525D58E7C00B9C519 /* HelibBgvNativeFunctionEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibBgvNativeFunctionEvaluator.h; sourceTree = "<group>"; };
+		A5D0320625D58E7C00B9C519 /* HelibContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibContext.h; sourceTree = "<group>"; };
+		A5D0320725D58E7C00B9C519 /* HelibContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibContext.cpp; sourceTree = "<group>"; };
+		A5D0320825D58E7C00B9C519 /* HelibCiphertext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibCiphertext.cpp; sourceTree = "<group>"; };
+		A5D0320925D58E7C00B9C519 /* HelibCkksContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibCkksContext.h; sourceTree = "<group>"; };
+		A5D0320A25D58E7C00B9C519 /* HelibBgvCiphertext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibBgvCiphertext.cpp; sourceTree = "<group>"; };
+		A5D0320B25D58E7C00B9C519 /* HelibBgvEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibBgvEncoder.h; sourceTree = "<group>"; };
+		A5D0320C25D58E7C00B9C519 /* HelibConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelibConfig.h; sourceTree = "<group>"; };
+		A5D0320D25D58E7C00B9C519 /* HelibBgvNativeFunctionEvaluator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibBgvNativeFunctionEvaluator.cpp; sourceTree = "<group>"; };
+		A5D0320E25D58E7C00B9C519 /* HelibBgvContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelibBgvContext.cpp; sourceTree = "<group>"; };
+		A5D0320F25D58E7C00B9C519 /* AlwaysAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlwaysAssert.h; sourceTree = "<group>"; };
+		A5D0321025D58E7C00B9C519 /* HeContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HeContext.cpp; sourceTree = "<group>"; };
+		A5D0321125D58E7C00B9C519 /* Encoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Encoder.cpp; sourceTree = "<group>"; };
+		A5D0321225D58E7C00B9C519 /* PTile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PTile.cpp; sourceTree = "<group>"; };
+		A5D0321325D58E7C00B9C519 /* BitwiseEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitwiseEvaluator.h; sourceTree = "<group>"; };
+		A5D0323425D59C0400B9C519 /* ClientServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientServer.h; sourceTree = "<group>"; };
+		A5D0323825D5A49900B9C519 /* h5Parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = h5Parser.cpp; sourceTree = "<group>"; };
+		A5D0323925D5A49900B9C519 /* SimpleNeuralNetPlain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleNeuralNetPlain.h; sourceTree = "<group>"; };
+		A5D0323A25D5A49900B9C519 /* SimpleFcLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleFcLayer.cpp; sourceTree = "<group>"; };
+		A5D0323B25D5A49900B9C519 /* SimpleFcPlainLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleFcPlainLayer.cpp; sourceTree = "<group>"; };
+		A5D0323C25D5A49900B9C519 /* DoubleMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DoubleMatrix.cpp; sourceTree = "<group>"; };
+		A5D0323D25D5A49900B9C519 /* SimpleFcLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFcLayer.h; sourceTree = "<group>"; };
+		A5D0323E25D5A49900B9C519 /* SimpleSquareActivationPlainLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleSquareActivationPlainLayer.h; sourceTree = "<group>"; };
+		A5D0323F25D5A49900B9C519 /* DoubleMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleMatrix.h; sourceTree = "<group>"; };
+		A5D0324025D5A49900B9C519 /* SimpleNeuralNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleNeuralNet.h; sourceTree = "<group>"; };
+		A5D0324125D5A49900B9C519 /* h5Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = h5Parser.h; sourceTree = "<group>"; };
+		A5D0324225D5A49900B9C519 /* CipherMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CipherMatrix.cpp; sourceTree = "<group>"; };
+		A5D0324325D5A49900B9C519 /* DoubleMatrixArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DoubleMatrixArray.cpp; sourceTree = "<group>"; };
+		A5D0324425D5A49900B9C519 /* DoubleMatrixArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleMatrixArray.h; sourceTree = "<group>"; };
+		A5D0324525D5A49900B9C519 /* SimpleFcPlainLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFcPlainLayer.h; sourceTree = "<group>"; };
+		A5D0324625D5A49900B9C519 /* SimpleNeuralNet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleNeuralNet.cpp; sourceTree = "<group>"; };
+		A5D0324725D5A49900B9C519 /* CipherMatrixEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherMatrixEncoder.h; sourceTree = "<group>"; };
+		A5D0324825D5A49900B9C519 /* SimpleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleLayer.h; sourceTree = "<group>"; };
+		A5D0324925D5A49900B9C519 /* SimpleLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleLayer.cpp; sourceTree = "<group>"; };
+		A5D0324A25D5A49900B9C519 /* TrainingSetPlain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainingSetPlain.h; sourceTree = "<group>"; };
+		A5D0324B25D5A49900B9C519 /* TrainingSetPlain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TrainingSetPlain.cpp; sourceTree = "<group>"; };
+		A5D0324C25D5A49900B9C519 /* CipherMatrixEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CipherMatrixEncoder.cpp; sourceTree = "<group>"; };
+		A5D0324D25D5A49900B9C519 /* SimpleSquareActivationLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleSquareActivationLayer.cpp; sourceTree = "<group>"; };
+		A5D0324E25D5A49900B9C519 /* SimpleSquareActivationLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleSquareActivationLayer.h; sourceTree = "<group>"; };
+		A5D0324F25D5A49900B9C519 /* SimpleNeuralNetPlain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleNeuralNetPlain.cpp; sourceTree = "<group>"; };
+		A5D0325025D5A49900B9C519 /* CipherMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherMatrix.h; sourceTree = "<group>"; };
+		A5D0325125D5A49900B9C519 /* SimpleSquareActivationPlainLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleSquareActivationPlainLayer.cpp; sourceTree = "<group>"; };
+		A5D0325F25D5B34B00B9C519 /* ClientServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClientServer.cpp; sourceTree = "<group>"; };
+		A5D032CA25D5CCEE00B9C519 /* ClientServerWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientServerWrapper.h; sourceTree = "<group>"; };
+		A5D032CB25D5CCEE00B9C519 /* ClientServerWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ClientServerWrapper.mm; sourceTree = "<group>"; };
 		A5F64956244F726F0087514D /* PackageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageInfo.h; sourceTree = "<group>"; };
 		A5F64957244F726F0087514D /* GF2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GF2.h; sourceTree = "<group>"; };
 		A5F64958244F726F0087514D /* FFT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFT.h; sourceTree = "<group>"; };
@@ -481,6 +532,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D0326125D5BAE800B9C519 /* libhelib.a in Frameworks */,
 				A5BB176A253F4F02004DDA94 /* libhdf5_debug.a in Frameworks */,
 				A506953A24C8B17200FFF08B /* libhdf5_cpp_debug.a in Frameworks */,
 				A506953E24C8BD7600FFF08B /* libboost_filesystem.dylib in Frameworks */,
@@ -507,10 +559,11 @@
 		A50693E224C7298500FFF08B /* Credit Card Fraud */ = {
 			isa = PBXGroup;
 			children = (
+				A5D0333325D5CCF900B9C519 /* ClientServer */,
+				A5D031D025D58E7C00B9C519 /* helayers */,
 				A5D0073824DB33C700AAE351 /* README.md */,
 				A5D0073124D1E6A200AAE351 /* Views */,
 				A5F9514F24C91B6100406273 /* data */,
-				A50694D624C878C500FFF08B /* helib_ai */,
 				A50693E324C7298500FFF08B /* AppDelegate.h */,
 				A50693E424C7298500FFF08B /* AppDelegate.m */,
 				A50693E624C7298500FFF08B /* CreditCardInferenceViewController.h */,
@@ -522,72 +575,6 @@
 				A50693F124C7298A00FFF08B /* Credit_Card_Fraud.entitlements */,
 			);
 			path = "Credit Card Fraud";
-			sourceTree = "<group>";
-		};
-		A50694D624C878C500FFF08B /* helib_ai */ = {
-			isa = PBXGroup;
-			children = (
-				A50694D724C878C500FFF08B /* h5Parser.cpp */,
-				A50694D824C878C500FFF08B /* HelibCkksPlaintext.h */,
-				A50694D924C878C500FFF08B /* SimpleNeuralNetPlain.h */,
-				A50694DA24C878C500FFF08B /* HelibCkksPlaintext.cpp */,
-				A50694DB24C878C500FFF08B /* SimpleFcLayer.cpp */,
-				A50694DC24C878C500FFF08B /* SimpleTrainingSet.h */,
-				A50694DD24C878C500FFF08B /* HelibConfig.cpp */,
-				A50694DE24C878C500FFF08B /* DoubleMatrix.cpp */,
-				A50694DF24C878C500FFF08B /* SimpleFcLayer.h */,
-				A50694E024C878C500FFF08B /* AlwaysAssert.cpp */,
-				A50694E124C878C500FFF08B /* HelibCkksEncoder.h */,
-				A50694E224C878C500FFF08B /* HelibCkksEncoder.cpp */,
-				A50694E324C878C500FFF08B /* FileUtils.h */,
-				A50694E424C878C500FFF08B /* HelibCkksCiphertext.cpp */,
-				A50694E524C878C500FFF08B /* DoubleMatrix.h */,
-				A50694E624C878C500FFF08B /* AbstractCiphertext.cpp */,
-				A50694E724C878C500FFF08B /* SimpleNeuralNet.h */,
-				A50694E824C878C500FFF08B /* CTile.cpp */,
-				A50694E924C878C500FFF08B /* h5Parser.h */,
-				A50694EA24C878C500FFF08B /* HeContext.h */,
-				A50694EB24C878C500FFF08B /* CipherMatrix.cpp */,
-				A50694EC24C878C500FFF08B /* Layer.h */,
-				A50694ED24C878C500FFF08B /* Layer.cpp */,
-				A50694EE24C878C500FFF08B /* FileUtils.cpp */,
-				A50694EF24C878C500FFF08B /* PTile.h */,
-				A50694F024C878C500FFF08B /* HelibCiphertext.h */,
-				A50694F124C878C500FFF08B /* DoubleMatrixArray.cpp */,
-				A50694F224C878C500FFF08B /* SimpleTimer.h */,
-				A50694F324C878C500FFF08B /* DoubleMatrixArray.h */,
-				A50694F424C878C500FFF08B /* AbstractCiphertext.h */,
-				A50694F524C878C500FFF08B /* SimpleNeuralNet.cpp */,
-				A50694F624C878C500FFF08B /* CipherMatrixEncoder.h */,
-				A50694F724C878C500FFF08B /* HelibCkksContext.cpp */,
-				A50694F824C878C500FFF08B /* AbstractEncoder.h */,
-				A50694F924C878C500FFF08B /* HelibCkksCiphertext.h */,
-				A50694FA24C878C500FFF08B /* CTile.h */,
-				A50694FB24C878C500FFF08B /* AbstractEncoder.cpp */,
-				A50694FC24C878C500FFF08B /* HelibContext.h */,
-				A50694FD24C878C500FFF08B /* SimpleTimer.cpp */,
-				A50694FE24C878C500FFF08B /* HelibContext.cpp */,
-				A50694FF24C878C500FFF08B /* h5Dumper.cpp */,
-				A506950024C878C500FFF08B /* Encoder.h */,
-				A506950124C878C500FFF08B /* h5Dumper.h */,
-				A506950224C878C500FFF08B /* AbstractPlaintext.h */,
-				A506950324C878C500FFF08B /* CipherMatrixEncoder.cpp */,
-				A506950424C878C500FFF08B /* SimpleSquareActivationLayer.cpp */,
-				A506950524C878C500FFF08B /* SimpleSquareActivationLayer.h */,
-				A506950624C878C500FFF08B /* HelibCiphertext.cpp */,
-				A506950724C878C500FFF08B /* FcLayer.h */,
-				A506950824C878C500FFF08B /* AlwaysAssert.h */,
-				A506950924C878C500FFF08B /* HelibCkksContext.h */,
-				A506950A24C878C500FFF08B /* SimpleNeuralNetPlain.cpp */,
-				A506950B24C878C500FFF08B /* SimpleTrainingSet.cpp */,
-				A506950C24C878C500FFF08B /* HeContext.cpp */,
-				A506950D24C878C500FFF08B /* Encoder.cpp */,
-				A506950E24C878C500FFF08B /* HelibConfig.h */,
-				A506950F24C878C500FFF08B /* PTile.cpp */,
-				A506951024C878C500FFF08B /* CipherMatrix.h */,
-				A506951124C878C500FFF08B /* FcLayer.cpp */,
-			);
-			path = helib_ai;
 			sourceTree = "<group>";
 		};
 		A513E00A25CC8C460066A3BA /* helayers */ = {
@@ -815,6 +802,154 @@
 				A5D0073324D1E6CC00AAE351 /* CCProgressView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A5D031D025D58E7C00B9C519 /* helayers */ = {
+			isa = PBXGroup;
+			children = (
+				A5D0323725D5A49900B9C519 /* simple_nn */,
+				A5D031D125D58E7C00B9C519 /* hebase */,
+			);
+			name = helayers;
+			path = "Privacy Preserving Search/helayers";
+			sourceTree = SOURCE_ROOT;
+		};
+		A5D031D125D58E7C00B9C519 /* hebase */ = {
+			isa = PBXGroup;
+			children = (
+				A5D031D225D58E7C00B9C519 /* NativeFunctionEvaluator.h */,
+				A5D031D325D58E7C00B9C519 /* impl */,
+				A5D031DD25D58E7C00B9C519 /* NativeFunctionEvaluator.cpp */,
+				A5D031DE25D58E7C00B9C519 /* HeTraits.cpp */,
+				A5D031DF25D58E7C00B9C519 /* AlwaysAssert.cpp */,
+				A5D031E025D58E7C00B9C519 /* HeTraits.h */,
+				A5D031E125D58E7C00B9C519 /* AbstractFunctionEvaluator.h */,
+				A5D031E225D58E7C00B9C519 /* FileUtils.h */,
+				A5D031E325D58E7C00B9C519 /* BitwiseEvaluator.cpp */,
+				A5D031E425D58E7C00B9C519 /* HelayersTimer.h */,
+				A5D031E525D58E7C00B9C519 /* CTile.cpp */,
+				A5D031E625D58E7C00B9C519 /* hebase.h */,
+				A5D031E725D58E7C00B9C519 /* HeContext.h */,
+				A5D031E825D58E7C00B9C519 /* FileUtils.cpp */,
+				A5D031E925D58E7C00B9C519 /* PTile.h */,
+				A5D031EA25D58E7C00B9C519 /* utils */,
+				A5D031F325D58E7C00B9C519 /* CTile.h */,
+				A5D031F425D58E7C00B9C519 /* Encoder.h */,
+				A5D031F525D58E7C00B9C519 /* HelayersTimer.cpp */,
+				A5D031F625D58E7C00B9C519 /* helib */,
+				A5D0320F25D58E7C00B9C519 /* AlwaysAssert.h */,
+				A5D0321025D58E7C00B9C519 /* HeContext.cpp */,
+				A5D0321125D58E7C00B9C519 /* Encoder.cpp */,
+				A5D0321225D58E7C00B9C519 /* PTile.cpp */,
+				A5D0321325D58E7C00B9C519 /* BitwiseEvaluator.h */,
+			);
+			path = hebase;
+			sourceTree = "<group>";
+		};
+		A5D031D325D58E7C00B9C519 /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				A5D031D425D58E7C00B9C519 /* AbstractPlaintext.cpp */,
+				A5D031D525D58E7C00B9C519 /* AbstractFunctionEvaluator.h */,
+				A5D031D625D58E7C00B9C519 /* AbstractCiphertext.cpp */,
+				A5D031D725D58E7C00B9C519 /* AbstractCiphertext.h */,
+				A5D031D825D58E7C00B9C519 /* AbstractBitwiseEvaluator.h */,
+				A5D031D925D58E7C00B9C519 /* AbstractEncoder.h */,
+				A5D031DA25D58E7C00B9C519 /* AbstractEncoder.cpp */,
+				A5D031DB25D58E7C00B9C519 /* AbstractFunctionEvaluator.cpp */,
+				A5D031DC25D58E7C00B9C519 /* AbstractPlaintext.h */,
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
+		A5D031EA25D58E7C00B9C519 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				A5D031EB25D58E7C00B9C519 /* JsonSubtree.h */,
+				A5D031EC25D58E7C00B9C519 /* JsonSubtree.cpp */,
+				A5D031ED25D58E7C00B9C519 /* JsonWrapper.h */,
+				A5D031EE25D58E7C00B9C519 /* HelayersConfig.h */,
+				A5D031EF25D58E7C00B9C519 /* BinIoUtils.cpp */,
+				A5D031F025D58E7C00B9C519 /* HelayersConfig.cpp */,
+				A5D031F125D58E7C00B9C519 /* JsonWrapper.cpp */,
+				A5D031F225D58E7C00B9C519 /* BinIoUtils.h */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		A5D031F625D58E7C00B9C519 /* helib */ = {
+			isa = PBXGroup;
+			children = (
+				A5D031F725D58E7C00B9C519 /* HelibCkksPlaintext.h */,
+				A5D031F825D58E7C00B9C519 /* HelibCkksPlaintext.cpp */,
+				A5D031F925D58E7C00B9C519 /* HelibBgvPlaintext.cpp */,
+				A5D031FA25D58E7C00B9C519 /* HelibConfig.cpp */,
+				A5D031FB25D58E7C00B9C519 /* HelibBgvContext.h */,
+				A5D031FC25D58E7C00B9C519 /* HelibCkksEncoder.h */,
+				A5D031FD25D58E7C00B9C519 /* HelibCkksEncoder.cpp */,
+				A5D031FE25D58E7C00B9C519 /* HelibBgvCiphertext.h */,
+				A5D031FF25D58E7C00B9C519 /* HelibCkksCiphertext.cpp */,
+				A5D0320025D58E7C00B9C519 /* HelibCiphertext.h */,
+				A5D0320125D58E7C00B9C519 /* HelibBgvEncoder.cpp */,
+				A5D0320225D58E7C00B9C519 /* HelibBgvPlaintext.h */,
+				A5D0320325D58E7C00B9C519 /* HelibCkksContext.cpp */,
+				A5D0320425D58E7C00B9C519 /* HelibCkksCiphertext.h */,
+				A5D0320525D58E7C00B9C519 /* HelibBgvNativeFunctionEvaluator.h */,
+				A5D0320625D58E7C00B9C519 /* HelibContext.h */,
+				A5D0320725D58E7C00B9C519 /* HelibContext.cpp */,
+				A5D0320825D58E7C00B9C519 /* HelibCiphertext.cpp */,
+				A5D0320925D58E7C00B9C519 /* HelibCkksContext.h */,
+				A5D0320A25D58E7C00B9C519 /* HelibBgvCiphertext.cpp */,
+				A5D0320B25D58E7C00B9C519 /* HelibBgvEncoder.h */,
+				A5D0320C25D58E7C00B9C519 /* HelibConfig.h */,
+				A5D0320D25D58E7C00B9C519 /* HelibBgvNativeFunctionEvaluator.cpp */,
+				A5D0320E25D58E7C00B9C519 /* HelibBgvContext.cpp */,
+			);
+			path = helib;
+			sourceTree = "<group>";
+		};
+		A5D0323725D5A49900B9C519 /* simple_nn */ = {
+			isa = PBXGroup;
+			children = (
+				A5D0323825D5A49900B9C519 /* h5Parser.cpp */,
+				A5D0323925D5A49900B9C519 /* SimpleNeuralNetPlain.h */,
+				A5D0323A25D5A49900B9C519 /* SimpleFcLayer.cpp */,
+				A5D0323B25D5A49900B9C519 /* SimpleFcPlainLayer.cpp */,
+				A5D0323C25D5A49900B9C519 /* DoubleMatrix.cpp */,
+				A5D0323D25D5A49900B9C519 /* SimpleFcLayer.h */,
+				A5D0323E25D5A49900B9C519 /* SimpleSquareActivationPlainLayer.h */,
+				A5D0323F25D5A49900B9C519 /* DoubleMatrix.h */,
+				A5D0324025D5A49900B9C519 /* SimpleNeuralNet.h */,
+				A5D0324125D5A49900B9C519 /* h5Parser.h */,
+				A5D0324225D5A49900B9C519 /* CipherMatrix.cpp */,
+				A5D0324325D5A49900B9C519 /* DoubleMatrixArray.cpp */,
+				A5D0324425D5A49900B9C519 /* DoubleMatrixArray.h */,
+				A5D0324525D5A49900B9C519 /* SimpleFcPlainLayer.h */,
+				A5D0324625D5A49900B9C519 /* SimpleNeuralNet.cpp */,
+				A5D0324725D5A49900B9C519 /* CipherMatrixEncoder.h */,
+				A5D0324825D5A49900B9C519 /* SimpleLayer.h */,
+				A5D0324925D5A49900B9C519 /* SimpleLayer.cpp */,
+				A5D0324A25D5A49900B9C519 /* TrainingSetPlain.h */,
+				A5D0324B25D5A49900B9C519 /* TrainingSetPlain.cpp */,
+				A5D0324C25D5A49900B9C519 /* CipherMatrixEncoder.cpp */,
+				A5D0324D25D5A49900B9C519 /* SimpleSquareActivationLayer.cpp */,
+				A5D0324E25D5A49900B9C519 /* SimpleSquareActivationLayer.h */,
+				A5D0324F25D5A49900B9C519 /* SimpleNeuralNetPlain.cpp */,
+				A5D0325025D5A49900B9C519 /* CipherMatrix.h */,
+				A5D0325125D5A49900B9C519 /* SimpleSquareActivationPlainLayer.cpp */,
+			);
+			path = simple_nn;
+			sourceTree = "<group>";
+		};
+		A5D0333325D5CCF900B9C519 /* ClientServer */ = {
+			isa = PBXGroup;
+			children = (
+				A5D032CA25D5CCEE00B9C519 /* ClientServerWrapper.h */,
+				A5D032CB25D5CCEE00B9C519 /* ClientServerWrapper.mm */,
+				A5D0325F25D5B34B00B9C519 /* ClientServer.cpp */,
+				A5D0323425D59C0400B9C519 /* ClientServer.h */,
+			);
+			path = ClientServer;
 			sourceTree = "<group>";
 		};
 		A5F64920244F711D0087514D /* include */ = {
@@ -1168,40 +1303,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A506951524C878C500FFF08B /* HelibConfig.cpp in Sources */,
-				A506951624C878C500FFF08B /* DoubleMatrix.cpp in Sources */,
-				A506952E24C878C600FFF08B /* FcLayer.cpp in Sources */,
-				A506952B24C878C600FFF08B /* HeContext.cpp in Sources */,
+				A5D0322225D58E7C00B9C519 /* HelayersTimer.cpp in Sources */,
+				A5D0321625D58E7C00B9C519 /* AbstractEncoder.cpp in Sources */,
+				A5D0322725D58E7C00B9C519 /* HelibCkksCiphertext.cpp in Sources */,
+				A5D0321B25D58E7C00B9C519 /* BitwiseEvaluator.cpp in Sources */,
 				A50694D424C7DE2300FFF08B /* CreditCardInferenceViewController.mm in Sources */,
-				A506951A24C878C600FFF08B /* AbstractCiphertext.cpp in Sources */,
-				A506951824C878C600FFF08B /* HelibCkksEncoder.cpp in Sources */,
-				A506951B24C878C600FFF08B /* CTile.cpp in Sources */,
+				A5D0322B25D58E7C00B9C519 /* HelibCiphertext.cpp in Sources */,
+				A5D0322425D58E7C00B9C519 /* HelibBgvPlaintext.cpp in Sources */,
+				A5D0325725D5A49900B9C519 /* DoubleMatrixArray.cpp in Sources */,
 				A50693F024C7298A00FFF08B /* main.m in Sources */,
-				A506951924C878C600FFF08B /* HelibCkksCiphertext.cpp in Sources */,
-				A506952624C878C600FFF08B /* CipherMatrixEncoder.cpp in Sources */,
+				A5D0321E25D58E7C00B9C519 /* JsonSubtree.cpp in Sources */,
+				A5D0321725D58E7C00B9C519 /* AbstractFunctionEvaluator.cpp in Sources */,
+				A5D0325E25D5A49900B9C519 /* SimpleSquareActivationPlainLayer.cpp in Sources */,
+				A5D0325625D5A49900B9C519 /* CipherMatrix.cpp in Sources */,
+				A5D032CC25D5CCEE00B9C519 /* ClientServerWrapper.mm in Sources */,
+				A5D0323025D58E7C00B9C519 /* Encoder.cpp in Sources */,
+				A5D0322525D58E7C00B9C519 /* HelibConfig.cpp in Sources */,
+				A5D0322125D58E7C00B9C519 /* JsonWrapper.cpp in Sources */,
+				A5D0322E25D58E7C00B9C519 /* HelibBgvContext.cpp in Sources */,
+				A5D0322C25D58E7C00B9C519 /* HelibBgvCiphertext.cpp in Sources */,
 				A50693E524C7298500FFF08B /* AppDelegate.m in Sources */,
-				A506952D24C878C600FFF08B /* PTile.cpp in Sources */,
-				A506952124C878C600FFF08B /* HelibCkksContext.cpp in Sources */,
+				A5D0322F25D58E7C00B9C519 /* HeContext.cpp in Sources */,
+				A5D0322325D58E7C00B9C519 /* HelibCkksPlaintext.cpp in Sources */,
+				A5D0321F25D58E7C00B9C519 /* BinIoUtils.cpp in Sources */,
+				A5D0325A25D5A49900B9C519 /* TrainingSetPlain.cpp in Sources */,
+				A5D032C825D5BB5B00B9C519 /* ClientServer.cpp in Sources */,
+				A5D0322625D58E7C00B9C519 /* HelibCkksEncoder.cpp in Sources */,
 				A5A0E47F24D09CFB00FA427E /* CreditSampleResultsData.m in Sources */,
-				A506952724C878C600FFF08B /* SimpleSquareActivationLayer.cpp in Sources */,
-				A506951F24C878C600FFF08B /* DoubleMatrixArray.cpp in Sources */,
-				A506952C24C878C600FFF08B /* Encoder.cpp in Sources */,
-				A506951D24C878C600FFF08B /* Layer.cpp in Sources */,
-				A506952824C878C600FFF08B /* HelibCiphertext.cpp in Sources */,
-				A506952224C878C600FFF08B /* AbstractEncoder.cpp in Sources */,
-				A506952924C878C600FFF08B /* SimpleNeuralNetPlain.cpp in Sources */,
-				A506951C24C878C600FFF08B /* CipherMatrix.cpp in Sources */,
-				A506951324C878C500FFF08B /* HelibCkksPlaintext.cpp in Sources */,
-				A506951424C878C500FFF08B /* SimpleFcLayer.cpp in Sources */,
-				A506952324C878C600FFF08B /* SimpleTimer.cpp in Sources */,
-				A506951224C878C500FFF08B /* h5Parser.cpp in Sources */,
+				A5D0321825D58E7C00B9C519 /* NativeFunctionEvaluator.cpp in Sources */,
+				A5D0325C25D5A49900B9C519 /* SimpleSquareActivationLayer.cpp in Sources */,
+				A5D0325325D5A49900B9C519 /* SimpleFcLayer.cpp in Sources */,
+				A5D0321D25D58E7C00B9C519 /* FileUtils.cpp in Sources */,
+				A5D0325525D5A49900B9C519 /* DoubleMatrix.cpp in Sources */,
+				A5D0325825D5A49900B9C519 /* SimpleNeuralNet.cpp in Sources */,
+				A5D0321525D58E7C00B9C519 /* AbstractCiphertext.cpp in Sources */,
+				A5D0322025D58E7C00B9C519 /* HelayersConfig.cpp in Sources */,
+				A5D0325925D5A49900B9C519 /* SimpleLayer.cpp in Sources */,
+				A5D0321A25D58E7C00B9C519 /* AlwaysAssert.cpp in Sources */,
+				A5D0325B25D5A49900B9C519 /* CipherMatrixEncoder.cpp in Sources */,
+				A5D0325425D5A49900B9C519 /* SimpleFcPlainLayer.cpp in Sources */,
+				A5D0325D25D5A49900B9C519 /* SimpleNeuralNetPlain.cpp in Sources */,
+				A5D0322925D58E7C00B9C519 /* HelibCkksContext.cpp in Sources */,
+				A5D0325225D5A49900B9C519 /* h5Parser.cpp in Sources */,
+				A5D0321925D58E7C00B9C519 /* HeTraits.cpp in Sources */,
 				A5D0073424D1E6CC00AAE351 /* CCProgressView.m in Sources */,
-				A506952424C878C600FFF08B /* HelibContext.cpp in Sources */,
-				A506951724C878C500FFF08B /* AlwaysAssert.cpp in Sources */,
-				A506952A24C878C600FFF08B /* SimpleTrainingSet.cpp in Sources */,
-				A506952024C878C600FFF08B /* SimpleNeuralNet.cpp in Sources */,
-				A506952524C878C600FFF08B /* h5Dumper.cpp in Sources */,
-				A506951E24C878C600FFF08B /* FileUtils.cpp in Sources */,
+				A5D0321425D58E7C00B9C519 /* AbstractPlaintext.cpp in Sources */,
+				A5D0321C25D58E7C00B9C519 /* CTile.cpp in Sources */,
+				A5D0322D25D58E7C00B9C519 /* HelibBgvNativeFunctionEvaluator.cpp in Sources */,
+				A5D0322A25D58E7C00B9C519 /* HelibContext.cpp in Sources */,
+				A5D0323125D58E7C00B9C519 /* PTile.cpp in Sources */,
+				A5D0322825D58E7C00B9C519 /* HelibBgvEncoder.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1290,6 +1441,7 @@
 					"$(PROJECT_DIR)/dependencies/CMake-hdf5-$(HDF5_FILE_VERSION)/hdf5-$(HDF5_FILE_VERSION)/src",
 					"$(PROJECT_DIR)/dependencies/HElib/include",
 					"$(PROJECT_DIR)/dependencies/hdf5-$(HDF5_FILE_VERSION)",
+					"$(PROJECT_DIR)/dependencies/HElib_macOS/src",
 				);
 				INFOPLIST_FILE = "Credit Card Fraud/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1313,8 +1465,9 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/ntl/include",
-					"\"$(PROJECT_DIR)/Credit Card Fraud/helib_ai\"",
 					"$(PROJECT_DIR)/dependencies/hdf5-$(HDF5_FILE_VERSION)",
+					"$(PROJECT_DIR)/dependencies/include",
+					"$(PROJECT_DIR)/\"Privacy Preserving Search\"",
 				);
 				WARNING_LDFLAGS = "-W";
 			};
@@ -1340,6 +1493,7 @@
 					"$(PROJECT_DIR)/dependencies/CMake-hdf5-$(HDF5_FILE_VERSION)/hdf5-$(HDF5_FILE_VERSION)/src",
 					"$(PROJECT_DIR)/dependencies/HElib/include",
 					"$(PROJECT_DIR)/dependencies/hdf5-$(HDF5_FILE_VERSION)",
+					"$(PROJECT_DIR)/dependencies/HElib_macOS/src",
 				);
 				INFOPLIST_FILE = "Credit Card Fraud/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1363,8 +1517,9 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/ntl/include",
-					"\"$(PROJECT_DIR)/Credit Card Fraud/helib_ai\"",
 					"$(PROJECT_DIR)/dependencies/hdf5-$(HDF5_FILE_VERSION)",
+					"$(PROJECT_DIR)/dependencies/include",
+					"$(PROJECT_DIR)/\"Privacy Preserving Search\"",
 				);
 				WARNING_LDFLAGS = "-W";
 			};
