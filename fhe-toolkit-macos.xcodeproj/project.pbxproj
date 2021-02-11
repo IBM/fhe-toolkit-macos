@@ -97,7 +97,6 @@
 		A5F649D8244F73390087514D /* gmp.info-2 in Resources */ = {isa = PBXBuildFile; fileRef = A5F649D1244F73380087514D /* gmp.info-2 */; };
 		A5F649D9244F73390087514D /* dir in Resources */ = {isa = PBXBuildFile; fileRef = A5F649D2244F73380087514D /* dir */; };
 		A5F649E02450852C0087514D /* CountryData.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F649DF2450852C0087514D /* CountryData.m */; };
-		A5F649E22450853C0087514D /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A5F649E12450853C0087514D /* data.json */; };
 		A5F649E524508CAD0087514D /* CountryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F649E424508CAD0087514D /* CountryTableViewController.m */; };
 		A5F649E924508CCC0087514D /* CapitalDetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A5F649E724508CCC0087514D /* CapitalDetailViewController.mm */; };
 		A5F649ED2450DC270087514D /* CountryDisplaySplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F649EC2450DC270087514D /* CountryDisplaySplitViewController.m */; };
@@ -466,7 +465,6 @@
 		A5F649D2244F73380087514D /* dir */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dir; sourceTree = "<group>"; };
 		A5F649DE2450852C0087514D /* CountryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryData.h; sourceTree = "<group>"; };
 		A5F649DF2450852C0087514D /* CountryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryData.m; sourceTree = "<group>"; };
-		A5F649E12450853C0087514D /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		A5F649E324508CAD0087514D /* CountryTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryTableViewController.h; sourceTree = "<group>"; };
 		A5F649E424508CAD0087514D /* CountryTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryTableViewController.m; sourceTree = "<group>"; };
 		A5F649E624508CCC0087514D /* CapitalDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CapitalDetailViewController.h; sourceTree = "<group>"; };
@@ -706,7 +704,6 @@
 				A5D0073724DB330900AAE351 /* README.md */,
 				A5667A0023F714CF00F122FD /* AppDelegate.h */,
 				A5667A0123F714CF00F122FD /* AppDelegate.m */,
-				A5F649E12450853C0087514D /* data.json */,
 				A5F649DD245085070087514D /* Sample Code */,
 				A5F649C6244F73380087514D /* gmplib-so-macosx-x86_64 */,
 				A5F64953244F726F0087514D /* ntl */,
@@ -1156,7 +1153,6 @@
 				A5F649D9244F73390087514D /* dir in Resources */,
 				A5667A0723F714D200F122FD /* Assets.xcassets in Resources */,
 				A5F649D8244F73390087514D /* gmp.info-2 in Resources */,
-				A5F649E22450853C0087514D /* data.json in Resources */,
 				A5667A0A23F714D200F122FD /* Main.storyboard in Resources */,
 				A5F649D6244F73390087514D /* gmp.info-1 in Resources */,
 				A5F649D7244F73390087514D /* gmp.info in Resources */,
