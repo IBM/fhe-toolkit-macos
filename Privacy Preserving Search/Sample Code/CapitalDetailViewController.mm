@@ -140,21 +140,7 @@ unsigned long debug = 0;
        string string_result =  run(he, db_filename, countryName, debug);
        
     
-//    // Initialize context
-//       std::cout << "\n\tContext ... ";
-//       helib::Context context(m, p, r);
-//      
-//     // Modify the context, adding primes to the modulus chain
-//     std::cout  << "Building modulus chain..." << std::endl;
 
-//     helib::buildModChain(context, bits, c);
-//
-//     // Secret key management
-//     std::cout << "\nCreating Secret Key ...";
-//     // Create a secret key associated with the context
-//     helib::SecKey secret_key = helib::SecKey(context);
-//     // Generate the secret key
-//     secret_key.GenSecKey();
 //     
 //     dispatch_async(dispatch_get_main_queue(), ^(void){
 //         [self.logging setStringValue:[NSString stringWithFormat:@"Creating secret key..."]];
@@ -414,9 +400,23 @@ vector<pair<string, string>> read_csv(string filename, int maxLen) {
     while (getline(data_file, line)) {
       row.clear();
       stringstream ss(line);
-      while (getline(ss, entry, ',')) {
-        row.push_back(entry);
-      }
+      //grab the next line in the csv
+      getline(ss, entry);
+      size_t pos = 0;
+      //split the first part by "," which should be the country
+      std::string delimiter = ",";
+      //find the pos of the first ,
+      pos = entry.find(delimiter);
+      //grab all the characters in front of the first ,
+      std::string token = entry.substr(0, pos);
+      //store it in row[0]
+      row.push_back(token);
+      //add the size of the , char to the position so we know where the capital starts
+      pos = pos + delimiter.length();
+      //grab the rest of the row as the capital
+      token = entry.substr(pos, string::npos);
+      //store it as row[1]
+      row.push_back(token);
       if (row[0].size() > maxLen)
         throw runtime_error("Country name " + row[0] + " too long");
       if (row[1].size() > maxLen)
@@ -432,8 +432,6 @@ vector<pair<string, string>> read_csv(string filename, int maxLen) {
 }
 
 string run(HeContext& he, const string& db_filename, const std::string& countryName, bool debug) {
-    cout << "\n***Country Name: " << countryName
-         << " ***  example ***" << endl;
     // The run function receives an abstract HeContext class.
     // Therefore the code below is oblivious to a particular HE scheme
     // implementation.
