@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ClientWrapper : NSObject
 
-- (void)initClient;
-- (void)initServer;
 - (int)getNumBatches;
+- (void)encrypt:(int)batch andSaveSamples:(NSString *)encryptedSamplesFile;
+- (void)assessResults;
 
 @end
 

@@ -45,7 +45,7 @@ const string serverContext = outDir + "/server_context.bin";
 const string encryptedModelFile = outDir + "/encrypted_model.bin";
 
 // paths from which to load the plain model, samples and labels
-const string plainModelFile = "/net_fraud/model_42098.h5";
+const string plainModelFile = "/model_42098.h5";
 const string plainSamplesFile = "/net_fraud/x_test.h5";
 const string plainLabelsFile = "/net_fraud/y_test.h5";
 
@@ -68,7 +68,7 @@ void Client::init()
   cout << "CLIENT: loading plain model . . ." << endl;
 
   SimpleNeuralNetPlain plainNet;
-  H5Parser parser(plainModelFile);
+  H5Parser parser(dataDir + plainModelFile);
   plainNet.loadh5(parser,
                   std::vector<string>{"dense_1", "dense_2", "dense_3"},
                   std::vector<int>{29, 20, 5, 1},

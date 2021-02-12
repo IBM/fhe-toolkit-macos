@@ -1,5 +1,5 @@
 //
-//  ClientServerWrapper.h
+//  ServerWrapper.h
 //  Credit Card Fraud
 //
 //  Created by boland on 2/11/21.
@@ -10,11 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ClientWrapper : NSObject
+@interface ServerWrapper : NSObject
 
-- (void)initClient;
-- (void)initServer;
-- (int)getNumBatches;
 
 @end
 

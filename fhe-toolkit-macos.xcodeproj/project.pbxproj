@@ -104,7 +104,8 @@
 		A5D0325E25D5A49900B9C519 /* SimpleSquareActivationPlainLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0325125D5A49900B9C519 /* SimpleSquareActivationPlainLayer.cpp */; };
 		A5D0326125D5BAE800B9C519 /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5CDB49425CDF08300EC929D /* libhelib.a */; };
 		A5D032C825D5BB5B00B9C519 /* ClientServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D0325F25D5B34B00B9C519 /* ClientServer.cpp */; };
-		A5D032CC25D5CCEE00B9C519 /* ClientServerWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = A5D032CB25D5CCEE00B9C519 /* ClientServerWrapper.mm */; };
+		A5D032CC25D5CCEE00B9C519 /* ClientWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = A5D032CB25D5CCEE00B9C519 /* ClientWrapper.mm */; };
+		A5D0333625D60E5800B9C519 /* ServerWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = A5D0333525D60E5800B9C519 /* ServerWrapper.mm */; };
 		A5F649C5244F72700087514D /* ntl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649C4244F72700087514D /* ntl.a */; };
 		A5F649D3244F73390087514D /* libgmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CA244F73380087514D /* libgmp.a */; };
 		A5F649D4244F73390087514D /* libgmp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F649CB244F73380087514D /* libgmp.dylib */; };
@@ -394,8 +395,10 @@
 		A5D0325025D5A49900B9C519 /* CipherMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherMatrix.h; sourceTree = "<group>"; };
 		A5D0325125D5A49900B9C519 /* SimpleSquareActivationPlainLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleSquareActivationPlainLayer.cpp; sourceTree = "<group>"; };
 		A5D0325F25D5B34B00B9C519 /* ClientServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClientServer.cpp; sourceTree = "<group>"; };
-		A5D032CA25D5CCEE00B9C519 /* ClientServerWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientServerWrapper.h; sourceTree = "<group>"; };
-		A5D032CB25D5CCEE00B9C519 /* ClientServerWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ClientServerWrapper.mm; sourceTree = "<group>"; };
+		A5D032CA25D5CCEE00B9C519 /* ClientWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientWrapper.h; sourceTree = "<group>"; };
+		A5D032CB25D5CCEE00B9C519 /* ClientWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ClientWrapper.mm; sourceTree = "<group>"; };
+		A5D0333425D60E5800B9C519 /* ServerWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerWrapper.h; sourceTree = "<group>"; };
+		A5D0333525D60E5800B9C519 /* ServerWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ServerWrapper.mm; sourceTree = "<group>"; };
 		A5F64956244F726F0087514D /* PackageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageInfo.h; sourceTree = "<group>"; };
 		A5F64957244F726F0087514D /* GF2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GF2.h; sourceTree = "<group>"; };
 		A5F64958244F726F0087514D /* FFT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFT.h; sourceTree = "<group>"; };
@@ -944,10 +947,12 @@
 		A5D0333325D5CCF900B9C519 /* ClientServer */ = {
 			isa = PBXGroup;
 			children = (
-				A5D032CA25D5CCEE00B9C519 /* ClientServerWrapper.h */,
-				A5D032CB25D5CCEE00B9C519 /* ClientServerWrapper.mm */,
+				A5D032CA25D5CCEE00B9C519 /* ClientWrapper.h */,
+				A5D032CB25D5CCEE00B9C519 /* ClientWrapper.mm */,
 				A5D0325F25D5B34B00B9C519 /* ClientServer.cpp */,
 				A5D0323425D59C0400B9C519 /* ClientServer.h */,
+				A5D0333425D60E5800B9C519 /* ServerWrapper.h */,
+				A5D0333525D60E5800B9C519 /* ServerWrapper.mm */,
 			);
 			path = ClientServer;
 			sourceTree = "<group>";
@@ -1316,7 +1321,7 @@
 				A5D0321725D58E7C00B9C519 /* AbstractFunctionEvaluator.cpp in Sources */,
 				A5D0325E25D5A49900B9C519 /* SimpleSquareActivationPlainLayer.cpp in Sources */,
 				A5D0325625D5A49900B9C519 /* CipherMatrix.cpp in Sources */,
-				A5D032CC25D5CCEE00B9C519 /* ClientServerWrapper.mm in Sources */,
+				A5D032CC25D5CCEE00B9C519 /* ClientWrapper.mm in Sources */,
 				A5D0323025D58E7C00B9C519 /* Encoder.cpp in Sources */,
 				A5D0322525D58E7C00B9C519 /* HelibConfig.cpp in Sources */,
 				A5D0322125D58E7C00B9C519 /* JsonWrapper.cpp in Sources */,
@@ -1335,6 +1340,7 @@
 				A5D0325325D5A49900B9C519 /* SimpleFcLayer.cpp in Sources */,
 				A5D0321D25D58E7C00B9C519 /* FileUtils.cpp in Sources */,
 				A5D0325525D5A49900B9C519 /* DoubleMatrix.cpp in Sources */,
+				A5D0333625D60E5800B9C519 /* ServerWrapper.mm in Sources */,
 				A5D0325825D5A49900B9C519 /* SimpleNeuralNet.cpp in Sources */,
 				A5D0321525D58E7C00B9C519 /* AbstractCiphertext.cpp in Sources */,
 				A5D0322025D58E7C00B9C519 /* HelayersConfig.cpp in Sources */,

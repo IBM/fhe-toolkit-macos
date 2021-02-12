@@ -24,7 +24,7 @@
 
 #import "CreditCardInferenceViewController.h"
 #import "CreditSampleResultsData.h"
-#import "ClientServer/ClientServerWrapper.h"
+#import "ClientServer/ClientWrapper.h"
 
 #include <iostream>
 
@@ -349,12 +349,10 @@ void createContexts()
     createContexts();
     
     // init client
-    ClientServerWrapper *client = [[ClientServerWrapper alloc] init];
-    [client initClient];
+    ClientWrapper *client = [[ClientWrapper alloc] init];
 
     // init server
-    ClientServerWrapper *server = [[ClientServerWrapper alloc] init];
-    [server initServer];
+    ClientWrapper *server = [[ClientWrapper alloc] init];
 
     // go over each batch of samples
     int iterations = runAll ? [client getNumBatches] : min(24, [client getNumBatches]);
@@ -370,20 +368,23 @@ void createContexts()
       const string encryptedPredictionsFile =
           outDir + "/encrypted_batch_predictions_" + to_string(i) + ".bin";
 
+      NSArray *paths = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
       // encrypt current batch of samples by client, save to file
-      client.encryptAndSaveSamples(i, encryptedSamplesFile);
-
+      //client.encryptAndSaveSamples(i, encryptedSamplesFile);
+        [client encrypt:i andSaveSamples:[NSString stringWithFormat:@"%@/encrypted_batch_samples_%@.bin", paths[0], i]];
       // load current batch of encrypted samples by server, predict and save
       // encrypted predictions
-      server.processEncryptedSamples(encryptedSamplesFile,
-                                     encryptedPredictionsFile);
+      
+        //server.processEncryptedSamples(encryptedSamplesFile,
+         //                            encryptedPredictionsFile);
 
       // load current batch's predictions by client, decrypt and store
-      client.decryptPredictions(encryptedPredictionsFile);
+      
+        //client.decryptPredictions(encryptedPredictionsFile);
 
       // analyze the server's predictions so far with respect to the expected
       // labels
-      client.assessResults();
+      [client assessResults];
 
 
     }

@@ -6,11 +6,11 @@
 //  Copyright © 2021 IBM. All rights reserved.
 //
 
-#import "ClientServerWrapper.h"
+#import "ClientWrapper.h"
 #include "ClientServer.h"
 #include <iostream>
 
-@interface ClientServerWrapper () {
+@interface ClientWrapper () {
     Client *client;
     Server *server;
 }
@@ -23,42 +23,30 @@ std::string prependBundlePathOnFilePath(const char *fileName) {
     
 }
 
-@implementation ClientServerWrapper
+@implementation ClientWrapper
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        
+        NSString *path = [[NSBundle mainBundle] resourcePath];
+        std::string dataDir = [path UTF8String];
+        client = new Client(dataDir);
+        client->init();
     }
     return self;
-}
-
-- (void)prepareClient {
-    std::string dataDir = "";
-    client = new Client(dataDir);
-    client->init();
-}
-
-- (void)initServer {
-    server = new Server();
-    server->init();
 }
 
 - (int)getNumBatches {
     return client->getNumBatches();
 }
 
-//- (id)initWithSize:(int)size
-//{
-//  self = [super init];
-//  if (self)
-//  {
-//    std::string dataDir = "";
-//    client = Client(dataDir);
-//    if (!client) self = nil;
-//  }
-//  return self;
-//}
+- (void)encrypt:(int)batch andSaveSamples:(NSString *)encryptedSamplesFile {
+    client->encryptAndSaveSamples(batch, [encryptedSamplesFile UTF8String]);
+}
+
+- (void)assessResults {
+    
+}
 
 @end
