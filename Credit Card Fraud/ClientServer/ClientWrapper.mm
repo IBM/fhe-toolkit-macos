@@ -12,7 +12,6 @@
 
 @interface ClientWrapper () {
     Client *client;
-    Server *server;
 }
 @end
 

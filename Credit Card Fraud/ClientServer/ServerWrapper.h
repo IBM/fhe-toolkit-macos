@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ServerWrapper : NSObject
 
+- (void)processEncryptedSamples: (NSString*)encryptedSamplesFile encryptedPredictions: (NSString *)encryptedPredictionsFile;
 
 @end
 

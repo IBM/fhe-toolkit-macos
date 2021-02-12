@@ -46,8 +46,8 @@ const string encryptedModelFile = outDir + "/encrypted_model.bin";
 
 // paths from which to load the plain model, samples and labels
 const string plainModelFile = "/model_42098.h5";
-const string plainSamplesFile = "/net_fraud/x_test.h5";
-const string plainLabelsFile = "/net_fraud/y_test.h5";
+const string plainSamplesFile = "/x_test.h5";
+const string plainLabelsFile = "/y_test.h5";
 
 double classificationThreshold =
     0.5; // used to separate positive from negative samples
@@ -107,7 +107,7 @@ void Client::encryptAndSaveSamples(int batch,
   const DoubleMatrixArray& plainSamples = ts->getSamples(batch);
   CipherMatrix encryptedSamples(*he);
   encoder.encodeEncrypt(encryptedSamples, plainSamples.getTensor());
-  HELAYERS_TIMER_POP();
+  //HELAYERS_TIMER_POP();
 
   cout << "CLIENT: saving encrypted samples . . ." << endl;
   ofstream ofs(encryptedSamplesFile, ios::out | ios::binary);

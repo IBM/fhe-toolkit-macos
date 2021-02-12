@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (int)getNumBatches;
 - (void)encrypt:(int)batch andSaveSamples:(NSString *)encryptedSamplesFile;
+- (void)decryptPredictions:(NSString *)encryptedPredictionsFile;
 - (void)assessResults;
 
 @end

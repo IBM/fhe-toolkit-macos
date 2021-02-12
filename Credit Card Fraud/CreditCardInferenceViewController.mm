@@ -25,6 +25,7 @@
 #import "CreditCardInferenceViewController.h"
 #import "CreditSampleResultsData.h"
 #import "ClientServer/ClientWrapper.h"
+#import "ClientServer/ServerWrapper.h"
 
 #include <iostream>
 
@@ -40,7 +41,7 @@ using namespace helayers;
 const string outDir = getExamplesOutputDir();
 const string clientContext = outDir + "/client_context.bin";
 const string serverContext = outDir + "/server_context.bin";
-bool runAll = true;
+bool runAll = false;
 
 /*
  * create an HELIB context for both the client and the server, and save contexts
@@ -352,7 +353,7 @@ void createContexts()
     ClientWrapper *client = [[ClientWrapper alloc] init];
 
     // init server
-    ClientWrapper *server = [[ClientWrapper alloc] init];
+    ServerWrapper *server = [[ServerWrapper alloc] init];
 
     // go over each batch of samples
     int iterations = runAll ? [client getNumBatches] : min(24, [client getNumBatches]);
@@ -363,24 +364,29 @@ void createContexts()
            << " ***" << endl;
       // define names of files to be used to save encrypted batch of samples and
       // their correspondent predictions
-      const string encryptedSamplesFile =
-          outDir + "/encrypted_batch_samples_" + to_string(i) + ".bin";
-      const string encryptedPredictionsFile =
-          outDir + "/encrypted_batch_predictions_" + to_string(i) + ".bin";
-
+      
+      //const string encryptedSamplesFile =
+      //    outDir + "/encrypted_batch_samples_" + to_string(i) + ".bin";
+      //const string encryptedPredictionsFile =
+      //    outDir + "/encrypted_batch_predictions_" + to_string(i) + ".bin";
+        
       NSArray *paths = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+      NSString *encryptedSamplesFile = [NSString stringWithFormat:@"%@encrypted_batch_samples_%i.bin", paths[0], i];
+      NSString *encryptedPredictionsFile = [NSString stringWithFormat:@"%@encrypted_batch_predictions_%i.bin", paths[0], i];
+     
       // encrypt current batch of samples by client, save to file
       //client.encryptAndSaveSamples(i, encryptedSamplesFile);
-        [client encrypt:i andSaveSamples:[NSString stringWithFormat:@"%@/encrypted_batch_samples_%@.bin", paths[0], i]];
+        [client encrypt:i andSaveSamples:encryptedSamplesFile];
       // load current batch of encrypted samples by server, predict and save
       // encrypted predictions
       
         //server.processEncryptedSamples(encryptedSamplesFile,
          //                            encryptedPredictionsFile);
+        [server processEncryptedSamples: encryptedSamplesFile encryptedPredictions: encryptedPredictionsFile];
 
       // load current batch's predictions by client, decrypt and store
       
-        //client.decryptPredictions(encryptedPredictionsFile);
+        [client decryptPredictions: encryptedPredictionsFile];
 
       // analyze the server's predictions so far with respect to the expected
       // labels

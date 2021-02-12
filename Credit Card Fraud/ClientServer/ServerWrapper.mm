@@ -28,5 +28,9 @@
     return self;
 }
 
+- (void)processEncryptedSamples: (NSString*)encryptedSamplesFile encryptedPredictions: (NSString *)encryptedPredictionsFile {
+    server->processEncryptedSamples([encryptedSamplesFile UTF8String],[encryptedPredictionsFile UTF8String]);
+}
+
 
 @end
