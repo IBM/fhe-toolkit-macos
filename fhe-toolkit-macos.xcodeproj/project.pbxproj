@@ -399,6 +399,7 @@
 		A5D032CB25D5CCEE00B9C519 /* ClientWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ClientWrapper.mm; sourceTree = "<group>"; };
 		A5D0333425D60E5800B9C519 /* ServerWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerWrapper.h; sourceTree = "<group>"; };
 		A5D0333525D60E5800B9C519 /* ServerWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ServerWrapper.mm; sourceTree = "<group>"; };
+		A5D0339D25DAC85900B9C519 /* CreditSampleResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreditSampleResults.h; sourceTree = "<group>"; };
 		A5F64956244F726F0087514D /* PackageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageInfo.h; sourceTree = "<group>"; };
 		A5F64957244F726F0087514D /* GF2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GF2.h; sourceTree = "<group>"; };
 		A5F64958244F726F0087514D /* FFT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFT.h; sourceTree = "<group>"; };
@@ -953,6 +954,7 @@
 				A5D0323425D59C0400B9C519 /* ClientServer.h */,
 				A5D0333425D60E5800B9C519 /* ServerWrapper.h */,
 				A5D0333525D60E5800B9C519 /* ServerWrapper.mm */,
+				A5D0339D25DAC85900B9C519 /* CreditSampleResults.h */,
 			);
 			path = ClientServer;
 			sourceTree = "<group>";

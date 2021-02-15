@@ -44,8 +44,12 @@ std::string prependBundlePathOnFilePath(const char *fileName) {
     client->encryptAndSaveSamples(batch, [encryptedSamplesFile UTF8String]);
 }
 
-- (void)assessResults {
-    
+- (void)decryptPredictions:(NSString *)encryptedPredictionsFile {
+    client->decryptPredictions([encryptedPredictionsFile UTF8String]);
+}
+
+- (void)assessResults:(CreditSampleResults *)creditSampleResults {
+    client->assessResults(creditSampleResults);
 }
 
 @end

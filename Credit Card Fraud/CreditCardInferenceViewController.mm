@@ -359,39 +359,37 @@ void createContexts()
     int iterations = runAll ? [client getNumBatches] : min(24, [client getNumBatches]);
     for (int i = 0; i < iterations; ++i) {
 
-      cout << endl
+        cout << endl
            << "*** Performing inference on batch " << i + 1 << "/" << iterations
            << " ***" << endl;
-      // define names of files to be used to save encrypted batch of samples and
-      // their correspondent predictions
-      
-      //const string encryptedSamplesFile =
-      //    outDir + "/encrypted_batch_samples_" + to_string(i) + ".bin";
-      //const string encryptedPredictionsFile =
-      //    outDir + "/encrypted_batch_predictions_" + to_string(i) + ".bin";
-        
-      NSArray *paths = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
-      NSString *encryptedSamplesFile = [NSString stringWithFormat:@"%@encrypted_batch_samples_%i.bin", paths[0], i];
-      NSString *encryptedPredictionsFile = [NSString stringWithFormat:@"%@encrypted_batch_predictions_%i.bin", paths[0], i];
+        // define names of files to be used to save encrypted batch of samples and
+        // their correspondent predictions
+        NSString *encryptedSamplesFile = [NSString stringWithFormat:@"%s/encrypted_batch_samples_%i.bin", outDir.c_str(), i];
+        NSString *encryptedPredictionsFile = [NSString stringWithFormat:@"%s/encrypted_batch_predictions_%i.bin", outDir.c_str(), i];
      
-      // encrypt current batch of samples by client, save to file
-      //client.encryptAndSaveSamples(i, encryptedSamplesFile);
+        // encrypt current batch of samples by client, save to file
         [client encrypt:i andSaveSamples:encryptedSamplesFile];
-      // load current batch of encrypted samples by server, predict and save
-      // encrypted predictions
-      
-        //server.processEncryptedSamples(encryptedSamplesFile,
-         //                            encryptedPredictionsFile);
+        // load current batch of encrypted samples by server, predict and save
+        // encrypted predictions
         [server processEncryptedSamples: encryptedSamplesFile encryptedPredictions: encryptedPredictionsFile];
 
-      // load current batch's predictions by client, decrypt and store
-      
+        // load current batch's predictions by client, decrypt and store
         [client decryptPredictions: encryptedPredictionsFile];
-
-      // analyze the server's predictions so far with respect to the expected
-      // labels
-      [client assessResults];
-
+        
+        //create a place to store the Sample results so we can display it
+        //CreditSampleResults *sampleResults = [[CreditSampleResults alloc] init];
+        CreditSampleResults *sampleResults = (CreditSampleResults *) malloc(sizeof(CreditSampleResults));
+        sampleResults->totalInferenceCount = iterations;
+        sampleResults->inferenceCount = i+1;
+        
+        // analyze the server's predictions so far with respect to the expected labels
+        [client assessResults: sampleResults];
+        
+        [self.sampleDataArray addObject:[[CreditSampleResultsData alloc] initWithData: sampleResults]];
+        // re-load the views with the updated information
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+                    [self updateView:[self.sampleDataArray objectAtIndex:i]];
+        });
 
     }
     
@@ -413,8 +411,8 @@ void createContexts()
 //        // load current batch's predictions by client, decrypt and store
 //        client.decryptPredictions(encryptedPredictionsFile);
 //
-//        // analyze the server's predictions so far with respect to the expected labels
-//        CreditSampleResults *sampleResults = (CreditSampleResults *) malloc(sizeof(CreditSampleResults));
+    //        // analyze the server's predictions so far with respect to the expected labels
+    //        CreditSampleResults *sampleResults = (CreditSampleResults *) malloc(sizeof(CreditSampleResults));
 //
 //        sampleResults->totalInferenceCount = nn;
 //        sampleResults->inferenceCount = i+1;

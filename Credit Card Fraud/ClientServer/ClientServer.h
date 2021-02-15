@@ -28,6 +28,8 @@
 #include "helayers/hebase/hebase.h"
 #include "helayers/simple_nn/SimpleNeuralNet.h"
 #include "helayers/simple_nn/TrainingSetPlain.h"
+#include "CreditSampleResults.h"
+
 
 /// A class representing the client side
 class Client
@@ -71,7 +73,7 @@ public:
 
   /// Assess received predictions compared with training set's labels (the
   /// ground truth).
-  void assessResults();
+  void assessResults(CreditSampleResults* creditData);
 
   /// Total number of batches in training set.
   int getNumBatches() const { return numBatches; }

@@ -7,20 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#include "CreditSampleResults.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-typedef struct {
-    NSInteger inferenceCount;
-    NSInteger totalInferenceCount;
-    NSInteger truePositives;
-    NSInteger trueNegatives;
-    NSInteger falsePositives;
-    NSInteger falseNegatives;
-    double precision;
-    double recall;
-    double f1Score;
-} CreditSampleResults;
 
 typedef NS_ENUM(NSInteger, ResultsTableViewType) {
     ScoresTableViewType,

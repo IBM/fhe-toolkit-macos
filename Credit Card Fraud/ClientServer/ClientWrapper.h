@@ -7,15 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CreditSampleResultsData.h"
+#import "CreditSampleResults.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
 
 @interface ClientWrapper : NSObject
 
 - (int)getNumBatches;
 - (void)encrypt:(int)batch andSaveSamples:(NSString *)encryptedSamplesFile;
 - (void)decryptPredictions:(NSString *)encryptedPredictionsFile;
-- (void)assessResults;
+- (void)assessResults:(CreditSampleResults *)creditSampleResults;
 
 @end
 
