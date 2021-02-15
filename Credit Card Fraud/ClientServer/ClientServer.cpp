@@ -192,7 +192,7 @@ void Client::assessResults(CreditSampleResults* creditData)
     cout << "Precision: " << precision << endl;
     cout << "Recall: " << recall << endl;
     cout << "F1 score: " << f1Score << endl;
-    
+
     creditData->f1Score = f1Score;
     creditData->recall = recall;
     creditData->precision = precision;
@@ -201,72 +201,6 @@ void Client::assessResults(CreditSampleResults* creditData)
     creditData->falsePositives = falsePositives;
     creditData->falseNegatives = falseNegatives;
 }
-
-//  void assessResults(CreditSampleResults *creditData){
-//
-//          cout << "CLIENT: assessing results so far . . ." << endl;
-//
-//      int truePositives = 0;
-//      int trueNegatives = 0;
-//      int falsePositives = 0;
-//      int falseNegatives = 0;
-//      currentBatch++;
-//
-//          // go over the predictions of each batch and count hits
-//      for(int i=0; i<currentBatch; ++i){
-//
-//          const DoubleMatrixArray labels = ts.getLabels(i); // these are the batch's true labels
-//          const DoubleMatrixArray predictions = allPredictions.at(i); // these are the batch's predictions
-//
-//          int samplesToCheck = labels.size();
-//          if(i == numBatches - 1) // last batch may partially be populated with "dummy" labels to ignore
-//              samplesToCheck = ts.getNumSamples() - (batchSize * (numBatches - 1));
-//
-//          for(int j=0; j<samplesToCheck; ++j){
-//              int label = labels.getMat(j).get(0, 0);
-//              // determines the classification of the current samples based on the prediction made by the server
-//              // and the threshold defined
-//              int classification = (predictions.getMat(j).get(0, 0) > classificationThreshold ? 1 : 0);
-//
-//              if(classification == label && classification == 1)
-//                  truePositives++;
-//              else if(classification == label && classification == 0)
-//                  trueNegatives++;
-//              else if(classification != label && classification == 1)
-//                  falsePositives++;
-//              else
-//                  falseNegatives++;
-//          }
-//      }
-//
-//      double precision = ((double) truePositives / (truePositives + falsePositives));
-//      double recall = ((double) truePositives / (truePositives + falseNegatives));
-//      double f1Score = (2 * precision * recall) / (precision + recall);
-//
-//      cout << endl;
-//      cout << "|---------------------------------------------|" << endl;
-//      cout << "|                       |    True condition   |" << endl;
-//      cout << "|                       ----------------------|" << endl;
-//      cout << "|                       | Positive | Negative |" << endl;
-//      cout << "|---------------------------------------------|" << endl;
-//      cout << "| Predicted  | Positive |" << setw(8) << truePositives << "  |" << setw(8) << falsePositives << "  |" << endl;
-//      cout << "|            |--------------------------------|" << endl;
-//      cout << "| condition  | Negative |" << setw(8) << falseNegatives << "  |" << setw(8) << trueNegatives << "  |" << endl;
-//      cout << "|---------------------------------------------|" << endl;
-//      cout << endl;
-//      cout << "Precision: " << precision << endl;
-//      cout << "Recall: " << recall << endl;
-//      cout << "F1 score: " << f1Score << endl;
-//
-//      creditData->f1Score = f1Score;
-//      creditData->recall = recall;
-//      creditData->precision = precision;
-//      creditData->truePositives = truePositives;
-//      creditData->trueNegatives = trueNegatives;
-//      creditData->falsePositives = falsePositives;
-//      creditData->falseNegatives = falseNegatives;
-//    }
-
 
 // Server methods
 Server::~Server() {}
