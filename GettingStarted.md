@@ -17,6 +17,9 @@ A working Internet connection is required to build the toolkit as some dependenc
 
 This toolkit requires the Xcode IDE and some associated command line tools. It also requires the cmake build system to be installed. 
 
+This demo will currently run on Xcode 12.x and is set to compile for macOS 10.14 and above. Note that it will run on older versions of macOS and Xcode but some minimum build versions will need to change in the project for it to compile successfully.
+
+
 
 
 ## Step 1: Install XCode and command line tools (1/2)
@@ -37,13 +40,13 @@ xcode-select --install
 
 CMake is an open-source, cross-platform family of tools that can be used to build and test software source code. CMake is used to control the software compilation process using platform and compiler independent configuration files as well as generating native makefiles that work with a variety of compilers.
 
-This toolkit has been tested with `cmake version 3.17.1`. Please check whether you have cmake installed in your environment and whether `cmake version >= 3.17.1` by entering the following command in a terminal window :
+This toolkit has been tested with `cmake version 3.19`. Please check whether you have cmake installed in your environment and whether `cmake version >= 3.19` by entering the following command in a terminal window :
 
 ```
 cmake -version
 ```
 
-Should you need to install or reinstall cmake in your environment, precompiled binaries for MacOS are available directly from  [CMake website](https://cmake.org/download/). Available binary release that supports Mac OS X 10.7 or later, can be downloaded directly from: [https://github.com/Kitware/CMake/releases/download/v3.17.3/cmake-3.17.3-Darwin-x86_64.dmg](https://github.com/Kitware/CMake/releases/download/v3.17.3/cmake-3.17.3-Darwin-x86_64.dmg).  Alternatively cmake is also available as [MacPorts Project](https://www.macports.org/) or [Homebrew](https://brew.sh/) packages. 
+Should you need to install or reinstall cmake in your environment, precompiled binaries for MacOS are available directly from  [CMake website](https://cmake.org/download/). Available binary release that supports Mac OS X 10.7 or later, can be downloaded directly from: [https://github.com/Kitware/CMake/releases/download/v3.19.2/cmake-3.19.2-macos-universal.tar.gz](https://github.com/Kitware/CMake/releases/download/v3.19.2/cmake-3.19.2-macos-universal.tar.gz).  Alternatively cmake is also available as [MacPorts Project](https://www.macports.org/) or [Homebrew](https://brew.sh/) packages. 
 
 If you do not currently have cmake installed, the setup script will attempt to install it for you as it is needed to build the libraries.
 
