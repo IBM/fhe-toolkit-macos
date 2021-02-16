@@ -28,8 +28,10 @@ set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "com.ibm.research")
 project(helib_macOS_SDK
   LANGUAGES C CXX)
 
-# Define standard installation directories (GNU)
-include(GNUInstallDirs)
+# STRINGS avoids having the 2 newline characters at the end of the string.
+# Alternatively it's possible to use file(READ ...) and then
+# string(REGEX REPLACE "\n$" "" HELIB_VERSION "${HELIB_VERSION}")
+file(STRINGS "${PROJECT_SOURCE_DIR}/VERSION" HELIB_VERSION)
 
 ## Use -std=c++17 as default.
 set(CMAKE_CXX_STANDARD 17)
@@ -304,7 +306,15 @@ if (PACKAGE_BUILD)
       -DPACKAGE_BUILD=${PACKAGE_BUILD}
       -DFETCH_GMP=${FETCH_GMP}
       -DENABLE_TEST=${ENABLE_TEST}
-      -DENABLE_LEGACY_TEST=OFF
+      -DHELIB_DEBUG=${HELIB_DEBUG}
+      -DHELIB_PROJECT_ROOT_DIR=${HELIB_PROJECT_ROOT_DIR}
+      -DHELIB_CMAKE_EXTRA_DIR=${HELIB_CMAKE_EXTRA_DIR}
+      -DHELIB_INCLUDE_DIR=${HELIB_INCLUDE_DIR}
+      -DHELIB_HEADER_DIR=${HELIB_HEADER_DIR}
+      -DHELIB_SOURCE_DIR=${HELIB_SOURCE_DIR}
+      -DHELIB_TESTS_DIR=${HELIB_TESTS_DIR}
+      -DHELIB_DEPENDENCIES_DIR=${HELIB_DEPENDENCIES_DIR}
+      -DHELIB_VERSION=${HELIB_VERSION}
     BUILD_ALWAYS ON
   )
 

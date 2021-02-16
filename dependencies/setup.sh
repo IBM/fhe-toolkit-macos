@@ -192,10 +192,11 @@ build_helib()
     cmake -S. -B../HElib_macOS -GXcode \
     -DCMAKE_SYSTEM_NAME=Darwin \
     "-DCMAKE_OSX_ARCHITECTURES=arm64;x86_64" \
-    -DCMAKE_OSX_DEPLOYMENT_TARGET=10.10 \
+    -DCMAKE_OSX_DEPLOYMENT_TARGET=10.14 \
     -DCMAKE_INSTALL_PREFIX=`pwd`/_install \
     -DCMAKE_XCODE_ATTRIBUTE_ONLY_ACTIVE_ARCH=NO \
     -DCMAKE_IOS_INSTALL_COMBINED=YES \
+    -DHELIB_DEPENDENCIES_DIR="${DEPEND_DIR}/HElib/dependencies" \
     -DGMP_DIR="${DEPEND_DIR}/gmp" \
     -DNTL_INCLUDE_PATHS="${DEPEND_DIR}/ntl/include" \
     -DNTL_LIB="${DEPEND_DIR}/ntl/libs/ntl.a" \

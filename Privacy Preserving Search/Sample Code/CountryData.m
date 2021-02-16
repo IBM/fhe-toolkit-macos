@@ -30,8 +30,8 @@
 {
     self = [super init];
     if (self) {
-        NSDictionary *capitalData = [self JSONFromFile];
-        self.capitalArray = [capitalData objectForKey:@"data"];
+        NSDictionary *capitalData = [self CSVFromFile];
+        self.capitalArray = [[capitalData allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
     }
     return self;
 }
@@ -43,9 +43,30 @@
     return [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
 }
 
+- (NSDictionary *)CSVFromFile {
+    //Create the path to the CSV file
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"countries_dataset" ofType:@"csv"];
+    //Load the CSV file into memory as a String
+    NSString *csvContent = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    //Parse through the CSV file by \n (newline) character creating an array of rows with (country, capital) pairs
+    NSArray* csvRows = [csvContent componentsSeparatedByString:@"\n"];
+    //Parse through individual rows creating a dictionary entry
+    NSMutableDictionary *countryCSVData = [[NSMutableDictionary alloc] initWithCapacity:csvRows.count-1];
+    // For each row create a new dictionary entry with a key and a value
+    for (NSString *countryRow in csvRows) {
+        NSArray *csvValues = [countryRow componentsSeparatedByString:@","];
+        if (csvValues.count >= 2) {
+            [countryCSVData setValue:csvValues[1] forKey:csvValues[0]];
+        }
+       
+    }
+    NSLog(@"%@", countryCSVData);
+    return  countryCSVData;
+    
+}
+
 - (NSString *)getCountry:(NSInteger)index {
-    NSDictionary *countryInfo = [self.capitalArray objectAtIndex:index];
-    NSString *countryTitle = [[countryInfo allKeys] objectAtIndex:0];
+    NSString *countryTitle = [self.capitalArray objectAtIndex:index];
     return countryTitle;
 }
 

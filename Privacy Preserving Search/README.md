@@ -5,7 +5,7 @@ This FHE toolkit example demonstrates a privacy preserving search against an enc
 ## Relation to a real use case
 Privacy preserving search is a common scenario to demonstrate the benefits of homomorphic encryption. Being able to perform a query while preserving the privacy and confidentiality of the parameters of the query has many applications across various industry segments spanning from genomics to finance. This example uses a simple and easy to follow algorithm that demonstrates how one can use homomorphic encryption based techniques to generate a mask to retrieve data from a key-value pair database. It uses a dataset that is understandable for users across all industries and expertise levels. 
 
-With respect to realism of data, the dataset takes into account all countries in the continent of Europe. In a real use case, this could be information on customers or financial records for example. This is an educational example so a small dataset was needed to ensure timely responses and that it was relevant for all users.
+With respect to realism of data, the dataset takes into account countries of the world. In a real use case, this could be information on customers or financial records for example. This is an educational example so a small dataset was needed to ensure timely responses and that it was relevant for all users.
 
 ## Build
 
