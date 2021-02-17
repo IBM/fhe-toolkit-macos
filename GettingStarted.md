@@ -6,7 +6,7 @@ a complete mobile application example step by step.
 
 A working Internet connection is required to build the toolkit as some dependencies are fetched from external sources at build time.
 
-
+We currently offer this version of the toolkit on the X86 architecture only.  There are future plans to port it to Apple Silicon & ARM Architecture, but that is not something that is working at this time.  We are always welcoming patches and pull requests if someone is interested in contributing.  
 
 
 
@@ -18,6 +18,8 @@ A working Internet connection is required to build the toolkit as some dependenc
 This toolkit requires the Xcode IDE and some associated command line tools. It also requires the cmake build system to be installed. 
 
 This demo will currently run on Xcode 12.x and is set to compile for macOS 10.14 and above. Note that it will run on older versions of macOS and Xcode but some minimum build versions will need to change in the project for it to compile successfully.
+
+
 
 
 
