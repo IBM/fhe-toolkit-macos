@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol CapitalDisplayLoadingDelegate <NSObject>
 - (void)databaseSearchStarted;
-- (void)databaseSearchEnded;
+- (void)databaseSearchEnded: (NSString *)stringResult;
 @end
 
 @interface CapitalDetailViewController : NSViewController
