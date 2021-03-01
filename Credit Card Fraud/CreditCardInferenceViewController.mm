@@ -229,13 +229,13 @@ void createContexts()
 }
 
 - (void)triggerInference {
+    [self.progressView start];
      dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
          [self startInference];
      });
 }
 
 - (IBAction) startButtonWasPressed:(id)sender {
-    [self.progressView start];
     [self triggerInference];
 }
 

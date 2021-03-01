@@ -56,6 +56,7 @@
 		A5A0E47C24CFBE7B00FA427E /* new_2.h5 in Resources */ = {isa = PBXBuildFile; fileRef = A5A0E47B24CFBE7B00FA427E /* new_2.h5 */; };
 		A5A0E47F24D09CFB00FA427E /* CreditSampleResultsData.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */; settings = {COMPILER_FLAGS = "-W"; }; };
 		A5ABC9A025ED4B9500E07297 /* PrivacyPreservingSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ABC99F25ED4B9500E07297 /* PrivacyPreservingSearchTests.m */; };
+		A5ABC9B325ED982200E07297 /* CreditCardFraudTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ABC9B225ED982200E07297 /* CreditCardFraudTests.m */; };
 		A5BB176A253F4F02004DDA94 /* libhdf5_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BB1769253F4F02004DDA94 /* libhdf5_debug.a */; };
 		A5CDB49525CDF09000EC929D /* libhelib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5CDB49425CDF08300EC929D /* libhelib.a */; };
 		A5D0073424D1E6CC00AAE351 /* CCProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D0073324D1E6CC00AAE351 /* CCProgressView.m */; settings = {COMPILER_FLAGS = "-W"; }; };
@@ -131,6 +132,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = A56679FC23F714CF00F122FD;
 			remoteInfo = "Privacy Preserving Search";
+		};
+		A5ABC9B525ED982200E07297 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A56679F523F714CF00F122FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A50693E024C7298500FFF08B;
+			remoteInfo = "Credit Card Fraud";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -248,6 +256,9 @@
 		A5ABC99D25ED4B9500E07297 /* PrivacyPreservingSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrivacyPreservingSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5ABC99F25ED4B9500E07297 /* PrivacyPreservingSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivacyPreservingSearchTests.m; sourceTree = "<group>"; };
 		A5ABC9A125ED4B9500E07297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5ABC9B025ED982200E07297 /* CreditCardFraudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CreditCardFraudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5ABC9B225ED982200E07297 /* CreditCardFraudTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreditCardFraudTests.m; sourceTree = "<group>"; };
+		A5ABC9B425ED982200E07297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5BB1769253F4F02004DDA94 /* libhdf5_debug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libhdf5_debug.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CDB23A25CCE66D00EC929D /* AbstractFunctionEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractFunctionEvaluator.h; sourceTree = "<group>"; };
 		A5CDB23B25CCE66D00EC929D /* AbstractCiphertext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractCiphertext.h; sourceTree = "<group>"; };
@@ -578,6 +589,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5ABC9AD25ED982200E07297 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -695,6 +713,7 @@
 				A56679FF23F714CF00F122FD /* Privacy Preserving Search */,
 				A50693E224C7298500FFF08B /* Credit Card Fraud */,
 				A5ABC99E25ED4B9500E07297 /* PrivacyPreservingSearchTests */,
+				A5ABC9B125ED982200E07297 /* CreditCardFraudTests */,
 				A56679FE23F714CF00F122FD /* Products */,
 				A5F649DA244F789E0087514D /* Frameworks */,
 			);
@@ -706,6 +725,7 @@
 				A56679FD23F714CF00F122FD /* Privacy Preserving Search.app */,
 				A50693E124C7298500FFF08B /* Credit Card Fraud.app */,
 				A5ABC99D25ED4B9500E07297 /* PrivacyPreservingSearchTests.xctest */,
+				A5ABC9B025ED982200E07297 /* CreditCardFraudTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -746,6 +766,15 @@
 				A5ABC9A125ED4B9500E07297 /* Info.plist */,
 			);
 			path = PrivacyPreservingSearchTests;
+			sourceTree = "<group>";
+		};
+		A5ABC9B125ED982200E07297 /* CreditCardFraudTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5ABC9B225ED982200E07297 /* CreditCardFraudTests.m */,
+				A5ABC9B425ED982200E07297 /* Info.plist */,
+			);
+			path = CreditCardFraudTests;
 			sourceTree = "<group>";
 		};
 		A5CDB23925CCE66D00EC929D /* impl */ = {
@@ -1288,6 +1317,24 @@
 			productReference = A5ABC99D25ED4B9500E07297 /* PrivacyPreservingSearchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A5ABC9AF25ED982200E07297 /* CreditCardFraudTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5ABC9B725ED982200E07297 /* Build configuration list for PBXNativeTarget "CreditCardFraudTests" */;
+			buildPhases = (
+				A5ABC9AC25ED982200E07297 /* Sources */,
+				A5ABC9AD25ED982200E07297 /* Frameworks */,
+				A5ABC9AE25ED982200E07297 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5ABC9B625ED982200E07297 /* PBXTargetDependency */,
+			);
+			name = CreditCardFraudTests;
+			productName = CreditCardFraudTests;
+			productReference = A5ABC9B025ED982200E07297 /* CreditCardFraudTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1307,6 +1354,10 @@
 						CreatedOnToolsVersion = 12.3;
 						TestTargetID = A56679FC23F714CF00F122FD;
 					};
+					A5ABC9AF25ED982200E07297 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = A50693E024C7298500FFF08B;
+					};
 				};
 			};
 			buildConfigurationList = A56679F823F714CF00F122FD /* Build configuration list for PBXProject "fhe-toolkit-macos" */;
@@ -1325,6 +1376,7 @@
 				A56679FC23F714CF00F122FD /* Privacy Preserving Search */,
 				A50693E024C7298500FFF08B /* Credit Card Fraud */,
 				A5ABC99C25ED4B9500E07297 /* PrivacyPreservingSearchTests */,
+				A5ABC9AF25ED982200E07297 /* CreditCardFraudTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1359,6 +1411,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A5ABC99B25ED4B9500E07297 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5ABC9AE25ED982200E07297 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1477,6 +1536,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5ABC9AC25ED982200E07297 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5ABC9B325ED982200E07297 /* CreditCardFraudTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1484,6 +1551,11 @@
 			isa = PBXTargetDependency;
 			target = A56679FC23F714CF00F122FD /* Privacy Preserving Search */;
 			targetProxy = A5ABC9A225ED4B9500E07297 /* PBXContainerItemProxy */;
+		};
+		A5ABC9B625ED982200E07297 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A50693E024C7298500FFF08B /* Credit Card Fraud */;
+			targetProxy = A5ABC9B525ED982200E07297 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1880,6 +1952,52 @@
 			};
 			name = Release;
 		};
+		A5ABC9B825ED982200E07297 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CreditCardFraudTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.research.CreditCardFraudTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Credit Card Fraud.app/Contents/MacOS/Credit Card Fraud";
+			};
+			name = Debug;
+		};
+		A5ABC9B925ED982200E07297 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CreditCardFraudTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.research.CreditCardFraudTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Credit Card Fraud.app/Contents/MacOS/Credit Card Fraud";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1915,6 +2033,15 @@
 			buildConfigurations = (
 				A5ABC9A425ED4B9500E07297 /* Debug */,
 				A5ABC9A525ED4B9500E07297 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5ABC9B725ED982200E07297 /* Build configuration list for PBXNativeTarget "CreditCardFraudTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5ABC9B825ED982200E07297 /* Debug */,
+				A5ABC9B925ED982200E07297 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
