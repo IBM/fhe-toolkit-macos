@@ -33,8 +33,6 @@ set -e
 #BUILD_TYPE=$1
 #SLACK_HOOK=$2
 
-# Pull latest from the FHE repo, master branch
-#git checkout master
 
 xcodebuild -workspace fhe-toolkit-macos.xcworkspace -scheme "Privacy Preserving Search" test
 xcodebuild -workspace fhe-toolkit-macos.xcworkspace -scheme "Credit Card Fraud" test
