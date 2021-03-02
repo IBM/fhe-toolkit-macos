@@ -145,7 +145,7 @@ unsigned long debug = 0;
            [self.capitalResultLabel setStringValue:[NSString stringWithFormat:@"Capital: %s", string_result.c_str()]];
            [self.progressBar stopAnimation:self];
            [self.timeTicker invalidate];
-           [self.delegate databaseSearchEnded];
+           [self.delegate databaseSearchEnded: [NSString stringWithFormat: @"%s", string_result.c_str()]];
        });
 }
 

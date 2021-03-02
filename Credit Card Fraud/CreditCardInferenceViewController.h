@@ -32,6 +32,8 @@
 @property (nonatomic, weak) IBOutlet NSTableView *inferenceTableView;
 @property (nonatomic, strong) NSMutableArray *sampleDataArray;
 
+- (void)triggerInference;
+
 
 
 @end

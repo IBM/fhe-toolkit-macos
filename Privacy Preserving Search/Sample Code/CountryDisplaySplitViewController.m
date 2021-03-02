@@ -64,7 +64,7 @@
     loadingSpinner = indicator;
 }
 
-- (void)databaseSearchEnded {
+- (void)databaseSearchEnded: (NSString *)stringResult {
     if (loadingSpinner) {
         [loadingSpinner removeFromSuperview];
         loadingSpinner = nil;
