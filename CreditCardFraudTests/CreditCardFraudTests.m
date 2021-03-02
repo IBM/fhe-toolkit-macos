@@ -29,7 +29,7 @@
     XCTestExpectation *expectation = [self expectationWithDescription:@"Cred Card Inference test Results"];
     [view triggerInference];
     
-    XCTWaiterResult *result = [XCTWaiter waitForExpectations:expectation timeout:30.0];
+    XCTWaiterResult result = [XCTWaiter waitForExpectations:@[expectation] timeout:45.0];
     if (result == XCTWaiterResultTimedOut) {
         NSArray *resultsArray = view.sampleDataArray;
         BOOL result = NO;
