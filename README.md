@@ -2,7 +2,7 @@
 IBM Fully Homomorphic Encryption Toolkit for MacOS
 ----------------------------------------------------------------------------
 
-This source code is the packaged XCode project and resources needed to build the open source <a href="https://github.com/homenc/HElib/">HELib</a> <a href="https://en.wikipedia.org/wiki/Homomorphic_encryption">Fully Homomorphic Encryption</a> library on MacOS. If you are instead looking for the IBM Fully Homomorphic Encryption Tookit for Linux that provides a docker based toolkit for Linux developers, it can be found <a href="https://github.com/IBM/fhe-toolkit-linux" target="_blank">here</a>.
+This source code is the packaged XCode project and resources needed to build the open source <a href="https://github.com/IBM-HElib/HElib/">HELib</a> <a href="https://en.wikipedia.org/wiki/Homomorphic_encryption">Fully Homomorphic Encryption</a> library on MacOS. If you are instead looking for the IBM Fully Homomorphic Encryption Tookit for Linux that provides a docker based toolkit for Linux developers, it can be found <a href="https://github.com/IBM/fhe-toolkit-linux" target="_blank">here</a>.
 
 
 --------------------------------------------
@@ -52,7 +52,7 @@ The code base is split up into a few major components.  Upon initial installatio
 
 * The Helib source code is a copy of the public open source repo of [HElib](https://github.com/homenc/HElib).  The files have been compiled into a static library and linked to the `fhe-toolkit-macos` project file.  This is done through a shared workspace.  All work should be done through the `fhe-toolkit-macos.xcworkspace` file.
 
-* The `include/helib` directory contains all of the .h files that are a copy of the public open source repo of [HElib](https://github.com/homenc/HElib).  None of these files have been modified from the original files from that repo, but they need to be included in the Xcode project in order to build.  In the Xcode project, under the target, under `Build Settings`, there is a path that links to these files under `Header Search Paths`.  The current path is a relative path to the files from your system directory.  They currently reside in `dependencies/HElib/include`.  If you change the location of these files it will be neccessary to update this path.
+* The `include/helib` directory contains all of the .h files that are a copy of the public open source repo of [HElib](https://github.com/IBM-HElib/HElib).  None of these files have been modified from the original files from that repo, but they need to be included in the Xcode project in order to build.  In the Xcode project, under the target, under `Build Settings`, there is a path that links to these files under `Header Search Paths`.  The current path is a relative path to the files from your system directory.  They currently reside in `dependencies/HElib/include`.  If you change the location of these files it will be neccessary to update this path.
 
 * The Helib library has two dependencies from other open source libraries.  They are built when the `setup.sh` script is run for the first time.  They currently build for the x86_64 ARCHITECTURE and get added to the `dependencies` folder.  Nothing needs to be done with them, but they are linked as relative paths on the target, in `Build Settings` under `Library Search Paths`, for the .a files, and `Header Search Paths` for the .h files.  Again if you alter the location of these files, you will need to update these paths accordingly.
 
