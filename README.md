@@ -36,7 +36,9 @@ If you are a developer interested in Homomorphic Encryption and you use a MacOS 
 The contents of this Xcode project includes the pre-determined compilation procedure and the required dependency relationships between source code modules. Typically an Xcode project contains one or more build targets, which specify the compilation procedure for the final executable or library products. This project comes complete with default build settings for HELib as well as the two external dependencies required by HELib, namely [The GNU Multiple Precision Arithmetic Library (GMP)](https://gmplib.org/) and [NTL Lib](https://www.shoup.net/ntl/) which is a number theoretic library.
 
 The targets of the project are:
+	
 * Privacy Preserving Search (sample app)
+* Credit Card Fraud (sample app)
 * HElib Library
 
 
@@ -81,7 +83,11 @@ These are files that Xcode manages to help the developer create and build the ap
 fhe-toolkit-macos
 --------------------------------------------
 
-This is the Xcode Directory that contains all of the files that are neccessary to build the osx target.  The Helib files are imported into the `CountryTableViewController.mm` 
+This is the Xcode Directory that contains all of the files that are neccessary to build the macOS target.  Inside here are two sample applications.  Privacy Preserving Search and Credit Card Fraud.
+
+#####Privacy Preserving Search
+
+The Helib files are imported into the `CountryTableViewController.mm` 
 
 * Assets.xcassets	- directory structure where all assets (art, icons, images, etc) are held
 * AppDelegate - Main entry point to application. Handles responsibilities for when the app is launched or closed
@@ -90,6 +96,18 @@ This is the Xcode Directory that contains all of the files that are neccessary t
 * CapitalDetailViewController - The side of the split view controller that contains the details about the country.  This is where the code utilizes the Helib library.
 * CountryTableViewController - the "left" side of the split view that contains all of the countries to click
 * CountryDisplaySplitViewController - The file that manages the split views 
+* main.m	-	The start file that creates the Application, this is usually not altered in an macOS application
+
+#####Credit Card Fraud
+
+
+The Helib files are imported into the `CreditCardInferenceViewController.mm` 
+
+* Assets.xcassets	- directory structure where all assets (art, icons, images, etc) are held
+* AppDelegate - Main entry point to application. Handles responsibilities for when the app is launched or closed
+* Info.plist	- The file that contains app settings
+* CreditSampleResultsData - The object that contains the data that is returned from the inferencing 
+* CreditCardInferenceViewController - The main window of the application that holds the UI for interacting with the program.  This is where the code utilizes the Helib library through a Client Server model.
 * main.m	-	The start file that creates the Application, this is usually not altered in an macOS application
 
 
