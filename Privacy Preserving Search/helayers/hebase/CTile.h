@@ -27,6 +27,7 @@
 
 #include "HeContext.h"
 #include "impl/AbstractCiphertext.h"
+#include "utils/Saveable.h"
 #include "PTile.h"
 
 namespace helayers {
@@ -40,7 +41,7 @@ namespace helayers {
 /// For a lower level documentation of different functionalities (such as the
 /// effect on chainIndex), see documentation of the underlying encryption
 /// scheme.
-class CTile
+class CTile : public Saveable
 {
 
   std::shared_ptr<AbstractCiphertext> impl;
@@ -66,25 +67,15 @@ public:
   /// @param[in] src Object to copy.
   CTile& operator=(const CTile& src);
 
-  ///  Saves this CTile to a file in binary form.
-  ///
-  ///  @param[in] fileName name of file to write to
-  void saveToFile(const std::string& fileName) const;
-
-  ///  Loads this CTile from a file saved by saveToFile()
-  ///
-  ///  @param[in] fileName name of file to read from
-  void loadFromFile(const std::string& fileName);
-
   ///  Saves this CTile to a stream in binary form.
   ///
   ///  @param[in] stream output stream to write to
-  std::streamoff save(std::ostream& stream) const;
+  std::streamoff save(std::ostream& stream) const override;
 
   ///  Loads this CTile from a file saved by save()
   ///
   ///  @param[in] stream input stream to read from
-  std::streamoff load(std::istream& stream);
+  std::streamoff load(std::istream& stream) override;
 
   ///  Conjugates contents of this CTile in place, elementwise.
   ///  For non-complex numbers this has no effect.
@@ -321,6 +312,9 @@ public:
 
   /// Reserved for debugging and internal use.
   const AbstractCiphertext& getImpl() const { return *impl; };
+    
+  /// Reserved for debugging and internal use.
+  AbstractCiphertext& getImpl() { return *impl; };
 };
 }
 

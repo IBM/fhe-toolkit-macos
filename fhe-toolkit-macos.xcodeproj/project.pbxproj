@@ -52,6 +52,7 @@
 		A5667A0723F714D200F122FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5667A0623F714D200F122FD /* Assets.xcassets */; };
 		A5667A0A23F714D200F122FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5667A0823F714D200F122FD /* Main.storyboard */; };
 		A5667EF823FCD4BA00F122FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5667A0C23F714D200F122FD /* main.m */; };
+		A56A6D3E25FFB2EA00773807 /* Saveable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A56A6D3C25FFB2EA00773807 /* Saveable.cpp */; };
 		A58BF5C325D34F3F002A8A89 /* countries_dataset.csv in Resources */ = {isa = PBXBuildFile; fileRef = A58BF5C225D34F3F002A8A89 /* countries_dataset.csv */; };
 		A5A0E47C24CFBE7B00FA427E /* new_2.h5 in Resources */ = {isa = PBXBuildFile; fileRef = A5A0E47B24CFBE7B00FA427E /* new_2.h5 */; };
 		A5A0E47F24D09CFB00FA427E /* CreditSampleResultsData.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A0E47E24D09CFB00FA427E /* CreditSampleResultsData.m */; settings = {COMPILER_FLAGS = "-W"; }; };
@@ -248,6 +249,8 @@
 		A5667A0B23F714D200F122FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5667A0C23F714D200F122FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A5667A0E23F714D200F122FD /* fhe-toolkit-macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "fhe-toolkit-macos.entitlements"; sourceTree = "<group>"; };
+		A56A6D3C25FFB2EA00773807 /* Saveable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Saveable.cpp; sourceTree = "<group>"; };
+		A56A6D3D25FFB2EA00773807 /* Saveable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Saveable.h; sourceTree = "<group>"; };
 		A58BF5C225D34F3F002A8A89 /* countries_dataset.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = countries_dataset.csv; sourceTree = "<group>"; };
 		A5A0E47B24CFBE7B00FA427E /* new_2.h5 */ = {isa = PBXFileReference; lastKnownFileType = file; path = new_2.h5; sourceTree = "<group>"; };
 		A5A0E47D24D09CFB00FA427E /* CreditSampleResultsData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreditSampleResultsData.h; sourceTree = "<group>"; };
@@ -694,6 +697,8 @@
 		A5151EF625D1ED620063303B /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				A56A6D3C25FFB2EA00773807 /* Saveable.cpp */,
+				A56A6D3D25FFB2EA00773807 /* Saveable.h */,
 				A5151EF725D1ED620063303B /* JsonSubtree.h */,
 				A5151EF825D1ED620063303B /* JsonSubtree.cpp */,
 				A5151EF925D1ED620063303B /* JsonWrapper.h */,
@@ -1525,6 +1530,7 @@
 				A5151E8925D1EC880063303B /* AbstractFunctionEvaluator.cpp in Sources */,
 				A5151D8D25D1E9920063303B /* FileUtils.cpp in Sources */,
 				A5151E1625D1EA8E0063303B /* HelibCkksPlaintext.cpp in Sources */,
+				A56A6D3E25FFB2EA00773807 /* Saveable.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -75,8 +75,7 @@ void HelibBgvContext::init(const HelibConfig& conf)
   secretKey->GenSecKey();
   addSome1DMatrices(*secretKey);
   publicKey = secretKey;
-  ea = &context->getEA();
-  nslots = ea->size();
+  initCommon(context);
 }
 
 void HelibBgvContext::init(const HelibConfig& conf,
@@ -88,6 +87,11 @@ void HelibBgvContext::init(const HelibConfig& conf,
   context = userContext;
   secretKey = userSecretKey;
   publicKey = userPublicKey;
+  initCommon(context);
+}
+
+void HelibBgvContext::initCommon(helib::Context* context)
+{
   ea = &context->getEA();
   nslots = ea->size();
 }

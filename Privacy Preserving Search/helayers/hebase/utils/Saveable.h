@@ -22,39 +22,38 @@
  * SOFTWARE.
  */
 
-#ifndef HELAYERS_CONFIG_H
-#define HELAYERS_CONFIG_H
+#ifndef SRC_HELAYERS_SAVEABLE_H
+#define SRC_HELAYERS_SAVEABLE_H
 
+#include <iostream>
+#include <fstream>
 #include <string>
-#include <cstdlib>
 
-namespace helayers {
+class Saveable
+{
+public:
+  static std::ofstream openOfstream(const std::string& fileName);
+  static std::ifstream openIfstream(const std::string& fileName);
 
-// Returns directory where examples are located.
-// Default is "../examples"
-// Can be overridden using environment variable HELAYERS_EXAMPLES_DIR
-std::string getExamplesDir();
+  ///  Saves this Saveable object to a file in binary form.
+  ///
+  ///  @param[in] fileName name of file to write to
+  std::streamoff saveToFile(const std::string& fileName) const;
 
-// Returns directory where large data sets are located.
-// Default is "../examples/data"
-// Can be overridden using environment variable HELAYERS_DATA_SETS_DIR
-std::string getDataSetsDir();
+  ///  Loads this Saveable object from a file saved by saveToFile()
+  ///
+  ///  @param[in] fileName name of file to read from
+  std::streamoff loadFromFile(const std::string& fileName);
 
-// Returns directory where examples will write their output.
-// (possibly clean it first).
-// Default is "./output"
-// Can be overridden using environment variable HELAYERS_EXAMPLES_OUTPUT_DIR
-std::string getExamplesOutputDir();
+  ///  Saves this Saveable object to a stream in binary form.
+  ///
+  ///  @param[in] stream output stream to write to
+  virtual std::streamoff save(std::ostream& stream) const = 0;
 
-// Returns directory where tests will write temp files.
-// (possibly clean it first).
-// Default is "./output"
-// Can be overridden using environment variable HELAYERS_TESTS_OUTPUT_DIR
-std::string getTestsOutputDir();
+  ///  Loads this Saveable object from a file saved by save()
+  ///
+  ///  @param[in] stream input stream to read from
+  virtual std::streamoff load(std::istream& stream) = 0;
+};
 
-// Returns directory where resources to be used internally by the code are
-// located. Default is "../resources" Can be overridden using environment
-// variable HELAYERS_RESOURCES_DIR
-std::string getResourcesDir();
-} // namespace helayers
 #endif

@@ -46,6 +46,10 @@ class HelibBgvContext : public HelibContext
 
   // double defaultScale = 100;
 
+protected:
+  /// A helper function for init() method
+  void initCommon(helib::Context* context);
+
 public:
   HelibBgvContext();
   virtual ~HelibBgvContext();

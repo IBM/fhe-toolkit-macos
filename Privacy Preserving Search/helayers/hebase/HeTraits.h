@@ -30,7 +30,7 @@ namespace helayers {
 /// A set of flags characterizing the underyling HE scheme.
 class HeTraits
 {
-
+  bool supportsBootstrapUtils = false;
   bool supportsBootstrapping = false;
   bool supportsExplicitRescale = false;
   bool automaticallyManagesChainIndices = false;
@@ -47,8 +47,11 @@ class HeTraits
 public:
   void intersect(const HeTraits& other);
 
-/// A class currently lacking information
-/// This has no information
+  inline void setSupportsBootstrapUtils(bool val)
+  {
+    supportsBootstrapUtils = val;
+  }
+    
   inline void setSupportsBootstrapping(bool val)
   {
     supportsBootstrapping = val;
