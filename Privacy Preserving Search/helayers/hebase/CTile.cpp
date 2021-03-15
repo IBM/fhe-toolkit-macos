@@ -42,28 +42,6 @@ CTile& CTile::operator=(const CTile& src)
   return *this;
 }
 
-void CTile::saveToFile(const std::string& fileName) const
-{
-  ofstream out;
-  out.open(fileName, ofstream::out | ofstream::binary);
-  if (out.fail())
-    throw runtime_error("Failed to open file " + fileName);
-  out.exceptions(std::ifstream::failbit | std::ifstream::badbit);
-  save(out);
-  out.close();
-}
-
-void CTile::loadFromFile(const std::string& fileName)
-{
-  ifstream in;
-  in.open(fileName);
-  if (in.fail())
-    throw runtime_error("Failed to open file " + fileName);
-  in.exceptions(std::ifstream::failbit | std::ifstream::badbit);
-  load(in);
-  in.close();
-}
-
 streamoff CTile::save(ostream& stream) const { return impl->save(stream); }
 
 streamoff CTile::load(istream& stream) { return impl->load(stream); }

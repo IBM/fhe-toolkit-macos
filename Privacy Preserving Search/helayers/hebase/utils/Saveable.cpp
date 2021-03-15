@@ -22,33 +22,43 @@
  * SOFTWARE.
  */
 
-#include "NativeFunctionEvaluator.h"
+#include <fstream>
+#include "Saveable.h"
 
 using namespace std;
 
-namespace helayers {
-
-NativeFunctionEvaluator::NativeFunctionEvaluator(HeContext& he)
-    : impl(he.getFunctionEvaluator())
-{}
-
-NativeFunctionEvaluator::~NativeFunctionEvaluator() {}
-
-void NativeFunctionEvaluator::powerInPlace(CTile& c, int p) const
+std::ofstream Saveable::openOfstream(const std::string& fileName)
 {
-  impl->powerInPlace(*c.impl, p);
+  ofstream out;
+  out.open(fileName, ofstream::out | ofstream::binary);
+  if (out.fail())
+    throw runtime_error("Failed to open file " + fileName);
+  out.exceptions(std::ifstream::failbit | std::ifstream::badbit);
+  return out;
 }
 
-void NativeFunctionEvaluator::totalProduct(
-    CTile& result,
-    const std::vector<CTile>& multiplicands) const
+std::streamoff Saveable::saveToFile(const std::string& fileName) const
 {
-  int size = multiplicands.size();
-  std::vector<shared_ptr<helayers::AbstractCiphertext>> absMultiplicands(size);
-  for (int i = 0; i < size; i++) {
-    absMultiplicands[i] = (multiplicands[i]).impl;
-  }
-  impl->totalProduct(*result.impl, absMultiplicands);
+  ofstream out = openOfstream(fileName);
+  streamoff offset = save(out);
+  out.close();
+  return offset;
 }
 
-} // namespace helayers
+std::ifstream Saveable::openIfstream(const std::string& fileName)
+{
+  ifstream in;
+  in.open(fileName);
+  if (in.fail())
+    throw runtime_error("Failed to open file " + fileName);
+  in.exceptions(std::ifstream::failbit | std::ifstream::badbit);
+  return in;
+}
+
+std::streamoff Saveable::loadFromFile(const std::string& fileName)
+{
+  ifstream in = openIfstream(fileName);
+  streamoff offset = load(in);
+  in.close();
+  return offset;
+}
