@@ -1,6 +1,6 @@
 # Credit Card Fraud Example
 
-This FHE toolkit example demonstrates a use case in the finance domain as well as demonstrating encrypted machine learning. More specifically, the credit card fraud example demonstrates the process of neural network inference over fully homomorphic encrypted dataset and model. The neural network and dataset determine fraudulent activities based on anonymized transactions. The demonstration is split into a privledged client that has access to unencrypted data and models, and an unprivledged server that only performs homomorphic computation in a completely encrypted fashion. Specific details can be found in the section on  running the demonstration later in this document. 
+This FHE toolkit example demonstrates a use case in the finance domain as well as demonstrating encrypted machine learning. More specifically, the credit card fraud example demonstrates the process of neural network inference over fully homomorphic encrypted dataset and model. The neural network and dataset determine fraudulent activities based on anonymized transactions. The demonstration is split into a privileged client that has access to unencrypted data and models, and an unprivileged server that only performs homomorphic computation in a completely encrypted fashion. Specific details can be found in the section on running the demonstration later in this document. 
 
 
 ## Relation to a real use case
