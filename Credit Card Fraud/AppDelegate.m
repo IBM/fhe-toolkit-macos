@@ -31,6 +31,15 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    NSDictionary *env = @{ @"HELAYERS_EXAMPLES_OUTPUT_DIR" : NSHomeDirectory()};
+    NSString *outputDir = [NSString stringWithFormat:@"%@/output", NSHomeDirectory()];
+    setenv("HELAYERS_EXAMPLES_OUTPUT_DIR", [outputDir cStringUsingEncoding:nil], 1);
+    //[[[NSProcessInfo processInfo] environment] setValue:NSTemporaryDirectory() forKey:@"HELAYERS_EXAMPLES_OUTPUT_DIR"];
+    NSLog(@"Looking for Env Var");
+    NSString *result = [[[NSProcessInfo processInfo] environment] objectForKey:@"HELAYERS_EXAMPLES_OUTPUT_DIR"];
+    NSLog(@"%@", result);
+    
+    
 }
 
 
