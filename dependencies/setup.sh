@@ -192,7 +192,7 @@ build_helib()
     cmake -S. -B../HElib_macOS -GXcode \
     -DCMAKE_SYSTEM_NAME=Darwin \
     "-DCMAKE_OSX_ARCHITECTURES=arm64;x86_64" \
-    -DCMAKE_OSX_DEPLOYMENT_TARGET=10.14 \
+    -DCMAKE_OSX_DEPLOYMENT_TARGET=11.0 \
     -DCMAKE_INSTALL_PREFIX=`pwd`/_install \
     -DCMAKE_XCODE_ATTRIBUTE_ONLY_ACTIVE_ARCH=NO \
     -DCMAKE_IOS_INSTALL_COMBINED=YES \
@@ -211,7 +211,8 @@ build_boost()
     {
         CURRENT_DIR=`pwd`
         if [ ! -s ${CURRENT_DIR}/boost_1_72_0.tar.gz ]; then
-            curl -k -L -o ${CURRENT_DIR}/boost_1_72_0.tar.gz "https://dl.bintray.com/boostorg/release/1.72.0/source/boost_1_72_0.tar.gz"
+            #curl -k -L -o ${CURRENT_DIR}/boost_1_72_0.tar.gz "https://dl.bintray.com/boostorg/release/1.72.0/source/boost_1_72_0.tar.gz"
+            curl -fL -o ${CURRENT_DIR}/boost_1_72_0.tar.gz "https://boostorg.jfrog.io/artifactory/main/release/1.72.0/source/boost_1_72_0.tar.gz"
         fi
         tar xvzf "boost_${BOOST_VERSION}.tar.gz"
     }
@@ -239,7 +240,7 @@ build_hdf5()
     CURRENT_DIR=`pwd`
     mkdir hdf5-1.12.0
     cd hdf5-1.12.0
-    cmake -G "Xcode" -DCMAKE_OSX_ARCHITECTURES="x86_64" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DHDF5_BUILD_TOOLS:BOOL=ON ../CMake-hdf5-1.12.0/hdf5-1.12.0
+    cmake -G "Xcode" -DCMAKE_OSX_ARCHITECTURES="x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=11.0 -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DHDF5_BUILD_TOOLS:BOOL=ON ../CMake-hdf5-1.12.0/hdf5-1.12.0
     CURRENT_DIR=`pwd`
     xcodebuild -target hdf5-static
     cd ../
