@@ -40,10 +40,10 @@
 using namespace std;
 using namespace helayers;
 
-const string outDir = getExamplesOutputDir();
-const string clientContext = outDir + "/client_context.bin";
-const string serverContext = outDir + "/server_context.bin";
-const string encryptedModelFile = outDir + "/encrypted_model.bin";
+string outputDirectory;
+string theClientContext;
+string theServerContext;
+string fullyEncryptedModelFile;
 
 // paths from which to load the plain model, samples and labels
 const string plainModelFile = "/model_42098.h5";
@@ -61,8 +61,12 @@ Client::~Client() {}
 
 void Client::init()
 {
-  cout << "CLIENT: loading client side context . . ." << endl;
-  he = HeContext::loadHeContextFromFile(clientContext);
+    cout << "CLIENT: loading client side context . . ." << endl;
+  outputDirectory =  getenv("HELAYERS_EXAMPLES_OUTPUT_DIR");
+  theClientContext = outputDirectory + "/client_context.bin";
+  theServerContext = outputDirectory + "/server_context.bin";
+  fullyEncryptedModelFile = outputDirectory + "/encrypted_model.bin";;
+  he = HeContext::loadHeContextFromFile(theClientContext);
   he->printSignature(cout);
   batchSize = he->slotCount();
 
@@ -80,7 +84,7 @@ void Client::init()
   netHe.initFromNet(plainNet);
 
   cout << "CLIENT: saving encrypted model . . ." << endl;
-  ofstream ofs(encryptedModelFile, ios::out | ios::binary);
+  ofstream ofs(fullyEncryptedModelFile, ios::out | ios::binary);
   netHe.save(ofs);
   ofs.close();
 
@@ -208,11 +212,11 @@ Server::~Server() {}
 void Server::init()
 {
   cout << "SERVER: loading server side context . . ." << endl;
-  he = HeContext::loadHeContextFromFile(serverContext);
+  he = HeContext::loadHeContextFromFile(theServerContext);
   he->printSignature(cout);
 
   cout << "SERVER: loading encrypted model . . ." << endl;
-  ifstream ifs(encryptedModelFile, ios::in | ios::binary);
+  ifstream ifs(fullyEncryptedModelFile, ios::in | ios::binary);
   SimpleNeuralNet net(*he);
   net.load(ifs);
   ifs.close();

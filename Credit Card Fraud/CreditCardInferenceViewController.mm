@@ -38,9 +38,9 @@ using namespace helayers;
 
 // define names of files to be used for saving and loading of HE contexts and
 // encrypted model
-const string outDir = getExamplesOutputDir();
-const string clientContext = outDir + "/client_context.bin";
-const string serverContext = outDir + "/server_context.bin";
+string outDir;
+string clientContext;
+string serverContext;
 bool runAll = false;
 
 /*
@@ -54,7 +54,10 @@ void createContexts()
   cout << "Initalizing HElib . . ." << endl;
 
   shared_ptr<HeContext> hePtr;
-
+  outDir = getenv("HELAYERS_EXAMPLES_OUTPUT_DIR");
+  clientContext = outDir + "/client_context.bin";
+    serverContext = outDir + "/server_context.bin";
+    cout << outDir << endl;
   // Preset configuration with 512 slots: low security level, but fast, just for
   // the demo
   hePtr = HelibContext::create(HELIB_NOT_SECURE_CKKS_512_FAST);
