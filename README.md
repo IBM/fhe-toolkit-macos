@@ -86,7 +86,7 @@ fhe-toolkit-macos
 
 This is the Xcode Directory that contains all of the files that are neccessary to build the macOS target.  Inside here are two sample applications.  Privacy Preserving Search and Credit Card Fraud.
 
-#####Privacy Preserving Search
+##### Privacy Preserving Search
 
 The Helib files are imported into the `CountryTableViewController.mm` 
 
@@ -99,7 +99,7 @@ The Helib files are imported into the `CountryTableViewController.mm`
 * CountryDisplaySplitViewController - The file that manages the split views 
 * main.m	-	The start file that creates the Application, this is usually not altered in an macOS application
 
-#####Credit Card Fraud
+##### Credit Card Fraud
 
 
 The Helib files are imported into the `CreditCardInferenceViewController.mm` 
