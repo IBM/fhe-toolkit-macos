@@ -4,7 +4,7 @@ Adding new features, improving documentation, fixing bugs, writing new tests, de
 
 We kindly request that any bug fixes be initiated through GitHub pull requests (PRs). 
 
-## Prerequisits
+## Prerequisites
 If you are new to GitHub, you can find useful documentation [here][1], and information on the `git` version control system in this [handbook][2].
 
 ## Coding convention

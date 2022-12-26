@@ -51,7 +51,7 @@ bool runAll = false;
 void createContexts()
 {
 
-  cout << "Initalizing HElib . . ." << endl;
+  cout << "Initializing HElib . . ." << endl;
 
   shared_ptr<HeContext> hePtr;
 
