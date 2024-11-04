@@ -28,35 +28,37 @@ echo " — — — — — — — — — — Building Dependencies Script Star
 
 MIN_IOS="10.0"
 MIN_WATCHOS="2.0"
-MIN_TVOS=$MIN_IOS
+MIN_TVOS="$MIN_IOS"
 MIN_MACOS="10.10"
-IPHONEOS=iphoneos
-IPHONESIMULATOR=iphonesimulator
-WATCHOS=watchos
-WATCHSIMULATOR=watchsimulator
-TVOS=appletvos
-TVSIMULATOR=appletvsimulator
-MACOS=macosx
-LOGICALCPU_MAX=`sysctl -n hw.logicalcpu_max`
+IPHONEOS="iphoneos"
+IPHONESIMULATOR="iphonesimulator"
+WATCHOS="watchos"
+WATCHSIMULATOR="watchsimulator"
+TVOS="appletvos"
+TVSIMULATOR="appletvsimulator"
+MACOS="macosx"
+LOGICALCPU_MAX=$(sysctl -n hw.logicalcpu_max)
 
-
-PLATFORM=macosx
+PLATFORM="macosx"
 ARCH="x86_64"
 
-SDK=`xcrun --sdk $PLATFORM --show-sdk-path`
-PLATFORM_PATH=`xcrun --sdk $PLATFORM --show-sdk-platform-path`
-CLANG=`xcrun --sdk $PLATFORM --find clang`
-CMAKE_C_COMPILER="${CLANG}"
-CLANGXX=`xcrun --sdk $PLATFORM --find clang++`
-CMAKE_CXX_COMPILER="${CLANGXX}"
-CURRENT_DIR=`pwd`
-DEVELOPER=`xcode-select --print-path`
+SDK=$(xcrun --sdk "$PLATFORM" --show-sdk-path)
+PLATFORM_PATH=$(xcrun --sdk "$PLATFORM" --show-sdk-platform-path)
+CLANG=$(xcrun --sdk "$PLATFORM" --find clang)
+CLANGXX=$(xcrun --sdk "$PLATFORM" --find clang++)
 
-CMAKE_PATH=$(dirname `which cmake`)
+CMAKE_C_COMPILER="${CLANG}"
+CMAKE_CXX_COMPILER="${CLANGXX}"
+
+CURRENT_DIR=$(pwd)
+DEVELOPER=$(xcode-select --print-path)
+
+CMAKE_PATH=$(dirname "$(which cmake)")
 
 export PATH="${CMAKE_PATH}:${PLATFORM_PATH}/Developer/usr/bin:${DEVELOPER}/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-GMP_DIR="`pwd`/gmp"
+
+GMP_DIR="$(pwd)/gmp"
 
 #Load in version Vars from the ConfigConstants file
 source ConfigConstants.xcconfig
@@ -71,7 +73,7 @@ check_cmake()
     install_cmake()
     {
         echo "installing cmake"
-        curl -OL https://github.com/Kitware/CMake/releases/download/v3.19.2/cmake-3.19.2-macos-universal.tar.gz
+        curl -OL "https://github.com/Kitware/CMake/releases/download/v3.19.2/cmake-3.19.2-macos-universal.tar.gz"
         tar -xzf cmake-3.19.2-macos-universal.tar.gz 
         sudo mv cmake-3.19.2-macos-universal/CMake.app /Applications 
         sudo /Applications/CMake.app/Contents/bin/cmake-gui --install 
@@ -111,19 +113,19 @@ prepare()
 {
     download_gmp()
     {
-        CURRENT_DIR=`pwd`
-        if [ ! -s ${CURRENT_DIR}/gmp-${GMP_VERSION}.tar.bz2 ]; then
-            curl -k -L -o ${CURRENT_DIR}/gmp-${GMP_VERSION}.tar.bz2 https://gmplib.org/download/gmp/gmp-${GMP_VERSION}.tar.bz2
+        CURRENT_DIR="$(pwd)"
+        if [ ! -s "${CURRENT_DIR}/gmp-${GMP_VERSION}.tar.bz2" ]; then
+            curl -k -L -o "${CURRENT_DIR}/gmp-${GMP_VERSION}.tar.bz2" "https://gmplib.org/download/gmp/gmp-${GMP_VERSION}.tar.bz2"
         fi
         rm -rf gmp
         tar xfj "gmp-${GMP_VERSION}.tar.bz2"
-        mv gmp-${GMP_VERSION} gmp
+        mv "gmp-${GMP_VERSION}" gmp
     }
     download_ntl()
     {
-        CURRENT_DIR=`pwd`
-        if [ ! -s ${CURRENT_DIR}/ntl-${NTL_VERSION}.tar.gz ]; then
-            curl -k -L -o ${CURRENT_DIR}/ntl-${NTL_VERSION}.tar https://www.shoup.net/ntl/ntl-${NTL_VERSION}.tar.gz
+        CURRENT_DIR="$(pwd)"
+        if [ ! -s "${CURRENT_DIR}/ntl-${NTL_VERSION}.tar.gz" ]; then
+            curl -k -L -o "${CURRENT_DIR}/ntl-${NTL_VERSION}.tar" "https://www.shoup.net/ntl/ntl-${NTL_VERSION}.tar.gz"
         fi
         tar xvf "ntl-${NTL_VERSION}.tar"
     }
@@ -133,15 +135,15 @@ prepare()
 
 build_gmp()
 {
-   
-     cd gmp
+    cd gmp
     PLATFORM=$1
     ARCH=$2
-    SDK=`xcrun --sdk $PLATFORM --show-sdk-path`
-    PLATFORM_PATH=`xcrun --sdk $PLATFORM --show-sdk-platform-path`
-    CLANG=`xcrun --sdk $PLATFORM --find clang`
-    CURRENT_DIR=`pwd`
-    DEVELOPER=`xcode-select --print-path`
+    
+    SDK=$(xcrun --sdk "$PLATFORM" --show-sdk-path)
+    PLATFORM_PATH=$(xcrun --sdk "$PLATFORM" --show-sdk-platform-path)
+    CLANG=$(xcrun --sdk "$PLATFORM" --find clang)
+    CURRENT_DIR="$(pwd)"
+    DEVELOPER="$(xcode-select --print-path)"
     #export PATH="${PLATFORM_PATH}/Developer/usr/bin:${DEVELOPER}/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
     mkdir "${CURRENT_DIR}/../gmplib-so-${PLATFORM}-${ARCH}"
     CFLAGS="-arch ${ARCH} --sysroot=${SDK}"
@@ -164,8 +166,9 @@ build_ntl()
 {
     PLATFORM=$1
     ARCH=$2
-    CURRENT_DIR=`pwd`
-    SDK=`xcrun --sdk $PLATFORM --show-sdk-path`
+    CURRENT_DIR="$(pwd)"
+    
+    SDK=$(xcrun --sdk "$PLATFORM" --show-sdk-path)
     
     mkdir ntl
     mkdir ntl/libs
@@ -185,7 +188,7 @@ build_helib()
 {
     PLATFORM=$1
     ARCH=$2
-    CURRENT_DIR=`pwd`
+    CURRENT_DIR="$(pwd)"
     DEPEND_DIR="${CURRENT_DIR}"
     cp "${CURRENT_DIR}/Helib_install/CMakeLists.txt" "${CURRENT_DIR}/HElib"
     cd "${CURRENT_DIR}/HElib"
@@ -206,18 +209,18 @@ build_helib()
 
 build_boost() 
 {
-     #hardcoding the version because they want to specifically use the 1.72.0 release
+    #hardcoding the version because they want to specifically use the 1.72.0 release
     download_boost()
     {
-        CURRENT_DIR=`pwd`
-        if [ ! -s ${CURRENT_DIR}/boost_1_72_0.tar.gz ]; then
-            curl -k -L -o ${CURRENT_DIR}/boost_1_72_0.tar.gz "https://dl.bintray.com/boostorg/release/1.72.0/source/boost_1_72_0.tar.gz"
+        CURRENT_DIR="$(pwd)"
+        if [ ! -s "${CURRENT_DIR}/boost_1_72_0.tar.gz" ]; then
+            curl -k -L -o "${CURRENT_DIR}/boost_1_72_0.tar.gz" "https://dl.bintray.com/boostorg/release/1.72.0/source/boost_1_72_0.tar.gz"
         fi
         tar xvzf "boost_${BOOST_VERSION}.tar.gz"
     }
     download_boost
 
-    CURRENT_DIR=`pwd`
+    CURRENT_DIR="$(pwd)"
     cd boost_1_72_0
     ./bootstrap.sh --without-libraries=python --prefix=${CURRENT_DIR}
     ./b2 install
@@ -228,19 +231,19 @@ build_hdf5()
 {
     download_hdf5() 
     {
-        CURRENT_DIR=`pwd`
-        if [ ! -s ${CURRENT_DIR}/cmake-hdf5-${HDF5_VERSION}.tar.gz ]; then
-            curl -k -L -o ${CURRENT_DIR}/cmake-hdf5-${HDF5_VERSION}.tar.gz "https://www.hdfgroup.org/package/cmake-hdf5-${HDF5_VERSION}-tar-gz/?wpdmdl=14580&refresh=5f19d44b903561595528267"
+        CURRENT_DIR="$(pwd)"
+        if [ ! -s "${CURRENT_DIR}/cmake-hdf5-${HDF5_VERSION}.tar.gz" ]; then
+            curl -k -L -o "${CURRENT_DIR}/cmake-hdf5-${HDF5_VERSION}.tar.gz" "https://www.hdfgroup.org/package/cmake-hdf5-${HDF5_VERSION}-tar-gz/?wpdmdl=14580&refresh=5f19d44b903561595528267"
         fi
         tar xvzf "cmake-hdf5-1-12-0.tar.gz"
     }
     download_hdf5
 
-    CURRENT_DIR=`pwd`
+    CURRENT_DIR="$(pwd)"
     mkdir hdf5-1.12.0
     cd hdf5-1.12.0
     cmake -G "Xcode" -DCMAKE_OSX_ARCHITECTURES="x86_64" -DCMAKE_BUILD_TYPE:STRING=Release -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DHDF5_BUILD_TOOLS:BOOL=ON ../CMake-hdf5-1.12.0/hdf5-1.12.0
-    CURRENT_DIR=`pwd`
+    CURRENT_DIR="$(pwd)"
     xcodebuild -target hdf5-static
     cd ../
 }
